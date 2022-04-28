@@ -16,6 +16,11 @@ Repository for Discussions and Materials about The Carpentries Workbench.
  - [{varnish}](https://carpentries.github.io/varnish/): HTML, CSS, and JavaScript templates
  - [(carpentries/actions)](https://github.com/carpentries/actions#readme): GitHub Actions for Workbench Workflows
 
+### Templates
+
+ - [R Markdown Lesson Template](https://github.com/carpentries/workbench-template-rmd)
+ - [Markdown Lesson Template](https://github.com/carpentries/workbench-template-md)
+
 
 ### Inspired Examples
 
