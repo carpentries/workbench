@@ -1,0 +1,49 @@
+---
+title: "Transition Guide: From Styles to Workbench"
+---
+
+This document is intended to provide you with a quick reference about the
+differences between [kramdown] (used by styles) and [pandoc-flavoured
+markdown][pandoc] (used by The Workbench):
+
+## Callout Blocks
+
+::: {.panel-tabset}
+
+### Workbench
+
+A callout block with The Workbench uses _at least_ three colons followed by a
+keyword to start a block. The block is closed with _at least_ three colons.
+
+```markdown
+:::: callout
+
+### Act Openly
+
+We believe that transparency, honesty, and fairness are keys to fostering
+trust within an open community.
+
+::::::::::::
+```
+
+### styles
+
+A callout block with styles used block quote syntax and level 2 headers followed
+by a postfix tag declaring the class of block:
+
+input: 
+
+```markdown
+> ## Act Openly
+>
+> We believe that transparency, honesty, and fairness are keys to fostering
+> trust within an open community.
+>
+{: .callout}
+```
+:::
+
+
+
+[kramdown]: https://kramdown.gettalong.org/syntax.html
+[pandoc]: https://pandoc.org/MANUAL.html#pandocs-markdown
