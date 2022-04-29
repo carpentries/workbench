@@ -1,0 +1,51 @@
+[
+  {
+    "objectID": "transition-guide.html",
+    "href": "transition-guide.html",
+    "title": "2  Transition Guide: From Styles to Workbench",
+    "section": "",
+    "text": "This document is intended to provide you with a quick reference about the differences between kramdown (used by styles) and pandoc-flavoured markdown (used by The Workbench):"
+  },
+  {
+    "objectID": "transition-guide.html#folder-structure",
+    "href": "transition-guide.html#folder-structure",
+    "title": "2  Transition Guide: From Styles to Workbench",
+    "section": "2.1 Folder Structure",
+    "text": "2.1 Folder Structure"
+  },
+  {
+    "objectID": "transition-guide.html#callout-blocks",
+    "href": "transition-guide.html#callout-blocks",
+    "title": "2  Transition Guide: From Styles to Workbench",
+    "section": "2.2 Callout Blocks",
+    "text": "2.2 Callout Blocks\n\n\n\n\n2.2.1 Workbench\nA callout block with The Workbench uses at least three colons followed by a keyword to start a block. The block is closed with at least three colons.\n:::: callout\n\n### Act Openly\n\nWe believe that transparency, honesty, and fairness are keys to fostering\ntrust within an open community.\n\n::::::::::::\nThese are called fenced divs and in Workbench lessons, you will often see them have many more colons to clearly delineate sections in a lesson. The number of opening colons and the number of closing colons do not match and it is completely up to the lesson author to choose a style.\n\n\n\n\n2.2.2 styles\nA callout block with styles used block quote syntax and level 2 headers followed by a postfix tag declaring the class of block:\n> ## Act Openly\n>\n> We believe that transparency, honesty, and fairness are keys to fostering\n> trust within an open community.\n>\n{: .callout}"
+  },
+  {
+    "objectID": "transition-guide.html#challengesolution-blocks",
+    "href": "transition-guide.html#challengesolution-blocks",
+    "title": "2  Transition Guide: From Styles to Workbench",
+    "section": "2.3 Challenge/Solution blocks",
+    "text": "2.3 Challenge/Solution blocks\n\n\n\n\n2.3.1 Workbench\nThe challenge and solution blocks in the workbench are nested pairs of blocks with an optional Level 3 header. You can additonally add a “hint” block before the solution.\n::::::::::::::::::::::::::::: challenge\n\n### Challenge: build\n\nWhat is the R command to build a Workbench lesson?\n\n::::::: hint\n\nThis command is going to start a **serve**r on your computer\n\n:::::::::::::\n\n::::::::: solution\n\n```r\nsandpaper::serve()\n```\n\n::::::::::::::::::\n:::::::::::::::::::::::::::::::::::::::\n\n\n\n\n\n\nTip\n\n\n\nTo help distinguish sections, double the number of columns for the outer section compared to the inner section.\n\n\n\n\n\n\n2.3.2 styles\nThe challenge and solution blocks in the workbench are nested block quotes with Level 2 headers. Additional blocks are still of the class “solution”\n> ## Challenge: build\n> \n> What is the R command to build a Workbench lesson?\n> \n> > ## Hint\n> >\n> > This command is going to start a **serve**r on your computer\n> > \n> {: .solution} \n>\n> > ~~~\n> > sandpaper::serve()\n> > ~~~\n> > {: .language-r}\n> {: .solution} \n{: .challenge}"
+  },
+  {
+    "objectID": "transition-guide.html#instructor-notes",
+    "href": "transition-guide.html#instructor-notes",
+    "title": "2  Transition Guide: From Styles to Workbench",
+    "section": "2.4 Instructor notes",
+    "text": "2.4 Instructor notes\n\n\n\n\n2.4.1 Workbench\nAn instructor note in the workbench is formed by making a fenced div with the class “instructor”\n:::: instructor\n\nHere be dragons\n\n::::::::::::\n\n\n\n\n2.4.2 styles\nInstructor notes do not exist in styles\n(-_-;)\n<!--\n\nMaybe the instructors will see the source code!\n\n-->"
+  },
+  {
+    "objectID": "transition-guide.html#internal-links",
+    "href": "transition-guide.html#internal-links",
+    "title": "2  Transition Guide: From Styles to Workbench",
+    "section": "2.5 Internal Links",
+    "text": "2.5 Internal Links\n\n\n\n\n2.5.1 Workbench\nLinks in the Workbench are relative to the file so that you can link to the files and confirm they work in the github preview. Figures, files, and data are nested inside the episodes/ folder.\n<!-- Next Episode -->\n[next episode on dragons](dragons.md)\n<!-- Data -->\n[download the dragon data for this episode](data/dragon-lifespan.csv)\n<!-- Setup -->\n[setup instructions](../learners/setup.md)\n\n\n\n\n2.5.2 styles\nLinks are relative to the page that they are rendered to. You should use the {{ page.root }} variable and the link tag in order to construct the correct path to the resource:\n<!-- Next Episode -->\n[next episode on dragons]({{ page.root }}{% link _episodes/dragons.md %})\n<!-- Data -->\n[download the dragon data for this episode]({{ page.root }}/data/dragon-lifespan.csv)\n<!-- Setup -->\n[setup instructions]({{ page.root }}/setup.md)"
+  },
+  {
+    "objectID": "transition-guide.html#figures",
+    "href": "transition-guide.html#figures",
+    "title": "2  Transition Guide: From Styles to Workbench",
+    "section": "2.6 Figures",
+    "text": "2.6 Figures\n\n\n\n\n2.6.1 Workbench\nFigures are written with the caption in the square brackets and alt appended as an attribute like so: ![caption](fig/image.png){alt='image description'}.\n![The dragon emerges!](fig/dragon-egg.png){alt='a red baby \ndragon head sticks out from its egg'}\n\n\n\n\n\n\nNote\n\n\n\nThere is a valid reason behind this choice: text inside of the square brackets can be formatted as markdown, so it makes sense for the caption. Alt text needs no decoration as it will be descriptive.\n\n\n\n\n\n\n2.6.2 styles\nFigures are written with alt text in the square brackets, but no caption like so: ![alt text]({{ page.root }}/fig/image.png)\n![a red baby dragon head sticks out from its egg]({{ page.root }}/fig/dragon-egg.png)\n\nThe dragon emerges!"
+  }
+]
