@@ -6,9 +6,22 @@ This document is intended to provide you with a quick reference about the
 differences between [kramdown] (used by styles) and [pandoc-flavoured
 markdown][pandoc] (used by The Workbench):
 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
+
+## Folder Structure
+
+![](fig/folder-flow.svg){data-alt='A diagram showing the transition between the
+former lesson structure (styles) to the new lesson structure (workbench). It
+shows episodes flowing to episodes, extras flowing to learners and instructors,
+and figures, data, and files flowing to subfolders under episodes. Other
+folders are in grey with no arrows indicating that they are discarded.'}
+
 ## Callout Blocks
 
-::: {.panel-tabset}
+
+:::::::::::::::::::::: {layout="[50,50]"}
+
+::: {.column}
 
 ### Workbench
 
@@ -26,12 +39,19 @@ trust within an open community.
 ::::::::::::
 ```
 
+These are called [_fenced divs_][fenced-divs] and in Workbench lessons, you will
+often see them have many more colons to clearly delineate sections in a lesson.
+The number of opening colons and the number of closing colons do not match and
+it is completely up to the lesson author to choose a style.
+
+:::
+
+::: {.column}
+
 ### styles
 
 A callout block with styles used block quote syntax and level 2 headers followed
 by a postfix tag declaring the class of block:
-
-input: 
 
 ```markdown
 > ## Act Openly
@@ -43,7 +63,213 @@ input:
 ```
 :::
 
+:::::::::::::::::::::::::::::::::::::::
+
+## Challenge/Solution blocks
+
+:::::::::::::::::::::: {layout="[50,50]"}
+
+::: {.column}
+
+### Workbench
+
+The challenge and solution blocks in the workbench are nested pairs of blocks
+with an optional Level 3 header. You can additonally add a "hint" block before
+the solution.
+
+````markdown
+::::::::::::::::::::::::::::: challenge
+
+### Challenge: build
+
+What is the R command to build a Workbench lesson?
+
+::::::: hint
+
+This command is going to start a **serve**r on your computer
+
+:::::::::::::
+
+::::::::: solution
+
+```r
+sandpaper::serve()
+```
+
+::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::
+````
+
+::: {.callout-tip}
+
+To help distinguish sections, double the number of columns for the outer section
+compared to the inner section.
+
+:::
+
+
+:::
+
+::: {.column}
+
+### styles
+
+The challenge and solution blocks in the workbench are nested block quotes
+with Level 2 headers. Additional blocks are still of the class "solution" 
+
+````markdown
+> ## Challenge: build
+> 
+> What is the R command to build a Workbench lesson?
+> 
+> > ## Hint
+> >
+> > This command is going to start a **serve**r on your computer
+> > 
+> {: .solution} 
+>
+> > ~~~
+> > sandpaper::serve()
+> > ~~~
+> > {: .language-r}
+> {: .solution} 
+{: .challenge}
+````
+:::
+
+:::::::::::::::::::::::::::::::::::::::
+
+## Instructor notes
+
+:::::::::::::::::::::: {layout="[50,50]"}
+
+::: {.column}
+
+### Workbench
+
+An instructor note in the workbench is formed by making a 
+[_fenced div_][fenced-divs] with the class "instructor"
+
+```markdown
+:::: instructor
+
+Here be dragons
+
+::::::::::::
+```
+
+:::
+
+::: {.column}
+
+### styles
+
+Instructor notes do not exist in styles    
+(-_-;)
+
+```markdown
+<!--
+
+Maybe the instructors will see the source code!
+
+-->
+```
+:::
+
+:::::::::::::::::::::::::::::::::::::::
+
+## Internal Links 
+
+:::::::::::::::::::::: {layout="[50,50]"}
+
+::: {.column}
+
+### Workbench
+
+Links in the Workbench are relative to the file so that you can link to the
+files and confirm they work in the github preview. Figures, files, and data are
+nested inside the `episodes/` folder.
+
+```markdown
+<!-- Next Episode -->
+[next episode on dragons](dragons.md)
+<!-- Data -->
+[download the dragon data for this episode](data/dragon-lifespan.csv)
+<!-- Setup -->
+[setup instructions](../learners/setup.md)
+```
+
+:::
+
+::: {.column}
+
+### styles
+
+Links are relative to the page that they are rendered to. You should use the 
+`{{ page.root }}` variable and the `link` tag in order to construct the correct
+path to the resource:
+
+```markdown
+<!-- Next Episode -->
+[next episode on dragons]({{ page.root }}{% link _episodes/dragons.md %})
+<!-- Data -->
+[download the dragon data for this episode]({{ page.root }}/data/dragon-lifespan.csv)
+<!-- Setup -->
+[setup instructions]({{ page.root }}/setup.md)
+```
+:::
+
+
+:::::::::::::::::::::::::::::::::::::::
+
+## Figures
+
+:::::::::::::::::::::: {layout="[50,50]"}
+
+::: {.column}
+
+### Workbench
+
+Figures are written with the caption in the square brackets and alt appended
+as an attribute like so: `![caption](fig/image.png){alt='image description'}`.
+
+
+```markdown
+![The dragon emerges!](fig/dragon-egg.png){alt='a red baby 
+dragon head sticks out from its egg'}
+```
+
+::: {.callout-note}
+
+There is a valid reason behind this choice: text inside of the square brackets
+can be formatted as markdown, so it makes sense for the caption. Alt text needs
+no decoration as it will be descriptive.
+
+:::
+
+
+:::
+
+::: {.column}
+
+### styles
+
+Figures are written with alt text in the square brackets, but no caption like
+so: `![alt text]({{ page.root }}/fig/image.png)`
+
+```markdown
+![a red baby dragon head sticks out from its egg]({{ page.root }}/fig/dragon-egg.png)
+
+The dragon emerges!
+```
+:::
+
+:::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
 
 
 [kramdown]: https://kramdown.gettalong.org/syntax.html
 [pandoc]: https://pandoc.org/MANUAL.html#pandocs-markdown
+[fenced-divs]: https://pandoc.org/MANUAL.html#divs-and-spans

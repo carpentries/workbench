@@ -1,0 +1,18 @@
+project:
+  title: "Workbench this and that"
+  type: book
+
+format:
+  html:
+    toc: true
+
+book:
+  title: "Workbench This and That"
+  author: "Zhian N. Kamvar"
+  date: "2022-04-29"
+  chapters:
+    - index.qmd
+    - transition-guide.qmd
+
+
+
