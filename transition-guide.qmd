@@ -6,6 +6,27 @@ This document is intended to provide you with a quick reference about the
 differences between [kramdown] (used by styles) and [pandoc-flavoured
 markdown][pandoc] (used by The Workbench):
 
+## Default Branch
+
+:::::::::::::: {layout="[50, 50]"}
+::: {.column}
+
+### Workbench
+
+The default branch is always **`main`**
+
+:::
+
+::: {.column}
+
+### styles
+
+The default branch is **`gh-pages`** UNLESS you have rendered RMarkdown content,
+then the default branch is `main`
+
+:::
+::::::::::::::::::::::::::::::::
+
 
 ## Folder Structure
 
