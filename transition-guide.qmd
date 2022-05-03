@@ -152,6 +152,100 @@ with Level 2 headers. Additional blocks are still of the class "solution"
 :::::::::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
+## Questions/Objectives/Keypoints
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
+:::::::::::::::::::::: {layout="[50,50]"}
+::: {.column}
+
+### Workbench
+
+Questions and Objectives appear at the top of the lesson as [fenced 
+divs][fenced-divs] with list elements:
+
+
+````markdown
+---
+title: "Bomp"
+teaching: 5
+exercises: 5
+---
+
+::::::::::::::::: questions
+
+ - Who put the **bomp** in the bomp bah bomp bah bomp?
+ - Who put the **ram** in the rama lama ding dong?
+
+:::::::::::::::::::::::::::
+
+::::::::::::::::: objectives
+
+ - Solve the "bomp" mystery.
+
+::::::::::::::::::::::::::::
+
+## Introduction
+
+...
+````
+
+Keypoints should go in a [fenced div][fenced-divs] at the _end_ of the document:
+
+```markdown
+...
+
+::::::::::::::::: keypoints
+
+ - We will never know who put the bomp in the bomp bah bomp bah bomp.
+
+:::::::::::::::::::::::::::
+```
+
+:::
+
+::: {.column}
+
+### styles
+
+The questions, objectives, and keypoints were placed in the YAML metadata for
+each episode:
+
+````markdown
+---
+title: "Bomp"
+teaching: 5
+exercises: 5
+questions:
+ - "Who put the bomp in the bomp bah bomp bah bomp?"
+ - "Who put the ram in the rama lama ding dong?"
+objectives:
+ - "Solve the \"bomp\" mystery."
+keypoints:
+ - "We will never know who put the bomp in the bomp bah bomp bah bomp." 
+---
+
+## Introduction
+
+...
+````
+
+::: {.callout-warning}
+
+### The trouble with YAML metadata
+
+It was not possible to include markdown inside these strings and it often caused
+errors due to missed quotation marks (i.e. ` - "sentence with a period after quotes".`
+was a common type of error.)
+
+This content was originally introduced into the YAML metadata so that we could
+use Jekyll's metadata parsing to create a custom introductory block.
+:::
+
+:::
+
+:::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
 ## Instructor notes
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
@@ -160,8 +254,8 @@ with Level 2 headers. Additional blocks are still of the class "solution"
 
 ### Workbench
 
-An instructor note in the workbench is formed by making a 
-[_fenced div_][fenced-divs] with the class "instructor"
+An **inline instructor note** in the workbench is formed inside an episode by
+making a [_fenced div_][fenced-divs] with the class "instructor"
 
 ```markdown
 :::: instructor
@@ -171,22 +265,17 @@ Here be dragons
 ::::::::::::
 ```
 
+Instructor notes for the whole lesson can be placed in `instructors/instructor-notes.md`
+
 :::
 
 ::: {.column}
 
 ### styles
 
-Instructor notes do not exist in styles    
-(-_-;)
+Instructor notes do not exist in styles other than an aggregate markdown file
+called `_extras/guide.md`
 
-```markdown
-<!--
-
-Maybe the instructors will see the source code!
-
--->
-```
 :::
 :::::::::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
