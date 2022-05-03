@@ -1,6 +1,6 @@
 project:
   title: "Workbench this and that"
-  type: book
+  type: website
 
 format:
   html:
@@ -13,6 +13,16 @@ book:
   chapters:
     - index.qmd
     - transition-guide.qmd
+
+website:
+  title: "Workbench This and That"
+  background: primary
+  navbar:
+    left:
+      - href: transition-guide.qmd
+        text: Transition Guide
+
+
 
 
 

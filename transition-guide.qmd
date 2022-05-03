@@ -6,21 +6,33 @@ This document is intended to provide you with a quick reference about the
 differences between [kramdown] (used by styles) and [pandoc-flavoured
 markdown][pandoc] (used by The Workbench):
 
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
 
 ## Folder Structure
 
+
+The folders from styles to Workbench are rearranged to achieve the following
+goals:
+
+ 1. tools for building the lesson do not live in the lesson ^[caveat: we still need the GitHub actions, but those are buried in the `.github` folder]. 
+ 2. the episodes can be directly lifted from the lesson without needing external
+    context/resources.
+ 3. extra content intended for instructors is clearly separated from that intended for learners
+
+Episodes (aka Chapters) will move from `_episodes/` and `_episodes_rmd` to the
+single folder `episodes/`. `_extras/` content will be split into `learners/`
+and `instructors/` depending on the context of the content. Figures, data, and
+files all become subfolders of `episodes/`.
 ![](fig/folder-flow.svg){data-alt='A diagram showing the transition between the
 former lesson structure (styles) to the new lesson structure (workbench). It
 shows episodes flowing to episodes, extras flowing to learners and instructors,
 and figures, data, and files flowing to subfolders under episodes. Other
 folders are in grey with no arrows indicating that they are discarded.'}
 
+
 ## Callout Blocks
 
-
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
 :::::::::::::::::::::: {layout="[50,50]"}
-
 ::: {.column}
 
 ### Workbench
@@ -62,13 +74,13 @@ by a postfix tag declaring the class of block:
 {: .callout}
 ```
 :::
-
 :::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Challenge/Solution blocks
 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
 :::::::::::::::::::::: {layout="[50,50]"}
-
 ::: {.column}
 
 ### Workbench
@@ -138,11 +150,12 @@ with Level 2 headers. Additional blocks are still of the class "solution"
 :::
 
 :::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Instructor notes
 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
 :::::::::::::::::::::: {layout="[50,50]"}
-
 ::: {.column}
 
 ### Workbench
@@ -175,13 +188,13 @@ Maybe the instructors will see the source code!
 -->
 ```
 :::
-
 :::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Internal Links 
 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
 :::::::::::::::::::::: {layout="[50,50]"}
-
 ::: {.column}
 
 ### Workbench
@@ -221,11 +234,12 @@ path to the resource:
 
 
 :::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Figures
 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
 :::::::::::::::::::::: {layout="[50,50]"}
-
 ::: {.column}
 
 ### Workbench
