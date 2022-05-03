@@ -7,6 +7,13 @@
     "text": "This document is intended to provide you with a quick reference about the differences between kramdown (used by styles) and pandoc-flavoured markdown (used by The Workbench):"
   },
   {
+    "objectID": "transition-guide.html#default-branch",
+    "href": "transition-guide.html#default-branch",
+    "title": "Transition Guide: From Styles to Workbench",
+    "section": "Default Branch",
+    "text": "Default Branch\n\n\n\n\nWorkbench\nThe default branch is always main\n\n\n\n\nstyles\nThe default branch is gh-pages UNLESS you have rendered RMarkdown content, then the default branch is main"
+  },
+  {
     "objectID": "transition-guide.html#folder-structure",
     "href": "transition-guide.html#folder-structure",
     "title": "Transition Guide: From Styles to Workbench",
