@@ -51,11 +51,14 @@ trust within an open community.
 ::::::::::::
 ```
 
+::: {.callout-tip}
+
 These are called [_fenced divs_][fenced-divs] and in Workbench lessons, you will
 often see them have many more colons to clearly delineate sections in a lesson.
 The number of opening colons and the number of closing colons do not match and
 it is completely up to the lesson author to choose a style.
 
+:::
 :::
 
 ::: {.column}
@@ -73,6 +76,58 @@ by a postfix tag declaring the class of block:
 >
 {: .callout}
 ```
+
+::: {.callout-warning}
+
+### Did you know?
+
+The decision to use blockquotes was to facilitate an easy way to author special
+sections without having lesson authors/contributors type `<div>` tags into the
+document. 
+
+:::
+:::
+:::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+## Highlighted Code Blocks
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
+:::::::::::::::::::::: {layout="[50,50]"}
+::: {.column}
+
+### Workbench
+
+Code fences in the workbench are indicated by fences that consist of three
+backticks (```` ``` ````) with the name of the language appended on the opening 
+fence:
+
+````markdown
+clean all merged branches from git
+
+```bash
+git branch --merged | grep -v '^\*' | xargs git branch -d
+```
+````
+
+:::
+
+::: {.column}
+
+### styles
+
+Code fences in styles follow kramdown syntax, which prefers fences that consist
+of three tildes (`~~~`) with the liquid tag of the language appended on a new
+line after the closing fence (postfix tag):
+
+````markdown
+clean all merged branches from git
+
+~~~
+git branch --merged | grep -v '^\*' | xargs git branch -d
+~~~
+{: .language-bash}
+````
 :::
 :::::::::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
