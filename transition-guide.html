@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.328">
+<meta name="generator" content="quarto-0.9.347">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Workbench This and That - 2&nbsp; Transition Guide: From Styles to Workbench</title>
+<title>Workbench This and That - Transition Guide: From Styles to Workbench</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -87,7 +87,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
-<link href="./index.qmd" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -98,11 +97,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 20,
   "language": {
     "search-no-results-text": "No results",
@@ -120,53 +119,53 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </head>
 
-<body class="floating">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Transition Guide: From Styles to Workbench</span></h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
-      </button>
-    </div>
-  </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Workbench This and That</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./transition-guide.html" aria-current="page">Transition Guide</a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">Workbench This and That</a> 
-    </div>
-      </div>
-      <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-      </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./transition-guide.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Transition Guide: From Styles to Workbench</span></a>
-  </div>
-</li>
-    </ul>
-    </div>
-</nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#folder-structure" id="toc-folder-structure" class="nav-link active" data-scroll-target="#folder-structure">Folder Structure</a></li>
+  <li><a href="#callout-blocks" id="toc-callout-blocks" class="nav-link" data-scroll-target="#callout-blocks">Callout Blocks</a></li>
+  <li><a href="#challengesolution-blocks" id="toc-challengesolution-blocks" class="nav-link" data-scroll-target="#challengesolution-blocks">Challenge/Solution blocks</a></li>
+  <li><a href="#instructor-notes" id="toc-instructor-notes" class="nav-link" data-scroll-target="#instructor-notes">Instructor notes</a></li>
+  <li><a href="#internal-links" id="toc-internal-links" class="nav-link" data-scroll-target="#internal-links">Internal Links</a></li>
+  <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Transition Guide: From Styles to Workbench</span></h1>
+<h1 class="title">Transition Guide: From Styles to Workbench</h1>
 </div>
 
 
@@ -183,18 +182,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </header>
 
 <p>This document is intended to provide you with a quick reference about the differences between <a href="https://kramdown.gettalong.org/syntax.html">kramdown</a> (used by styles) and <a href="https://pandoc.org/MANUAL.html#pandocs-markdown">pandoc-flavoured markdown</a> (used by The Workbench):</p>
-<div class="column-screen-inset">
-<section id="folder-structure" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="folder-structure"><span class="header-section-number">2.1</span> Folder Structure</h2>
-<p><img src="fig/folder-flow.svg" class="img-fluid" data-alt="A diagram showing the transition between the former lesson structure (styles) to the new lesson structure (workbench). It shows episodes flowing to episodes, extras flowing to learners and instructors, and figures, data, and files flowing to subfolders under episodes. Other folders are in grey with no arrows indicating that they are discarded."></p>
+<section id="folder-structure" class="level2">
+<h2 class="anchored" data-anchor-id="folder-structure">Folder Structure</h2>
+<p>The folders from styles to Workbench are rearranged to achieve the following goals:</p>
+<ol type="1">
+<li>tools for building the lesson do not live in the lesson <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</li>
+<li>the episodes can be directly lifted from the lesson without needing external context/resources.</li>
+<li>extra content intended for instructors is clearly separated from that intended for learners</li>
+</ol>
+<p>Episodes (aka Chapters) will move from <code>_episodes/</code> and <code>_episodes_rmd</code> to the single folder <code>episodes/</code>. <code>_extras/</code> content will be split into <code>learners/</code> and <code>instructors/</code> depending on the context of the content. Figures, data, and files all become subfolders of <code>episodes/</code>. <img src="fig/folder-flow.svg" class="img-fluid" data-alt="A diagram showing the transition between the former lesson structure (styles) to the new lesson structure (workbench). It shows episodes flowing to episodes, extras flowing to learners and instructors, and figures, data, and files flowing to subfolders under episodes. Other folders are in grey with no arrows indicating that they are discarded."></p>
 </section>
-<section id="callout-blocks" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="callout-blocks"><span class="header-section-number">2.2</span> Callout Blocks</h2>
+<section id="callout-blocks" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="callout-blocks">Callout Blocks</h2>
+<div class="column-screen-inset">
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<section id="workbench" class="level3" data-number="2.2.1">
-<h3 data-number="2.2.1" class="anchored" data-anchor-id="workbench"><span class="header-section-number">2.2.1</span> Workbench</h3>
+<section id="workbench" class="level3">
+<h3 class="anchored" data-anchor-id="workbench">Workbench</h3>
 <p>A callout block with The Workbench uses <em>at least</em> three colons followed by a keyword to start a block. The block is closed with <em>at least</em> three colons.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>:::: callout</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -208,8 +213,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 </div>
 <div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<section id="styles" class="level3" data-number="2.2.2">
-<h3 data-number="2.2.2" class="anchored" data-anchor-id="styles"><span class="header-section-number">2.2.2</span> styles</h3>
+<section id="styles" class="level3">
+<h3 class="anchored" data-anchor-id="styles">styles</h3>
 <p>A callout block with styles used block quote syntax and level 2 headers followed by a postfix tag declaring the class of block:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; ## Act Openly</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;</span></span>
@@ -221,14 +226,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </div>
+</div>
 </section>
-<section id="challengesolution-blocks" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="challengesolution-blocks"><span class="header-section-number">2.3</span> Challenge/Solution blocks</h2>
+<section id="challengesolution-blocks" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="challengesolution-blocks">Challenge/Solution blocks</h2>
+<div class="column-screen-inset">
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<section id="workbench-1" class="level3" data-number="2.3.1">
-<h3 data-number="2.3.1" class="anchored" data-anchor-id="workbench-1"><span class="header-section-number">2.3.1</span> Workbench</h3>
+<section id="workbench-1" class="level3">
+<h3 class="anchored" data-anchor-id="workbench-1">Workbench</h3>
 <p>The challenge and solution blocks in the workbench are nested pairs of blocks with an optional Level 3 header. You can additonally add a “hint” block before the solution.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>::::::::::::::::::::::::::::: challenge</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -266,8 +273,8 @@ Tip
 </section>
 </div>
 <div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<section id="styles-1" class="level3" data-number="2.3.2">
-<h3 data-number="2.3.2" class="anchored" data-anchor-id="styles-1"><span class="header-section-number">2.3.2</span> styles</h3>
+<section id="styles-1" class="level3">
+<h3 class="anchored" data-anchor-id="styles-1">styles</h3>
 <p>The challenge and solution blocks in the workbench are nested block quotes with Level 2 headers. Additional blocks are still of the class “solution”</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; ## Challenge: build</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; </span></span>
@@ -289,14 +296,16 @@ Tip
 </div>
 </div>
 </div>
+</div>
 </section>
-<section id="instructor-notes" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="instructor-notes"><span class="header-section-number">2.4</span> Instructor notes</h2>
+<section id="instructor-notes" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="instructor-notes">Instructor notes</h2>
+<div class="column-screen-inset">
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<section id="workbench-2" class="level3" data-number="2.4.1">
-<h3 data-number="2.4.1" class="anchored" data-anchor-id="workbench-2"><span class="header-section-number">2.4.1</span> Workbench</h3>
+<section id="workbench-2" class="level3">
+<h3 class="anchored" data-anchor-id="workbench-2">Workbench</h3>
 <p>An instructor note in the workbench is formed by making a <a href="https://pandoc.org/MANUAL.html#divs-and-spans"><em>fenced div</em></a> with the class “instructor”</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>:::: instructor</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -306,8 +315,8 @@ Tip
 </section>
 </div>
 <div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<section id="styles-2" class="level3" data-number="2.4.2">
-<h3 data-number="2.4.2" class="anchored" data-anchor-id="styles-2"><span class="header-section-number">2.4.2</span> styles</h3>
+<section id="styles-2" class="level3">
+<h3 class="anchored" data-anchor-id="styles-2">styles</h3>
 <p>Instructor notes do not exist in styles<br>
 (-_-;)</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!--</span></span>
@@ -319,14 +328,16 @@ Tip
 </div>
 </div>
 </div>
+</div>
 </section>
-<section id="internal-links" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="internal-links"><span class="header-section-number">2.5</span> Internal Links</h2>
+<section id="internal-links" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="internal-links">Internal Links</h2>
+<div class="column-screen-inset">
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<section id="workbench-3" class="level3" data-number="2.5.1">
-<h3 data-number="2.5.1" class="anchored" data-anchor-id="workbench-3"><span class="header-section-number">2.5.1</span> Workbench</h3>
+<section id="workbench-3" class="level3">
+<h3 class="anchored" data-anchor-id="workbench-3">Workbench</h3>
 <p>Links in the Workbench are relative to the file so that you can link to the files and confirm they work in the github preview. Figures, files, and data are nested inside the <code>episodes/</code> folder.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Next Episode --&gt;</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">next episode on dragons</span><span class="co">](dragons.md)</span></span>
@@ -337,8 +348,8 @@ Tip
 </section>
 </div>
 <div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<section id="styles-3" class="level3" data-number="2.5.2">
-<h3 data-number="2.5.2" class="anchored" data-anchor-id="styles-3"><span class="header-section-number">2.5.2</span> styles</h3>
+<section id="styles-3" class="level3">
+<h3 class="anchored" data-anchor-id="styles-3">styles</h3>
 <p>Links are relative to the page that they are rendered to. You should use the <code>{{ page.root }}</code> variable and the <code>link</code> tag in order to construct the correct path to the resource:</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Next Episode --&gt;</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">next episode on dragons</span><span class="co">]({{ page.root }}{% link _episodes/dragons.md %})</span></span>
@@ -350,14 +361,16 @@ Tip
 </div>
 </div>
 </div>
+</div>
 </section>
-<section id="figures" class="level2" data-number="2.6">
-<h2 data-number="2.6" class="anchored" data-anchor-id="figures"><span class="header-section-number">2.6</span> Figures</h2>
+<section id="figures" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="figures">Figures</h2>
+<div class="column-screen-inset">
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<section id="workbench-4" class="level3" data-number="2.6.1">
-<h3 data-number="2.6.1" class="anchored" data-anchor-id="workbench-4"><span class="header-section-number">2.6.1</span> Workbench</h3>
+<section id="workbench-4" class="level3">
+<h3 class="anchored" data-anchor-id="workbench-4">Workbench</h3>
 <p>Figures are written with the caption in the square brackets and alt appended as an attribute like so: <code>![caption](fig/image.png){alt='image description'}</code>.</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="al">![The dragon emerges!](fig/dragon-egg.png)</span>{alt='a red baby </span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>dragon head sticks out from its egg'}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -377,8 +390,8 @@ Note
 </section>
 </div>
 <div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<section id="styles-4" class="level3" data-number="2.6.2">
-<h3 data-number="2.6.2" class="anchored" data-anchor-id="styles-4"><span class="header-section-number">2.6.2</span> styles</h3>
+<section id="styles-4" class="level3">
+<h3 class="anchored" data-anchor-id="styles-4">styles</h3>
 <p>Figures are written with alt text in the square brackets, but no caption like so: <code>![alt text]({{ page.root }}/fig/image.png)</code></p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="al">![a red baby dragon head sticks out from its egg]({{ page.root }}/fig/dragon-egg.png)</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -387,13 +400,19 @@ Note
 </div>
 </div>
 </div>
-</section>
 </div>
 
 
+</section>
+<section class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1" role="doc-endnote"><p>caveat: we still need the GitHub actions, but those are buried in the <code>.github</code> folder<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 
 </main> <!-- /main -->
-<script type="application/javascript">
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const icon = "";
   const anchorJS = new window.AnchorJS();
@@ -472,15 +491,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="./index.qmd" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"></span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-  </div>
-</nav>
 </div> <!-- /content -->
 
 
