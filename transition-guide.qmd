@@ -27,6 +27,63 @@ then the default branch is `main`
 :::
 ::::::::::::::::::::::::::::::::
 
+## Infrastructure
+
+:::::::::::::: {layout="[50, 50]"}
+::: {.column}
+
+### Workbench
+
+The workbench infrastructure is **independent**^[one exception: github
+workflows are contained inside the `.github/workflows` folder] from individual
+lessons. It consists of three major pieces of software.
+
+ - **Git **
+ - **R**
+ - **[Pandoc][pandoc]**
+
+The workbench itself consists of three R packages, which can all be updated on
+the fly with no changes to the lesson.
+
+ - [{sandpaper}]\: user interface and workflow engine
+ - [{pegboard}]\: parsing and validation engine
+ - [{varnish}]\: HTML templates, CSS, and JS elements
+
+
+:::
+
+::: {.column}
+
+### styles
+
+The styles infrastructure is **embedded** within the lesson itself. It requires
+the following major pieces of software to run:
+
+ - **Git**
+ - **Ruby**
+ - **BASH**
+ - **Make**
+ - Python^[python in styles is required for validation and initialisation, but is not required for local rendering]
+ - R^[R in styles is required for R Markdown-based lessons]
+
+
+The styles workflow is a [Jekyll][jekyll]-based workflow, which uses the
+following components:
+
+ - [bundler](https://bundler.io/): manages the Ruby gems (packages) including Jekyll
+ - [Jekyll][jekyll]\: static site generator
+ - (file) `Makefile`: workflow management for building and validating
+ - (dir)  `assets/`: CSS and JS elements
+ - (dir)  `_layouts/`: HTML templates
+ - (dir)  `bin/`: intialisation, runtime, and validation scripts (in BASH, Python, and R)
+ - (dir)  `_includes/`: Markdown and HTML boilerplate for customisation
+
+The file components can only be updated via pull request.
+
+:::
+::::::::::::::::::::::::::::::::
+
+
 ## Local Rendering
 
 :::::::::::::: {layout="[50, 50]"}
@@ -34,7 +91,7 @@ then the default branch is `main`
 
 ### Workbench
 
-1. If you haven't already, Follow the [setup instructions for the workbench](https://carpentries.github.io/sandpaper-docs/#setup) to install R, pandoc, and the workbench packages
+1. If you haven't already, Follow the [setup instructions for the workbench][workbench-setup] to install R, pandoc, and the workbench packages
 2. In your lesson directory, open either [R](https://cloud.r-project.org/), [RStudio](https://www.rstudio.com/products/rstudio/download/#download), or [VS Code](https://code.visualstudio.com/docs/languages/r) and run:
 
 ```r
@@ -481,4 +538,10 @@ The dragon emerges!
 
 [kramdown]: https://kramdown.gettalong.org/syntax.html
 [pandoc]: https://pandoc.org/MANUAL.html#pandocs-markdown
+[jekyll]: http://jekyllrb.com/
 [fenced-divs]: https://pandoc.org/MANUAL.html#divs-and-spans
+[{varnish}]: https://carpentries.github.io/varnish/
+[{pegboard}]: https://carpentries.github.io/pegboard/
+[{sandpaper}]: https://carpentries.github.io/sandpaper/
+[{tinkr}]: https://docs.ropensci.org/tinkr/
+[workbench-setup]: https://carpentries.github.io/sandpaper-docs/#setup
