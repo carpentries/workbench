@@ -14,6 +14,13 @@
     "text": "Default Branch\n\n\n\n\nWorkbench\nThe default branch is always main\n\n\n\n\nstyles\nThe default branch is gh-pages UNLESS you have rendered RMarkdown content, then the default branch is main"
   },
   {
+    "objectID": "transition-guide.html#local-rendering",
+    "href": "transition-guide.html#local-rendering",
+    "title": "Transition Guide: From Styles to Workbench",
+    "section": "Local Rendering",
+    "text": "Local Rendering\n\n\n\n\nWorkbench\n\nIf you haven’t already, Follow the setup instructions for the workbench to install R, pandoc, and the workbench packages\nIn your lesson directory, open either R, RStudio, or VS Code and run:\n\nsandpaper::serve()\n\n\n\n\nstyles\n\nIf you haven’t already, Follow the setup instructions for styles to install Ruby, Bundler, Jekyll, Make, Python, and BASH\nIn your lesson directory, open your command line and run:\n\nmake serve"
+  },
+  {
     "objectID": "transition-guide.html#folder-structure",
     "href": "transition-guide.html#folder-structure",
     "title": "Transition Guide: From Styles to Workbench",
