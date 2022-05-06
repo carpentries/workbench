@@ -27,6 +27,36 @@ then the default branch is `main`
 :::
 ::::::::::::::::::::::::::::::::
 
+## Local Rendering
+
+:::::::::::::: {layout="[50, 50]"}
+::: {.column}
+
+### Workbench
+
+1. If you haven't already, Follow the [setup instructions for the workbench](https://carpentries.github.io/sandpaper-docs/#setup) to install R, pandoc, and the workbench packages
+2. In your lesson directory, open either [R](https://cloud.r-project.org/), [RStudio](https://www.rstudio.com/products/rstudio/download/#download), or [VS Code](https://code.visualstudio.com/docs/languages/r) and run:
+
+```r
+sandpaper::serve()
+```
+
+:::
+
+::: {.column}
+
+### styles
+
+1. If you haven't already, Follow the [setup instructions for styles](https://carpentries.github.io/lesson-example/setup) to install Ruby, Bundler, Jekyll, Make, Python, and BASH
+2. In your lesson directory, open your command line and run:
+
+```bash
+make serve
+```
+
+:::
+::::::::::::::::::::::::::::::::
+
 
 ## Folder Structure
 
