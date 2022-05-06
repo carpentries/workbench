@@ -14,6 +14,13 @@
     "text": "Default Branch\n\n\n\n\nWorkbench\nThe default branch is always main\n\n\n\n\nstyles\nThe default branch is gh-pages UNLESS you have rendered RMarkdown content, then the default branch is main"
   },
   {
+    "objectID": "transition-guide.html#infrastructure",
+    "href": "transition-guide.html#infrastructure",
+    "title": "Transition Guide: From Styles to Workbench",
+    "section": "Infrastructure",
+    "text": "Infrastructure\n\n\n\n\nWorkbench\nThe workbench infrastructure is independent1 from individual lessons. It consists of three major pieces of software.\n\nGit \nR\nPandoc\n\nThe workbench itself consists of three R packages, which can all be updated on the fly with no changes to the lesson.\n\n{sandpaper}: user interface and workflow engine\n{pegboard}: parsing and validation engine\n{varnish}: HTML templates, CSS, and JS elements\n\n\n\n\n\nstyles\nThe styles infrastructure is embedded within the lesson itself. It requires the following major pieces of software to run:\n\nGit\nRuby\nBASH\nMake\nPython2\nR3\n\nThe styles workflow is a Jekyll-based workflow, which uses the following components:\n\nbundler: manages the Ruby gems (packages) including Jekyll\nJekyll: static site generator\n(file) Makefile: workflow management for building and validating\n(dir) assets/: CSS and JS elements\n(dir) _layouts/: HTML templates\n(dir) bin/: intialisation, runtime, and validation scripts (in BASH, Python, and R)\n(dir) _includes/: Markdown and HTML boilerplate for customisation\n\nThe file components can only be updated via pull request."
+  },
+  {
     "objectID": "transition-guide.html#local-rendering",
     "href": "transition-guide.html#local-rendering",
     "title": "Transition Guide: From Styles to Workbench",
@@ -25,7 +32,7 @@
     "href": "transition-guide.html#folder-structure",
     "title": "Transition Guide: From Styles to Workbench",
     "section": "Folder Structure",
-    "text": "Folder Structure\nThe folders from styles to Workbench are rearranged to achieve the following goals:\n\ntools for building the lesson do not live in the lesson 1.\nthe episodes can be directly lifted from the lesson without needing external context/resources.\nextra content intended for instructors is clearly separated from that intended for learners\n\nEpisodes (aka Chapters) will move from _episodes/ and _episodes_rmd to the single folder episodes/. _extras/ content will be split into learners/ and instructors/ depending on the context of the content. Figures, data, and files all become subfolders of episodes/."
+    "text": "Folder Structure\nThe folders from styles to Workbench are rearranged to achieve the following goals:\n\ntools for building the lesson do not live in the lesson 4.\nthe episodes can be directly lifted from the lesson without needing external context/resources.\nextra content intended for instructors is clearly separated from that intended for learners\n\nEpisodes (aka Chapters) will move from _episodes/ and _episodes_rmd to the single folder episodes/. _extras/ content will be split into learners/ and instructors/ depending on the context of the content. Figures, data, and files all become subfolders of episodes/."
   },
   {
     "objectID": "transition-guide.html#callout-blocks",

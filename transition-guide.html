@@ -152,6 +152,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
    
   <ul>
   <li><a href="#default-branch" id="toc-default-branch" class="nav-link active" data-scroll-target="#default-branch">Default Branch</a></li>
+  <li><a href="#infrastructure" id="toc-infrastructure" class="nav-link" data-scroll-target="#infrastructure">Infrastructure</a></li>
   <li><a href="#local-rendering" id="toc-local-rendering" class="nav-link" data-scroll-target="#local-rendering">Local Rendering</a></li>
   <li><a href="#folder-structure" id="toc-folder-structure" class="nav-link" data-scroll-target="#folder-structure">Folder Structure</a></li>
   <li><a href="#callout-blocks" id="toc-callout-blocks" class="nav-link" data-scroll-target="#callout-blocks">Callout Blocks</a></li>
@@ -205,13 +206,62 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </section>
-<section id="local-rendering" class="level2">
-<h2 class="anchored" data-anchor-id="local-rendering">Local Rendering</h2>
+<section id="infrastructure" class="level2">
+<h2 class="anchored" data-anchor-id="infrastructure">Infrastructure</h2>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <section id="workbench-1" class="level3">
 <h3 class="anchored" data-anchor-id="workbench-1">Workbench</h3>
+<p>The workbench infrastructure is <strong>independent</strong><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> from individual lessons. It consists of three major pieces of software.</p>
+<ul>
+<li><strong>Git </strong></li>
+<li><strong>R</strong></li>
+<li><strong><a href="https://pandoc.org/MANUAL.html#pandocs-markdown">Pandoc</a></strong></li>
+</ul>
+<p>The workbench itself consists of three R packages, which can all be updated on the fly with no changes to the lesson.</p>
+<ul>
+<li><a href="https://carpentries.github.io/sandpaper/">{sandpaper}</a>: user interface and workflow engine</li>
+<li><a href="https://carpentries.github.io/pegboard/">{pegboard}</a>: parsing and validation engine</li>
+<li><a href="https://carpentries.github.io/varnish/">{varnish}</a>: HTML templates, CSS, and JS elements</li>
+</ul>
+</section>
+</div>
+<div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<section id="styles-1" class="level3">
+<h3 class="anchored" data-anchor-id="styles-1">styles</h3>
+<p>The styles infrastructure is <strong>embedded</strong> within the lesson itself. It requires the following major pieces of software to run:</p>
+<ul>
+<li><strong>Git</strong></li>
+<li><strong>Ruby</strong></li>
+<li><strong>BASH</strong></li>
+<li><strong>Make</strong></li>
+<li>Python<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></li>
+<li>R<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></li>
+</ul>
+<p>The styles workflow is a <a href="http://jekyllrb.com/">Jekyll</a>-based workflow, which uses the following components:</p>
+<ul>
+<li><a href="https://bundler.io/">bundler</a>: manages the Ruby gems (packages) including Jekyll</li>
+<li><a href="http://jekyllrb.com/">Jekyll</a>: static site generator</li>
+<li>(file) <code>Makefile</code>: workflow management for building and validating</li>
+<li>(dir) <code>assets/</code>: CSS and JS elements</li>
+<li>(dir) <code>_layouts/</code>: HTML templates</li>
+<li>(dir) <code>bin/</code>: intialisation, runtime, and validation scripts (in BASH, Python, and R)</li>
+<li>(dir) <code>_includes/</code>: Markdown and HTML boilerplate for customisation</li>
+</ul>
+<p>The file components can only be updated via pull request.</p>
+</section>
+</div>
+</div>
+</div>
+</section>
+<section id="local-rendering" class="level2">
+<h2 class="anchored" data-anchor-id="local-rendering">Local Rendering</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<section id="workbench-2" class="level3">
+<h3 class="anchored" data-anchor-id="workbench-2">Workbench</h3>
 <ol type="1">
 <li>If you haven’t already, Follow the <a href="https://carpentries.github.io/sandpaper-docs/#setup">setup instructions for the workbench</a> to install R, pandoc, and the workbench packages</li>
 <li>In your lesson directory, open either <a href="https://cloud.r-project.org/">R</a>, <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio</a>, or <a href="https://code.visualstudio.com/docs/languages/r">VS Code</a> and run:</li>
@@ -220,8 +270,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 </div>
 <div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<section id="styles-1" class="level3">
-<h3 class="anchored" data-anchor-id="styles-1">styles</h3>
+<section id="styles-2" class="level3">
+<h3 class="anchored" data-anchor-id="styles-2">styles</h3>
 <ol type="1">
 <li>If you haven’t already, Follow the <a href="https://carpentries.github.io/lesson-example/setup">setup instructions for styles</a> to install Ruby, Bundler, Jekyll, Make, Python, and BASH</li>
 <li>In your lesson directory, open your command line and run:</li>
@@ -236,7 +286,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2 class="anchored" data-anchor-id="folder-structure">Folder Structure</h2>
 <p>The folders from styles to Workbench are rearranged to achieve the following goals:</p>
 <ol type="1">
-<li>tools for building the lesson do not live in the lesson <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</li>
+<li>tools for building the lesson do not live in the lesson <a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>.</li>
 <li>the episodes can be directly lifted from the lesson without needing external context/resources.</li>
 <li>extra content intended for instructors is clearly separated from that intended for learners</li>
 </ol>
@@ -248,8 +298,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<section id="workbench-2" class="level3">
-<h3 class="anchored" data-anchor-id="workbench-2">Workbench</h3>
+<section id="workbench-3" class="level3">
+<h3 class="anchored" data-anchor-id="workbench-3">Workbench</h3>
 <p>A callout block with The Workbench uses <em>at least</em> three colons followed by a keyword to start a block. The block is closed with <em>at least</em> three colons.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>:::: callout</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -275,8 +325,8 @@ Tip
 </section>
 </div>
 <div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<section id="styles-2" class="level3">
-<h3 class="anchored" data-anchor-id="styles-2">styles</h3>
+<section id="styles-3" class="level3">
+<h3 class="anchored" data-anchor-id="styles-3">styles</h3>
 <p>A callout block with styles used block quote syntax and level 2 headers followed by a postfix tag declaring the class of block:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; ## Act Openly</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;</span></span>
@@ -309,8 +359,8 @@ Did you know?
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<section id="workbench-3" class="level3">
-<h3 class="anchored" data-anchor-id="workbench-3">Workbench</h3>
+<section id="workbench-4" class="level3">
+<h3 class="anchored" data-anchor-id="workbench-4">Workbench</h3>
 <p>Code fences in the workbench are indicated by fences that consist of three backticks (<code>```</code>) with the name of the language appended on the opening fence:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>clean all merged branches from git</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -320,8 +370,8 @@ Did you know?
 </section>
 </div>
 <div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<section id="styles-3" class="level3">
-<h3 class="anchored" data-anchor-id="styles-3">styles</h3>
+<section id="styles-4" class="level3">
+<h3 class="anchored" data-anchor-id="styles-4">styles</h3>
 <p>Code fences in styles follow kramdown syntax, which prefers fences that consist of three tildes (<code>~~~</code>) with the liquid tag of the language appended on a new line after the closing fence (postfix tag):</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>clean all merged branches from git</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -341,8 +391,8 @@ Did you know?
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<section id="workbench-4" class="level3">
-<h3 class="anchored" data-anchor-id="workbench-4">Workbench</h3>
+<section id="workbench-5" class="level3">
+<h3 class="anchored" data-anchor-id="workbench-5">Workbench</h3>
 <p>The challenge and solution blocks in the workbench are nested pairs of blocks with an optional Level 3 header. You can additonally add a “hint” block before the solution.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>::::::::::::::::::::::::::::: challenge</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -380,8 +430,8 @@ Tip
 </section>
 </div>
 <div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<section id="styles-4" class="level3">
-<h3 class="anchored" data-anchor-id="styles-4">styles</h3>
+<section id="styles-5" class="level3">
+<h3 class="anchored" data-anchor-id="styles-5">styles</h3>
 <p>The challenge and solution blocks in the workbench are nested block quotes with Level 2 headers. Additional blocks are still of the class “solution”</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; ## Challenge: build</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; </span></span>
@@ -411,8 +461,8 @@ Tip
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<section id="workbench-5" class="level3">
-<h3 class="anchored" data-anchor-id="workbench-5">Workbench</h3>
+<section id="workbench-6" class="level3">
+<h3 class="anchored" data-anchor-id="workbench-6">Workbench</h3>
 <p>Questions and Objectives appear at the top of the lesson as <a href="https://pandoc.org/MANUAL.html#divs-and-spans">fenced divs</a> with list elements:</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Bomp"</span></span>
@@ -447,8 +497,8 @@ Tip
 </section>
 </div>
 <div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<section id="styles-5" class="level3">
-<h3 class="anchored" data-anchor-id="styles-5">styles</h3>
+<section id="styles-6" class="level3">
+<h3 class="anchored" data-anchor-id="styles-6">styles</h3>
 <p>The questions, objectives, and keypoints were placed in the YAML metadata for each episode:</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Bomp"</span></span>
@@ -492,8 +542,8 @@ The trouble with YAML metadata
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<section id="workbench-6" class="level3">
-<h3 class="anchored" data-anchor-id="workbench-6">Workbench</h3>
+<section id="workbench-7" class="level3">
+<h3 class="anchored" data-anchor-id="workbench-7">Workbench</h3>
 <p>An <strong>inline instructor note</strong> in the workbench is formed inside an episode by making a <a href="https://pandoc.org/MANUAL.html#divs-and-spans"><em>fenced div</em></a> with the class “instructor”</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>:::: instructor</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -504,8 +554,8 @@ The trouble with YAML metadata
 </section>
 </div>
 <div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<section id="styles-6" class="level3">
-<h3 class="anchored" data-anchor-id="styles-6">styles</h3>
+<section id="styles-7" class="level3">
+<h3 class="anchored" data-anchor-id="styles-7">styles</h3>
 <p>Instructor notes do not exist in styles other than an aggregate markdown file called <code>_extras/guide.md</code></p>
 </section>
 </div>
@@ -519,8 +569,8 @@ The trouble with YAML metadata
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<section id="workbench-7" class="level3">
-<h3 class="anchored" data-anchor-id="workbench-7">Workbench</h3>
+<section id="workbench-8" class="level3">
+<h3 class="anchored" data-anchor-id="workbench-8">Workbench</h3>
 <p>Links in the Workbench are relative to the file so that you can link to the files and confirm they work in the github preview. Figures, files, and data are nested inside the <code>episodes/</code> folder.</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Next Episode --&gt;</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">next episode on dragons</span><span class="co">](dragons.md)</span></span>
@@ -531,8 +581,8 @@ The trouble with YAML metadata
 </section>
 </div>
 <div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<section id="styles-7" class="level3">
-<h3 class="anchored" data-anchor-id="styles-7">styles</h3>
+<section id="styles-8" class="level3">
+<h3 class="anchored" data-anchor-id="styles-8">styles</h3>
 <p>Links are relative to the page that they are rendered to. You should use the <code>{{ page.root }}</code> variable and the <code>link</code> tag in order to construct the correct path to the resource:</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Next Episode --&gt;</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">next episode on dragons</span><span class="co">]({{ page.root }}{% link _episodes/dragons.md %})</span></span>
@@ -552,8 +602,8 @@ The trouble with YAML metadata
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<section id="workbench-8" class="level3">
-<h3 class="anchored" data-anchor-id="workbench-8">Workbench</h3>
+<section id="workbench-9" class="level3">
+<h3 class="anchored" data-anchor-id="workbench-9">Workbench</h3>
 <p>Figures are written with the caption in the square brackets and alt appended as an attribute like so: <code>![caption](fig/image.png){alt='image description'}</code>.</p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="al">![The dragon emerges!](fig/dragon-egg.png)</span>{alt='a red baby </span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>dragon head sticks out from its egg'}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -573,8 +623,8 @@ Note
 </section>
 </div>
 <div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<section id="styles-8" class="level3">
-<h3 class="anchored" data-anchor-id="styles-8">styles</h3>
+<section id="styles-9" class="level3">
+<h3 class="anchored" data-anchor-id="styles-9">styles</h3>
 <p>Figures are written with alt text in the square brackets, but no caption like so: <code>![alt text]({{ page.root }}/fig/image.png)</code></p>
 <div class="sourceCode" id="cb16"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="al">![a red baby dragon head sticks out from its egg]({{ page.root }}/fig/dragon-egg.png)</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -590,7 +640,10 @@ Note
 <section class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn1" role="doc-endnote"><p>caveat: we still need the GitHub actions, but those are buried in the <code>.github</code> folder<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1" role="doc-endnote"><p>one exception: github workflows are contained inside the <code>.github/workflows</code> folder<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p>python in styles is required for validation and initialisation, but is not required for local rendering<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3" role="doc-endnote"><p>R in styles is required for R Markdown-based lessons<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4" role="doc-endnote"><p>caveat: we still need the GitHub actions, but those are buried in the <code>.github</code> folder<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 
