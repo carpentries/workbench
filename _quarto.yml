@@ -13,14 +13,19 @@ book:
   chapters:
     - index.qmd
     - transition-guide.qmd
+    - releases.qmd
 
 website:
   title: "Workbench This and That"
   background: primary
   navbar:
     left:
+      - href: index.qmd
+        text: Home
       - href: transition-guide.qmd
         text: Transition Guide
+      - href: releases.qmd
+        text: Release Process
 
 
 

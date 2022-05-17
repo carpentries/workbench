@@ -1,0 +1,63 @@
+---
+title: "How Packages for The Carpentries Workbench Are Released"
+---
+
+## Background
+
+The workbench contains three main packages:
+
+
+ - [{sandpaper}]\: user interface and workflow engine
+ - [{pegboard}]\: parsing and validation engine
+ - [{varnish}]\: HTML templates, CSS, and JS elements
+
+Each of these packages are available on the [Carpentries R-Universe][r-universe]
+and new versions are checked for hourly. This allows folks to get up-to-date
+versions of The Workbench packages built for their system without running out
+of GitHub API query attempts.
+
+In order to maintain quality, packages are only sent to the R-Universe if they
+have been formally released on GitHub ([as specified in the packages.json
+configuration
+file](https://github.com/carpentries/universe/blob/0c330a1e8f0337de483144fece37c2710af6f4df/packages.json#L16-L33)).
+This allows us to incrementally add new experimental features without changing
+the stable deployments.
+
+## Release Process
+
+When a package is ready for release we use the following checklist:
+
+ - [ ] Update version number in DESCRIPTION
+ - [ ] Add NEWS for the changes in this version
+ - [ ] Ensure all changes are committed and pushed
+ - [ ] add new signed tag with the name "<package> X.Y.Z"
+      ```
+      # example for tagging sandpaper 3.3.3
+      git tag -s 3.3.3 -m 'sandpaper 3.3.3'
+      ```
+ - [ ] create a release on github from the new tag
+
+The last two items can be achieved in a single step with the [github
+cli](https://cli.github.com/) with the command `gh release create X.Y.Z` for
+the version number
+
+```bash
+$ gh release create 3.3.3
+? Title (optional) sandpaper 3.3.3
+? Release notes  [Use arrows to move, type to filter]
+  Write my own
+> Write using generated notes as template
+  Leave blank
+```
+
+Selecting "Write using generated notes as a template" opens an editor and
+populates it with the pull requests that have been accepted since the last
+release.
+
+Once the relase is created on GitHub, then the package will be available on
+the R-Universe in about an hour or less. 
+
+[{varnish}]: https://carpentries.github.io/varnish/
+[{pegboard}]: https://carpentries.github.io/pegboard/
+[{sandpaper}]: https://carpentries.github.io/sandpaper/
+[r-universe]: https://carpentries.r-universe.dev/

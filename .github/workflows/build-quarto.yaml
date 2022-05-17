@@ -28,6 +28,7 @@ jobs:
       - name: Render book to all format
         # Add any command line argument needed
         run: |
+          cp README.md index.qmd
           quarto render
 
       - name: Deploy 🚀
