@@ -28,6 +28,6 @@ These are examples of lessons developed with The Workbench since the initial ann
 
 - Toby Hodges, Mateusz Kuzak, Aleksandra Nenadic, Sarah Stevens---[Collaborative Lesson Development Training](https://carpentries.github.io/lesson-development-training/)
 - Saranjeet Kuar, Achintya Rao, Heather Turner, Aman Goel---[R's Bug Tracking](https://contributor.r-project.org/r-bug-tracking-lesson/)
-- Saba Ferdous, David Pérez-Suárez---[Learn To Discover---Data Frames in Python](https://learntodiscover.github.io/lesson2_sandpaper/) (note---this uses a custom fork of sandpaper, and varnish to run python)
+- Saba Ferdous, David Pérez-Suárez---[Learn To Discover---Basic Python](https://learntodiscover.github.io/Basic_Python/) (note---this uses a custom fork of sandpaper, and varnish to run python)
 - Philipp Matthias Schäfer---[GitLab Novice](https://zedif.github.io/gitlab-novice/)
 - Michael Culshaw-Maurer---[Rewrite of the R Ecology Lesson](https://www.michaelc-m.com/Rewrite-R-ecology-lesson/)
