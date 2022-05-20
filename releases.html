@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.426">
+<meta name="generator" content="quarto-0.9.436">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -172,8 +172,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 
-
-
 <div class="quarto-title-meta">
 
     
@@ -198,24 +196,38 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2 class="anchored" data-anchor-id="release-process">Release Process</h2>
 <p>When a package is ready for release we use the following checklist:</p>
 <ul class="task-list">
-<li><input type="checkbox" disabled="">
-Update version number in DESCRIPTION</li>
-<li><input type="checkbox" disabled="">
-Add NEWS for the changes in this version</li>
-<li><input type="checkbox" disabled="">
-Ensure all changes are committed and pushed</li>
-<li><input type="checkbox" disabled="">
-add new signed tag with the name “<package> X.Y.Z” <code># example for tagging sandpaper 3.3.3       git tag -s 3.3.3 -m 'sandpaper 3.3.3'</code></package></li>
-<li><input type="checkbox" disabled="">
-create a release on github from the new tag</li>
+<li><p><input type="checkbox" disabled="">
+Update version number in DESCRIPTION</p></li>
+<li><p><input type="checkbox" disabled="">
+Add NEWS for the changes in this version</p></li>
+<li><p><input type="checkbox" disabled="">
+Ensure all changes are committed and pushed</p></li>
+<li><p><input type="checkbox" disabled="">
+add new signed tag with the name “<package> X.Y.Z”</package></p><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># example: create a signed (-s) tag for sandpaper 3.3.3</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> tag <span class="at">-s</span> 3.3.3 <span class="at">-m</span> <span class="st">'sandpaper 3.3.3'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p><input type="checkbox" disabled="">
+create a release on github from the new tag</p></li>
 </ul>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Zhian likes to create tags via the command line because he has set up his git configuration to use <a href="https://www.garrickadenbuie.com/blog/signed-verified-git-commits-keybase-rstudio/#fnref3">a gpg signature</a> so the tags and the releases are both verified.</p>
+</div>
+</div>
 <p>The last two items can be achieved in a single step with the <a href="https://cli.github.com/">github cli</a> with the command <code>gh release create X.Y.Z</code> for the version number</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> gh release create 3.3.3</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">?</span> Title <span class="er">(</span><span class="ex">optional</span><span class="kw">)</span> <span class="ex">sandpaper</span> 3.3.3</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">?</span> Release notes  [Use arrows to move, type to filter]</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="ex">Write</span> my own</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> Write <span class="ex">using</span> generated notes as template</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="ex">Leave</span> blank</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gh</span> release create 3.3.3</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ? Title (optional) sandpaper 3.3.3</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># ? Release notes  [Use arrows to move, type to filter]</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">#   Write my own</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># &gt; Write using generated notes as template</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co">#   Leave blank</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Selecting “Write using generated notes as a template” opens an editor and populates it with the pull requests that have been accepted since the last release.</p>
 <p>Once the relase is created on GitHub, then the package will be available on the R-Universe in about an hour or less.</p>
 
