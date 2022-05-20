@@ -31,23 +31,33 @@ When a package is ready for release we use the following checklist:
  - [ ] Add NEWS for the changes in this version
  - [ ] Ensure all changes are committed and pushed
  - [ ] add new signed tag with the name "<package> X.Y.Z"
-      ```
-      # example for tagging sandpaper 3.3.3
+
+      ```bash
+      # example: create a signed (-s) tag for sandpaper 3.3.3
       git tag -s 3.3.3 -m 'sandpaper 3.3.3'
       ```
  - [ ] create a release on github from the new tag
+
+
+::: {.callout-note}
+
+Zhian likes to create tags via the command line because he has set up his git
+configuration to use [a gpg signature](https://www.garrickadenbuie.com/blog/signed-verified-git-commits-keybase-rstudio/#fnref3)
+so the tags and the releases are both verified.
+
+:::
 
 The last two items can be achieved in a single step with the [github
 cli](https://cli.github.com/) with the command `gh release create X.Y.Z` for
 the version number
 
 ```bash
-$ gh release create 3.3.3
-? Title (optional) sandpaper 3.3.3
-? Release notes  [Use arrows to move, type to filter]
-  Write my own
-> Write using generated notes as template
-  Leave blank
+gh release create 3.3.3
+# ? Title (optional) sandpaper 3.3.3
+# ? Release notes  [Use arrows to move, type to filter]
+#   Write my own
+# > Write using generated notes as template
+#   Leave blank
 ```
 
 Selecting "Write using generated notes as a template" opens an editor and
