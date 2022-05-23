@@ -1,6 +1,17 @@
-# The Carpentries Workbench Landing Page
+# The Carpentries Workbench Resource Guide
 
-Repository for Discussions and Materials about The Carpentries Workbench.
+**The Carpentries Workbench is currently in its Beta Phase an undergoing testing**
+for the broader Carpentries Community including, but not limited to:
+
+ - Maintainers (Official Lessons)
+ - Lesson Developers (Community-curated Lessons)
+ - Instructors
+ - Trainers
+ - Learners
+
+You can [find out more about our workbench through our Resource Guide](#resources),
+**[introduce yourself](https://github.com/workbench/disscussions/1)**,
+and [give feedback via GitHub Discussions](https://github.com/workbench/discussions).
 
 ## Resources
 
