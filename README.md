@@ -9,9 +9,11 @@ for the broader Carpentries Community including, but not limited to:
  - Trainers
  - Learners
 
-You can [find out more about our workbench through our Resource Guide](#resources),
-**[introduce yourself](https://github.com/workbench/disscussions/1)**,
-and [give feedback via GitHub Discussions](https://github.com/workbench/discussions).
+If you would like to participate in the beta phase, you can
+
+ - [find out more about our workbench through our Resource Guide](#resources),
+ - **[introduce yourself](https://github.com/carpentries/workbench/discussions/1)**, and 
+ - [give feedback via GitHub Discussions](https://github.com/carpentries/workbench/discussions/)
 
 ## Resources
 
