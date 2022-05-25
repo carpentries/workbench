@@ -1,5 +1,10 @@
 # The Carpentries Workbench Resource Guide
 
+<figure>
+<img src="fig/hex-collection.jpeg" alt="three isometric hex badges for The Carpentries Workbench representing the packages sandpaper, pegboard, and varnish. Each badge is styled to look like a tiny workshop working on a wooden carpentries logo with the package namesake highlighted.">
+</figure>
+
+
 **The Carpentries Workbench is currently in its Beta Phase an undergoing testing**
 for the broader Carpentries Community including, but not limited to:
 
