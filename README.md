@@ -8,6 +8,10 @@
 </figure>
 
 
+::::::: {.callout-note}
+
+## Workbench Beta Phase
+
 **The Carpentries Workbench is currently in its Beta Phase an undergoing testing**
 for the broader Carpentries Community including, but not limited to:
 
@@ -22,6 +26,8 @@ If you would like to participate in the beta phase, you can
  - [find out more about our workbench through our Resource Guide](#resources),
  - **[introduce yourself](https://github.com/carpentries/workbench/discussions/1)**, and 
  - [give feedback via GitHub Discussions](https://github.com/carpentries/workbench/discussions/)
+
+::::::::::::::::::::
 
 ## Resources
 
