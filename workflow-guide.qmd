@@ -1,0 +1,119 @@
+---
+title: "Behind the Scenes of The Carpentries Workbench"
+---
+
+## Introduction
+
+The Carpentries Workbench is the set of R packages and other tools that make it
+easy for anyone to create and contribute to a Carpentries Lesson and it was
+designed with the following guiding principles:
+
+1. **Lesson contributors do not need to know anything about the toolchain to
+   contribute in a meaningful way**,
+2. Elements of the toolchain that evaluates, validates, and stylizes should
+   live in **separate repositories to allow for seamless updating**, and 
+3. The procedures should be **well-documented and generalizable** enough that the
+   toolchain is not entirely dependent on R.
+
+This document provides details of how the packages of the workbench work
+behind the scenes to create a full Carpentries lesson website from markdown
+source file. 
+
+### Tools
+
+The Workbench is built on top of the following major pieces of software, all of
+which are available via [RStudio](https://rstudio.com)
+
+ - **Git **
+ - **R**
+ - **[Pandoc](https://pandoc.org)**
+
+The workbench itself consists of three R packages, which can all be updated on
+the fly with no changes to the lesson.
+
+There are three packages that comprise The Workbench:
+
+- [{sandpaper}](https://carpentries.github.io/sandpaper/): User interface and engine for the workbench
+- [{pegboard}](https://carpentries.github.io/pegboard/): Validation and parsing of lesson components
+- [{varnish}](https://carpentries.github.io/varnish/): HTML, CSS, and JavaScript templates
+
+In addition, The workbench uses the following packages for support:
+
+- [{knitr}](https://yihui.org/knitr/): engine that renders R Markdown documents to Markdown
+- [{tinkr}](https://docs.ropensci.org/tinkr/): converts Markdown to an XML representation for {pegboard} to parse
+- [{pkgdown}](https://pkgdown.r-lib.org/): provisioning and applying HTML templates
+- [{gert}](https://gert.r-lib.org/): interface to git with or without a local installation.
+
+## Local Workflow
+
+
+### The two-step
+
+The local workflow is known as a 'two-step' workflow, which renders markdown
+from the source files (either Markdown or R Markdown) and then applies the 
+styling to HTML rendered from these Markdown sources. 
+
+![The local two-step model of deployment into local
+folders](fig/local-flow.svg){alt='diagram of three folders. The first
+folder, "episodes/", labelled as RMarkdown, has an arrow (labelled as hash
+episodes) pointing to "site/built/", labelled as Markdown. The Markdown folder
+has an arrow (labelled as "apply template") pointing to "site/docs/", labelled
+as "HTML". The first folder is labelled in pale yellow, indicating that it is
+the only one tracked by git.'}
+
+::: {.callout-note}
+Only the source files here are tracked by Git. Everything else is ignored locally.
+:::
+
+We use the two-step process because it provides us an air-gap between the tools
+needed to build the markdown and the tools needed to render the website. It also
+provides us a ready cache of outputs so that R Markdown source content does not
+need to be re-rendered. Moreover, we designed these tools to be independent from
+each other so that if, in the future, we can mix and match with different tools
+as they become available.
+
+::: {.callout-note}
+The two-step process is not new; the [{rmarkdown}](https://pkgs.rstudio.com/rmarkdown/)
+package uses this process behind the scenes, but it will discard the markdown
+output by default.
+:::
+
+### Validation
+
+Lesson validation is performed by {pegboard} by parsing Markdown and evaluating
+the elements for low-hanging fruit of accessibility: 
+
+ 1. [Link and Image Validity](https://carpentries.github.io/pegboard/articles/validation.html#link-validation)
+ 2. [Fenced Div Validity](https://carpentries.github.io/pegboard/articles/validation.html#fenced-div-validation)
+ 3. [Heading Validity](https://carpentries.github.io/pegboard/articles/validation.html#heading-validation)
+
+**The validation of lesson elements is performed _before_ the lesson is
+built**, so that the contributor can address any issues even if they have a
+broken component in the rest of the toolchain. Invalid lesson elements are
+displayed on the contributors R console with information about the location of
+the error, an explanation of what was wrong, and a link to resources to help
+explain the error and offer correction.
+
+### In Practice
+
+Because of the need for bootstrapping, validation, and caching, the number of 
+steps from source files to lesson website is considerably more than two. The
+diagram below describes shows the process by which a lesson is built using the
+workbench.
+
+1. The lesson contributor has an idea and writes it in Markdown or R Markdown
+2. The lesson contributor runs `sandpaper::serve()` to start the engine.
+3. {sandpaper} passes this file to {pegboard}, which checks it for accessibility
+   and reports to the user if there are any errors
+4. {sandpaper} passes the file to {knitr}, which renders the file to Markdown
+   and stores it in the `site/built` folder
+5. {sandpaper} passes the file to PANDOC, which renders the Markdown to HTML
+   (this is temporarily stored as a character vector in R)
+6. {sandpaper} passes the HTML to {pkgdown}, which applies the templates from 
+   {varnish}, creating the lesson website.
+
+![](fig/local-workbench-flow.svg){alt='Diagram showing the workflow described above.'}
+
+## Remote Workflow
+
+Writup coming soon!

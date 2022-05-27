@@ -22,6 +22,8 @@ website:
     left:
       - href: index.qmd
         text: Home
+      - href: workflow-guide.qmd
+        text: How The Workbench Works
       - href: transition-guide.qmd
         text: Transition Guide
       - href: releases.qmd
