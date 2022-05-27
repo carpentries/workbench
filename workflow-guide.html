@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.466">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Workbench This and That - Behind the Scenes of The Carpentries Workbench</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script><script src="site_libs/quarto-nav/headroom.min.js"></script><script src="site_libs/clipboard/clipboard.min.js"></script><script src="site_libs/quarto-search/autocomplete.umd.js"></script><script src="site_libs/quarto-search/fuse.min.js"></script><script src="site_libs/quarto-search/quarto-search.js"></script><meta name="quarto:offset" content="./"><script src="site_libs/quarto-html/quarto.js"></script><script src="site_libs/quarto-html/popper.min.js"></script><script src="site_libs/quarto-html/tippy.umd.min.js"></script><script src="site_libs/quarto-html/anchor.min.js"></script><link href="site_libs/quarto-html/tippy.css" rel="stylesheet"><link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><script src="site_libs/bootstrap/bootstrap.min.js"></script><link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet"><link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet"></head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Workbench This and That</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html">Home</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./workflow-guide.html" aria-current="page">How The Workbench Works</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./transition-guide.html">Transition Guide</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./releases.html">Release Process</a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
+  <ul class="collapse">
+  <li><a href="#tools" id="toc-tools" class="nav-link" data-scroll-target="#tools">Tools</a></li>
+  </ul></li>
+  <li><a href="#local-workflow" id="toc-local-workflow" class="nav-link" data-scroll-target="#local-workflow">Local Workflow</a>
+  <ul class="collapse">
+  <li><a href="#the-two-step" id="toc-the-two-step" class="nav-link" data-scroll-target="#the-two-step">The two-step</a></li>
+  <li><a href="#validation" id="toc-validation" class="nav-link" data-scroll-target="#validation">Validation</a></li>
+  <li><a href="#in-practice" id="toc-in-practice" class="nav-link" data-scroll-target="#in-practice">In Practice</a></li>
+  </ul></li>
+  <li><a href="#remote-workflow" id="toc-remote-workflow" class="nav-link" data-scroll-target="#remote-workflow">Remote Workflow</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Behind the Scenes of The Carpentries Workbench</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>The Carpentries Workbench is the set of R packages and other tools that make it easy for anyone to create and contribute to a Carpentries Lesson and it was designed with the following guiding principles:</p>
+<ol type="1">
+<li><strong>Lesson contributors do not need to know anything about the toolchain to contribute in a meaningful way</strong>,</li>
+<li>Elements of the toolchain that evaluates, validates, and stylizes should live in <strong>separate repositories to allow for seamless updating</strong>, and</li>
+<li>The procedures should be <strong>well-documented and generalizable</strong> enough that the toolchain is not entirely dependent on R.</li>
+</ol>
+<p>This document provides details of how the packages of the workbench work behind the scenes to create a full Carpentries lesson website from markdown source file.</p>
+<section id="tools" class="level3">
+<h3 class="anchored" data-anchor-id="tools">Tools</h3>
+<p>The Workbench is built on top of the following major pieces of software, all of which are available via <a href="https://rstudio.com">RStudio</a></p>
+<ul>
+<li><strong>Git </strong></li>
+<li><strong>R</strong></li>
+<li><strong><a href="https://pandoc.org">Pandoc</a></strong></li>
+</ul>
+<p>The workbench itself consists of three R packages, which can all be updated on the fly with no changes to the lesson.</p>
+<p>There are three packages that comprise The Workbench:</p>
+<ul>
+<li><a href="https://carpentries.github.io/sandpaper/">{sandpaper}</a>: User interface and engine for the workbench</li>
+<li><a href="https://carpentries.github.io/pegboard/">{pegboard}</a>: Validation and parsing of lesson components</li>
+<li><a href="https://carpentries.github.io/varnish/">{varnish}</a>: HTML, CSS, and JavaScript templates</li>
+</ul>
+<p>In addition, The workbench uses the following packages for support:</p>
+<ul>
+<li><a href="https://yihui.org/knitr/">{knitr}</a>: engine that renders R Markdown documents to Markdown</li>
+<li><a href="https://docs.ropensci.org/tinkr/">{tinkr}</a>: converts Markdown to an XML representation for {pegboard} to parse</li>
+<li><a href="https://pkgdown.r-lib.org/">{pkgdown}</a>: provisioning and applying HTML templates</li>
+<li><a href="https://gert.r-lib.org/">{gert}</a>: interface to git with or without a local installation.</li>
+</ul>
+</section>
+</section>
+<section id="local-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="local-workflow">Local Workflow</h2>
+<section id="the-two-step" class="level3">
+<h3 class="anchored" data-anchor-id="the-two-step">The two-step</h3>
+<p>The local workflow is known as a ‘two-step’ workflow, which renders markdown from the source files (either Markdown or R Markdown) and then applies the styling to HTML rendered from these Markdown sources.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="fig/local-flow.svg" class="img-fluid figure-img" alt="diagram of three folders. The first folder, &quot;episodes/&quot;, labelled as RMarkdown, has an arrow (labelled as hash episodes) pointing to &quot;site/built/&quot;, labelled as Markdown. The Markdown folder has an arrow (labelled as &quot;apply template&quot;) pointing to &quot;site/docs/&quot;, labelled as &quot;HTML&quot;. The first folder is labelled in pale yellow, indicating that it is the only one tracked by git."></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">The local two-step model of deployment into local folders</figcaption><p></p>
+</figure>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Only the source files here are tracked by Git. Everything else is ignored locally.</p>
+</div>
+</div>
+<p>We use the two-step process because it provides us an air-gap between the tools needed to build the markdown and the tools needed to render the website. It also provides us a ready cache of outputs so that R Markdown source content does not need to be re-rendered. Moreover, we designed these tools to be independent from each other so that if, in the future, we can mix and match with different tools as they become available.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The two-step process is not new; the <a href="https://pkgs.rstudio.com/rmarkdown/">{rmarkdown}</a> package uses this process behind the scenes, but it will discard the markdown output by default.</p>
+</div>
+</div>
+</section>
+<section id="validation" class="level3">
+<h3 class="anchored" data-anchor-id="validation">Validation</h3>
+<p>Lesson validation is performed by {pegboard} by parsing Markdown and evaluating the elements for low-hanging fruit of accessibility:</p>
+<ol type="1">
+<li><a href="https://carpentries.github.io/pegboard/articles/validation.html#link-validation">Link and Image Validity</a></li>
+<li><a href="https://carpentries.github.io/pegboard/articles/validation.html#fenced-div-validation">Fenced Div Validity</a></li>
+<li><a href="https://carpentries.github.io/pegboard/articles/validation.html#heading-validation">Heading Validity</a></li>
+</ol>
+<p><strong>The validation of lesson elements is performed <em>before</em> the lesson is built</strong>, so that the contributor can address any issues even if they have a broken component in the rest of the toolchain. Invalid lesson elements are displayed on the contributors R console with information about the location of the error, an explanation of what was wrong, and a link to resources to help explain the error and offer correction.</p>
+</section>
+<section id="in-practice" class="level3">
+<h3 class="anchored" data-anchor-id="in-practice">In Practice</h3>
+<p>Because of the need for bootstrapping, validation, and caching, the number of steps from source files to lesson website is considerably more than two. The diagram below describes shows the process by which a lesson is built using the workbench.</p>
+<ol type="1">
+<li>The lesson contributor has an idea and writes it in Markdown or R Markdown</li>
+<li>The lesson contributor runs <code>sandpaper::serve()</code> to start the engine.</li>
+<li>{sandpaper} passes this file to {pegboard}, which checks it for accessibility and reports to the user if there are any errors</li>
+<li>{sandpaper} passes the file to {knitr}, which renders the file to Markdown and stores it in the <code>site/built</code> folder</li>
+<li>{sandpaper} passes the file to PANDOC, which renders the Markdown to HTML (this is temporarily stored as a character vector in R)</li>
+<li>{sandpaper} passes the HTML to {pkgdown}, which applies the templates from {varnish}, creating the lesson website.</li>
+</ol>
+<p><img src="fig/local-workbench-flow.svg" class="img-fluid" alt="Diagram showing the workflow described above."></p>
+</section>
+</section>
+<section id="remote-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="remote-workflow">Remote Workflow</h2>
+<p>Writup coming soon!</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
