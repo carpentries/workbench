@@ -137,7 +137,7 @@ and figures, data, and files flowing to subfolders under episodes. Other
 folders are in grey with no arrows indicating that they are discarded.'}
 
 
-## Callout Blocks
+## Callout Blocks/Special Blockquotes
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
 :::::::::::::::::::::: {layout="[50,50]"}
@@ -147,6 +147,12 @@ folders are in grey with no arrows indicating that they are discarded.'}
 
 A callout block with The Workbench uses _at least_ three colons followed by a
 keyword to start a block. The block is closed with _at least_ three colons.
+
+::::: {.callout-note}
+
+You can find a demonstration of all the possible callout blocks in [the workbench component guide](https://carpentries.github.io/sandpaper-docs/component-guide.html)
+
+:::::
 
 ```markdown
 :::: callout
@@ -173,8 +179,15 @@ it is completely up to the lesson author to choose a style.
 
 ### styles
 
-A callout block with styles used block quote syntax and level 2 headers followed
-by a postfix tag declaring the class of block:
+A callout block (aka "Special Blockquote") with styles used block quote syntax and level 2 headers followed
+by a postfix tag declaring the class of block
+
+
+::::: {.callout-note}
+
+You can find a demonstration of all the possible callout blocks in [the styles "Special Blockquotes" guide](https://carpentries.github.io/lesson-example/04-formatting/index.html#special-blockquotes)
+
+:::::
 
 ```markdown
 > ## Act Openly
