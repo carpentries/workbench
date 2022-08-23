@@ -136,6 +136,126 @@ shows episodes flowing to episodes, extras flowing to learners and instructors,
 and figures, data, and files flowing to subfolders under episodes. Other
 folders are in grey with no arrows indicating that they are discarded.'}
 
+## Navigation 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
+:::::::::::::::::::::: {layout="[50,50]"}
+::: {.column}
+
+### Workbench
+
+Episode and setup information is located on the left hand side of the page.
+Navigation in the workbench is split between information for learners and
+information for instructors. The top right of the page has a toggle button
+between Learner and Instructor views, which change the four main navigation
+items in the top navigation bar. 
+
+
+#### Learner View
+
+When this is toggled, the main navigation contains the following menu items:
+Key Points, Glossary, Learner Profiles, and More. The "More" dropdown menu
+contains information for learners from the `learners/` folder aside from the
+setup instructions.
+
+![](fig/screenshot-learner-view.png){alt='screenshot of the workbench version
+of "The Unix Shell". A blue arrow points to the top right corner indicating the
+lesson is in "Learner View". The menu bar states the name of the lesson and has
+the items described in text, with all but the first underlined. There is a grey
+sidebar that says "Episodes" and a section called "Summary and Setup" is
+underlined in blue. The main content shows a blue underline under the last
+updated status.'}
+
+#### Instructor view
+
+When this is toggled, the main navigation contains the following menu items:
+Key Points, Instructor Notes, Extract All Images, and More. The "More" dropdown
+menu contains information for learners from the `instructors/` folder.
+
+In addition, the schedule now appears on the home page, instructor notes are
+displayed inline, and the estimated timings for a lesson appear.
+
+
+![](fig/screenshot-instructor-view.png){alt='screenshot of the workbench
+version of "The Unix Shell". A red arrow points to the top right corner
+indicating the lesson is in "Learner View". The menu bar states the name of the
+lesson and has the items described in text, with all but the first underlined
+in red. There is a grey sidebar that says "Episodes" and a section called
+"Summary and Setup" is underlined in red. The main content shows a red
+underline under the last updated status.'}
+
+
+:::
+
+::: {.column}
+
+### styles
+
+Navigation in the styles repository is relegated to a single menubar at the top
+of the lesson with seven items: Home, Code of Conduct, Setup, Episodes (dropdown),
+Extras (dropdown), License, and Improve This Page. 
+
+
+![](fig/screenshot-styles.png){alt='screenshot of the styles version
+of "The Unix Shell" lesson highlighting a single navigation bar at the top
+containing the items described in the text'}
+
+::: {.callout-warning}
+
+#### Perceived simplicity
+
+While the styles repositories appear to be simpler, there were several components
+of lessons (such as instructor notes and glossary terms) that were not clearly
+available to learners or instructors. Moreover, in cases like instructor training,
+where there was much extra content for both learners and instructors, it was not
+easy to look at the "Extra" menu and determine what content was appropriate for
+a learner or an instructor.
+
+:::
+
+
+:::
+:::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
+
+
+## Setup Information
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
+:::::::::::::::::::::: {layout="[50,50]"}
+::: {.column}
+
+### Workbench 
+
+The setup instructions are located on the home page at the `#setup` anchor. 
+
+The setup information lives in `learners/setup.md` or `learner/setup.Rmd`,
+depending on whether or not you need code generated. Access this file from 
+episodes with 
+
+```markdown
+[setup instructions](../learners/setup.md)
+```
+
+:::
+
+::: {.column}
+
+### styles
+
+The setup instructions are in a separate page called `/setup`
+
+The setup information lives in the top level of the lesson at `setup.md` (no
+possibility to render generated content). Access this file from episodes with
+
+```markdown
+[setup instructions]({{ page.root }}/setup.md)
+```
+
+:::
+:::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
+
 
 ## Callout Blocks/Special Blockquotes {#callout-blocks}
 
