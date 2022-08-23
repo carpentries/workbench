@@ -56,6 +56,20 @@
     "text": "Folder Structure\nThe folders from styles to Workbench are rearranged to achieve the following goals:\n\ntools for building the lesson do not live in the lesson 4.\nthe episodes can be directly lifted from the lesson without needing external context/resources.\nextra content intended for instructors is clearly separated from that intended for learners\n\nEpisodes (aka Chapters) will move from _episodes/ and _episodes_rmd to the single folder episodes/. _extras/ content will be split into learners/ and instructors/ depending on the context of the content. Figures, data, and files all become subfolders of episodes/."
   },
   {
+    "objectID": "transition-guide.html#navigation",
+    "href": "transition-guide.html#navigation",
+    "title": "Transition Guide: From Styles to Workbench",
+    "section": "Navigation",
+    "text": "Navigation\n\n\n\n\n\nWorkbench\nEpisode and setup information is located on the left hand side of the page. Navigation in the workbench is split between information for learners and information for instructors. The top right of the page has a toggle button between Learner and Instructor views, which change the four main navigation items in the top navigation bar.\n\nLearner View\nWhen this is toggled, the main navigation contains the following menu items: Key Points, Glossary, Learner Profiles, and More. The “More” dropdown menu contains information for learners from the learners/ folder aside from the setup instructions.\n\n\n\nInstructor view\nWhen this is toggled, the main navigation contains the following menu items: Key Points, Instructor Notes, Extract All Images, and More. The “More” dropdown menu contains information for learners from the instructors/ folder.\nIn addition, the schedule now appears on the home page, instructor notes are displayed inline, and the estimated timings for a lesson appear.\n\n\n\n\n\n\nstyles\nNavigation in the styles repository is relegated to a single menubar at the top of the lesson with seven items: Home, Code of Conduct, Setup, Episodes (dropdown), Extras (dropdown), License, and Improve This Page.\n\n\n\n\n\n\n\nPerceived simplicity\n\n\n\nWhile the styles repositories appear to be simpler, there were several components of lessons (such as instructor notes and glossary terms) that were not clearly available to learners or instructors. Moreover, in cases like instructor training, where there was much extra content for both learners and instructors, it was not easy to look at the “Extra” menu and determine what content was appropriate for a learner or an instructor."
+  },
+  {
+    "objectID": "transition-guide.html#setup-information",
+    "href": "transition-guide.html#setup-information",
+    "title": "Transition Guide: From Styles to Workbench",
+    "section": "Setup Information",
+    "text": "Setup Information\n\n\n\n\n\nWorkbench\nThe setup instructions are located on the home page at the #setup anchor.\nThe setup information lives in learners/setup.md or learner/setup.Rmd, depending on whether or not you need code generated. Access this file from episodes with\n[setup instructions](../learners/setup.md)\n\n\n\n\nstyles\nThe setup instructions are in a separate page called /setup\nThe setup information lives in the top level of the lesson at setup.md (no possibility to render generated content). Access this file from episodes with\n[setup instructions]({{ page.root }}/setup.md)"
+  },
+  {
     "objectID": "transition-guide.html#callout-blocks",
     "href": "transition-guide.html#callout-blocks",
     "title": "Transition Guide: From Styles to Workbench",
