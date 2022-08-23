@@ -7,6 +7,24 @@
 <figcaption style='display: block'></p>The Workbench is an accessible lesson infrastructure built in R</p></figcaption>
 </figure>
 
+::::::: {.callout-tip}
+
+## Installation
+
+To install the workbench, make sure you have a working version of R and 
+pandoc/RStudio installed (see [the workbench setup instructions for 
+details](https://carpentries.github.io/sandpaper-docs/)).
+
+From there, you can install the workbench packages and their dependencies from
+our [Carpentries R Universe](https://carpentries.r-universe.dev):
+
+```r
+install.packages(c("sandpaper", "varnish", "pegboard", "tinkr"),
+  repos = c("https://carpentries.r-universe.dev/", getOption("repos")))
+```
+
+:::::::::::::::::::::::
+
 
 ::::::: {.callout-note}
 
