@@ -17,7 +17,6 @@ book:
 
 website:
   title: "Workbench This and That"
-  background: primary
   navbar:
     left:
       - href: index.qmd
