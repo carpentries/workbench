@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.38">
+<meta name="generator" content="quarto-1.1.251">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,10 +11,15 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 </style>
 
 
@@ -63,9 +68,11 @@ ul.task-list{list-style: none;}
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <a class="navbar-brand" href="./index.html">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Workbench This and That</span>
-  </a>
+    </a>
+  </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -94,7 +101,7 @@ ul.task-list{list-style: none;}
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
@@ -229,7 +236,59 @@ Note
 </section>
 <section id="remote-workflow" class="level2">
 <h2 class="anchored" data-anchor-id="remote-workflow">Remote Workflow</h2>
-<p>Writup coming soon!</p>
+<p>The motivation for the remote workflows is the same as the local workflow: to allow for rendering of an HTML website without having to rebuild files that have previously been built. The only twist is that these files are necessarily ephemeral because we will never be building the site on the same server day to day, so how do we avoid rebuilding markdown intermediates and HTML outputs when we do not track them by git?</p>
+<p>The answer is with orphan branches that map on to the folders in <code>site/</code> using git worktrees, which is achieved via the <a href="https://carpentries.github.io/sandpaper/reference/index.html#-internal-continous-integration-functions">internal function <code>sandpaper:::ci_deploy()</code></a>.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Folder</th>
+<th style="text-align: left;">Branch</th>
+<th style="text-align: left;">Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>site/built</code></td>
+<td style="text-align: left;"><code>md-outputs</code></td>
+<td style="text-align: left;">Markdown outputs and rendered files (e.g.&nbsp;images)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>site/docs</code></td>
+<td style="text-align: left;"><code>gh-pages</code></td>
+<td style="text-align: left;">HTML outputs for the live website.</td>
+</tr>
+</tbody>
+</table>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/carpentries/sandpaper/raw/main/vignettes/articles/img/branch-flow.svg" class="img-fluid figure-img" alt="Diagrammatic representation of the GitHub deployment cycle showing four branches, gh-pages, md-outputs, main, and my-edit. The my-edit branch is a direct descendent of the main branch, while the gh-pages and md-outputs branches are orphans. Each commit of the main branch has a process represented by a dashed arrow that builds a commit of the subsequent orphan branches"></p>
+<p></p><figcaption class="figure-caption">Diagram of the <code>sandpaper:::ci_deploy()</code> process</figcaption><p></p>
+</figure>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Glossary
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<dl>
+<dt>orphan branch</dt>
+<dd>
+Orphan branches are separate branches known to git that share no common history with the main branch.
+</dd>
+<dt>work tree</dt>
+<dd>
+Work trees are a special git workflow that allows you to work on multiple for the same repository in separate folders.
+</dd>
+</dl>
+</div>
+</div>
+<p>Each time a commit happens on the <code>main</code> branch, the main branch is checked out and then git worktrees are provisioned inside of the <code>site/</code> directory for each branch via the <a href="https://carpentries.github.io/sandpaper/reference/git_worktree_setup.html">internal function <code>sandpaper:::git_worktree_setup()</code></a>, which is modified from Hadley Wickham’s <a href="https://pkgdown.r-lib.org/reference/deploy_to_branch.html"><code>pkgdown::deploy_to_branch()</code> function</a>. After they are provisioned and the contents populated from the existing branches, then they appear on the remote system just like they appear on your local system and the lesson can be updated without rebuilding everyting.</p>
+<p>Once it is all done, the contents are pushed to their respective branches, the worktrees are disassembled, and the remote runner is released to another task.</p>
 
 
 </section>
@@ -304,7 +363,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
