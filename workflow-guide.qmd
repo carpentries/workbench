@@ -116,4 +116,53 @@ workbench.
 
 ## Remote Workflow
 
-Writup coming soon!
+The motivation for the remote workflows is the same as the local workflow: to
+allow for rendering of an HTML website without having to rebuild files that
+have previously been built. The only twist is that these files are necessarily
+ephemeral because we will never be building the site on the same server day to
+day, so how do we avoid rebuilding markdown intermediates and HTML outputs when
+we do not track them by git? 
+
+The answer is with orphan branches that map on to the folders in `site/` using
+git worktrees, which is achieved via the [internal function 
+`sandpaper:::ci_deploy()`](https://carpentries.github.io/sandpaper/reference/index.html#-internal-continous-integration-functions).
+
+Folder        Branch        Contents
+------------  ------------  ----------
+`site/built`  `md-outputs`  Markdown outputs and rendered files (e.g. images)
+`site/docs`   `gh-pages`    HTML outputs for the live website.
+
+
+![Diagram of the `sandpaper:::ci_deploy()` process](https://github.com/carpentries/sandpaper/raw/main/vignettes/articles/img/branch-flow.svg){fig-alt="Diagrammatic
+representation of the GitHub deployment cycle showing four branches, gh-pages,
+md-outputs, main, and my-edit. The my-edit branch is a direct descendent of the
+main branch, while the gh-pages and md-outputs branches are orphans. Each
+commit of the main branch has a process represented by a dashed arrow that
+builds a commit of the subsequent orphan branches"}
+
+::: {.callout-note}
+
+### Glossary
+
+orphan branch
+: Orphan branches are separate branches known to git that share no common
+  history with the main branch. 
+
+work tree
+: Work trees are a special git workflow that allows you to work on multiple
+  for the same repository in separate folders.
+
+:::
+
+Each time a commit happens on the `main` branch, the main
+branch is checked out and then git worktrees are provisioned inside of the 
+`site/` directory for each branch via the [internal function
+`sandpaper:::git_worktree_setup()`](https://carpentries.github.io/sandpaper/reference/git_worktree_setup.html),
+which is modified from Hadley Wickham's [ `pkgdown::deploy_to_branch()`
+function](https://pkgdown.r-lib.org/reference/deploy_to_branch.html). After
+they are provisioned and the contents populated from the existing branches,
+then they appear on the remote system just like they appear on your local system
+and the lesson can be updated without rebuilding everyting.
+
+Once it is all done, the contents are pushed to their respective branches, the
+worktrees are disassembled, and the remote runner is released to another task.
