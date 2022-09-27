@@ -1,5 +1,5 @@
 project:
-  title: "Workbench this and that"
+  title: "The Carpentries Workbench"
   type: website
 
 format:
@@ -16,7 +16,7 @@ book:
     - releases.qmd
 
 website:
-  title: "Workbench This and That"
+  title: "The Carpentries Workbench"
   navbar:
     left:
       - href: index.qmd
@@ -27,6 +27,10 @@ website:
         text: Transition Guide
       - href: releases.qmd
         text: Release Process
+    right:
+      - icon: github
+        href: 'https://github.com/carpentries/workbench'
+        aria-label: Workbench GitHub
 
 
 
