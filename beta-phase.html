@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>The Carpentries Workbench - Beta Phase of The Carpentries Workbench</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">The Carpentries Workbench</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html">Home</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./beta-phase.html" aria-current="page"><strong>Beta Phase</strong></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./workflow-guide.html">How The Workbench Works</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./transition-guide.html">Transition Guide</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./releases.html">Release Process</a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/carpentries/workbench"><i class="bi bi-github" role="img" aria-label="Workbench GitHub">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-is-the-workbench-beta-phase" id="toc-what-is-the-workbench-beta-phase" class="nav-link active" data-scroll-target="#what-is-the-workbench-beta-phase">What is the Workbench Beta Phase?</a>
+  <ul class="collapse">
+  <li><a href="#pre-beta-two-repos-two-sites" id="toc-pre-beta-two-repos-two-sites" class="nav-link" data-scroll-target="#pre-beta-two-repos-two-sites"><strong>pre-beta</strong> (two repos, two sites)</a></li>
+  <li><a href="#beta-one-repo-using-the-workbench-two-sites" id="toc-beta-one-repo-using-the-workbench-two-sites" class="nav-link" data-scroll-target="#beta-one-repo-using-the-workbench-two-sites"><strong>beta</strong> (one repo using the workbench, two sites)</a></li>
+  <li><a href="#pre-release-release-candidate-one-repo-using-workbench-one-site" id="toc-pre-release-release-candidate-one-repo-using-workbench-one-site" class="nav-link" data-scroll-target="#pre-release-release-candidate-one-repo-using-workbench-one-site"><strong>pre-release (release-candidate)</strong> (one repo using workbench, one site)</a></li>
+  </ul></li>
+  <li><a href="#timeline-lessons-entered-into-workbench-beta" id="toc-timeline-lessons-entered-into-workbench-beta" class="nav-link" data-scroll-target="#timeline-lessons-entered-into-workbench-beta">Timeline: Lessons Entered into Workbench Beta</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Beta Phase of The Carpentries Workbench</h1>
+<p class="subtitle lead">2022-10-17 to 2022-03-13</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="what-is-the-workbench-beta-phase" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-the-workbench-beta-phase">What is the Workbench Beta Phase?</h2>
+<p>The Carpentries Workbench, first released in January 2022, has been running without issue for several months with several early adopters, who have all contributed to its improvement from their feedback. It is now at the stage where we are confident that it is in a stable condition to be used for Carpentries Lessons as a whole. Of course, with over 100 maintainers and even more instructors, making a sudden change has the potential to be massively disruptive.</p>
+<p>Instead, we are slowly releasing The Workbench in <strong>three stages <em>per lesson</em></strong> over a <strong>12 week period during which there will be <em>parallel websites</em> showing two versions of the same lesson<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</strong> For example, when you visit <code>https://datacarpentry.org/R-ecology-lesson</code>, there will be a banner at the top of every page that will give a link to the beta version of the lesson (tentatively under <code>https://workbench-beta.carpentries.org/</code>) and the dates the styles version will be deprecated and finally superseded.</p>
+<p>This slow progression is designed to allow community members to familiarlize themselves with the new format and to build expertise within the community for April 2022 when the infrastructure is formally released.</p>
+<p>The three stages are called “pre-beta”, “beta”<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>, and “pre-release”.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://carpentries.org/images/blog/2022/05/workbench-beta-flow.png" class="img-fluid figure-img" alt="Diagram of three phases of the beta release. At the top is box labelled 'current' that contains a GitHub logo, a cartoon of a lesson page. Below is a box labelled 'Pre Beta' with the same contents as the box above plus an additional GitHub logo in blue with a camera above it (to indicate a snapshot) and a new cartoon of a lesson page with a padlock over it. There is a clock indicating a timeframe of four weeks. The next box below is labelled 'Beta'. The GitHub logo has become blue and there is a lightning bolt and a line connecting it to the previous logo, indicating that a transformation happened. A smaller, grey GitHub logo is adjacent with a lock over it, indicating that it is archived. The  old lesson page now has a lock and information symbol above it. The new lesson page does not have any symbols above it. The timreframe is 6 to 8 weeks. The final box is titled 'Release Candidate' and has a single blue GitHub logo, a faded old lesson page, and a new lesson page with a timeframe of 6 months"></p>
+<p></p><figcaption class="figure-caption">An overview of the Workbench beta phase for the Git repository and the website, separated into three stages. The entire process will take about 12 months until the pre-beta stage.</figcaption><p></p>
+</figure>
+</div>
+<section id="pre-beta-two-repos-two-sites" class="level3">
+<h3 class="anchored" data-anchor-id="pre-beta-two-repos-two-sites"><strong>pre-beta</strong> (two repos, two sites)</h3>
+<p>Lessons in this stage will have a workbench version of the lesson live in a separate repository in a sandbox GitHub organisation. This version will be a <strong>snapshot from the date of the pre-beta version</strong>. Any changes made to the snapshot will appear on the beta website, but will disappear as soon as the lesson enters beta. Maintainers are encouraged to clone this snapshot repository and try it out by creating pull requests that change content.</p>
+</section>
+<section id="beta-one-repo-using-the-workbench-two-sites" class="level3">
+<h3 class="anchored" data-anchor-id="beta-one-repo-using-the-workbench-two-sites"><strong>beta</strong> (one repo using the workbench, two sites)</h3>
+<p>Lessons in this stage will undergo a lesson release of the styles version and a snapshot of the repository, including issues and pull requests, will be archived. The branch serving the github pages will be frozen and renamed to “legacy” and will continue to serve to GitHub Pages.</p>
+<p>The workbench version of the repository will be inserted as the “main” branch with a modified history to remove all commits from styles and generated content<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>. <strong>All new changes to the lesson will be made to the workbench version.</strong></p>
+<p>Maintainers will continue to work on this workbench version of the lesson.</p>
+</section>
+<section id="pre-release-release-candidate-one-repo-using-workbench-one-site" class="level3">
+<h3 class="anchored" data-anchor-id="pre-release-release-candidate-one-repo-using-workbench-one-site"><strong>pre-release (release-candidate)</strong> (one repo using workbench, one site)</h3>
+<p>The styles version of the lesson (in the <code>legacy</code> branch) will be removed, the default version of the lesson will switch to The Workbench, and the workbench-beta website will redirect to the live lesson.</p>
+</section>
+</section>
+<section id="timeline-lessons-entered-into-workbench-beta" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="timeline-lessons-entered-into-workbench-beta">Timeline: Lessons Entered into Workbench Beta</h2>
+<div class="column-screen-inset">
+<section id="official-lessons" class="level3">
+<h3 class="anchored" data-anchor-id="official-lessons">Official Lessons</h3>
+<p>These are the official Carpentries lessons that will enter the Beta Phase during 2022-Q4 and 2023-Q1. The dates in the columns reflect the anticipated dates for the transitions of the different stages of the Beta Phase. Note that any stage that overlaps the last week of December and the first week of January will be extended by two weeks due to Winter holidays.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Lesson</th>
+<th>Pre-Beta</th>
+<th>Beta</th>
+<th>Pre-release</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://github.com/datacarpentry/R-ecology-lesson/discussions/799">datacarpentry/R-ecology-lesson—Data Analysis and Visualization in R for Ecologists</a> (✅ approved by maintainers)</td>
+<td>2022-10-17</td>
+<td>2022-11-14</td>
+<td>2023-01-23</td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/datacarpentry/r-socialsci">datacarpentry/r-socialsci—R for Social Scientists</a> (✅ approved by maintainer)</td>
+<td>2022-10-24</td>
+<td>2022-11-21</td>
+<td>2023-01-30</td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/datacarpentry/r-raster-vector-geospatial/issues/369">datacarpentry/r-raster-vector-geospatial—Introduction to Geospatial Raster and Vector Data with R</a> (⏳ awaiting responses)</td>
+<td>2022-10-31</td>
+<td>2022-11-28</td>
+<td>2023-02-06</td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/datacarpentry/OpenRefine-ecology-lesson">datacarpentry/OpenRefine-ecology-lesson—Data Cleaning with OpenRefine for Ecologists</a> (✅ approved by maintainer)</td>
+<td>2022-11-07</td>
+<td>2022-12-05</td>
+<td>2023-02-13</td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/librarycarpentry/lc-shell">librarycarpentry/lc-shell—Library Carpentry: The UNIX Shell</a> (⏳ awaiting responses)</td>
+<td>2022-11-14</td>
+<td>2022-12-12</td>
+<td>2023-02-20</td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/carpentries/instructor-training/issues/1396">carpentries/instructor-training—Instructor Training</a> (⏳ awaiting responses)</td>
+<td>2022-11-28</td>
+<td>2023-01-09</td>
+<td>2023-03-06</td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/datacarpentry/python-ecology-lesson-es">datacarpentry/python-ecology-lesson-es—Análisis y visualización de datos usando Python</a></td>
+<td>2022-12-05</td>
+<td>2023-01-16</td>
+<td>2023-03-13</td>
+</tr>
+</tbody>
+</table>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<p>
+</p><pre class="mermaid" data-tooltip-selector="#mermaid-tooltip-1">gantt
+    dateFormat  YYYY-MM-DD
+    axisFormat  %d %b
+    title       Tentative Schedule For Lessons in Workbench Beta
+
+    Beta Phase Start   :milestone, 2022-10-17,
+    section DC/R For Ecologists
+    Pre Beta           :      dcre-pb, 2022-10-17, 28d
+    Beta               :      dcre-b, after dcre-pb, 70d
+    Pre-release        :milestone, crit, after dcre-b
+
+    section DC/R Social Sciences
+    Pre Beta           :      dcrs-pb, 2022-10-24, 28d
+    Beta               :      dcrs-b, after dcrs-pb, 70d
+    Pre-release        :milestone, crit, after dcrs-b
+
+    section DC/R Raster Vector Geospatial
+    Pre Beta           :      dcrvg-pb, 2022-10-31, 28d
+    Beta               :      dcrvg-b, after dcrvg-pb, 70d
+    Pre-release        :milestone, crit, after dcrvg-b
+
+    section DC/OpenRefine Ecology
+    Pre Beta           :      dcore-pb, 2022-11-07, 28d
+    Beta               :      dcore-b, after dcore-pb, 70d
+    Pre-release        :milestone, crit, after dcore-b
+
+    section LC/Intro to Shell
+    Pre Beta           :      lcs-pb, 2022-11-14, 28d
+    Beta               :      lcs-b, after lcs-pb, 70d
+    Pre-release        :milestone, crit, after lcs-b
+    
+    section Instructor Training
+    Pre Beta           :      it-pb, 2022-11-28, 42d
+    Beta               :      it-b, after it-pb, 56d
+    Pre-release        :milestone, crit, after it-b
+    
+    section DC/Python Ecology ES
+    Pre Beta           :      pes-pb, 2022-12-05, 42d
+    Beta               :      pes-b, after pes-pb, 56d
+    Pre-release        :milestone, crit, after pes-b
+</pre>
+<div id="mermaid-tooltip-1" class="mermaidTooltip">
+
+</div>
+<p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="community-lessons" class="level3">
+<h3 class="anchored" data-anchor-id="community-lessons">Community Lessons</h3>
+<p>The following community lessons will be migrated to the Workbench during the beta phase. At the moment, there is no definite timeline, but we will update that soon. Note that these lessons will skip directly from pre-beta into pre-release.</p>
+<ul>
+<li><a href="https://github.com/carpentries-incubator/git-novice-branch-pr">carpentries-incubator/git-novice-branch-pr—Version Control with Git</a></li>
+<li><a href="https://github.com/carpentries-incubator/data-management-pipelines-engineering">carpentries-incubator/data-management-pipelines-engineering—Data management and analytic pipelines for engineers</a></li>
+<li><a href="https://github.com/carpentries-incubator/markdown-intro">carpentries-incubator/markdown-intro—Introduction to Markdown</a></li>
+<li><a href="https://github.com/carpentries-incubator/SDC-BIDS-IntroMRI">carpentries-incubator/SDC-BIDS-IntroMRI—Introduction to MRI and BIDS</a></li>
+<li><a href="https://github.com/carpentries-incubator/SDC-BIDS-dMRI">carpentries-incubator/SDC-BIDS-dMRI—Introduction to dMRI</a></li>
+<li><a href="https://github.com/carpentries-incubator/SDC-BIDS-fMRI">carpentries-incubator/SDC-BIDS-fMRI—fMRI Imaging Analysis</a></li>
+<li><a href="https://github.com/carpentries-incubator/julia-novice">carpentries-incubator/julia-novice—A lesson exploring the Julia language</a></li>
+<li><a href="https://github.com/carpentries-incubator/R-archaeology-lesson/issues/4#issuecomment-1138641684">carpentries-incubator/R-archaeology-lesson</a></li>
+<li><a href="https://github.com/carpentries-incubator/python-packaging-publishing">carpentries-incubator/python-packaging-publishing—Packaging and Publishing with Python</a></li>
+</ul>
+</section>
+</div>
+
+
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>It will be mostly the same content, save for small changes as described in the different stages.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Note, this is NOT the same thing as an in-development lesson being in Beta.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>For details of what will happen to the files and syntax during the transition, see <a href="transition-guide.html">The Transition Guide</a>. During the transformation, we will also excise the commits from styles, which necessarily rerwite the history of the lesson, while <strong>preserving the commits from lesson content</strong>. This move has two benefits: 1. The list of committers on the lesson will better reflect the actual lesson contributors rather than the contributors to the template. 2. Lessons will be reduced in size so that downloading them and contributing to them will be easier. There <em>is</em> precedence for this: When Software Carpentry moved its lessons from the original <a href="https://github.com/swcarpentry/bc">swcarpentr/bc</a> monorepo, they excised the commits related to each lesson from the repository, but preserved the history.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
