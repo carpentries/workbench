@@ -1,0 +1,180 @@
+---
+title: "Beta Phase of The Carpentries Workbench"
+subtitle: "2022-10-17 to 2022-03-13"
+---
+
+## What is the Workbench Beta Phase?
+
+The Carpentries Workbench, first released in January 2022, has been running
+without issue for several months with several early adopters, who have all
+contributed to its improvement from their feedback. It is now at the stage
+where we are confident that it is in a stable condition to be used for
+Carpentries Lessons as a whole. Of course, with over 100 maintainers and even
+more instructors, making a sudden change has the potential to be massively
+disruptive.
+
+Instead, we are slowly releasing The Workbench in **three stages _per lesson_**
+over a **12 week period during which there will be _parallel websites_ showing
+two versions of the same lesson[^parallel-nightmares].** For example, when you
+visit `https://datacarpentry.org/R-ecology-lesson`, there will be a banner at
+the top of every page that will give a link to the beta version of the lesson
+(tentatively under `https://workbench-beta.carpentries.org/`) and the dates the
+styles version will be deprecated and finally superseded. 
+
+This slow progression is designed to allow community members to familiarlize
+themselves with the new format and to build expertise within the community for
+April 2022 when the infrastructure is formally released.
+
+The three stages are called "pre-beta", "beta"[^beta], and "pre-release".
+
+[^parallel-nightmares]: It will be mostly the same content, save for small
+  changes as described in the different stages.
+[^beta]: Note, this is NOT the same thing as an in-development lesson being in
+  Beta.
+
+![An overview of the Workbench beta phase for the Git repository and the
+website, separated into three stages. The entire process will take about 12
+months until the pre-beta stage.
+](https://carpentries.org/images/blog/2022/05/workbench-beta-flow.png){
+fig-alt="Diagram of three phases of the beta release. At the top is box
+labelled 'current' that contains a GitHub logo, a cartoon of a lesson page.
+Below is a box labelled 'Pre Beta' with the same contents as the box above plus
+an additional GitHub logo in blue with a camera above it (to indicate a
+snapshot) and a new cartoon of a lesson page with a padlock over it. There is a
+clock indicating a timeframe of four weeks. The next box below is labelled
+'Beta'. The GitHub logo has become blue and there is a lightning bolt and a
+line connecting it to the previous logo, indicating that a transformation
+happened. A smaller, grey GitHub logo is adjacent with a lock over it,
+indicating that it is archived. The  old lesson page now has a lock and
+information symbol above it. The new lesson page does not have any symbols
+above it. The timreframe is 6 to 8 weeks. The final box is titled 'Release
+Candidate' and has a single blue GitHub logo, a faded old lesson page, and a
+new lesson page with a timeframe of 6 months"}
+
+### **pre-beta** (two repos, two sites)
+
+Lessons in this stage will have a workbench version of the lesson live in a
+separate repository in a sandbox GitHub organisation. This version will be a
+**snapshot from the date of the pre-beta version**. Any changes made to the
+snapshot will appear on the beta website, but will disappear as soon as the
+lesson enters beta. Maintainers are encouraged to clone this snapshot
+repository and try it out by creating pull requests that change content. 
+
+### **beta** (one repo using the workbench, two sites)
+
+Lessons in this stage will undergo a lesson release of the styles version and a
+snapshot of the repository, including issues and pull requests, will be archived. 
+The branch serving the github pages will be frozen and renamed to "legacy" and
+will continue to serve to GitHub Pages.
+
+The workbench version of the repository will be inserted as the "main" branch
+with a modified history to remove all commits from styles and generated
+content[^modify]. **All new changes to the lesson will be made to the workbench
+version.**
+
+[^modify]: For details of what will happen to the files and syntax during the
+  transition, see [The Transition Guide](transition-guide.html). During the 
+  transformation, we will also excise the commits from styles, which necessarily
+  rerwite the history of the lesson, while **preserving the commits from lesson
+  content**. This move has two benefits: 
+  1. The list of committers on the lesson will better reflect the actual lesson
+  contributors rather than the contributors to the template.
+  2. Lessons will be reduced in size so that downloading them and contributing to
+  them will be easier. There _is_ precedence for this: When Software Carpentry
+  moved its lessons from the original
+  [swcarpentr/bc](https://github.com/swcarpentry/bc) monorepo, they excised the
+  commits related to each lesson from the repository, but preserved the history.
+
+Maintainers will continue to work on this workbench version of the lesson.
+
+### **pre-release (release-candidate)** (one repo using workbench, one site)
+
+The styles version of the lesson (in the `legacy` branch) will be removed,
+the default version of the lesson will switch to The Workbench, and the 
+workbench-beta website will redirect to the live lesson.
+
+## Timeline: Lessons Entered into Workbench Beta
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
+### Official Lessons
+
+These are the official Carpentries lessons that will enter the Beta Phase during
+2022-Q4 and 2023-Q1. The dates in the columns reflect the anticipated dates for
+the transitions of the different stages of the Beta Phase. Note that any stage
+that overlaps the last week of December and the first week of January will be
+extended by two weeks due to Winter holidays. 
+
+
+| Lesson                                                   | Pre-Beta   | Beta       | Pre-release |
+| -------------------------------------------------------- | ---------- | ---------- | ----------- |
+| [datacarpentry/R-ecology-lesson---Data Analysis and Visualization in R for Ecologists](https://github.com/datacarpentry/R-ecology-lesson/discussions/799) (✅ approved by maintainers)      | 2022-10-17 | 2022-11-14 | 2023-01-23  |
+| [datacarpentry/r-socialsci---R for Social Scientists](https://github.com/datacarpentry/r-socialsci) (✅ approved by maintainer) | 2022-10-24 | 2022-11-21 | 2023-01-30  |
+| [datacarpentry/r-raster-vector-geospatial---Introduction to Geospatial Raster and Vector Data with R](https://github.com/datacarpentry/r-raster-vector-geospatial/issues/369) (⏳ awaiting responses) | 2022-10-31 | 2022-11-28 | 2023-02-06  |
+| [datacarpentry/OpenRefine-ecology-lesson---Data Cleaning with OpenRefine for Ecologists](https://github.com/datacarpentry/OpenRefine-ecology-lesson) (✅ approved by maintainer) | 2022-11-07 | 2022-12-05 | 2023-02-13  |
+| [librarycarpentry/lc-shell---Library Carpentry: The UNIX Shell](https://github.com/librarycarpentry/lc-shell) (⏳ awaiting responses) | 2022-11-14 | 2022-12-12 | 2023-02-20  |
+| [carpentries/instructor-training---Instructor Training](https://github.com/carpentries/instructor-training/issues/1396) (⏳ awaiting responses) | 2022-11-28 | 2023-01-09 | 2023-03-06  |
+| [datacarpentry/python-ecology-lesson-es---Análisis y visualización de datos usando Python](https://github.com/datacarpentry/python-ecology-lesson-es) | 2022-12-05 | 2023-01-16 | 2023-03-13  |
+
+```{mermaid}
+gantt
+    dateFormat  YYYY-MM-DD
+    axisFormat  %d %b
+    title       Tentative Schedule For Lessons in Workbench Beta
+
+    Beta Phase Start   :milestone, 2022-10-17,
+    section DC/R For Ecologists
+    Pre Beta           :      dcre-pb, 2022-10-17, 28d
+    Beta               :      dcre-b, after dcre-pb, 70d
+    Pre-release        :milestone, crit, after dcre-b
+
+    section DC/R Social Sciences
+    Pre Beta           :      dcrs-pb, 2022-10-24, 28d
+    Beta               :      dcrs-b, after dcrs-pb, 70d
+    Pre-release        :milestone, crit, after dcrs-b
+
+    section DC/R Raster Vector Geospatial
+    Pre Beta           :      dcrvg-pb, 2022-10-31, 28d
+    Beta               :      dcrvg-b, after dcrvg-pb, 70d
+    Pre-release        :milestone, crit, after dcrvg-b
+
+    section DC/OpenRefine Ecology
+    Pre Beta           :      dcore-pb, 2022-11-07, 28d
+    Beta               :      dcore-b, after dcore-pb, 70d
+    Pre-release        :milestone, crit, after dcore-b
+
+    section LC/Intro to Shell
+    Pre Beta           :      lcs-pb, 2022-11-14, 28d
+    Beta               :      lcs-b, after lcs-pb, 70d
+    Pre-release        :milestone, crit, after lcs-b
+    
+    section Instructor Training
+    Pre Beta           :      it-pb, 2022-11-28, 42d
+    Beta               :      it-b, after it-pb, 56d
+    Pre-release        :milestone, crit, after it-b
+    
+    section DC/Python Ecology ES
+    Pre Beta           :      pes-pb, 2022-12-05, 42d
+    Beta               :      pes-b, after pes-pb, 56d
+    Pre-release        :milestone, crit, after pes-b
+```
+
+
+### Community Lessons
+
+The following community lessons will be migrated to the Workbench during the
+beta phase. At the moment, there is no definite timeline, but we will update
+that soon. Note that these lessons will skip directly from pre-beta into 
+pre-release. 
+
+ - [carpentries-incubator/git-novice-branch-pr---Version Control with Git](https://github.com/carpentries-incubator/git-novice-branch-pr)
+ - [carpentries-incubator/data-management-pipelines-engineering---Data management and analytic pipelines for engineers](https://github.com/carpentries-incubator/data-management-pipelines-engineering)
+ - [carpentries-incubator/markdown-intro---Introduction to Markdown](https://github.com/carpentries-incubator/markdown-intro)
+ - [carpentries-incubator/SDC-BIDS-IntroMRI---Introduction to MRI and BIDS](https://github.com/carpentries-incubator/SDC-BIDS-IntroMRI)
+ - [carpentries-incubator/SDC-BIDS-dMRI---Introduction to dMRI](https://github.com/carpentries-incubator/SDC-BIDS-dMRI)
+ - [carpentries-incubator/SDC-BIDS-fMRI---fMRI Imaging Analysis](https://github.com/carpentries-incubator/SDC-BIDS-fMRI)
+ - [carpentries-incubator/julia-novice---A lesson exploring the Julia language](https://github.com/carpentries-incubator/julia-novice)
+ - [carpentries-incubator/R-archaeology-lesson](https://github.com/carpentries-incubator/R-archaeology-lesson/issues/4#issuecomment-1138641684)
+ - [carpentries-incubator/python-packaging-publishing---Packaging and Publishing with Python](https://github.com/carpentries-incubator/python-packaging-publishing)
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::

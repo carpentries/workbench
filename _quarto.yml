@@ -21,6 +21,8 @@ website:
     left:
       - href: index.qmd
         text: Home
+      - href: beta-phase.qmd
+        text: "**Beta Phase**"
       - href: workflow-guide.qmd
         text: How The Workbench Works
       - href: transition-guide.qmd
