@@ -109,7 +109,7 @@ extended by two weeks due to Winter holidays.
 | -------------------------------------------------------- | ---------- | ---------- | ----------- |
 | [datacarpentry/R-ecology-lesson---Data Analysis and Visualization in R for Ecologists](https://github.com/datacarpentry/R-ecology-lesson/discussions/799) (✅ approved by maintainers)      | 2022-10-17 | 2022-11-14 | 2023-01-23  |
 | [datacarpentry/r-socialsci---R for Social Scientists](https://github.com/datacarpentry/r-socialsci/discussions/411) (✅ approved by maintainer) | 2022-10-24 | 2022-11-21 | 2023-01-30  |
-| [datacarpentry/r-raster-vector-geospatial---Introduction to Geospatial Raster and Vector Data with R](https://github.com/datacarpentry/r-raster-vector-geospatial/issues/369) (⏳ awaiting responses) | 2022-10-31 | 2022-11-28 | 2023-02-06  |
+| [datacarpentry/r-raster-vector-geospatial---Introduction to Geospatial Raster and Vector Data with R](https://github.com/datacarpentry/r-raster-vector-geospatial/issues/369) (✅ approved by maintainers) | 2022-10-31 | 2022-11-28 | 2023-02-06  |
 | [datacarpentry/OpenRefine-ecology-lesson---Data Cleaning with OpenRefine for Ecologists](https://github.com/datacarpentry/OpenRefine-ecology-lesson/discussions/275) (✅ approved by maintainer) | 2022-11-07 | 2022-12-05 | 2023-02-13  |
 | [librarycarpentry/lc-shell---Library Carpentry: The UNIX Shell](https://github.com/LibraryCarpentry/lc-shell/discussions/211) (⏳ awaiting responses) | 2022-11-14 | 2022-12-12 | 2023-02-20  |
 | [carpentries/instructor-training---Instructor Training](https://github.com/carpentries/instructor-training/issues/1396) (⏳ awaiting responses) | 2022-11-28 | 2023-01-09 | 2023-03-06  |
