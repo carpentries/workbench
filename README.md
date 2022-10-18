@@ -61,6 +61,7 @@ If you would like to participate in the beta phase, you can
  - [{pegboard}](https://carpentries.github.io/pegboard/): Validation and parsing of lesson components
  - [{varnish}](https://carpentries.github.io/varnish/): HTML, CSS, and JavaScript templates
  - [(carpentries/actions)](https://github.com/carpentries/actions#readme): GitHub Actions for Workbench Workflows
+ - [(carpentries/lesson-transition)](https://github.com/carpentries/lesson-transition): Tool for automated transition from styles-based lessons to Workbench.
 
 ### Templates
 

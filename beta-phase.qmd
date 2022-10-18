@@ -18,8 +18,10 @@ over a **12 week period during which there will be _parallel websites_ showing
 two versions of the same lesson[^parallel-nightmares].** For example, when you
 visit `https://datacarpentry.org/R-ecology-lesson`, there will be a banner at
 the top of every page that will give a link to the beta version of the lesson
-(tentatively under `https://workbench-beta.carpentries.org/`) and the dates the
-styles version will be deprecated and finally superseded. 
+(under `https://preview.carpentries.org/`) and the dates the styles version
+will be deprecated and finally superseded. 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/B3J9eJ6TUwY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 This slow progression is designed to allow community members to familiarlize
 themselves with the new format and to build expertise within the community for
