@@ -30,7 +30,7 @@ install.packages(c("sandpaper", "varnish", "pegboard", "tinkr"),
 
 ## Workbench Beta Phase
 
-**The Carpentries Workbench is currently in its Beta Phase an undergoing testing**
+**[The Carpentries Workbench is currently in its Beta Phase](beta-phase.html), undergoing testing**
 for the broader Carpentries Community including, but not limited to:
 
  - Maintainers (Official Lessons)
@@ -53,6 +53,7 @@ If you would like to participate in the beta phase, you can
 
  - [Official Workbench Documentation](https://carpentries.github.io/sandpaper-docs)
  - [Collaborative Lesson Development Training](https://carpentries.github.io/lesson-development-training/)
+ - [Workbench Beta Phase](beta-phase.html)
 
 ### Tools
 
