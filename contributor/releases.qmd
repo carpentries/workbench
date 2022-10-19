@@ -1,11 +1,10 @@
 ---
-title: "How Packages for The Carpentries Workbench Are Released"
+title: "Release Process for Workbench Packages"
 ---
 
 ## Background
 
 The workbench contains three main packages:
-
 
  - [{sandpaper}]\: user interface and workflow engine
  - [{pegboard}]\: parsing and validation engine

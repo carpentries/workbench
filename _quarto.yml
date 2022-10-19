@@ -27,8 +27,10 @@ website:
         text: How The Workbench Works
       - href: transition-guide.qmd
         text: Transition Guide
-      - href: releases.qmd
-        text: Release Process
+      - text: "Contributor Guides"
+        menu: 
+         - contributor/index.qmd
+         - contributor/releases.qmd
     right:
       - icon: github
         href: 'https://github.com/carpentries/workbench'

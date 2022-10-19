@@ -1,0 +1,46 @@
+---
+title: "Overview"
+---
+
+## Introduction
+
+
+This section of the website is dedicated to materials you may need when you want
+to make a contribution to The Carpentries Workbench. It will detail the minimum
+developer environment required to contribute to the components of this project. 
+
+::: {.callout-warning}
+
+### This section is still under construction!
+
+We are still assembling the documentation for this part of the site. If you
+would like to contribute, please feel free to open an issue.
+
+:::
+
+The core of The Carpentries Workbench consists of three packages: 
+
+ - [{sandpaper}]\: user interface and workflow engine
+ - [{pegboard}]\: parsing and validation engine
+ - [{varnish}]\: HTML templates, CSS, and JS elements
+
+These packages are all available and released to the [Carpentries 
+R-Universe][r-universe], which checks for updates to the source packages hourly. 
+
+If you are interested, we have [documentation for the release process](releases.html) 
+available.
+
+
+Coming up:
+
+ - Testing Pull Requests (Locally and on your fork)
+ - Resources for R package development
+ - Adding functionality to {sandpaper}
+ - Adding functionality to {pegboard}
+ - Adding styling elements to {varnish}
+ - Adding functionality to carpentries/actions
+
+[{varnish}]: https://carpentries.github.io/varnish/
+[{pegboard}]: https://carpentries.github.io/pegboard/
+[{sandpaper}]: https://carpentries.github.io/sandpaper/
+[r-universe]: https://carpentries.r-universe.dev/
