@@ -112,25 +112,32 @@
     "text": "Figures\n\n\n\n\n\nWorkbench\nFigures are written with the caption in the square brackets and alt appended as an attribute like so: ![caption](fig/image.png){alt='image description'}.\n![The dragon emerges!](fig/dragon-egg.png){alt='a red baby \ndragon head sticks out from its egg'}\n\n\n\n\n\n\nNote\n\n\n\nThere is a valid reason behind this choice: text inside of the square brackets can be formatted as markdown, so it makes sense for the caption. Alt text needs no decoration as it will be descriptive.\n\n\n\n\n\n\nstyles\nFigures are written with alt text in the square brackets, but no caption like so: ![alt text]({{ page.root }}/fig/image.png)\n![a red baby dragon head sticks out from its egg]({{ page.root }}/fig/dragon-egg.png)\n\nThe dragon emerges!"
   },
   {
+    "objectID": "contributor/index.html",
+    "href": "contributor/index.html",
+    "title": "Overview",
+    "section": "",
+    "text": "This section of the website is dedicated to materials you may need when you want to make a contribution to The Carpentries Workbench. It will detail the minimum developer environment required to contribute to the components of this project.\n\n\n\n\n\n\nThis section is still under construction!\n\n\n\nWe are still assembling the documentation for this part of the site. If you would like to contribute, please feel free to open an issue.\n\n\nThe core of The Carpentries Workbench consists of three packages:\n\n{sandpaper}: user interface and workflow engine\n{pegboard}: parsing and validation engine\n{varnish}: HTML templates, CSS, and JS elements\n\nThese packages are all available and released to the Carpentries R-Universe, which checks for updates to the source packages hourly.\nIf you are interested, we have documentation for the release process available.\nComing up:\n\nTesting Pull Requests (Locally and on your fork)\nResources for R package development\nAdding functionality to {sandpaper}\nAdding functionality to {pegboard}\nAdding styling elements to {varnish}\nAdding functionality to carpentries/actions"
+  },
+  {
+    "objectID": "contributor/releases.html",
+    "href": "contributor/releases.html",
+    "title": "Release Process for Workbench Packages",
+    "section": "",
+    "text": "The workbench contains three main packages:\n\n{sandpaper}: user interface and workflow engine\n{pegboard}: parsing and validation engine\n{varnish}: HTML templates, CSS, and JS elements\n\nEach of these packages are available on the Carpentries R-Universe and new versions are checked for hourly. This allows folks to get up-to-date versions of The Workbench packages built for their system without running out of GitHub API query attempts.\nIn order to maintain quality, packages are only sent to the R-Universe if they have been formally released on GitHub (as specified in the packages.json configuration file). This allows us to incrementally add new experimental features without changing the stable deployments."
+  },
+  {
+    "objectID": "contributor/releases.html#release-process",
+    "href": "contributor/releases.html#release-process",
+    "title": "Release Process for Workbench Packages",
+    "section": "Release Process",
+    "text": "Release Process\nWhen a package is ready for release we use the following checklist:\n\nUpdate version number in DESCRIPTION\nAdd NEWS for the changes in this version\nEnsure all changes are committed and pushed\nadd new signed tag with the name “ X.Y.Z”# example: create a signed (-s) tag for sandpaper 3.3.3\ngit tag -s 3.3.3 -m 'sandpaper 3.3.3'\ncreate a release on github from the new tag\n\n\n\n\n\n\n\nNote\n\n\n\nZhian likes to create tags via the command line because he has set up his git configuration to use a gpg signature so the tags and the releases are both verified.\n\n\nThe last two items can be achieved in a single step with the github cli with the command gh release create X.Y.Z for the version number\ngh release create 3.3.3\n# ? Title (optional) sandpaper 3.3.3\n# ? Release notes  [Use arrows to move, type to filter]\n#   Write my own\n# > Write using generated notes as template\n#   Leave blank\nSelecting “Write using generated notes as a template” opens an editor and populates it with the pull requests that have been accepted since the last release.\nOnce the relase is created on GitHub, then the package will be available on the R-Universe in about an hour or less."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "The Carpentries Workbench",
     "section": "",
     "text": "The Workbench is an accessible lesson infrastructure built in R\n\n\n\n\n\n\n\n\n\nInstallation\n\n\n\nTo install the workbench, make sure you have a working version of R and pandoc/RStudio installed (see the workbench setup instructions for details).\nFrom there, you can install the workbench packages and their dependencies from our Carpentries R Universe:\ninstall.packages(c(\"sandpaper\", \"varnish\", \"pegboard\", \"tinkr\"),\n  repos = c(\"https://carpentries.r-universe.dev/\", getOption(\"repos\")))\n\n\n\n\n\n\n\n\nWorkbench Beta Phase\n\n\n\nThe Carpentries Workbench is currently in its Beta Phase, undergoing testing for the broader Carpentries Community including, but not limited to:\n\nMaintainers (Official Lessons)\nLesson Developers (Community-curated Lessons)\nInstructors\nTrainers\nLearners\n\nIf you would like to participate in the beta phase, you can\n\nfind out more about our workbench through our Resource Guide,\nintroduce yourself, and\ngive feedback via GitHub Discussions\n\n\n\n\n\n\n\n\nOfficial Workbench Documentation\nCollaborative Lesson Development Training\nWorkbench Beta Phase\n\n\n\n\n\n{sandpaper}: User interface and engine for the workbench\n{pegboard}: Validation and parsing of lesson components\n{varnish}: HTML, CSS, and JavaScript templates\n(carpentries/actions): GitHub Actions for Workbench Workflows\n(carpentries/lesson-transition): Tool for automated transition from styles-based lessons to Workbench.\n\n\n\n\n\nR Markdown Lesson Template\nMarkdown Lesson Template\n\n\n\n\nThese are examples of lessons developed with The Workbench since the initial announcement:\n\nToby Hodges, Mateusz Kuzak, Aleksandra Nenadic, Sarah Stevens—Collaborative Lesson Development Training\nSaranjeet Kuar, Achintya Rao, Heather Turner, Aman Goel—R’s Bug Tracking\nSaba Ferdous, David Pérez-Suárez—Learn To Discover—Basic Python (note—this uses a custom fork of sandpaper, and varnish to run python)\nPhilipp Matthias Schäfer—GitLab Novice\nMichael Culshaw-Maurer—Rewrite of the R Ecology Lesson"
-  },
-  {
-    "objectID": "releases.html",
-    "href": "releases.html",
-    "title": "How Packages for The Carpentries Workbench Are Released",
-    "section": "",
-    "text": "The workbench contains three main packages:\n\n{sandpaper}: user interface and workflow engine\n{pegboard}: parsing and validation engine\n{varnish}: HTML templates, CSS, and JS elements\n\nEach of these packages are available on the Carpentries R-Universe and new versions are checked for hourly. This allows folks to get up-to-date versions of The Workbench packages built for their system without running out of GitHub API query attempts.\nIn order to maintain quality, packages are only sent to the R-Universe if they have been formally released on GitHub (as specified in the packages.json configuration file). This allows us to incrementally add new experimental features without changing the stable deployments."
-  },
-  {
-    "objectID": "releases.html#release-process",
-    "href": "releases.html#release-process",
-    "title": "How Packages for The Carpentries Workbench Are Released",
-    "section": "Release Process",
-    "text": "Release Process\nWhen a package is ready for release we use the following checklist:\n\nUpdate version number in DESCRIPTION\nAdd NEWS for the changes in this version\nEnsure all changes are committed and pushed\nadd new signed tag with the name “ X.Y.Z”# example: create a signed (-s) tag for sandpaper 3.3.3\ngit tag -s 3.3.3 -m 'sandpaper 3.3.3'\ncreate a release on github from the new tag\n\n\n\n\n\n\n\nNote\n\n\n\nZhian likes to create tags via the command line because he has set up his git configuration to use a gpg signature so the tags and the releases are both verified.\n\n\nThe last two items can be achieved in a single step with the github cli with the command gh release create X.Y.Z for the version number\ngh release create 3.3.3\n# ? Title (optional) sandpaper 3.3.3\n# ? Release notes  [Use arrows to move, type to filter]\n#   Write my own\n# > Write using generated notes as template\n#   Leave blank\nSelecting “Write using generated notes as a template” opens an editor and populates it with the pull requests that have been accepted since the last release.\nOnce the relase is created on GitHub, then the package will be available on the R-Universe in about an hour or less."
   },
   {
     "objectID": "workflow-guide.html",
