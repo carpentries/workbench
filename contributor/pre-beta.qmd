@@ -1,0 +1,16 @@
+---
+title: "Workbench Beta Phase: pre-beta stage"
+format:
+  html:
+    include-in-header:
+      - beta-url.html
+---
+
+Welcome to The Carpentries Workbench Beta Phase
+
+You've landed here because you want to make an edit to this lesson, but you
+were viewing a **live snapshot** of the lesson. **Any edits you make will not be
+permanent.**
+
+If you wish, you may make an edit: [placeholder]{#edit-url}
+
