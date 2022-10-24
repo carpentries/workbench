@@ -1,18 +1,16 @@
-<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-
 <script type="text/javascript">
-$( document ).ready(function() {
-    var edit_url = $(".edit-url");
+document.addEventListener('DOMContentLoaded', function () {
     const parsedURL = new URL(document.URL);
-    var stage = parsedURL.pathname.split("/")[3];
-    console.log(parsedURL.searchParams);
-    console.log(parsedURL);
+    var stage = parsedURL.pathname.split("/");
+    stage = stage[stage.length - 1];
     var new_url = new URL(parsedURL.searchParams.get('id'));
-    var edit = "the live lesson</a>.";
+    var edit_url = document.getElementById("edit-url");
+    var edit = "the live lesson</a></b>.";
     if (new_url) {
         console.log("new_url:" + new_url.toString());
+        console.log(stage);
         if (stage.startsWith("pre-beta")) {
-            edit = "the temporary snapshot</a> of this lesson";
+            edit = "the temporary snapshot</a></b> of this lesson";
             console.log("pre-beta stage");
         } else {
             console.log("beta stage");
@@ -51,11 +49,13 @@ $( document ).ready(function() {
             new_url.pathname = newpath.join("/");
             console.log("Updated URL: " + new_url.toString());
         }
-        var href = "<a href='" + new_url.toString() + "'>";
-        var explainer = "You may continue to " + href + "propose changes to ";
-        edit_url.html("<p>" + explainer + edit + "</p>");
+        if (new_url.toString().startsWith("https://github.com/")) {
+            var href = "<b><a href='" + new_url.toString() + "'>";
+            var explainer = "You may continue to " + href + "propose changes to ";
+            edit_url.innerHTML = "<p style='font-size: larger;'>" + explainer + edit + "</p>";
+       }
     } else {
-        edit_url.html("");
+        edit_url.innerHTML = "";
     }
 });
 </script>
