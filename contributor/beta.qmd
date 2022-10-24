@@ -6,13 +6,17 @@ format:
       - beta-url.html
 ---
 
-Welcome to The Carpentries Workbench Beta Phase
+## Carpentris Workbench Beta Phase: **beta stage**
 
-You've landed here because you want to make an edit to this lesson, but you were
-viewing a **frozen snapshot** of the lesson. If you want to make an edit to the
-live version, you can follow the URL below: 
+You came to this page from a **frozen snapshot** of the lesson. Please be aware
+that **any edits you propose will be made on the live version of the lesson.**
+
+If you have a minute, please give us feedback in a 
+[short, <1 minute survey](https://carpentries.typeform.com/to/KRBl4IZM)
+about your experience with using The Carpentries Workbench.
+
+::: edit-url
+
+:::
 
 
-Make an edit: [placeholder]{#edit-url}
-
-Thank You!
