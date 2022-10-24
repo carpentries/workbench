@@ -1,12 +1,10 @@
 ---
-title: "Workbench Beta Phase: beta stage"
+title: "Carpentries Workbench Beta Phase: **beta stage**"
 format:
   html:
     include-in-header:
       - beta-url.html
 ---
-
-## Carpentris Workbench Beta Phase: **beta stage**
 
 You came to this page from a **frozen snapshot** of the lesson. Please be aware
 that **any edits you propose will be made on the live version of the lesson.**
