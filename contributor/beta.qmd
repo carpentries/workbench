@@ -1,0 +1,22 @@
+---
+title: "Workbench Beta Phase: beta stage"
+format:
+  html:
+    include-in-header:
+      - beta-url.html
+---
+
+## Carpentris Workbench Beta Phase: **beta stage**
+
+You came to this page from a **frozen snapshot** of the lesson. Please be aware
+that **any edits you propose will be made on the live version of the lesson.**
+
+If you have a minute, please give us feedback in a 
+[short, <1 minute survey](https://carpentries.typeform.com/to/KRBl4IZM)
+about your experience with using The Carpentries Workbench.
+
+::: edit-url
+
+:::
+
+
