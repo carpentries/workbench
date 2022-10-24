@@ -4,7 +4,7 @@
 $( document ).ready(function() {
     var edit_url = $(".edit-url");
     const parsedURL = new URL(document.URL);
-    var stage = parsedURL.pathname;
+    var stage = parsedURL.pathname.split("/")[3];
     console.log(parsedURL.searchParams);
     console.log(parsedURL);
     var new_url = new URL(parsedURL.searchParams.get('id'));
