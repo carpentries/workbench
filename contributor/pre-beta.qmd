@@ -10,6 +10,7 @@ format:
 
 You came to this page from a **live snapshot** of the lesson. Please be aware
 that **any edits you make will not be permanent.**
+[Find out more about the **pre-beta stage**](../beta-phase.html#pre-beta).
 
 ::: {.callout-tip appearance="simple"}
 

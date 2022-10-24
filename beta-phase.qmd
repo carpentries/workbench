@@ -53,7 +53,7 @@ above it. The timreframe is 6 to 8 weeks. The final box is titled 'Release
 Candidate' and has a single blue GitHub logo, a faded old lesson page, and a
 new lesson page with a timeframe of 6 months"}
 
-### **pre-beta** (two repos, two sites)
+### **pre-beta** (two repos, two sites) {#pre-beta}
 
 Lessons in this stage will have a workbench version of the lesson live in a
 separate repository in a sandbox GitHub organisation. This version will be a
@@ -62,7 +62,7 @@ snapshot will appear on the beta website, but will disappear as soon as the
 lesson enters beta. Maintainers are encouraged to clone this snapshot
 repository and try it out by creating pull requests that change content. 
 
-### **beta** (one repo using the workbench, two sites)
+### **beta** (one repo using the workbench, two sites) {#beta}
 
 Lessons in this stage will undergo a lesson release of the styles version and a
 snapshot of the repository, including issues and pull requests, will be archived. 
@@ -89,7 +89,7 @@ version.**
 
 Maintainers will continue to work on this workbench version of the lesson.
 
-### **pre-release (release-candidate)** (one repo using workbench, one site)
+### **pre-release (release-candidate)** (one repo using workbench, one site) {#pre-release}
 
 The styles version of the lesson (in the `legacy` branch) will be removed,
 the default version of the lesson will switch to The Workbench, and the 
