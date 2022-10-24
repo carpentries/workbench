@@ -12,8 +12,10 @@ $( document ).ready(function() {
     if (new_url) {
         console.log("new_url:" + new_url.toString());
         if (stage.startsWith("pre-beta")) {
-            edit <- "the temporary snapshot</a> of this lesson";
+            edit = "the temporary snapshot</a> of this lesson";
+            console.log("pre-beta stage");
         } else {
+            console.log("beta stage");
             // With the beta phase, we want to parse the URL to see if we can
             // get the workbench equivalent.
             // carpentries/instructor-training/edit/gh-pages/_episodes/06-feedback.md
