@@ -130,9 +130,9 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#what-is-the-workbench-beta-phase" id="toc-what-is-the-workbench-beta-phase" class="nav-link active" data-scroll-target="#what-is-the-workbench-beta-phase">What is the Workbench Beta Phase?</a>
   <ul class="collapse">
-  <li><a href="#pre-beta-two-repos-two-sites" id="toc-pre-beta-two-repos-two-sites" class="nav-link" data-scroll-target="#pre-beta-two-repos-two-sites"><strong>pre-beta</strong> (two repos, two sites)</a></li>
-  <li><a href="#beta-one-repo-using-the-workbench-two-sites" id="toc-beta-one-repo-using-the-workbench-two-sites" class="nav-link" data-scroll-target="#beta-one-repo-using-the-workbench-two-sites"><strong>beta</strong> (one repo using the workbench, two sites)</a></li>
-  <li><a href="#pre-release-release-candidate-one-repo-using-workbench-one-site" id="toc-pre-release-release-candidate-one-repo-using-workbench-one-site" class="nav-link" data-scroll-target="#pre-release-release-candidate-one-repo-using-workbench-one-site"><strong>pre-release (release-candidate)</strong> (one repo using workbench, one site)</a></li>
+  <li><a href="#pre-beta" id="toc-pre-beta" class="nav-link" data-scroll-target="#pre-beta"><strong>pre-beta</strong> (two repos, two sites)</a></li>
+  <li><a href="#beta" id="toc-beta" class="nav-link" data-scroll-target="#beta"><strong>beta</strong> (one repo using the workbench, two sites)</a></li>
+  <li><a href="#pre-release" id="toc-pre-release" class="nav-link" data-scroll-target="#pre-release"><strong>pre-release (release-candidate)</strong> (one repo using workbench, one site)</a></li>
   </ul></li>
   <li><a href="#timeline-lessons-entered-into-workbench-beta" id="toc-timeline-lessons-entered-into-workbench-beta" class="nav-link" data-scroll-target="#timeline-lessons-entered-into-workbench-beta">Timeline: Lessons Entered into Workbench Beta</a></li>
   </ul>
@@ -172,18 +172,18 @@ ul.task-list li input[type="checkbox"] {
 <p></p><figcaption class="figure-caption">An overview of the Workbench beta phase for the Git repository and the website, separated into three stages. The entire process will take about 12 months until the pre-beta stage.</figcaption><p></p>
 </figure>
 </div>
-<section id="pre-beta-two-repos-two-sites" class="level3">
-<h3 class="anchored" data-anchor-id="pre-beta-two-repos-two-sites"><strong>pre-beta</strong> (two repos, two sites)</h3>
+<section id="pre-beta" class="level3">
+<h3 class="anchored" data-anchor-id="pre-beta"><strong>pre-beta</strong> (two repos, two sites)</h3>
 <p>Lessons in this stage will have a workbench version of the lesson live in a separate repository in a sandbox GitHub organisation. This version will be a <strong>snapshot from the date of the pre-beta version</strong>. Any changes made to the snapshot will appear on the beta website, but will disappear as soon as the lesson enters beta. Maintainers are encouraged to clone this snapshot repository and try it out by creating pull requests that change content.</p>
 </section>
-<section id="beta-one-repo-using-the-workbench-two-sites" class="level3">
-<h3 class="anchored" data-anchor-id="beta-one-repo-using-the-workbench-two-sites"><strong>beta</strong> (one repo using the workbench, two sites)</h3>
+<section id="beta" class="level3">
+<h3 class="anchored" data-anchor-id="beta"><strong>beta</strong> (one repo using the workbench, two sites)</h3>
 <p>Lessons in this stage will undergo a lesson release of the styles version and a snapshot of the repository, including issues and pull requests, will be archived. The branch serving the github pages will be frozen and renamed to “legacy” and will continue to serve to GitHub Pages.</p>
 <p>The workbench version of the repository will be inserted as the “main” branch with a modified history to remove all commits from styles and generated content<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>. <strong>All new changes to the lesson will be made to the workbench version.</strong></p>
 <p>Maintainers will continue to work on this workbench version of the lesson.</p>
 </section>
-<section id="pre-release-release-candidate-one-repo-using-workbench-one-site" class="level3">
-<h3 class="anchored" data-anchor-id="pre-release-release-candidate-one-repo-using-workbench-one-site"><strong>pre-release (release-candidate)</strong> (one repo using workbench, one site)</h3>
+<section id="pre-release" class="level3">
+<h3 class="anchored" data-anchor-id="pre-release"><strong>pre-release (release-candidate)</strong> (one repo using workbench, one site)</h3>
 <p>The styles version of the lesson (in the <code>legacy</code> branch) will be removed, the default version of the lesson will switch to The Workbench, and the workbench-beta website will redirect to the live lesson.</p>
 </section>
 </section>

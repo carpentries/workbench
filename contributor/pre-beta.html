@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>The Carpentries Workbench - Carpentries Workbench Beta Phase: pre-beta stage</title>
+<title>The Carpentries Workbench - Carpentries Workbench Beta Phase</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -58,21 +58,19 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
-<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-
 <script type="text/javascript">
-$( document ).ready(function() {
-    var edit_url = $(".edit-url");
+document.addEventListener('DOMContentLoaded', function () {
     const parsedURL = new URL(document.URL);
-    var stage = parsedURL.pathname.split("/")[3];
-    console.log(parsedURL.searchParams);
-    console.log(parsedURL);
+    var stage = parsedURL.pathname.split("/");
+    stage = stage[stage.length - 1];
     var new_url = new URL(parsedURL.searchParams.get('id'));
-    var edit = "the live lesson</a>.";
+    var edit_url = document.getElementById("edit-url");
+    var edit = "the live lesson</a></b>.";
     if (new_url) {
         console.log("new_url:" + new_url.toString());
+        console.log(stage);
         if (stage.startsWith("pre-beta")) {
-            edit = "the temporary snapshot</a> of this lesson";
+            edit = "the temporary snapshot</a></b> of this lesson";
             console.log("pre-beta stage");
         } else {
             console.log("beta stage");
@@ -111,11 +109,13 @@ $( document ).ready(function() {
             new_url.pathname = newpath.join("/");
             console.log("Updated URL: " + new_url.toString());
         }
-        var href = "<a href='" + new_url.toString() + "'>";
-        var explainer = "You may continue to " + href + "propose changes to ";
-        edit_url.html("<p>" + explainer + edit + "</p>");
+        if (new_url.toString().startsWith("https://github.com/")) {
+            var href = "<b><a href='" + new_url.toString() + "'>";
+            var explainer = "You may continue to " + href + "propose changes to ";
+            edit_url.innerHTML = "<p style='font-size: larger;'>" + explainer + edit + "</p>";
+       }
     } else {
-        edit_url.html("");
+        edit_url.innerHTML = "";
     }
 });
 </script>
@@ -185,14 +185,20 @@ $( document ).ready(function() {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#pre-beta-stage" id="toc-pre-beta-stage" class="nav-link active" data-scroll-target="#pre-beta-stage">Pre-beta stage</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Carpentries Workbench Beta Phase: <strong>pre-beta stage</strong></h1>
+<h1 class="title">Carpentries Workbench Beta Phase</h1>
 </div>
 
 
@@ -206,13 +212,25 @@ $( document ).ready(function() {
 
 </header>
 
-<p>You came to this page from a <strong>live snapshot</strong> of the lesson. Please be aware that <strong>any edits you make will not be permanent.</strong></p>
+<section id="pre-beta-stage" class="level2">
+<h2 class="anchored" data-anchor-id="pre-beta-stage">Pre-beta stage</h2>
+<p>You came to this page from a <strong>live snapshot</strong> of the lesson. Please be aware that <strong>any edits you make will not be permanent.</strong> <a href="../beta-phase.html#pre-beta">Find out more about the <strong>pre-beta stage</strong></a>.</p>
+<div class="callout-tip callout callout-style-simple">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
 <p>If you have a minute, please give us feedback in a <a href="https://carpentries.typeform.com/to/KRBl4IZM">short, &lt;1 minute survey</a> about your experience with using The Carpentries Workbench.</p>
-<div class="edit-url">
+</div>
+</div>
+</div>
+<div id="edit-url">
 
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
