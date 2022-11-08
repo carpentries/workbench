@@ -157,10 +157,10 @@ extended by two weeks due to Winter holidays.
 
 | Lesson                                                   | Pre-Beta   | Beta       | Pre-release |
 | -------------------------------------------------------- | ---------- | ---------- | ----------- |
-| [datacarpentry/R-ecology-lesson---Data Analysis and Visualization in R for Ecologists](https://github.com/datacarpentry/R-ecology-lesson/discussions/799) (✅ approved by maintainers)      | 2022-10-17 | 2022-11-14 | 2023-01-23  |
+| [datacarpentry/R-ecology-lesson---Data Analysis and Visualization in R for Ecologists](https://github.com/datacarpentry/R-ecology-lesson/discussions/799) (:pause_button: on hold)      | 2022-10-17 | TBD | TBD  |
 | [datacarpentry/r-socialsci---R for Social Scientists](https://github.com/datacarpentry/r-socialsci/discussions/411) (✅ approved by maintainers) | 2022-10-31 | 2022-12-12 | 2023-02-26  |
 | [datacarpentry/r-raster-vector-geospatial---Introduction to Geospatial Raster and Vector Data with R](https://github.com/datacarpentry/r-raster-vector-geospatial/issues/369) (✅ approved by maintainers) | 2022-10-31 | 2022-11-28 | 2023-02-06  |
-| [datacarpentry/OpenRefine-ecology-lesson---Data Cleaning with OpenRefine for Ecologists](https://github.com/datacarpentry/OpenRefine-ecology-lesson/discussions/275) ( on hold) | TBD | TBD | TBD |
+| [datacarpentry/OpenRefine-ecology-lesson---Data Cleaning with OpenRefine for Ecologists](https://github.com/datacarpentry/OpenRefine-ecology-lesson/discussions/275) (:pause_button: on hold) | TBD | TBD | TBD |
 | [librarycarpentry/lc-shell---Library Carpentry: The UNIX Shell](https://github.com/LibraryCarpentry/lc-shell/discussions/211) (✅ approved by maintainers) | 2022-11-14 | 2022-12-12 | 2023-02-20  |
 | [carpentries/instructor-training---Instructor Training](https://github.com/carpentries/instructor-training/issues/1396) (✅ approved by maintainers) | 2022-11-28 | 2023-01-09 | 2023-03-06  |
 | [datacarpentry/python-ecology-lesson-es---Análisis y visualización de datos usando Python](https://github.com/datacarpentry/python-ecology-lesson-es/issues/79)  (✅ approved by maintainers) | 2022-12-05 | 2023-01-16 | 2023-03-13  |
@@ -186,11 +186,6 @@ gantt
     Pre Beta           :      dcrvg-pb, 2022-10-31, 28d
     Beta               :      dcrvg-b, after dcrvg-pb, 70d
     Pre-release        :milestone, crit, after dcrvg-b
-
-    section DC/OpenRefine Ecology 
-    Pre Beta           :      dcore-pb, 2022-11-07, 28d
-    Beta               :      dcore-b, after dcore-pb, 70d
-    Pre-release        :milestone, crit, after dcore-b
 
     section LC/Intro to Shell
     Pre Beta           :      lcs-pb, 2022-11-14, 28d
