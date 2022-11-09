@@ -82,17 +82,20 @@ During this phase, you will need to take care to bring in the changes to your
 local clone because they WILL be different. Details can be found in [The Lesson
 Transition repository](https://github.com/carpentries/lesson-transition#keeping-your-clone-up-to-date):
 
+::: {.panel-tabset}
+
+##### Quck and Dirty
+
 The easiest way is to get the updates and avoid dreaded merges is to use the
 [burn it all down approach](https://happygitwithr.com/burn.html). For those who
 are more confident in their git skills, read on.
 
+
+##### via Git: Markdown Lessons
+
 The general strategy is the same as when someone changes the name of their
 default branch: rename your local branch, fetch the changes, and set the right
 branch to track upstream:
-
-::: {.panel-tabset}
-
-##### Markdown Lessons
 
 In your lesson, use these commands. DO NOT PULL FIRST.
 
@@ -105,7 +108,11 @@ git checkout main                  # switch to the brand-new main branch
 git remote set-head origin -a      # set main branch to be your local default
 ```
 
-##### R Markdown Lessons
+##### via Git: R Markdown Lessons
+
+The general strategy is the same as when someone changes the name of their
+default branch: rename your local branch, fetch the changes, and set the right
+branch to track upstream:
 
 In your lesson, use these commands. DO NOT PULL FIRST.
 
