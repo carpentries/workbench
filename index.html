@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.251">
+<meta name="generator" content="quarto-1.2.269">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -142,19 +142,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page">Home</a>
+    <a class="nav-link active" href="./index.html" aria-current="page">
+ <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./beta-phase.html"><strong>Beta Phase</strong></a>
+    <a class="nav-link" href="./beta-phase.html">
+ <span class="menu-text"><strong>Beta Phase</strong></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./workflow-guide.html">How The Workbench Works</a>
+    <a class="nav-link" href="./workflow-guide.html">
+ <span class="menu-text">How The Workbench Works</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./transition-guide.html">Transition Guide</a>
+    <a class="nav-link" href="./transition-guide.html">
+ <span class="menu-text">Transition Guide</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-contributor-guides" role="button" data-bs-toggle="dropdown" aria-expanded="false">Contributor Guides</a>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-contributor-guides" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Contributor Guides</span>
+    </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-contributor-guides">    
         <li>
     <a class="dropdown-item" href="./contributor/index.html">
@@ -171,7 +177,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/carpentries/workbench"><i class="bi bi-github" role="img" aria-label="Workbench GitHub">
 </i> 
- </a>
+ <span class="menu-text"></span></a>
   </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
@@ -188,30 +194,43 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#the-carpentries-workbench-resource-guide" id="toc-the-carpentries-workbench-resource-guide" class="nav-link active" data-scroll-target="#the-carpentries-workbench-resource-guide">The Carpentries Workbench Resource Guide</a>
-  <ul class="collapse">
-  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a>
+  <li><a href="#resources" id="toc-resources" class="nav-link active" data-scroll-target="#resources">Resources</a>
   <ul class="collapse">
   <li><a href="#guides" id="toc-guides" class="nav-link" data-scroll-target="#guides">Guides</a></li>
   <li><a href="#tools" id="toc-tools" class="nav-link" data-scroll-target="#tools">Tools</a></li>
   <li><a href="#templates" id="toc-templates" class="nav-link" data-scroll-target="#templates">Templates</a></li>
   <li><a href="#inspired-examples" id="toc-inspired-examples" class="nav-link" data-scroll-target="#inspired-examples">Inspired Examples</a></li>
   </ul></li>
-  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">The Carpentries Workbench</h1>
+</div>
 
 
 
-<section id="the-carpentries-workbench-resource-guide" class="level1">
-<h1>The Carpentries Workbench Resource Guide</h1>
-<figure style="text-align: center" class="figure">
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<figure style="text-align: center" class="figure page-columns page-full">
 <p>
 <img src="fig/hex-collection.jpeg" width="50%" alt="three isometric hex badges for The Carpentries Workbench representing the packages sandpaper, pegboard, and varnish. Each badge is styled to look like a tiny workshop working on a wooden carpentries logo with the package namesake highlighted." class="figure-img">
-</p>
+</p><div class="column-screen-inset" style="text-align: left">
+<p><img src="fig/lc-workbench.png" width="23%" alt="screenshot of the 'Navigating the Filesystem' episode of the Library Carpentry Shell lesson" class="figure-img"> <img src="fig/dc-workbench.png" width="23%" alt="screenshot of the 'Introduction to R' episode of the Library Carpentry R for Social Scientists lesson" class="figure-img"> <img src="fig/swc-workbench.png" width="23%" alt="screenshot of the 'Navigating Files and Directories' episode of the Software Carpentry Shell lesson" class="figure-img"> <img src="fig/cp-workbench.png" width="23%" alt="screenshot of the 'Building Skill with Practice' episode of the Instructor Training lesson" class="figure-img"></p>
+</div>
+<p></p>
 <figcaption style="display: block" class="figure-caption">
 <p></p>
 The Workbench is an accessible lesson infrastructure built in R
@@ -301,7 +320,6 @@ Workbench Beta Phase
 
 </section>
 </section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -345,7 +363,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -381,24 +416,42 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>
