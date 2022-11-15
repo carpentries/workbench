@@ -1,11 +1,21 @@
-# The Carpentries Workbench Resource Guide
+---
+title: The Carpentries Workbench
+---
+
 
 <figure style='text-align: center'>
 <p>
 <img src="fig/hex-collection.jpeg" width="50%" alt="three isometric hex badges for The Carpentries Workbench representing the packages sandpaper, pegboard, and varnish. Each badge is styled to look like a tiny workshop working on a wooden carpentries logo with the package namesake highlighted.">
+<div class='column-screen-inset' style='text-align: left'>
+<img src="fig/lc-workbench.png" width="23%" alt="screenshot of the 'Navigating the Filesystem' episode of the Library Carpentry Shell lesson">
+<img src="fig/dc-workbench.png" width="23%" alt="screenshot of the 'Introduction to R' episode of the Library Carpentry R for Social Scientists lesson">
+<img src="fig/swc-workbench.png" width="23%" alt="screenshot of the 'Navigating Files and Directories' episode of the Software Carpentry Shell lesson">
+<img src="fig/cp-workbench.png" width="23%" alt="screenshot of the 'Building Skill with Practice' episode of the Instructor Training lesson">
+</div>
 </p>
 <figcaption style='display: block'></p>The Workbench is an accessible lesson infrastructure built in R</p></figcaption>
 </figure>
+
 
 ::::::: {.callout-tip}
 
