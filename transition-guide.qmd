@@ -94,6 +94,38 @@ The file components can only be updated via pull request.
 :::
 ::::::::::::::::::::::::::::::::
 
+## Contributor Count
+
+Because content and tools are separated in Workbench Lessons, giving credit for
+the lesson is much more straightforward. Here we use Dr. Sarah Gibson's
+[Cross-Stitch Carpentry
+lesson](https://sgibson91.github.io/cross-stitch-carpentry/) as an example
+
+:::::::::::::: {layout="[50, 50]"}
+
+
+::: {.column}
+
+### Workbench
+
+The Contributors reflect those that actually worked on the lesson itself.
+
+![List of contributors reflects the lesson content contribution (note that Dr. Gibson is  listed first)](fig/contributors-workbench.png){alt='screenshot of github "contributors" short list showing 4 contributors with GitHub avatars.'}
+
+:::
+
+::: {.column}
+
+### styles
+
+The Contributors reflect those that worked on the lesson AND those that worked
+on the underlying infrastructure, going back to 2013.
+
+![List of contributors reflects lesson content and styles (note that Dr. Gibson is now fifth!)](fig/contributors-styles.png){alt='screenshot of github "contributors" short list showing 11 of 48 contributors with GitHub avatars.'}
+
+:::
+::::::::::::::::::::::::::::::::
+
 
 ## Local Rendering
 
