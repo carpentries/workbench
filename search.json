@@ -105,6 +105,13 @@
     "text": "Infrastructure\n\n\n\n\nWorkbench\nThe workbench infrastructure is independent1 from individual lessons. It consists of three major pieces of software.\n\nGit \nR\nPandoc\n\nThe workbench itself consists of three R packages, which can all be updated on the fly with no changes to the lesson.\n\n{sandpaper}: user interface and workflow engine\n{pegboard}: parsing and validation engine\n{varnish}: HTML templates, CSS, and JS elements\n\n\n\n\n\nstyles\nThe styles infrastructure is embedded within the lesson itself. It requires the following major pieces of software to run:\n\nGit\nRuby\nBASH\nMake\nPython2\nR3\n\nThe styles workflow is a Jekyll-based workflow, which uses the following components:\n\nbundler: manages the Ruby gems (packages) including Jekyll\nJekyll: static site generator\n(file) Makefile: workflow management for building and validating\n(dir) assets/: CSS and JS elements\n(dir) _layouts/: HTML templates\n(dir) bin/: intialisation, runtime, and validation scripts (in BASH, Python, and R)\n(dir) _includes/: Markdown and HTML boilerplate for customisation\n\nThe file components can only be updated via pull request."
   },
   {
+    "objectID": "transition-guide.html#contributor-count",
+    "href": "transition-guide.html#contributor-count",
+    "title": "Transition Guide: From Styles to Workbench",
+    "section": "Contributor Count",
+    "text": "Contributor Count\nBecause content and tools are separated in Workbench Lessons, giving credit for the lesson is much more straightforward. Here we use Dr. Sarah Gibson’s Cross-Stitch Carpentry lesson as an example\n\n\n\n\nWorkbench\nThe Contributors reflect those that actually worked on the lesson itself.\n\n\n\nList of contributors reflects the lesson content contribution (note that Dr. Gibson is listed first)\n\n\n\n\n\n\nstyles\nThe Contributors reflect those that worked on the lesson AND those that worked on the underlying infrastructure, going back to 2013.\n\n\n\nList of contributors reflects lesson content and styles (note that Dr. Gibson is now fifth!)"
+  },
+  {
     "objectID": "transition-guide.html#local-rendering",
     "href": "transition-guide.html#local-rendering",
     "title": "Transition Guide: From Styles to Workbench",
