@@ -65,14 +65,19 @@ repository and try it out by creating pull requests that change content.
 ### **beta** (one repo using the workbench, two sites) {#beta}
 
 Lessons in this stage will undergo a lesson release of the styles version and a
-snapshot of the repository, including issues and pull requests, will be archived. 
-The branch serving the github pages will be frozen and renamed to "legacy" and
-will continue to serve to GitHub Pages.
+snapshot of the repository, including issues and pull requests, will be
+archived. The default branches (`gh-pages` and `main`) will be renamed and a
+transformation[^modify] of the default branch will be inserted as `main`:
 
-The workbench version of the repository will be inserted as the "main" branch
-with a modified history to remove all commits from styles and generated
-content[^modify]. **All new changes to the lesson will be made to the workbench
-version.**
+| branch | transformation | new name |
+| ------ | -------------- | -------- |
+| `gh-pages` | none | `legacy/gh-pages` |
+| `main` | none | `legacy/main` |
+| [default] | [remove styles commits](https://github.com/carpentries/lesson-transition#motivation); transform syntax to Workbench | `main` |
+
+The default lesson URL will still be served from the `legacy/gh-pages` branch
+during this period. **All new changes to the lesson will be made to the
+workbench version.**
 
 ::: {.callout-tip appearance='simple'}
 
@@ -101,9 +106,9 @@ In your lesson, use these commands. DO NOT PULL FIRST.
 
 ```bash
 git checkout gh-pages              # make sure you are gh-pages
-git branch -m gh-pages legacy      # rename the gh-pages branch to legacy
-git fetch origin                   # fetch changes from GitHub
-git branch -u origin/legacy legacy # make sure your legacy branch tracks
+git branch -m gh-pages legacy/gh-pages               # rename the gh-pages branch to legacy
+git fetch origin                                     # fetch changes from GitHub
+git branch -u origin/legacy/gh-pages legacy/gh-pages # make sure your legacy branch tracks
 git checkout main                  # switch to the brand-new main branch
 git remote set-head origin -a      # set main branch to be your local default
 ```
@@ -118,11 +123,12 @@ In your lesson, use these commands. DO NOT PULL FIRST.
 
 ```bash
 git checkout main                  # make sure you are on main
-git branch -m main old             # change 'main' to a local 'old' branch
+git branch -m main legacy/main     # change 'main' to legacy
 git checkout gh-pages              # switch to gh-pages
-git branch -m gh-pages legacy      # rename the gh-pages branch to legacy
-git fetch origin                   # fetch changes from GitHub
-git branch -u origin/legacy legacy # make sure your legacy branch tracks
+git branch -m gh-pages legacy/gh-pages       # rename the gh-pages branch to legacy
+git fetch origin                             # fetch changes from GitHub
+git branch -u origin/legacy/main legacy/main # make sure your legacy branches track
+git branch -u origin/legacy/gh-pages legacy/gh-pages 
 git checkout main                  # switch to the brand-new main branch
 git remote set-head origin -a      # set main branch to be your local default
 ```
@@ -147,7 +153,7 @@ Maintainers will continue to work on this workbench version of the lesson.
 
 ### **pre-release (release-candidate)** (one repo using workbench, one site) {#pre-release}
 
-The styles version of the lesson (in the `legacy` branch) will be removed,
+The styles version of the lesson (in the `legacy/` branches) will be removed,
 the default version of the lesson will switch to The Workbench, and the 
 workbench-beta website will redirect to the live lesson.
 
