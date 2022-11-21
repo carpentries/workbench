@@ -248,8 +248,34 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="beta" class="level3">
 <h3 class="anchored" data-anchor-id="beta"><strong>beta</strong> (one repo using the workbench, two sites)</h3>
-<p>Lessons in this stage will undergo a lesson release of the styles version and a snapshot of the repository, including issues and pull requests, will be archived. The branch serving the github pages will be frozen and renamed to “legacy” and will continue to serve to GitHub Pages.</p>
-<p>The workbench version of the repository will be inserted as the “main” branch with a modified history to remove all commits from styles and generated content<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>. <strong>All new changes to the lesson will be made to the workbench version.</strong></p>
+<p>Lessons in this stage will undergo a lesson release of the styles version and a snapshot of the repository, including issues and pull requests, will be archived. The default branches (<code>gh-pages</code> and <code>main</code>) will be renamed and a transformation<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> of the default branch will be inserted as <code>main</code>:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>branch</th>
+<th>transformation</th>
+<th>new name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>gh-pages</code></td>
+<td>none</td>
+<td><code>legacy/gh-pages</code></td>
+</tr>
+<tr class="even">
+<td><code>main</code></td>
+<td>none</td>
+<td><code>legacy/main</code></td>
+</tr>
+<tr class="odd">
+<td>[default]</td>
+<td><a href="https://github.com/carpentries/lesson-transition#motivation">remove styles commits</a>; transform syntax to Workbench</td>
+<td><code>main</code></td>
+</tr>
+</tbody>
+</table>
+<p>The default lesson URL will still be served from the <code>legacy/gh-pages</code> branch during this period. <strong>All new changes to the lesson will be made to the workbench version.</strong></p>
 <div class="callout-tip callout callout-style-simple callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -271,9 +297,9 @@ Updating your local clone
 <p>The general strategy is the same as when someone changes the name of their default branch: rename your local branch, fetch the changes, and set the right branch to track upstream:</p>
 <p>In your lesson, use these commands. DO NOT PULL FIRST.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout gh-pages              <span class="co"># make sure you are gh-pages</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-m</span> gh-pages legacy      <span class="co"># rename the gh-pages branch to legacy</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> fetch origin                   <span class="co"># fetch changes from GitHub</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-u</span> origin/legacy legacy <span class="co"># make sure your legacy branch tracks</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-m</span> gh-pages legacy/gh-pages               <span class="co"># rename the gh-pages branch to legacy</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> fetch origin                                     <span class="co"># fetch changes from GitHub</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-u</span> origin/legacy/gh-pages legacy/gh-pages <span class="co"># make sure your legacy branch tracks</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout main                  <span class="co"># switch to the brand-new main branch</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote set-head origin <span class="at">-a</span>      <span class="co"># set main branch to be your local default</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -281,13 +307,14 @@ Updating your local clone
 <p>The general strategy is the same as when someone changes the name of their default branch: rename your local branch, fetch the changes, and set the right branch to track upstream:</p>
 <p>In your lesson, use these commands. DO NOT PULL FIRST.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout main                  <span class="co"># make sure you are on main</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-m</span> main old             <span class="co"># change 'main' to a local 'old' branch</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-m</span> main legacy/main     <span class="co"># change 'main' to legacy</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout gh-pages              <span class="co"># switch to gh-pages</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-m</span> gh-pages legacy      <span class="co"># rename the gh-pages branch to legacy</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> fetch origin                   <span class="co"># fetch changes from GitHub</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-u</span> origin/legacy legacy <span class="co"># make sure your legacy branch tracks</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout main                  <span class="co"># switch to the brand-new main branch</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote set-head origin <span class="at">-a</span>      <span class="co"># set main branch to be your local default</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-m</span> gh-pages legacy/gh-pages       <span class="co"># rename the gh-pages branch to legacy</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> fetch origin                             <span class="co"># fetch changes from GitHub</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-u</span> origin/legacy/main legacy/main <span class="co"># make sure your legacy branches track</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-u</span> origin/legacy/gh-pages legacy/gh-pages </span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout main                  <span class="co"># switch to the brand-new main branch</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote set-head origin <span class="at">-a</span>      <span class="co"># set main branch to be your local default</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -297,7 +324,7 @@ Updating your local clone
 </section>
 <section id="pre-release" class="level3">
 <h3 class="anchored" data-anchor-id="pre-release"><strong>pre-release (release-candidate)</strong> (one repo using workbench, one site)</h3>
-<p>The styles version of the lesson (in the <code>legacy</code> branch) will be removed, the default version of the lesson will switch to The Workbench, and the workbench-beta website will redirect to the live lesson.</p>
+<p>The styles version of the lesson (in the <code>legacy/</code> branches) will be removed, the default version of the lesson will switch to The Workbench, and the workbench-beta website will redirect to the live lesson.</p>
 </section>
 </section>
 <section id="timeline-lessons-entered-into-workbench-beta" class="level2 page-columns page-full">
