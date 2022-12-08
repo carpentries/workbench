@@ -1,6 +1,6 @@
 ---
 title: "Beta Phase of The Carpentries Workbench"
-subtitle: "2022-10-17 to 2022-03-13"
+subtitle: "2022-12-12 to 2022-04-03"
 ---
 
 ## Lessons currently in the beta phase
@@ -13,9 +13,9 @@ our [< 1 minute survey](https://carpentries.typeform.com/to/KRBl4IZM)**
 | Lesson                                                   | Stage     |  Workbench URL                                               | Next Transition Date |
 | -------------------------------------------------------- | --------- | ------------------------------------------------------------ | -------------------- |
 | Data Analysis and Visualisation in R for Ecologists      | pre-beta  | <https://preview.carpentries.org/R-ecology-lesson>           | TBA                  |
-| R for Social Scientists                                  | pre-beta  | <https://preview.carpentries.org/r-socialsci>                | 2022-12-06           |
-| Introduction to Geospatial Raster and Vector Data with R | pre-beta  | <https://preview.carpentries.org/r-raster-vector-geospatial> | 2022-11-28           |
-| Instructor Training                                      | pre-beta  | <https://preview.carpentries.org/instructor-training>        | 2023-01-09           |
+| R for Social Scientists                                  | pre-beta  | <https://preview.carpentries.org/r-socialsci>                | 2023-02-06           |
+| Introduction to Geospatial Raster and Vector Data with R | pre-beta  | <https://preview.carpentries.org/r-raster-vector-geospatial> | 2023-02-06           |
+| Instructor Training                                      | pre-beta  | <https://preview.carpentries.org/instructor-training>        | 2023-02-06           |
 
 ## What is the Workbench Beta Phase?
 
@@ -27,8 +27,8 @@ Carpentries Lessons as a whole. Of course, with over 100 maintainers and even
 more instructors, making a sudden change has the potential to be massively
 disruptive.
 
-Instead, we are slowly releasing The Workbench in **three stages _per lesson_**
-over a **12 week period during which there will be _parallel websites_ showing
+Instead, we are slowly releasing The Workbench in **three stages**
+over a **16 week period during which there will be _parallel websites_ showing
 two versions of the same lesson[^parallel-nightmares].** For example, when you
 visit `https://datacarpentry.org/R-ecology-lesson`, there will be a banner at
 the top of every page that will give a link to the beta version of the lesson
@@ -39,9 +39,9 @@ will be deprecated and finally superseded.
 
 This slow progression is designed to allow community members to familiarlize
 themselves with the new format and to build expertise within the community for
-April 2022 when the infrastructure is formally released.
+May 2023 when the infrastructure is formally released.
 
-The three stages are called "pre-beta", "beta"[^beta], and "pre-release".
+The three stages are called ["pre-beta"](#pre-beta), ["beta"](#beta)[^beta], and ["pre-release"](#pre-release).
 
 [^parallel-nightmares]: It will be mostly the same content, save for small
   changes as described in the different stages.
@@ -70,11 +70,60 @@ new lesson page with a timeframe of 6 months"}
 ### **pre-beta** (two repos, two sites) {#pre-beta}
 
 Lessons in this stage will have a workbench version of the lesson live in a
-separate repository in a sandbox GitHub organisation. This version will be a
+separate repository in a [sandbox GitHub
+organisation](https://github.com/fishtree-attempt)[^pun]. This version will be a
 **snapshot from the date of the pre-beta version**. Any changes made to the
 snapshot will appear on the beta website, but will disappear as soon as the
 lesson enters beta. Maintainers are encouraged to clone this snapshot
 repository and try it out by creating pull requests that change content. 
+
+[^pun]: The sandbox organisation is called "Fish Tree Attempt", which is a pun
+  on Carpentry: *carp*---fish, tree---*ent* (after Tolkien), attempt---*try*
+
+::::: {.callout-note}
+
+### Tasks to try
+
+The purpose of the pre-beta stage is to make sure maintainers are comfortable
+with working on the lesson. Anything that happens on the [sandbox
+repository](https://github.com/fishtree-attempt) is not permanent. Below is a
+list of tasks for different members of the community to try.
+
+As always, please **provide feedback in
+our [< 1 minute survey](https://carpentries.typeform.com/to/KRBl4IZM)**
+
+::: {.panel-tabset}
+
+#### Maintainers
+
+During this time, you should take the time to merge or resolve any open PRs in 
+your lesson. And yes, this is a big task and it is helpful to [remember how to
+say 'no'](https://opensource.guide/best-practices/#learning-to-say-no) in a way
+that respects the contributor’s time and effort. *If you feel like you need help
+with a particular PR, please contact Zhian and he will help craft a response.*
+
+ - clone the lesson and build it locally (see the [setup instructions](https://carpentries.github.io/sandpaper-docs#setup))
+ - merge one of the [automated workflow update PRs](https://carpentries.github.io/sandpaper-docs/pull-request#automated-pull-requests) that is opened by [@carpentries-bot](https://github.com/carpentries-bot)
+ - review a PR that includes some failing accessibility checks
+ - (R lessons only) review a PR using the [preview of rendered changes](https://carpentries.github.io/sandpaper-docs/instructor/pull-request.html#reviewing-a-pull-request)
+ - create an [inline instructor note](https://carpentries.github.io/sandpaper-docs/instructor/episodes.html#instructor-notes) from existing instructor notes
+ - fix a simple typo in a lesson---perhaps in a relatively non-obvious location e.g. in the setup instructions
+ - fix some broken syntax in a lesson
+ - write a link from one episode to another in the same lesson
+ - trigger a rebuild of the lesson from GitHub Actions
+
+#### Instructors
+
+Browse the lesson and give feedback on your impressions. Is everything where you
+expect it to be? 
+
+#### Contributors
+
+Make a contribution to an episode! Click on the "Edit this page" button and make
+a change.
+
+:::
+:::::
 
 ### **beta** (one repo using the workbench, two sites) {#beta}
 
@@ -93,7 +142,45 @@ The default lesson URL will still be served from the `legacy/gh-pages` branch
 during this period. **All new changes to the lesson will be made to the
 workbench version.**
 
-::: {.callout-tip appearance='simple'}
+::::: {.callout-note}
+
+### Tasks to try
+
+As always, please **provide feedback in
+our [< 1 minute survey](https://carpentries.typeform.com/to/KRBl4IZM)**
+
+::: {.panel-tabset}
+
+#### Maintainers 
+
+Before this stage can happen, you must **merge or resolve any open PRs in your
+lesson.** *If you feel like you need help with a particular PR, please contact
+Zhian and he will help craft a response.*
+
+During this stage, you are working on the lesson as you would normally, which
+means to address any issues or pull requests that come in and improve the
+lesson. In addition, I would recommend to continue to do the things you were
+doing during the [pre-beta stage](#pre-beta), but first:
+
+ - Update your local version of the lesson ([instructions to update](#update-clone))
+
+#### Instructors {#pre-beta-instructor}
+
+Browse the lesson and give feedback on your impressions. Is everything where you
+expect it to be? 
+
+Now that the lesson source is in a permanent stage, **add an inline instructor note**.
+Click on the "Edit this page" button in any episode and make a change. 
+
+#### Contributors {#pre-beta-contributor}
+
+Make a contribution to an episode! Click on the "Edit this page" button and make
+a change.
+
+:::
+:::::
+
+::: {#updating-clone .callout-tip appearance='simple'}
 
 #### Updating your local clone
 
@@ -173,62 +260,31 @@ workbench-beta website will redirect to the live lesson.
 
 ## Timeline: Lessons Entered into Workbench Beta
 
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
 ### Official Lessons
-
-These are the official Carpentries lessons that will enter the Beta Phase during
-2022-Q4 and 2023-Q1. The dates in the columns reflect the anticipated dates for
-the transitions of the different stages of the Beta Phase. Note that any stage
-that overlaps the last week of December and the first week of January will be
-extended by two weeks due to Winter holidays.
-
-| Lesson                                                   | Pre-Beta   | Beta       | Pre-release |
-| -------------------------------------------------------- | ---------- | ---------- | ----------- |
-| [datacarpentry/R-ecology-lesson---Data Analysis and Visualization in R for Ecologists](https://github.com/datacarpentry/R-ecology-lesson/discussions/799) (:pause_button: on hold)      | 2022-10-17 | TBD | TBD  |
-| [datacarpentry/r-socialsci---R for Social Scientists](https://github.com/datacarpentry/r-socialsci/discussions/411) (✅ approved by maintainers) | 2022-10-31 | 2022-12-12 | 2023-02-26  |
-| [datacarpentry/r-raster-vector-geospatial---Introduction to Geospatial Raster and Vector Data with R](https://github.com/datacarpentry/r-raster-vector-geospatial/issues/369) (✅ approved by maintainers) | 2022-10-31 | 2022-11-28 | 2023-02-06  |
-| [datacarpentry/OpenRefine-ecology-lesson---Data Cleaning with OpenRefine for Ecologists](https://github.com/datacarpentry/OpenRefine-ecology-lesson/discussions/275) (:pause_button: on hold) | TBD | TBD | TBD |
-| [librarycarpentry/lc-shell---Library Carpentry: The UNIX Shell](https://github.com/LibraryCarpentry/lc-shell/discussions/211) (✅ approved by maintainers) | 2022-11-14 | 2022-12-12 | 2023-02-20  |
-| [carpentries/instructor-training---Instructor Training](https://github.com/carpentries/instructor-training/issues/1396) (✅ approved by maintainers) | 2022-11-28 | 2023-01-09 | 2023-03-06  |
-| [datacarpentry/python-ecology-lesson-es---Análisis y visualización de datos usando Python](https://github.com/datacarpentry/python-ecology-lesson-es/issues/79)  (✅ approved by maintainers) | 2022-12-05 | 2023-01-16 | 2023-03-13  |
 
 ```{mermaid}
 gantt
     dateFormat  YYYY-MM-DD
     axisFormat  %d %b
-    title       Tentative Schedule For Lessons in Workbench Beta
+    title       Schedule For Lessons in Workbench Beta
 
-    Beta Phase Start   :milestone, 2022-10-17,
-    section DC/R For Ecologists
-    Pre Beta           :      dcre-pb, 2022-10-17, 28d
-    Beta               :      dcre-b, after dcre-pb, 70d
+    Beta Phase Start   :milestone, 2022-12-12,
+    Pre Beta           :      dcre-pb, 2022-12-12, 56d
+    Beta               :      dcre-b, after dcre-pb, 56d
     Pre-release        :milestone, crit, after dcre-b
 
-    section DC/R Social Sciences
-    Pre Beta           :      dcrs-pb, 2022-10-31, 42d
-    Beta               :      dcrs-b, after dcrs-pb, 70d
-    Pre-release        :milestone, crit, after dcrs-b
-
-    section DC/R Raster Vector Geospatial
-    Pre Beta           :      dcrvg-pb, 2022-10-31, 28d
-    Beta               :      dcrvg-b, after dcrvg-pb, 70d
-    Pre-release        :milestone, crit, after dcrvg-b
-
-    section LC/Intro to Shell
-    Pre Beta           :      lcs-pb, 2022-11-14, 28d
-    Beta               :      lcs-b, after lcs-pb, 70d
-    Pre-release        :milestone, crit, after lcs-b
-    
-    section Instructor Training
-    Pre Beta           :      it-pb, 2022-11-28, 42d
-    Beta               :      it-b, after it-pb, 56d
-    Pre-release        :milestone, crit, after it-b
-    
-    section DC/Python Ecology ES
-    Pre Beta           :      pes-pb, 2022-12-05, 42d
-    Beta               :      pes-b, after pes-pb, 56d
-    Pre-release        :milestone, crit, after pes-b
 ```
+
+These are the official Carpentries lessons that will enter the Beta Phase. 
+
+ - [datacarpentry/R-ecology-lesson---Data Analysis and Visualization in R for Ecologists](https://github.com/datacarpentry/R-ecology-lesson/discussions/799)
+ - [datacarpentry/r-socialsci---R for Social Scientists](https://github.com/datacarpentry/r-socialsci/discussions/411)
+ - [datacarpentry/r-raster-vector-geospatial---Introduction to Geospatial Raster and Vector Data with R](https://github.com/datacarpentry/r-raster-vector-geospatial/issues/369)
+ - [datacarpentry/OpenRefine-ecology-lesson---Data Cleaning with OpenRefine for Ecologists](https://github.com/datacarpentry/OpenRefine-ecology-lesson/discussions/275)
+ - [librarycarpentry/lc-shell---Library Carpentry: The UNIX Shell](https://github.com/LibraryCarpentry/lc-shell/discussions/211)
+ - [carpentries/instructor-training---Instructor Training](https://github.com/carpentries/instructor-training/issues/1396)
+ - [datacarpentry/python-ecology-lesson-es---Análisis y visualización de datos usando Python](https://github.com/datacarpentry/python-ecology-lesson-es/issues/79)
+
 
 
 ### Community Lessons
@@ -249,4 +305,3 @@ pre-release.
  - [carpentries-incubator/python-packaging-publishing---Packaging and Publishing with Python](https://github.com/carpentries-incubator/python-packaging-publishing)
 
 
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
