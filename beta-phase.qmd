@@ -80,7 +80,7 @@ repository and try it out by creating pull requests that change content.
 [^pun]: The sandbox organisation is called "Fish Tree Attempt", which is a pun
   on Carpentry: *carp*---fish, tree---*ent* (after Tolkien), attempt---*try*
 
-::::: {.callout-note}
+::::: {#pre-beta-tasks .callout-note}
 
 ### Tasks to try
 
@@ -142,7 +142,7 @@ The default lesson URL will still be served from the `legacy/gh-pages` branch
 during this period. **All new changes to the lesson will be made to the
 workbench version.**
 
-::::: {.callout-note}
+::::: {#beta-tasks .callout-note}
 
 ### Tasks to try
 
