@@ -10,12 +10,16 @@ out the beta phase of The Carpentries Workbench: If you want to preview these
 lessons, please visit the lesson, browse around and then **provide feedback in
 our [< 1 minute survey](https://carpentries.typeform.com/to/KRBl4IZM)**
 
-| Lesson                                                   | Stage     |  Workbench URL                                               | Next Transition Date |
-| -------------------------------------------------------- | --------- | ------------------------------------------------------------ | -------------------- |
-| Data Analysis and Visualisation in R for Ecologists      | pre-beta  | <https://preview.carpentries.org/R-ecology-lesson>           | 2023-02-06|
-| R for Social Scientists                                  | pre-beta  | <https://preview.carpentries.org/r-socialsci>                | 2023-02-06           |
-| Introduction to Geospatial Raster and Vector Data with R | pre-beta  | <https://preview.carpentries.org/r-raster-vector-geospatial> | 2023-02-06           |
-| Instructor Training                                      | pre-beta  | <https://preview.carpentries.org/instructor-training>        | 2023-02-06           |
+| Lesson                                                   | Workbench URL                                                |
+| -------------------------------------------------------- | ------------------------------------------------------------ |
+| Data Analysis and Visualisation in R for Ecologists      | <https://preview.carpentries.org/R-ecology-lesson>           |
+| R for Social Scientists                                  | <https://preview.carpentries.org/r-socialsci>                |
+| Introduction to Geospatial Raster and Vector Data with R | <https://preview.carpentries.org/r-raster-vector-geospatial> |
+| Instructor Training                                      | <https://preview.carpentries.org/instructor-training>        |
+| Análisis y visualización de datos usando Python          | <https://preview.carpentries.org/python-ecology-lesson-es>   |
+
+These lessons are all in the [**first (pre-beta) stage**](#pre-beta) and will
+transition to the [second (beta) stage](#beta) on **2023-02-03**. 
 
 ## What is the Workbench Beta Phase?
 
