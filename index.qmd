@@ -1,5 +1,6 @@
 ---
 title: The Carpentries Workbench
+subtitle: An accessible lesson infrastructure built in R
 ---
 
 
