@@ -619,6 +619,81 @@ called `_extras/guide.md`
 :::::::::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
+## Lists
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
+:::::::::::::::::::::: {layout="[50,50]"}
+::: {.column}
+
+### Workbench
+
+In general, if something does not work in Markdown, try adding a blank line.
+This is true for lists.
+
+A list must start with a blank line to be rendered properly:
+
+::: {.panel-tabset}
+
+#### Correct Syntax
+
+```markdown
+A list of things
+
+- shoes
+- coat
+- glasses
+```
+
+A list of things
+
+- shoes
+- coat
+- glasses
+
+
+#### Incorrect Syntax
+
+```markdown
+A list of things
+- shoes
+- coat
+- glasses
+```
+
+A list of things
+- shoes
+- coat
+- glasses
+
+:::
+:::
+
+::: {.column}
+
+### styles
+
+Jekyll is very forgiving for lists in general, so a blank line before the list
+is optional
+
+```markdown
+A list of things
+- shoes
+- coat
+- glasses
+```
+
+A list of things
+
+- shoes
+- coat
+- glasses
+
+
+:::
+
+
+:::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 ## Internal Links 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
