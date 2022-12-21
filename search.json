@@ -91,6 +91,13 @@
     "text": "Instructor notes\n\n\n\n\n\nWorkbench\nAn inline instructor note in the workbench is formed inside an episode by making a fenced div with the class “instructor”\n:::: instructor\n\nHere be dragons\n\n::::::::::::\nInstructor notes for the whole lesson can be placed in instructors/instructor-notes.md\n\n\n\n\nstyles\nInstructor notes do not exist in styles other than an aggregate markdown file called _extras/guide.md"
   },
   {
+    "objectID": "transition-guide.html#lists",
+    "href": "transition-guide.html#lists",
+    "title": "Transition Guide: From Styles to Workbench",
+    "section": "Lists",
+    "text": "Lists\n\n\n\n\n\nWorkbench\nIn general, if something does not work in Markdown, try adding a blank line. This is true for lists.\nA list must start with a blank line to be rendered properly:\n\nCorrect SyntaxIncorrect Syntax\n\n\nA list of things\n\n- shoes\n- coat\n- glasses\nA list of things\n\nshoes\ncoat\nglasses\n\n\n\nA list of things\n- shoes\n- coat\n- glasses\nA list of things - shoes - coat - glasses\n\n\n\n\n\n\n\nstyles\nJekyll is very forgiving for lists in general, so a blank line before the list is optional\nA list of things\n- shoes\n- coat\n- glasses\nA list of things\n\nshoes\ncoat\nglasses"
+  },
+  {
     "objectID": "transition-guide.html#internal-links",
     "href": "transition-guide.html#internal-links",
     "title": "Transition Guide: From Styles to Workbench",
