@@ -196,6 +196,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <ul>
   <li><a href="#resources" id="toc-resources" class="nav-link active" data-scroll-target="#resources">Resources</a>
   <ul class="collapse">
+  <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation">Installation</a></li>
   <li><a href="#guides" id="toc-guides" class="nav-link" data-scroll-target="#guides">Guides</a></li>
   <li><a href="#tools" id="toc-tools" class="nav-link" data-scroll-target="#tools">Tools</a></li>
   <li><a href="#templates" id="toc-templates" class="nav-link" data-scroll-target="#templates">Templates</a></li>
@@ -225,35 +226,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<figure style="text-align: center" class="figure page-columns page-full">
-<p>
-<img src="fig/hex-collection.jpeg" width="50%" alt="three isometric hex badges for The Carpentries Workbench representing the packages sandpaper, pegboard, and varnish. Each badge is styled to look like a tiny workshop working on a wooden carpentries logo with the package namesake highlighted." class="figure-img">
-</p><div class="column-screen-inset" style="text-align: left">
-<p><img src="fig/lc-workbench.png" width="23%" alt="screenshot of the 'Navigating the Filesystem' episode of the Library Carpentry Shell lesson" class="figure-img"> <img src="fig/dc-workbench.png" width="23%" alt="screenshot of the 'Introduction to R' episode of the Library Carpentry R for Social Scientists lesson" class="figure-img"> <img src="fig/swc-workbench.png" width="23%" alt="screenshot of the 'Navigating Files and Directories' episode of the Software Carpentry Shell lesson" class="figure-img"> <img src="fig/cp-workbench.png" width="23%" alt="screenshot of the 'Building Skill with Practice' episode of the Instructor Training lesson" class="figure-img"></p>
-</div>
-<p></p>
-<figcaption style="display: block" class="figure-caption">
-<p></p>
-The Workbench is an accessible lesson infrastructure built in R
-<p></p>
-</figcaption>
-</figure>
-<div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Installation
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>To install the workbench, make sure you have a working version of R and pandoc/RStudio installed (see <a href="https://carpentries.github.io/sandpaper-docs/">the workbench setup instructions for details</a>).</p>
-<p>From there, you can install the workbench packages and their dependencies from our <a href="https://carpentries.r-universe.dev">Carpentries R Universe</a>:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"sandpaper"</span>, <span class="st">"varnish"</span>, <span class="st">"pegboard"</span>, <span class="st">"tinkr"</span>),</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">repos =</span> <span class="fu">c</span>(<span class="st">"https://carpentries.r-universe.dev/"</span>, <span class="fu">getOption</span>(<span class="st">"repos"</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -264,30 +236,33 @@ Workbench Beta Phase
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong><a href="beta-phase.html">The Carpentries Workbench is currently in its Beta Phase</a>, undergoing testing</strong> for the broader Carpentries Community including, but not limited to:</p>
-<ul>
-<li>Maintainers (Official Lessons)</li>
-<li>Lesson Developers (Community-curated Lessons)</li>
-<li>Instructors</li>
-<li>Trainers</li>
-<li>Learners</li>
-</ul>
-<p>If you would like to participate in the beta phase, you can</p>
-<ul>
-<li><a href="#resources">find out more about our workbench through our Resource Guide</a>,</li>
-<li><strong><a href="https://github.com/carpentries/workbench/discussions/1">introduce yourself</a></strong>, and</li>
-<li><a href="https://github.com/carpentries/workbench/discussions/">give feedback via GitHub Discussions</a></li>
-</ul>
+<p>We are testing use of The Workbench on a small number of official lessons.<br>
+<strong><a href="beta-phase.html">Learn more about how to participate in the Beta Phase</a></strong>.</p>
 </div>
 </div>
+<p>The Workbench is a complete redesign of The Carpentries lesson websites, with new features prioritising accessibility and navigation. <strong>All Carpentries lessons will begin using The Carpentries Workbench in May 2023.</strong></p>
+<figure style="text-align: center" class="figure page-columns page-full">
+<p>
+<img src="fig/hex-collection.jpeg" width="50%" alt="three isometric hex badges for The Carpentries Workbench representing the packages sandpaper, pegboard, and varnish. Each badge is styled to look like a tiny workshop working on a wooden carpentries logo with the package namesake highlighted." class="figure-img">
+</p><div class="column-screen-inset" style="text-align: left">
+<p><img src="fig/lc-workbench.png" width="23%" alt="screenshot of the 'Navigating the Filesystem' episode of the Library Carpentry Shell lesson" class="figure-img"> <img src="fig/dc-workbench.png" width="23%" alt="screenshot of the 'Introduction to R' episode of the Library Carpentry R for Social Scientists lesson" class="figure-img"> <img src="fig/swc-workbench.png" width="23%" alt="screenshot of the 'Navigating Files and Directories' episode of the Software Carpentry Shell lesson" class="figure-img"> <img src="fig/cp-workbench.png" width="23%" alt="screenshot of the 'Building Skill with Practice' episode of the Instructor Training lesson" class="figure-img"></p>
+</div>
+<p></p>
+</figure>
 <section id="resources" class="level2">
 <h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<section id="installation" class="level3">
+<h3 class="anchored" data-anchor-id="installation">Installation</h3>
+<p>To install the workbench, make sure you have a working version of R and pandoc/RStudio installed (see <a href="https://carpentries.github.io/sandpaper-docs/">the workbench setup instructions for details</a>).</p>
+<p>From there, you can install the workbench packages and their dependencies from our <a href="https://carpentries.r-universe.dev">Carpentries R Universe</a>:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"sandpaper"</span>, <span class="st">"varnish"</span>, <span class="st">"pegboard"</span>, <span class="st">"tinkr"</span>),</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">repos =</span> <span class="fu">c</span>(<span class="st">"https://carpentries.r-universe.dev/"</span>, <span class="fu">getOption</span>(<span class="st">"repos"</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
 <section id="guides" class="level3">
 <h3 class="anchored" data-anchor-id="guides">Guides</h3>
 <ul>
-<li><a href="https://carpentries.github.io/sandpaper-docs">Official Workbench Documentation</a></li>
-<li><a href="https://carpentries.github.io/lesson-development-training/">Collaborative Lesson Development Training</a></li>
-<li><a href="beta-phase.html">Workbench Beta Phase</a></li>
+<li><a href="https://carpentries.github.io/sandpaper-docs">Official Workbench Documentation</a>: written using The Workbench, this guide provides everything you need to get started using The Workbench.</li>
+<li><a href="https://carpentries.github.io/lesson-development-training/">Collaborative Lesson Development Training</a>: Material for a three day workshop teaching good practices in lesson design and open source collaboration skills</li>
 </ul>
 </section>
 <section id="tools" class="level3">
