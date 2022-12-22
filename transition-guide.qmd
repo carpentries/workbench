@@ -587,7 +587,7 @@ use Jekyll's metadata parsing to create a custom introductory block.
 
 ## Instructor notes
 
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-page}
 :::::::::::::::::::::: {layout="[50,50]"}
 ::: {.column}
 
@@ -621,7 +621,7 @@ called `_extras/guide.md`
 
 ## Lists
 
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-page}
 :::::::::::::::::::::: {layout="[50,50]"}
 ::: {.column}
 
@@ -630,7 +630,7 @@ called `_extras/guide.md`
 In general, if something does not work in Markdown, try adding a blank line.
 This is true for lists.
 
-A list must start with a blank line to be rendered properly:
+A list must start and end with a blank line to be rendered properly:
 
 ::: {.panel-tabset}
 
@@ -642,6 +642,8 @@ A list of things
 - shoes
 - coat
 - glasses
+
+text after the list
 ```
 
 A list of things
@@ -649,6 +651,8 @@ A list of things
 - shoes
 - coat
 - glasses
+
+text after the list
 
 
 #### Incorrect Syntax
@@ -658,12 +662,52 @@ A list of things
 - shoes
 - coat
 - glasses
+
+text after the list
 ```
 
 A list of things
 - shoes
 - coat
 - glasses
+
+text after the list
+
+
+#### Lists in fenced divs
+
+Lists in fenced divs behave the same way and a common mode of failure is to
+create a list inside a fenced div that does not have space around it:
+
+```markdown
+::: callout
+- one
+- two
+- three
+:::
+```
+
+This will result in a callout that has this content. Moreover, [the lesson build
+will fail to validate](https://github.com/carpentries/sandpaper/issues/355):
+
+- one
+- two
+- three
+\:\:\:
+
+
+Instead, please make sure you add blank lines around your list like this:
+
+```markdown
+::: callout
+
+- one
+- two
+- three
+
+:::
+```
+
 
 :::
 :::
@@ -680,6 +724,8 @@ A list of things
 - shoes
 - coat
 - glasses
+
+text after the list
 ```
 
 A list of things
@@ -688,7 +734,7 @@ A list of things
 - coat
 - glasses
 
-
+text after the list
 :::
 
 
@@ -697,13 +743,25 @@ A list of things
 
 ## Tables
 
+::: {.callout-note}
+
+### About Table Styling
+
+Please note that the table display here is not a good representation of what
+you will see in The Workbench or in Styles. They both have their own 
+idiosyncratic ways of displaying tables. 
+
+I will try to replicate their display here soon.
+
+:::
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
 :::::::::::::::::::::: {layout="[50,50]"}
 ::: {.column}
 
+
 ### Workbench
 
-Tables in the workbench follow the rules for [pandoc pipe table syntax]().
+Tables in the workbench follow the rules for [pandoc pipe table syntax](https://pandoc.org/MANUAL.html#extension-pipe_tables).
 
 There are two extra features for this syntax in pandoc:
 
@@ -721,20 +779,22 @@ There are two extra features for this syntax in pandoc:
 ```markdown
 Table: A table of fruits and prices
 
-| fruit  | price |
-| ------ | ----- |
-| apple  | 2.05  |
-| pear   | 1.37  |
-| orange | 3.09  |
+| fruit  | price  |
+| ------ | -----: |
+| apple  | 2.05   |
+| pear   | 1.37   |
+| orange | 3.09   |
+| devil  | 666.00 |
 ```
 
 Table: A table of fruits and prices
 
-| fruit  | price |
-| ------ | ----- |
-| apple  | 2.05  |
-| pear   | 1.37  |
-| orange | 3.09  |
+| fruit  | price  |
+| ------ | -----: |
+| apple  | 2.05   |
+| pear   | 1.37   |
+| orange | 3.09   |
+| devil  | 666.00 |
 
 
 #### Wide table with caption
@@ -790,6 +850,23 @@ Table: table to demonstrate a wrapped cell
 ### styles
 
 [Jekyll tables](https://www.markdownguide.org/extended-syntax/#tables) are the same syntax, but with no ability to add captions or control width:
+
+```markdown
+| fruit  | price  |
+| ------ | -----: |
+| apple  | 2.05   | 
+| pear   | 1.37   |
+| orange | 3.09   |
+| devil  | 666.00 |
+```
+
+
+| fruit  | price  |
+| ------ | -----: |
+| apple  | 2.05   | 
+| pear   | 1.37   |
+| orange | 3.09   |
+| devil  | 666.00 |
 
 
 
