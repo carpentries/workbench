@@ -208,6 +208,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#questionsobjectiveskeypoints" id="toc-questionsobjectiveskeypoints" class="nav-link" data-scroll-target="#questionsobjectiveskeypoints">Questions/Objectives/Keypoints</a></li>
   <li><a href="#instructor-notes" id="toc-instructor-notes" class="nav-link" data-scroll-target="#instructor-notes">Instructor notes</a></li>
   <li><a href="#lists" id="toc-lists" class="nav-link" data-scroll-target="#lists">Lists</a></li>
+  <li><a href="#tables" id="toc-tables" class="nav-link" data-scroll-target="#tables">Tables</a></li>
   <li><a href="#internal-links" id="toc-internal-links" class="nav-link" data-scroll-target="#internal-links">Internal Links</a></li>
   <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
   </ul>
@@ -800,33 +801,174 @@ The trouble with YAML metadata
 </div>
 </div>
 </section>
-<section id="internal-links" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="internal-links">Internal Links</h2>
+<section id="tables" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="tables">Tables</h2>
 <div class="column-screen-inset">
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <section id="workbench-12" class="level3">
 <h3 class="anchored" data-anchor-id="workbench-12">Workbench</h3>
-<p>Links in the Workbench are relative to the file so that you can link to the files and confirm they work in the github preview. Figures, files, and data are nested inside the <code>episodes/</code> folder.</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Next Episode --&gt;</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">next episode on dragons</span><span class="co">](dragons.md)</span></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Data --&gt;</span></span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">download the dragon data for this episode</span><span class="co">](data/dragon-lifespan.csv)</span></span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Setup --&gt;</span></span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">setup instructions</span><span class="co">](../learners/setup.md)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Tables in the workbench follow the rules for <a href="">pandoc pipe table syntax</a>.</p>
+<p>There are two extra features for this syntax in pandoc:</p>
+<ol type="1">
+<li>You can add a table caption, which is great for accessibility<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></li>
+<li>You have control over the relative width of oversized table contents</li>
+</ol>
+<div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Short table with caption</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Wide table with caption</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<div class="sourceCode" id="cb18"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="an">Table:</span><span class="co"> A table of fruits and prices</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>| fruit  | price |</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>| ------ | ----- |</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>| apple  | 2.05  |</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>| pear   | 1.37  |</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>| orange | 3.09  |</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<table class="table">
+<caption>A table of fruits and prices</caption>
+<thead>
+<tr class="header">
+<th>fruit</th>
+<th>price</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>apple</td>
+<td>2.05</td>
+</tr>
+<tr class="even">
+<td>pear</td>
+<td>1.37</td>
+</tr>
+<tr class="odd">
+<td>orange</td>
+<td>3.09</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p>To control the width of columns in the table, adjust the number of <code>-</code> in the separator between the header and the table body. This table has three columns with a 2:1:1 ratio (as noted by the <code>|----|--|--|</code> header)</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="an">Table:</span><span class="co"> summary of relevant statistical tests for normally and non-normally distributed data</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>|Analysis required (continuous data) |Normally distributed data | Non-normally distributed data |</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>| ----                               | --                       | --                            |</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>|Compare mean or median of one sample group against a known value |One sample t-test |Wilcoxon Rank Sum test |</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>|Compare means or medians of two sample groups (unpaired data) |Unpaired t-test |Mann-Whitney test |</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>|Compare means or medians of two sample groups (paired data) |Paired t-test |Wilcoxon Matched Pairs test |</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>|Compare means or medians of ≥ three sample groups (unpaired data) |ANOVA |Kruskal-Wallis ANOVA |</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>|Compare means or medians of ≥ three sample groups (paired data) |Repeated measures ANOVA |Friedman test |</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<table class="table">
+<caption>summary of relevant statistical tests for normally and non-normally distributed data</caption>
+<colgroup>
+<col style="width: 50%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analysis required (continuous data)</th>
+<th>Normally distributed data</th>
+<th>Non-normally distributed data</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Compare mean or median of one sample group against a known value</td>
+<td>One sample t-test</td>
+<td>Wilcoxon Rank Sum test</td>
+</tr>
+<tr class="even">
+<td>Compare means or medians of two sample groups (unpaired data)</td>
+<td>Unpaired t-test</td>
+<td>Mann-Whitney test</td>
+</tr>
+<tr class="odd">
+<td>Compare means or medians of two sample groups (paired data)</td>
+<td>Paired t-test</td>
+<td>Wilcoxon Matched Pairs test</td>
+</tr>
+<tr class="even">
+<td>Compare means or medians of ≥ three sample groups (unpaired data)</td>
+<td>ANOVA</td>
+<td>Kruskal-Wallis ANOVA</td>
+</tr>
+<tr class="odd">
+<td>Compare means or medians of ≥ three sample groups (paired data)</td>
+<td>Repeated measures ANOVA</td>
+<td>Friedman test</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb20"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="an">Table:</span><span class="co"> table to demonstrate a wrapped cell</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>| with wrapping | without wrapping |</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>| --            | ------           |</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>| This is a lot of text for a very tiny cell. It almost certainly will be wrapped. | This is a lot of text for a wider cell. It will not wrap so soon. |</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<table class="table">
+<caption>table to demonstrate a wrapped cell</caption>
+<colgroup>
+<col style="width: 25%">
+<col style="width: 75%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>with wrapping</th>
+<th>without wrapping</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>This is a lot of text for a very tiny cell. It almost certainly will be wrapped.</td>
+<td>This is a lot of text for a wider cell. It will not wrap so soon.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
 </section>
 </div>
 <div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <section id="styles-12" class="level3">
 <h3 class="anchored" data-anchor-id="styles-12">styles</h3>
+<p><a href="https://www.markdownguide.org/extended-syntax/#tables">Jekyll tables</a> are the same syntax, but with no ability to add captions or control width:</p>
+</section>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="internal-links" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="internal-links">Internal Links</h2>
+<div class="column-screen-inset">
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<section id="workbench-13" class="level3">
+<h3 class="anchored" data-anchor-id="workbench-13">Workbench</h3>
+<p>Links in the Workbench are relative to the file so that you can link to the files and confirm they work in the github preview. Figures, files, and data are nested inside the <code>episodes/</code> folder.</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Next Episode --&gt;</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">next episode on dragons</span><span class="co">](dragons.md)</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Data --&gt;</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">download the dragon data for this episode</span><span class="co">](data/dragon-lifespan.csv)</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Setup --&gt;</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">setup instructions</span><span class="co">](../learners/setup.md)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</div>
+<div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<section id="styles-13" class="level3">
+<h3 class="anchored" data-anchor-id="styles-13">styles</h3>
 <p>Links are relative to the page that they are rendered to. You should use the <code>{{ page.root }}</code> variable and the <code>link</code> tag in order to construct the correct path to the resource:</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Next Episode --&gt;</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">next episode on dragons</span><span class="co">]({{ page.root }}{% link _episodes/dragons.md %})</span></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Data --&gt;</span></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">download the dragon data for this episode</span><span class="co">]({{ page.root }}/data/dragon-lifespan.csv)</span></span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Setup --&gt;</span></span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">setup instructions</span><span class="co">]({{ page.root }}/setup.md)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Next Episode --&gt;</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">next episode on dragons</span><span class="co">]({{ page.root }}{% link _episodes/dragons.md %})</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Data --&gt;</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">download the dragon data for this episode</span><span class="co">]({{ page.root }}/data/dragon-lifespan.csv)</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Setup --&gt;</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">setup instructions</span><span class="co">]({{ page.root }}/setup.md)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </div>
 </div>
@@ -839,11 +981,11 @@ The trouble with YAML metadata
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<section id="workbench-13" class="level3">
-<h3 class="anchored" data-anchor-id="workbench-13">Workbench</h3>
+<section id="workbench-14" class="level3">
+<h3 class="anchored" data-anchor-id="workbench-14">Workbench</h3>
 <p>Figures are written with the caption in the square brackets and alt appended as an attribute like so: <code>![caption](fig/image.png){alt='image description'}</code>.</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="al">![The dragon emerges!](fig/dragon-egg.png)</span>{alt='a red baby </span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>dragon head sticks out from its egg'}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="al">![The dragon emerges!](fig/dragon-egg.png)</span>{alt='a red baby </span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>dragon head sticks out from its egg'}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -860,12 +1002,12 @@ Note
 </section>
 </div>
 <div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<section id="styles-13" class="level3">
-<h3 class="anchored" data-anchor-id="styles-13">styles</h3>
+<section id="styles-14" class="level3">
+<h3 class="anchored" data-anchor-id="styles-14">styles</h3>
 <p>Figures are written with alt text in the square brackets, but no caption like so: <code>![alt text]({{ page.root }}/fig/image.png)</code></p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="al">![a red baby dragon head sticks out from its egg]({{ page.root }}/fig/dragon-egg.png)</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>The dragon emerges!</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="al">![a red baby dragon head sticks out from its egg]({{ page.root }}/fig/dragon-egg.png)</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>The dragon emerges!</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </div>
 </div>
@@ -881,6 +1023,7 @@ Note
 <li id="fn2"><p>python in styles is required for validation and initialisation, but is not required for local rendering<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn3"><p>R in styles is required for R Markdown-based lessons<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn4"><p>caveat: we still need the GitHub actions, but those are buried in the <code>.github</code> folder<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>Captions allow visually impaired users to choose if they want to skip over the table contents if it is scannable. <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Advanced#adding_a_caption_to_your_table_with_caption">MDN docs: adding a caption to your table</a><a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 
