@@ -694,6 +694,111 @@ A list of things
 
 :::::::::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+## Tables
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
+:::::::::::::::::::::: {layout="[50,50]"}
+::: {.column}
+
+### Workbench
+
+Tables in the workbench follow the rules for [pandoc pipe table syntax]().
+
+There are two extra features for this syntax in pandoc:
+
+1. You can add a table caption, which is great for accessibility[^caption]
+2. You have control over the relative width of oversized table contents
+
+[^caption]: Captions allow visually impaired users to choose if they want to
+  skip over the table contents if it is scannable. [MDN docs: adding a caption
+  to your table](https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Advanced#adding_a_caption_to_your_table_with_caption)
+
+::: {.panel-tabset}
+
+#### Short table with caption
+
+```markdown
+Table: A table of fruits and prices
+
+| fruit  | price |
+| ------ | ----- |
+| apple  | 2.05  |
+| pear   | 1.37  |
+| orange | 3.09  |
+```
+
+Table: A table of fruits and prices
+
+| fruit  | price |
+| ------ | ----- |
+| apple  | 2.05  |
+| pear   | 1.37  |
+| orange | 3.09  |
+
+
+#### Wide table with caption
+
+To control the width of columns in the table, adjust the number of `-` in the
+separator between the header and the table body. This table has three columns
+with a 2:1:1 ratio (as noted by the `|----|--|--|` header)
+
+```markdown
+Table: summary of relevant statistical tests for normally and non-normally distributed data
+
+|Analysis required (continuous data) |Normally distributed data | Non-normally distributed data |
+| ----                               | --                       | --                            |
+|Compare mean or median of one sample group against a known value |One sample t-test |Wilcoxon Rank Sum test |
+|Compare means or medians of two sample groups (unpaired data) |Unpaired t-test |Mann-Whitney test |
+|Compare means or medians of two sample groups (paired data) |Paired t-test |Wilcoxon Matched Pairs test |
+|Compare means or medians of ≥ three sample groups (unpaired data) |ANOVA |Kruskal-Wallis ANOVA |
+|Compare means or medians of ≥ three sample groups (paired data) |Repeated measures ANOVA |Friedman test |
+
+```
+
+Table: summary of relevant statistical tests for normally and non-normally distributed data
+
+|Analysis required (continuous data) |Normally distributed data | Non-normally distributed data |
+| ----                               | --                       | --                            |
+|Compare mean or median of one sample group against a known value |One sample t-test |Wilcoxon Rank Sum test |
+|Compare means or medians of two sample groups (unpaired data) |Unpaired t-test |Mann-Whitney test |
+|Compare means or medians of two sample groups (paired data) |Paired t-test |Wilcoxon Matched Pairs test |
+|Compare means or medians of ≥ three sample groups (unpaired data) |ANOVA |Kruskal-Wallis ANOVA |
+|Compare means or medians of ≥ three sample groups (paired data) |Repeated measures ANOVA |Friedman test |
+
+
+
+```markdown
+Table: table to demonstrate a wrapped cell
+
+| with wrapping | without wrapping |
+| --            | ------           |
+| This is a lot of text for a very tiny cell. It almost certainly will be wrapped. | This is a lot of text for a wider cell. It will not wrap so soon. |
+```
+
+Table: table to demonstrate a wrapped cell
+
+| with wrapping | without wrapping |
+| --            | ------           |
+| This is a lot of text for a very tiny cell. It almost certainly will be wrapped. | This is a lot of text for a wider cell. It will not wrap so soon. |
+
+:::
+:::
+
+::: {.column}
+
+### styles
+
+[Jekyll tables](https://www.markdownguide.org/extended-syntax/#tables) are the same syntax, but with no ability to add captions or control width:
+
+
+
+:::
+
+
+:::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
 ## Internal Links 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
