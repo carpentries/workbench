@@ -3,6 +3,19 @@ title: The Carpentries Workbench
 subtitle: An accessible lesson infrastructure built in R
 ---
 
+::::::: {.callout-note}
+
+## Workbench Beta Phase
+
+We are testing use of The Workbench on a small number of official lessons. \
+**[Learn more about how to participate in the Beta Phase](beta-phase.html)**.
+
+::::::::::::::::::::
+
+
+The Workbench is a complete redesign of The Carpentries lesson websites, with
+new features prioritising accessibility and navigation. **All Carpentries lessons
+will begin using The Carpentries Workbench in May 2023.**
 
 <figure style='text-align: center'>
 <p>
@@ -14,13 +27,11 @@ subtitle: An accessible lesson infrastructure built in R
 <img src="fig/cp-workbench.png" width="23%" alt="screenshot of the 'Building Skill with Practice' episode of the Instructor Training lesson">
 </div>
 </p>
-<figcaption style='display: block'></p>The Workbench is an accessible lesson infrastructure built in R</p></figcaption>
 </figure>
 
+## Resources
 
-::::::: {.callout-tip}
-
-## Installation
+### Installation
 
 To install the workbench, make sure you have a working version of R and 
 pandoc/RStudio installed (see [the workbench setup instructions for 
@@ -34,37 +45,10 @@ install.packages(c("sandpaper", "varnish", "pegboard", "tinkr"),
   repos = c("https://carpentries.r-universe.dev/", getOption("repos")))
 ```
 
-:::::::::::::::::::::::
-
-
-::::::: {.callout-note}
-
-## Workbench Beta Phase
-
-**[The Carpentries Workbench is currently in its Beta Phase](beta-phase.html), undergoing testing**
-for the broader Carpentries Community including, but not limited to:
-
- - Maintainers (Official Lessons)
- - Lesson Developers (Community-curated Lessons)
- - Instructors
- - Trainers
- - Learners
-
-If you would like to participate in the beta phase, you can
-
- - [find out more about our workbench through our Resource Guide](#resources),
- - **[introduce yourself](https://github.com/carpentries/workbench/discussions/1)**, and 
- - [give feedback via GitHub Discussions](https://github.com/carpentries/workbench/discussions/)
-
-::::::::::::::::::::
-
-## Resources
-
 ### Guides
 
- - [Official Workbench Documentation](https://carpentries.github.io/sandpaper-docs)
- - [Collaborative Lesson Development Training](https://carpentries.github.io/lesson-development-training/)
- - [Workbench Beta Phase](beta-phase.html)
+ - [Official Workbench Documentation](https://carpentries.github.io/sandpaper-docs): written using The Workbench, this guide provides everything you need to get started using The Workbench. 
+ - [Collaborative Lesson Development Training](https://carpentries.github.io/lesson-development-training/): Material for a three day workshop teaching good practices in lesson design and open source collaboration skills
 
 ### Tools
 

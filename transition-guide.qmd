@@ -1,5 +1,8 @@
 ---
 title: "Transition Guide: From Styles to Workbench"
+format:
+  html:
+    css: transition-guide.scss
 ---
 
 ## Background
@@ -17,12 +20,15 @@ This document is intended to provide you with a quick reference about the
 differences between [kramdown] (used by styles) and [pandoc-flavoured
 markdown][pandoc] (used by The Workbench):
 
-## Default Branch
+
+## For Maintainers
+
+### Default Branch
 
 :::::::::::::: {layout="[50, 50]"}
 ::: {.column}
 
-### Workbench
+#### Workbench
 
 The default branch is always **`main`**
 
@@ -30,7 +36,7 @@ The default branch is always **`main`**
 
 ::: {.column}
 
-### styles
+#### styles
 
 The default branch is **`gh-pages`** UNLESS you have rendered RMarkdown content,
 then the default branch is `main`
@@ -38,12 +44,12 @@ then the default branch is `main`
 :::
 ::::::::::::::::::::::::::::::::
 
-## Infrastructure
+### Infrastructure
 
 :::::::::::::: {layout="[50, 50]"}
 ::: {.column}
 
-### Workbench
+#### Workbench
 
 The workbench infrastructure is **independent**^[one exception: github
 workflows are contained inside the `.github/workflows` folder] from individual
@@ -65,7 +71,7 @@ the fly with no changes to the lesson.
 
 ::: {.column}
 
-### styles
+#### styles
 
 The styles infrastructure is **embedded** within the lesson itself. It requires
 the following major pieces of software to run:
@@ -94,7 +100,7 @@ The file components can only be updated via pull request.
 :::
 ::::::::::::::::::::::::::::::::
 
-## Contributor Count
+### Contributor Count
 
 Because content and tools are separated in Workbench Lessons, giving credit for
 the lesson is much more straightforward. Here we use Dr. Sarah Gibson's
@@ -106,7 +112,7 @@ lesson](https://sgibson91.github.io/cross-stitch-carpentry/) as an example
 
 ::: {.column}
 
-### Workbench
+#### Workbench
 
 The Contributors reflect those that actually worked on the lesson itself.
 
@@ -116,7 +122,7 @@ The Contributors reflect those that actually worked on the lesson itself.
 
 ::: {.column}
 
-### styles
+#### styles
 
 The Contributors reflect those that worked on the lesson AND those that worked
 on the underlying infrastructure, going back to 2013.
@@ -127,12 +133,12 @@ on the underlying infrastructure, going back to 2013.
 ::::::::::::::::::::::::::::::::
 
 
-## Local Rendering
+### Local Rendering
 
 :::::::::::::: {layout="[50, 50]"}
 ::: {.column}
 
-### Workbench
+#### Workbench
 
 1. If you haven't already, Follow the [setup instructions for the workbench][workbench-setup] to install R, pandoc, and the workbench packages
 2. In your lesson directory, open either [R](https://cloud.r-project.org/), [RStudio](https://www.rstudio.com/products/rstudio/download/#download), or [VS Code](https://code.visualstudio.com/docs/languages/r) and run:
@@ -145,7 +151,7 @@ sandpaper::serve()
 
 ::: {.column}
 
-### styles
+#### styles
 
 1. If you haven't already, Follow the [setup instructions for styles](https://carpentries.github.io/lesson-example/setup) to install Ruby, Bundler, Jekyll, Make, Python, and BASH
 2. In your lesson directory, open your command line and run:
@@ -158,7 +164,7 @@ make serve
 ::::::::::::::::::::::::::::::::
 
 
-## Folder Structure
+### Folder Structure
 
 
 The folders from styles to Workbench are rearranged to achieve the following
@@ -179,98 +185,14 @@ shows episodes flowing to episodes, extras flowing to learners and instructors,
 and figures, data, and files flowing to subfolders under episodes. Other
 folders are in grey with no arrows indicating that they are discarded.'}
 
-## Navigation 
+
+### Setup Page {#setup-maintainer}
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
 :::::::::::::::::::::: {layout="[50,50]"}
 ::: {.column}
 
-### Workbench
-
-Episode and setup information is located on the left hand side of the page.
-Navigation in the workbench is split between information for learners and
-information for instructors. The top right of the page has a toggle button
-between Learner and Instructor views, which change the four main navigation
-items in the top navigation bar. 
-
-
-#### Learner View
-
-When this is toggled, the main navigation contains the following menu items:
-Key Points, Glossary, Learner Profiles, and More. The "More" dropdown menu
-contains information for learners from the `learners/` folder aside from the
-setup instructions.
-
-![](fig/screenshot-learner-view.png){alt='screenshot of the workbench version
-of "The Unix Shell". A blue arrow points to the top right corner indicating the
-lesson is in "Learner View". The menu bar states the name of the lesson and has
-the items described in text, with all but the first underlined. There is a grey
-sidebar that says "Episodes" and a section called "Summary and Setup" is
-underlined in blue. The main content shows a blue underline under the last
-updated status.'}
-
-#### Instructor view
-
-When this is toggled, the main navigation contains the following menu items:
-Key Points, Instructor Notes, Extract All Images, and More. The "More" dropdown
-menu contains information for learners from the `instructors/` folder.
-
-In addition, the schedule now appears on the home page, instructor notes are
-displayed inline, and the estimated timings for a lesson appear.
-
-
-![](fig/screenshot-instructor-view.png){alt='screenshot of the workbench
-version of "The Unix Shell". A red arrow points to the top right corner
-indicating the lesson is in "Learner View". The menu bar states the name of the
-lesson and has the items described in text, with all but the first underlined
-in red. There is a grey sidebar that says "Episodes" and a section called
-"Summary and Setup" is underlined in red. The main content shows a red
-underline under the last updated status.'}
-
-
-:::
-
-::: {.column}
-
-### styles
-
-Navigation in the styles repository is relegated to a single menubar at the top
-of the lesson with seven items: Home, Code of Conduct, Setup, Episodes (dropdown),
-Extras (dropdown), License, and Improve This Page. 
-
-
-![](fig/screenshot-styles.png){alt='screenshot of the styles version
-of "The Unix Shell" lesson highlighting a single navigation bar at the top
-containing the items described in the text'}
-
-::: {.callout-warning}
-
-#### Perceived simplicity
-
-While the styles repositories appear to be simpler, there were several components
-of lessons (such as instructor notes and glossary terms) that were not clearly
-available to learners or instructors. Moreover, in cases like instructor training,
-where there was much extra content for both learners and instructors, it was not
-easy to look at the "Extra" menu and determine what content was appropriate for
-a learner or an instructor.
-
-:::
-
-
-:::
-:::::::::::::::::::::
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
-
-
-## Setup Information
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
-:::::::::::::::::::::: {layout="[50,50]"}
-::: {.column}
-
-### Workbench 
-
-The setup instructions are located on the home page at the `#setup` anchor. 
+#### Workbench
 
 The setup information lives in `learners/setup.md` or `learner/setup.Rmd`,
 depending on whether or not you need code generated. Access this file from 
@@ -280,13 +202,14 @@ episodes with
 [setup instructions](../learners/setup.md)
 ```
 
+On the rendered site, the setup instructions are located on the home page at
+the `#setup` anchor. 
+
 :::
 
 ::: {.column}
 
-### styles
-
-The setup instructions are in a separate page called `/setup`
+#### styles
 
 The setup information lives in the top level of the lesson at `setup.md` (no
 possibility to render generated content). Access this file from episodes with
@@ -295,18 +218,21 @@ possibility to render generated content). Access this file from episodes with
 [setup instructions]({{ page.root }}/setup.md)
 ```
 
+On the rendred site, the setup instructions are in a separate page called `/setup`
+
 :::
 :::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
 
 
-## Callout Blocks/Special Blockquotes {#callout-blocks}
+
+### Callout Blocks/Special Blockquotes {#callout-blocks}
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
 :::::::::::::::::::::: {layout="[50,50]"}
 ::: {.column}
 
-### Workbench
+#### Workbench
 
 A callout block with The Workbench uses _at least_ three colons followed by a
 keyword to start a block. The block is closed with _at least_ three colons.
@@ -320,7 +246,7 @@ You can find a demonstration of all the possible callout blocks in [the workbenc
 ```markdown
 :::: callout
 
-### Act Openly
+#### Act Openly
 
 We believe that transparency, honesty, and fairness are keys to fostering
 trust within an open community.
@@ -340,7 +266,7 @@ it is completely up to the lesson author to choose a style.
 
 ::: {.column}
 
-### styles
+#### styles
 
 A callout block (aka "Special Blockquote") with styles used block quote syntax and level 2 headers followed
 by a postfix tag declaring the class of block
@@ -363,7 +289,7 @@ You can find a demonstration of all the possible callout blocks in [the styles "
 
 ::: {.callout-warning}
 
-### Did you know?
+#### Did you know?
 
 The decision to use blockquotes was to facilitate an easy way to author special
 sections without having lesson authors/contributors type `<div>` tags into the
@@ -374,17 +300,19 @@ document.
 :::::::::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Highlighted Code Blocks
+### Highlighted Code Blocks
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
 :::::::::::::::::::::: {layout="[50,50]"}
 ::: {.column}
 
-### Workbench
+#### Workbench
 
 Code fences in the workbench are indicated by fences that consist of three
 backticks (```` ``` ````) with the name of the language appended on the opening 
 fence:
+<br>
+<br>
 
 ````markdown
 clean all merged branches from git
@@ -398,7 +326,7 @@ git branch --merged | grep -v '^\*' | xargs git branch -d
 
 ::: {.column}
 
-### styles
+#### styles
 
 Code fences in styles follow kramdown syntax, which prefers fences that consist
 of three tildes (`~~~`) with the liquid tag of the language appended on a new
@@ -416,13 +344,13 @@ git branch --merged | grep -v '^\*' | xargs git branch -d
 :::::::::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Challenge/Solution blocks
+### Challenge/Solution blocks
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
 :::::::::::::::::::::: {layout="[50,50]"}
 ::: {.column}
 
-### Workbench
+#### Workbench
 
 The challenge and solution blocks in the workbench are nested pairs of blocks
 with an optional Level 3 header. You can additonally add a "hint" block before
@@ -431,7 +359,7 @@ the solution.
 ````markdown
 ::::::::::::::::::::::::::::: challenge
 
-### Challenge: build
+#### Challenge: build
 
 What is the R command to build a Workbench lesson?
 
@@ -463,7 +391,7 @@ compared to the inner section.
 
 ::: {.column}
 
-### styles
+#### styles
 
 The challenge and solution blocks in the workbench are nested block quotes
 with Level 2 headers. Additional blocks are still of the class "solution" 
@@ -491,13 +419,13 @@ with Level 2 headers. Additional blocks are still of the class "solution"
 :::::::::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Questions/Objectives/Keypoints
+### Questions/Objectives/Keypoints
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
 :::::::::::::::::::::: {layout="[50,50]"}
 ::: {.column}
 
-### Workbench
+#### Workbench
 
 Questions and Objectives appear at the top of the lesson as [fenced 
 divs][fenced-divs] with list elements:
@@ -523,7 +451,7 @@ exercises: 5
 
 ::::::::::::::::::::::::::::
 
-## Introduction
+### Introduction
 
 ...
 ````
@@ -544,7 +472,7 @@ Keypoints should go in a [fenced div][fenced-divs] at the _end_ of the document:
 
 ::: {.column}
 
-### styles
+#### styles
 
 The questions, objectives, and keypoints were placed in the YAML metadata for
 each episode:
@@ -563,14 +491,14 @@ keypoints:
  - "We will never know who put the bomp in the bomp bah bomp bah bomp." 
 ---
 
-## Introduction
+### Introduction
 
 ...
 ````
 
 ::: {.callout-warning}
 
-### The trouble with YAML metadata
+#### The trouble with YAML metadata
 
 It was not possible to include markdown inside these strings and it often caused
 errors due to missed quotation marks (i.e. ` - "sentence with a period after quotes".`
@@ -585,13 +513,13 @@ use Jekyll's metadata parsing to create a custom introductory block.
 :::::::::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Instructor notes
+### Instructor notes
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-page}
 :::::::::::::::::::::: {layout="[50,50]"}
 ::: {.column}
 
-### Workbench
+#### Workbench
 
 An **inline instructor note** in the workbench is formed inside an episode by
 making a [_fenced div_][fenced-divs] with the class "instructor"
@@ -610,7 +538,7 @@ Instructor notes for the whole lesson can be placed in `instructors/instructor-n
 
 ::: {.column}
 
-### styles
+#### styles
 
 Instructor notes do not exist in styles other than an aggregate markdown file
 called `_extras/guide.md`
@@ -619,13 +547,13 @@ called `_extras/guide.md`
 :::::::::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Lists
+### Lists
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-page}
 :::::::::::::::::::::: {layout="[50,50]"}
 ::: {.column}
 
-### Workbench
+#### Workbench
 
 In general, if something does not work in Markdown, try adding a blank line.
 This is true for lists.
@@ -634,7 +562,7 @@ A list must start and end with a blank line to be rendered properly:
 
 ::: {.panel-tabset}
 
-#### Correct Syntax
+##### Correct Syntax
 
 ```markdown
 A list of things
@@ -655,7 +583,7 @@ A list of things
 text after the list
 
 
-#### Incorrect Syntax
+##### Incorrect Syntax
 
 ```markdown
 A list of things
@@ -674,7 +602,7 @@ A list of things
 text after the list
 
 
-#### Lists in fenced divs
+##### Lists in fenced divs
 
 Lists in fenced divs behave the same way and a common mode of failure is to
 create a list inside a fenced div that does not have space around it:
@@ -714,7 +642,7 @@ Instead, please make sure you add blank lines around your list like this:
 
 ::: {.column}
 
-### styles
+#### styles
 
 Jekyll is very forgiving for lists in general, so a blank line before the list
 is optional
@@ -741,11 +669,11 @@ text after the list
 :::::::::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Tables
+### Tables
 
 ::: {.callout-note}
 
-### About Table Styling
+#### About Table Styling
 
 Please note that the table display here is not a good representation of what
 you will see in The Workbench or in Styles. They both have their own 
@@ -759,7 +687,7 @@ I will try to replicate their display here soon.
 ::: {.column}
 
 
-### Workbench
+#### Workbench
 
 Tables in the workbench follow the rules for [pandoc pipe table syntax](https://pandoc.org/MANUAL.html#extension-pipe_tables).
 
@@ -774,7 +702,7 @@ There are two extra features for this syntax in pandoc:
 
 ::: {.panel-tabset}
 
-#### Short table with caption
+##### Short table with caption
 
 ```markdown
 Table: A table of fruits and prices
@@ -797,7 +725,7 @@ Table: A table of fruits and prices
 | devil  | 666.00 |
 
 
-#### Wide table with caption
+##### Wide table with caption
 
 To control the width of columns in the table, adjust the number of `-` in the
 separator between the header and the table body. This table has three columns
@@ -847,7 +775,7 @@ Table: table to demonstrate a wrapped cell
 
 ::: {.column}
 
-### styles
+#### styles
 
 [Jekyll tables](https://www.markdownguide.org/extended-syntax/#tables) are the same syntax, but with no ability to add captions or control width:
 
@@ -876,13 +804,13 @@ Table: table to demonstrate a wrapped cell
 :::::::::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Internal Links 
+### Internal Links 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
 :::::::::::::::::::::: {layout="[50,50]"}
 ::: {.column}
 
-### Workbench
+#### Workbench
 
 Links in the Workbench are relative to the file so that you can link to the
 files and confirm they work in the github preview. Figures, files, and data are
@@ -901,7 +829,7 @@ nested inside the `episodes/` folder.
 
 ::: {.column}
 
-### styles
+#### styles
 
 Links are relative to the page that they are rendered to. You should use the 
 `{{ page.root }}` variable and the `link` tag in order to construct the correct
@@ -921,13 +849,13 @@ path to the resource:
 :::::::::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Figures
+### Figures
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
 :::::::::::::::::::::: {layout="[50,50]"}
 ::: {.column}
 
-### Workbench
+#### Workbench
 
 Figures are written with the caption in the square brackets and alt appended
 as an attribute like so: `![caption](fig/image.png){alt='image description'}`.
@@ -951,7 +879,7 @@ no decoration as it will be descriptive.
 
 ::: {.column}
 
-### styles
+#### styles
 
 Figures are written with alt text in the square brackets, but no caption like
 so: `![alt text]({{ page.root }}/fig/image.png)`
@@ -966,6 +894,129 @@ The dragon emerges!
 :::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+
+## For Instructors
+
+### Setup Information {#setup-instructor}
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
+:::::::::::::::::::::: {layout="[50,50]"}
+::: {.column}
+
+#### Workbench
+
+The setup instructions are located on the home page at the `#setup` anchor. 
+
+The setup information lives in `learners/setup.md` or `learner/setup.Rmd`,
+depending on whether or not you need code generated. Access this file from 
+episodes with 
+
+```markdown
+[setup instructions](../learners/setup.md)
+```
+
+:::
+
+::: {.column}
+
+#### styles
+
+The setup instructions are in a separate page called `/setup`
+
+The setup information lives in the top level of the lesson at `setup.md` (no
+possibility to render generated content). Access this file from episodes with
+
+```markdown
+[setup instructions]({{ page.root }}/setup.md)
+```
+
+:::
+:::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
+
+### Navigation
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
+:::::::::::::::::::::: {layout="[50,50]"}
+::: {.column}
+
+#### Workbench
+
+Episode and setup information is located on the left hand side of the page.
+Navigation in the workbench is split between information for learners and
+information for instructors. The top right of the page has a toggle button
+between Learner and Instructor views, which change the four main navigation
+items in the top navigation bar. 
+
+
+##### Learner View
+
+When this is toggled, the main navigation contains the following menu items:
+Key Points, Glossary, Learner Profiles, and More. The "More" dropdown menu
+contains information for learners from the `learners/` folder aside from the
+setup instructions.
+
+![](fig/screenshot-learner-view.png){alt='screenshot of the workbench version
+of "The Unix Shell". A blue arrow points to the top right corner indicating the
+lesson is in "Learner View". The menu bar states the name of the lesson and has
+the items described in text, with all but the first underlined. There is a grey
+sidebar that says "Episodes" and a section called "Summary and Setup" is
+underlined in blue. The main content shows a blue underline under the last
+updated status.'}
+
+##### Instructor view
+
+When this is toggled, the main navigation contains the following menu items:
+Key Points, Instructor Notes, Extract All Images, and More. The "More" dropdown
+menu contains information for learners from the `instructors/` folder.
+
+In addition, the schedule now appears on the home page, instructor notes are
+displayed inline, and the estimated timings for a lesson appear.
+
+
+![](fig/screenshot-instructor-view.png){alt='screenshot of the workbench
+version of "The Unix Shell". A red arrow points to the top right corner
+indicating the lesson is in "Learner View". The menu bar states the name of the
+lesson and has the items described in text, with all but the first underlined
+in red. There is a grey sidebar that says "Episodes" and a section called
+"Summary and Setup" is underlined in red. The main content shows a red
+underline under the last updated status.'}
+
+
+:::
+
+::: {.column}
+
+#### styles
+
+Navigation in the styles repository is relegated to a single menubar at the top
+of the lesson with seven items: Home, Code of Conduct, Setup, Episodes (dropdown),
+Extras (dropdown), License, and Improve This Page. 
+
+
+![](fig/screenshot-styles.png){alt='screenshot of the styles version
+of "The Unix Shell" lesson highlighting a single navigation bar at the top
+containing the items described in the text'}
+
+::: {.callout-warning}
+
+##### Perceived simplicity
+
+While the styles repositories appear to be simpler, there were several components
+of lessons (such as instructor notes and glossary terms) that were not clearly
+available to learners or instructors. Moreover, in cases like instructor training,
+where there was much extra content for both learners and instructors, it was not
+easy to look at the "Extra" menu and determine what content was appropriate for
+a learner or an instructor.
+
+:::
+
+
+:::
+:::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
 
 
 

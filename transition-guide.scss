@@ -1,0 +1,12 @@
+section.level3 {
+  border: #001483 solid 1px;
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+section.level3 > h3 {
+  font-style: italic;
+  text-decoration-line: underline;
+  text-decoration-style: double;
+}
