@@ -216,8 +216,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </ul></li>
   <li><a href="#for-instructors" id="toc-for-instructors" class="nav-link" data-scroll-target="#for-instructors">For Instructors</a>
   <ul class="collapse">
-  <li><a href="#setup-instructor" id="toc-setup-instructor" class="nav-link" data-scroll-target="#setup-instructor">Setup Information</a></li>
   <li><a href="#navigation" id="toc-navigation" class="nav-link" data-scroll-target="#navigation">Navigation</a></li>
+  <li><a href="#setup-instructor" id="toc-setup-instructor" class="nav-link" data-scroll-target="#setup-instructor">Setup Information</a></li>
+  <li><a href="#improve" id="toc-improve" class="nav-link" data-scroll-target="#improve">Improve/Edit This Page</a></li>
+  <li><a href="#license-instructor" id="toc-license-instructor" class="nav-link" data-scroll-target="#license-instructor">License</a></li>
+  <li><a href="#coc-instructor" id="toc-coc-instructor" class="nav-link" data-scroll-target="#coc-instructor">Code of Conduct</a></li>
+  <li><a href="#aio-instructor" id="toc-aio-instructor" class="nav-link" data-scroll-target="#aio-instructor">All in One Page</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -1063,39 +1067,14 @@ Note
 </section>
 <section id="for-instructors" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="for-instructors">For Instructors</h2>
-<section id="setup-instructor" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="setup-instructor">Setup Information</h3>
-<div class="column-screen-inset">
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<section id="workbench-14" class="level4">
-<h4 class="anchored" data-anchor-id="workbench-14">Workbench</h4>
-<p>The setup instructions are located on the home page at the <code>#setup</code> anchor.</p>
-<p>The setup information lives in <code>learners/setup.md</code> or <code>learner/setup.Rmd</code>, depending on whether or not you need code generated. Access this file from episodes with</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">setup instructions</span><span class="co">](../learners/setup.md)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-</div>
-<div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<section id="styles-14" class="level4">
-<h4 class="anchored" data-anchor-id="styles-14">styles</h4>
-<p>The setup instructions are in a separate page called <code>/setup</code></p>
-<p>The setup information lives in the top level of the lesson at <code>setup.md</code> (no possibility to render generated content). Access this file from episodes with</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">setup instructions</span><span class="co">]({{ page.root }}/setup.md)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-</div>
-</div>
-</div>
-</div>
-</section>
 <section id="navigation" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="navigation">Navigation</h3>
 <div class="column-screen-inset">
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<section id="workbench-15" class="level4">
-<h4 class="anchored" data-anchor-id="workbench-15">Workbench</h4>
+<section id="workbench-14" class="level4">
+<h4 class="anchored" data-anchor-id="workbench-14">Workbench</h4>
 <p>Episode and setup information is located on the left hand side of the page. Navigation in the workbench is split between information for learners and information for instructors. The top right of the page has a toggle button between Learner and Instructor views, which change the four main navigation items in the top navigation bar.</p>
 <section id="learner-view" class="level5">
 <h5 class="anchored" data-anchor-id="learner-view">Learner View</h5>
@@ -1111,8 +1090,8 @@ Note
 </section>
 </div>
 <div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<section id="styles-15" class="level4">
-<h4 class="anchored" data-anchor-id="styles-15">styles</h4>
+<section id="styles-14" class="level4">
+<h4 class="anchored" data-anchor-id="styles-14">styles</h4>
 <p>Navigation in the styles repository is relegated to a single menubar at the top of the lesson with seven items: Home, Code of Conduct, Setup, Episodes (dropdown), Extras (dropdown), License, and Improve This Page.</p>
 <p><img src="fig/screenshot-styles.png" class="img-fluid" alt="screenshot of the styles version of &quot;The Unix Shell&quot; lesson highlighting a single navigation bar at the top containing the items described in the text"></p>
 <div class="callout-warning callout callout-style-default callout-captioned">
@@ -1128,6 +1107,134 @@ Perceived simplicity
 <p>While the styles repositories appear to be simpler, there were several components of lessons (such as instructor notes and glossary terms) that were not clearly available to learners or instructors. Moreover, in cases like instructor training, where there was much extra content for both learners and instructors, it was not easy to look at the “Extra” menu and determine what content was appropriate for a learner or an instructor.</p>
 </div>
 </div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="setup-instructor" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="setup-instructor">Setup Information</h3>
+<div class="column-screen-inset">
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<section id="workbench-15" class="level4">
+<h4 class="anchored" data-anchor-id="workbench-15">Workbench</h4>
+<p>The setup instructions are located on the home page at the <code>#setup</code> anchor.</p>
+<p>The link to get to the setup is located at the “Summary and Setup” (in Learner View) or the “Summary and Schedule” links (in Instructor View) in the side navigation bar:</p>
+<p><img src="fig/setup-workbench.png" class="img-fluid" alt="zoomed in screenshot of side navigation of a workbench episode showing &quot;Summary and Setup&quot; highlighted"></p>
+</section>
+</div>
+<div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<section id="styles-15" class="level4">
+<h4 class="anchored" data-anchor-id="styles-15">styles</h4>
+<p>The setup instructions are in a separate page called <code>/setup</code></p>
+<p>The link for the setup instructions are located in the navigation bar.</p>
+<p><img src="fig/setup-styles.png" class="img-fluid" alt="screenshot of top navigation of styles with &quot;setup&quot; highlighted"></p>
+</section>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="improve" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="improve">Improve/Edit This Page</h3>
+<p>Our core values state that we value openness, all contributions, and are always learning. This is why we have an “edit this page” button on all of our lessons, so anyone can make suggestions. This button is always at the top and the bottom of episodes.</p>
+<div class="column-screen-inset">
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<section id="workbench-16" class="level4">
+<h4 class="anchored" data-anchor-id="workbench-16">Workbench</h4>
+<p>The “Edit This Page” button is located under the heading for each episode:</p>
+<p><img src="fig/edit-page-head-workbench.png" class="img-fluid" alt="screenshot of workbench page header that says &quot;Introduction to R&quot; with a highlighted link that says &quot;Edit this page&quot;"></p>
+<p>and on the first column of the footer:</p>
+<p><img src="fig/edit-page-foot-workbench.png" class="img-fluid" alt="screenshot of workbench page footer that shows the &quot;Edit on GitHub&quot; link highlighted"></p>
+</section>
+</div>
+<div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<section id="styles-16" class="level4">
+<h4 class="anchored" data-anchor-id="styles-16">styles</h4>
+<p>The navigation bar in styles contains a link to “Improve this page”:</p>
+<p><img src="fig/edit-page-head-styles.png" class="img-fluid" alt="screenshot of styles navigation bar with &quot;Improve this page&quot; highlighted"></p>
+<p>The footer contains a link to “Edit on GitHub”</p>
+<p><img src="fig/edit-page-foot-styles.png" class="img-fluid" alt="screenshot of styles footer with &quot;Edit on GitHub&quot; highlighted"></p>
+</section>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="license-instructor" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="license-instructor">License</h3>
+<p>Our official lessons are all CC-BY, but lessons that are not official may have alternative licenses. Moreover, code and data should also specify attribution and reuse.</p>
+<div class="column-screen-inset">
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<section id="workbench-17" class="level4">
+<h4 class="anchored" data-anchor-id="workbench-17">Workbench</h4>
+<p>The License information can be found at the <code>LICENSE.html</code> page, whose link is always in the footer:</p>
+<p><img src="fig/license-workbench.png" class="img-fluid" alt="screenshot of workbench footer with &quot;CC-BY 4.0&quot; license highlighted"></p>
+</section>
+</div>
+<div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<section id="styles-17" class="level4">
+<h4 class="anchored" data-anchor-id="styles-17">styles</h4>
+<p>The License information can be found at the <code>LICENSE.html</code> page, whose link is in the header:</p>
+<p><img src="fig/license-styles.png" class="img-fluid" alt="screenshot of header with &quot;License&quot; highlighted"></p>
+</section>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="coc-instructor" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="coc-instructor">Code of Conduct</h3>
+<p><a href="https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html">The Carpentries Code of Conduct</a> ensures that our workshops and lessons are a safe space to learn and create. This link is always on our lesson pages. It provides rules for behaviour and reporting guidelines.</p>
+<div class="column-screen-inset">
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<section id="workbench-18" class="level4">
+<h4 class="anchored" data-anchor-id="workbench-18">Workbench</h4>
+<p>The Code of Conduct information can be found at the <code>CODE_OF_CONDUCT.html</code> page, whose link is always in the footer:</p>
+<p><img src="fig/coc-workbench.png" class="img-fluid" alt="screenshot of workbench footer with &quot;Code of Conduct&quot; highlighted"></p>
+</section>
+</div>
+<div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<section id="styles-18" class="level4">
+<h4 class="anchored" data-anchor-id="styles-18">styles</h4>
+<p>The Code of Conduct information can be found at the <code>CODE_OF_CONDUCT.html</code> page, whose link is in the header</p>
+<p><img src="fig/coc-styles.png" class="img-fluid" alt="screenshot of styles header with &quot;Code of Conduct&quot; highlighted"></p>
+</section>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="aio-instructor" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="aio-instructor">All in One Page</h3>
+<p>The all-in-one page concatenates all of the episodes in a lesson so that you can scroll through the episodes without having to switch pages.</p>
+<div class="column-screen-inset">
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<section id="workbench-19" class="level4">
+<h4 class="anchored" data-anchor-id="workbench-19">Workbench</h4>
+<p>The link to this page is at <code>aio.html</code> and can be found at the bottom of the side navigation bar.</p>
+<p><img src="fig/aio-workbench.png" class="img-fluid" alt="screenshot of side navigation bar with episodes collapsed into an ellipsis, highlighting the &quot;See all in one page&quot; link"></p>
+<p>You can jump to individual episodes within this page by adding <code>#aio-[page slug]</code> to the end of the URL.</p>
+<p>For example, From the <a href="https://carpentries.github.io/sandpaper-docs/">Workbench Documentation</a>, following <a href="https://carpentries.github.io/sandpaper-docs/aio.html#aio-episodes" class="uri">https://carpentries.github.io/sandpaper-docs/aio.html#aio-episodes</a> will bring you to the “Episode Structure” episode in the all in one page.</p>
+</section>
+</div>
+<div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<section id="styles-19" class="level4">
+<h4 class="anchored" data-anchor-id="styles-19">styles</h4>
+<p>The link to this page is at <code>aio.html</code> and can be found at the bottom of the episode dropdown in the navigation bar.</p>
+<p><img src="fig/aio-styles.png" class="img-fluid" alt="cropped screenshot of episodes dropdown navigation menu where &quot;All in one page (beta)&quot; has been highlighted"></p>
+<p>Note that there is no clear division between the episodes in this page.</p>
 </section>
 </div>
 </div>
