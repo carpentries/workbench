@@ -2,7 +2,7 @@
 title: "Transition Guide: From Styles to Workbench"
 format:
   html:
-    css: transition-guide.scss
+    css: transition-guide.css
 ---
 
 ## Background

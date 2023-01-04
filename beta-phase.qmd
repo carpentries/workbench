@@ -21,7 +21,7 @@ the top of every page that will give a link to the beta version of the lesson
 (under `https://preview.carpentries.org/`) and the dates the styles version
 will be deprecated and finally superseded. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/B3J9eJ6TUwY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/x7tETGpF3-4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 This slow progression is designed to allow community members to familiarlize
 themselves with the new format and to build expertise within the community for
