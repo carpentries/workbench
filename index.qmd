@@ -47,6 +47,16 @@ install.packages(c("sandpaper", "varnish", "pegboard", "tinkr"),
   repos = c("https://carpentries.r-universe.dev/", getOption("repos")))
 ```
 
+### Updating
+
+To update workbench packages, you can use the same command as you did to install
+your packages:
+
+```r
+install.packages(c("sandpaper", "varnish", "pegboard", "tinkr"),
+  repos = c("https://carpentries.r-universe.dev/", getOption("repos")))
+```
+
 ### Guides
 
  - [Official Workbench Documentation](https://carpentries.github.io/sandpaper-docs): written using The Workbench, this guide provides everything you need to get started using The Workbench. 
