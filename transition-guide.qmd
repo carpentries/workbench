@@ -26,7 +26,7 @@ markdown][pandoc] (used by The Workbench):
 ### Default Branch
 
 :::::::::::::: {layout="[50, 50]"}
-::: {.column}
+::: {.column .workbench}
 
 #### Workbench
 
@@ -34,7 +34,7 @@ The default branch is always **`main`**
 
 :::
 
-::: {.column}
+::: {.column .styles}
 
 #### styles
 
@@ -47,7 +47,7 @@ then the default branch is `main`
 ### Infrastructure
 
 :::::::::::::: {layout="[50, 50]"}
-::: {.column}
+::: {.column .workbench}
 
 #### Workbench
 
@@ -69,7 +69,7 @@ the fly with no changes to the lesson.
 
 :::
 
-::: {.column}
+::: {.column .styles}
 
 #### styles
 
@@ -110,7 +110,7 @@ lesson](https://sgibson91.github.io/cross-stitch-carpentry/) as an example
 :::::::::::::: {layout="[50, 50]"}
 
 
-::: {.column}
+::: {.column .workbench}
 
 #### Workbench
 
@@ -120,7 +120,7 @@ The Contributors reflect those that actually worked on the lesson itself.
 
 :::
 
-::: {.column}
+::: {.column .styles}
 
 #### styles
 
@@ -136,7 +136,7 @@ on the underlying infrastructure, going back to 2013.
 ### Local Rendering
 
 :::::::::::::: {layout="[50, 50]"}
-::: {.column}
+::: {.column .workbench}
 
 #### Workbench
 
@@ -149,7 +149,7 @@ sandpaper::serve()
 
 :::
 
-::: {.column}
+::: {.column .styles}
 
 #### styles
 
@@ -190,7 +190,7 @@ folders are in grey with no arrows indicating that they are discarded.'}
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
 :::::::::::::::::::::: {layout="[50,50]"}
-::: {.column}
+::: {.column .workbench}
 
 #### Workbench
 
@@ -207,7 +207,7 @@ the `#setup` anchor.
 
 :::
 
-::: {.column}
+::: {.column .styles}
 
 #### styles
 
@@ -230,7 +230,7 @@ On the rendred site, the setup instructions are in a separate page called `/setu
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
 :::::::::::::::::::::: {layout="[50,50]"}
-::: {.column}
+::: {.column .workbench}
 
 #### Workbench
 
@@ -264,7 +264,7 @@ it is completely up to the lesson author to choose a style.
 :::
 :::
 
-::: {.column}
+::: {.column .styles}
 
 #### styles
 
@@ -304,7 +304,7 @@ document.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
 :::::::::::::::::::::: {layout="[50,50]"}
-::: {.column}
+::: {.column .workbench}
 
 #### Workbench
 
@@ -324,7 +324,7 @@ git branch --merged | grep -v '^\*' | xargs git branch -d
 
 :::
 
-::: {.column}
+::: {.column .styles}
 
 #### styles
 
@@ -348,7 +348,7 @@ git branch --merged | grep -v '^\*' | xargs git branch -d
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
 :::::::::::::::::::::: {layout="[50,50]"}
-::: {.column}
+::: {.column .workbench}
 
 #### Workbench
 
@@ -389,7 +389,7 @@ compared to the inner section.
 
 :::
 
-::: {.column}
+::: {.column .styles}
 
 #### styles
 
@@ -423,7 +423,7 @@ with Level 2 headers. Additional blocks are still of the class "solution"
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
 :::::::::::::::::::::: {layout="[50,50]"}
-::: {.column}
+::: {.column .workbench}
 
 #### Workbench
 
@@ -470,7 +470,7 @@ Keypoints should go in a [fenced div][fenced-divs] at the _end_ of the document:
 
 :::
 
-::: {.column}
+::: {.column .styles}
 
 #### styles
 
@@ -517,7 +517,7 @@ use Jekyll's metadata parsing to create a custom introductory block.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-page}
 :::::::::::::::::::::: {layout="[50,50]"}
-::: {.column}
+::: {.column .workbench}
 
 #### Workbench
 
@@ -536,7 +536,7 @@ Instructor notes for the whole lesson can be placed in `instructors/instructor-n
 
 :::
 
-::: {.column}
+::: {.column .styles}
 
 #### styles
 
@@ -551,7 +551,7 @@ called `_extras/guide.md`
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-page}
 :::::::::::::::::::::: {layout="[50,50]"}
-::: {.column}
+::: {.column .workbench}
 
 #### Workbench
 
@@ -640,7 +640,7 @@ Instead, please make sure you add blank lines around your list like this:
 :::
 :::
 
-::: {.column}
+::: {.column .styles}
 
 #### styles
 
@@ -685,7 +685,7 @@ I will try to replicate their display here soon.
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
 :::::::::::::::::::::: {layout="[50,50]"}
 ::: {.column}
-
+ .workbench
 
 #### Workbench
 
@@ -773,7 +773,7 @@ Table: table to demonstrate a wrapped cell
 :::
 :::
 
-::: {.column}
+::: {.column .styles}
 
 #### styles
 
@@ -808,7 +808,7 @@ Table: table to demonstrate a wrapped cell
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
 :::::::::::::::::::::: {layout="[50,50]"}
-::: {.column}
+::: {.column .workbench}
 
 #### Workbench
 
@@ -827,7 +827,7 @@ nested inside the `episodes/` folder.
 
 :::
 
-::: {.column}
+::: {.column .styles}
 
 #### styles
 
@@ -853,7 +853,7 @@ path to the resource:
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
 :::::::::::::::::::::: {layout="[50,50]"}
-::: {.column}
+::: {.column .workbench}
 
 #### Workbench
 
@@ -877,7 +877,7 @@ no decoration as it will be descriptive.
 
 :::
 
-::: {.column}
+::: {.column .styles}
 
 #### styles
 
@@ -903,7 +903,7 @@ The dragon emerges!
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
 :::::::::::::::::::::: {layout="[50,50]"}
-::: {.column}
+::: {.column .workbench}
 
 #### Workbench
 
@@ -950,7 +950,7 @@ underline under the last updated status.'}
 
 :::
 
-::: {.column}
+::: {.column .styles}
 
 #### styles
 
@@ -985,7 +985,7 @@ a learner or an instructor.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
 :::::::::::::::::::::: {layout="[50,50]"}
-::: {.column}
+::: {.column .workbench}
 
 #### Workbench
 
@@ -1000,7 +1000,7 @@ a workbench episode showing "Summary and Setup" highlighted'}
 
 :::
 
-::: {.column}
+::: {.column .styles}
 
 #### styles
 
@@ -1024,7 +1024,7 @@ of episodes.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
 :::::::::::::::::::::: {layout="[50,50]"}
-::: {.column}
+::: {.column .workbench}
 
 #### Workbench
 
@@ -1040,7 +1040,7 @@ and on the first column of the footer:
 
 :::
 
-::: {.column}
+::: {.column .styles}
 
 #### styles
 
@@ -1065,7 +1065,7 @@ and reuse.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
 :::::::::::::::::::::: {layout="[50,50]"}
-::: {.column}
+::: {.column .workbench}
 
 #### Workbench
 
@@ -1076,7 +1076,7 @@ always in the footer:
 
 :::
 
-::: {.column}
+::: {.column .styles}
 
 #### styles
 
@@ -1100,7 +1100,7 @@ reporting guidelines.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
 :::::::::::::::::::::: {layout="[50,50]"}
-::: {.column}
+::: {.column .workbench}
 
 #### Workbench
 
@@ -1111,7 +1111,7 @@ always in the footer:
 
 :::
 
-::: {.column}
+::: {.column .styles}
 
 #### styles
 
@@ -1130,7 +1130,7 @@ The all-in-one page concatenates all of the episodes in a lesson so that you can
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
 :::::::::::::::::::::: {layout="[50,50]"}
-::: {.column}
+::: {.column .workbench}
 
 #### Workbench
 
@@ -1150,7 +1150,7 @@ you to the "Episode Structure" episode in the all in one page.
 
 :::
 
-::: {.column}
+::: {.column .styles}
 
 #### styles
 

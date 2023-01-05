@@ -10,3 +10,13 @@ section.level3 > h3 {
   text-decoration-line: underline;
   text-decoration-style: double;
 }
+
+div.column.workbench {
+  background-color: #FFF7F1;
+  padding: 0 5px;
+}
+
+div.column.styles {
+  background-color: #F5F8FF;
+  padding: 0 5px;
+}
