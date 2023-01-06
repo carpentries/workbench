@@ -59,6 +59,7 @@ install.packages(c("sandpaper", "varnish", "pegboard", "tinkr"),
 
 ### Guides
 
+ - [Glossary](reference.html#glossary) A glossary of terms for The Workbench.
  - [Official Workbench Documentation](https://carpentries.github.io/sandpaper-docs): written using The Workbench, this guide provides everything you need to get started using The Workbench. 
  - [Collaborative Lesson Development Training](https://carpentries.github.io/lesson-development-training/): Material for a three day workshop teaching good practices in lesson design and open source collaboration skills
 

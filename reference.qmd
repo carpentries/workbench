@@ -1,0 +1,101 @@
+---
+title: Reference
+---
+
+
+## Glossary
+
+
+[workbench]{#workbench .anchored}
+: the collection of three packages used to build Carpentries lessons. NOTE: this
+  is no longer called the “template”. 
+
+[[{sandpaper}](https://carpentries.github.io/sandpaper)]{#sandpaper .anchored}
+: the package that lesson contributors interact with. This orchestrates the
+  building of lessons from markdown/rmarkdown to html
+
+[[{pegboard}](https://carpentries.github.io/pegboard)]{#pegboard .anchored}
+: the validator for our lesson content.
+
+[[{varnish}](https://carpentries.github.io/varnish)]{#varnish .anchored}
+: html, css, and javascript styling for our lessons.
+
+[[carpentries/actions](https://github.com/carpentries/actions)]{#actions .anchored}
+: Automation for deploying and updating our lessons on GitHub
+
+[Markdown Lesson Template]{#markdown-lesson-template .anchored}
+: (https://bit.ly/new-lesson-md) a GitHub repository template to create a new
+  lesson written in markdown using The Workbench
+
+[R Markdown Lesson Template]{#r-markdown-lesson-template .anchored}
+: (https://bit.ly/new-lesson-rmd) a GitHub repository template to create a new
+  lesson written in R Markdown using The Workbench
+
+[Official Lessons]{#official-lessons .anchored}
+: Lessons within our Official Curriculum that are offered in
+  Centrally-Organised or Self-Organised workshops. Community Lessons Lessons
+  that are developed by community members, but are not offered in
+  centrally-organised workshops
+
+[Toolchain]{#toolchain  .anchored}
+: A series of software tools that work together to accomplish a specific task.
+  E.g. The Carpentries Workbench is a toolchain built with R and pandoc to
+  publish accessible lesson websites from markdown or R Markdown content.
+
+[Styles (aka lesson template)]{#styles .anchored}
+: This is the lesson infrastructure established in 2016 and can be found at
+  https://github.com/carpentries/styles. It uses Jekyll for rendering markdown
+  to HTML with a Make-based workflow. The Carpentries Workbench supersedes this
+  infrastructure. This particular infrastructure required that the tools and
+  templates were embedded within the lesson itself, meaning that updates were
+  often cumbersome. 
+
+[Lesson infrastructure]{#lesson-infrastructure .anchored}
+: The collection tools and templates required to build Carpentries-style lessons. 
+
+[Lesson-transition tool]{#lesson-transition-tool .anchored}
+: A custom toolchain that prepared existing lessons to use The Carpentries
+  Workbench: https://github.com/carpentries/lesson-transition. This would
+  transform markdown syntax from Kramdown to Pandoc-flavoured markdown and it
+  would remove commits unrelated to the lesson content.
+
+[Jekyll]{#jekyll .anchored}
+: A static site generator that is used by default to build websites on GitHub
+  from markdown. 
+
+[Kramdown]{#kramdown .anchored}
+: The default flavour of markdown used by
+  [Jekyll](https://kramdown.gettalong.org/syntax.html). It is originally based
+  off of a PHP variant of the original markdown syntax that is not widely used. 
+
+[Pandoc-flavoured markdown]{#pandoc-flavoured-markdown .anchored}
+: A style of markdown that is derived from CommonMark and is the basis for the
+  pandoc document converter <https://pandoc.org/MANUAL.html#pandocs-markdown>.
+
+[Fishtree Attempt (https://github.com/fishtree-attempt) ]{#fishtree-attempt .anchored}
+: GitHub organisation to host testing repositories of the transformed lessons. 
+
+[Beta Phase (https://carpentries.github.io/workbench/beta-phase.html) ]{#beta-phase .anchored}
+: This is the phase in which lessons are tested with maintainers, instructors,
+  and learners to evaluate any potential snags in the websites that should be
+  fixed before converting all of our lessons. This is divided into three stages
+  for each lesson.
+
+[Pre-beta stage (8 weeks)]{#pre-beta-stage .anchored}
+:  (https://carpentries.github.io/workbench/beta-phase.html#pre-beta) a snapshot
+  of a lesson is converted to the workbench in a separate github organisation
+  and hosted on a temporary url (preview.carpentries.org/<lesson>). A banner is
+  hosted on the github URL indicating a beta test with a link to the new url. 
+
+[Beta stage (8 weeks)]{#beta-stage .anchored}
+:  (https://carpentries.github.io/workbench/beta-phase.html#beta) a lesson
+  release and archive is created. The lesson is converted to the workbench and
+  hosted on (preview.carpentries.org/<lesson>). The github URL hosts the
+  snapshot of the lesson at the given release and has a link to the new URL,
+  indicating that it is the up-to-date version.
+
+[Release Candidate (24 weeks)]{#release-candidate .anchored}
+:  (https://carpentries.github.io/workbench/beta-phase.html#pre-release) The
+  default URL will now show the Workbench version of the lesson and the styles
+  version of the lesson will be archived. During this time, any imperfections
+  in the transition are to be addressed by the maintainers.
