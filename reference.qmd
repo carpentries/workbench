@@ -74,7 +74,7 @@ Below are terms used in association with The Carpentries Workbench.
 : A style of markdown that is derived from CommonMark and is the basis for the
   pandoc document converter <https://pandoc.org/MANUAL.html#pandocs-markdown>.
 
-[Fishtree Attempt (https://github.com/fishtree-attempt) ]{#fishtree-attempt .anchored}
+[Fishtree Attempt](https://github.com/fishtree-attempt){#fishtree-attempt .anchored}
 : GitHub organisation to host testing repositories of the transformed lessons. 
 
 [Beta Phase](beta-phase.html){#beta-phase .anchored}
