@@ -157,34 +157,35 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="glossary" class="level2">
 <h2 class="anchored" data-anchor-id="glossary">Glossary</h2>
+<p>Below are terms used in association with The Carpentries Workbench.</p>
 <dl>
 <dt><span id="workbench" class="anchored">workbench</span></dt>
 <dd>
 the collection of three packages used to build Carpentries lessons. NOTE: this is no longer called the “template”.
 </dd>
-<dt><span id="sandpaper" class="anchored"><a href="https://carpentries.github.io/sandpaper">{sandpaper}</a></span></dt>
+<dt><a href="https://carpentries.github.io/sandpaper" id="sandpaper" class="anchored">{sandpaper}</a></dt>
 <dd>
 the package that lesson contributors interact with. This orchestrates the building of lessons from markdown/rmarkdown to html
 </dd>
-<dt><span id="pegboard" class="anchored"><a href="https://carpentries.github.io/pegboard">{pegboard}</a></span></dt>
+<dt><a href="https://carpentries.github.io/pegboard" id="pegboard" class="anchored">{pegboard}</a></dt>
 <dd>
 the validator for our lesson content.
 </dd>
-<dt><span id="varnish" class="anchored"><a href="https://carpentries.github.io/varnish">{varnish}</a></span></dt>
+<dt><a href="https://carpentries.github.io/varnish" id="varnish" class="anchored">{varnish}</a></dt>
 <dd>
 html, css, and javascript styling for our lessons.
 </dd>
-<dt><span id="actions" class="anchored"><a href="https://github.com/carpentries/actions">carpentries/actions</a></span></dt>
+<dt><a href="https://github.com/carpentries/actions" id="actions" class="anchored">carpentries/actions</a></dt>
 <dd>
 Automation for deploying and updating our lessons on GitHub
 </dd>
 <dt><span id="markdown-lesson-template" class="anchored">Markdown Lesson Template</span></dt>
 <dd>
-(https://bit.ly/new-lesson-md) a GitHub repository template to create a new lesson written in markdown using The Workbench
+<a href="https://bit.ly/new-lesson-md" class="uri">https://bit.ly/new-lesson-md</a> a GitHub repository template to create a new lesson written in markdown using The Workbench
 </dd>
 <dt><span id="r-markdown-lesson-template" class="anchored">R Markdown Lesson Template</span></dt>
 <dd>
-(https://bit.ly/new-lesson-rmd) a GitHub repository template to create a new lesson written in R Markdown using The Workbench
+<a href="https://bit.ly/new-lesson-rmd" class="uri">https://bit.ly/new-lesson-rmd</a> a GitHub repository template to create a new lesson written in R Markdown using The Workbench
 </dd>
 <dt><span id="official-lessons" class="anchored">Official Lessons</span></dt>
 <dd>
@@ -196,7 +197,7 @@ A series of software tools that work together to accomplish a specific task. E.g
 </dd>
 <dt><span id="styles" class="anchored">Styles (aka lesson template)</span></dt>
 <dd>
-This is the lesson infrastructure established in 2016 and can be found at https://github.com/carpentries/styles. It uses Jekyll for rendering markdown to HTML with a Make-based workflow. The Carpentries Workbench supersedes this infrastructure. This particular infrastructure required that the tools and templates were embedded within the lesson itself, meaning that updates were often cumbersome.
+This is the lesson infrastructure established in 2016 and can be found at <a href="https://github.com/carpentries/styles" class="uri">https://github.com/carpentries/styles</a>. It uses Jekyll for rendering markdown to HTML with a Make-based workflow. The Carpentries Workbench supersedes this infrastructure. This particular infrastructure required that the tools and templates were embedded within the lesson itself, meaning that updates were often cumbersome.
 </dd>
 <dt><span id="lesson-infrastructure" class="anchored">Lesson infrastructure</span></dt>
 <dd>
@@ -204,15 +205,15 @@ The collection tools and templates required to build Carpentries-style lessons.
 </dd>
 <dt><span id="lesson-transition-tool" class="anchored">Lesson-transition tool</span></dt>
 <dd>
-A custom toolchain that prepared existing lessons to use The Carpentries Workbench: https://github.com/carpentries/lesson-transition. This would transform markdown syntax from Kramdown to Pandoc-flavoured markdown and it would remove commits unrelated to the lesson content.
+A custom toolchain that prepared existing lessons to use The Carpentries Workbench: <a href="https://github.com/carpentries/lesson-transition" class="uri">https://github.com/carpentries/lesson-transition</a>. This would transform markdown syntax from <a href="#kramdown">Kramdown</a> to <a href="#pandoc-flavoured-markdown">Pandoc-flavoured markdown</a> and it would remove commits unrelated to the lesson content.
 </dd>
-<dt><span id="jekyll" class="anchored">Jekyll</span></dt>
+<dt><a href="https://jekyllrb.com/" id="jekyll" class="anchored">Jekyll</a></dt>
 <dd>
 A static site generator that is used by default to build websites on GitHub from markdown.
 </dd>
 <dt><span id="kramdown" class="anchored">Kramdown</span></dt>
 <dd>
-The default flavour of markdown used by <a href="https://kramdown.gettalong.org/syntax.html">Jekyll</a>. It is originally based off of a PHP variant of the original markdown syntax that is not widely used.
+The default flavour of markdown used by <a href="#jekyll">Jekyll</a>. It is originally based off of a PHP variant of the original markdown syntax that is not widely used.
 </dd>
 <dt><span id="pandoc-flavoured-markdown" class="anchored">Pandoc-flavoured markdown</span></dt>
 <dd>
@@ -222,21 +223,21 @@ A style of markdown that is derived from CommonMark and is the basis for the pan
 <dd>
 GitHub organisation to host testing repositories of the transformed lessons.
 </dd>
-<dt><span id="beta-phase" class="anchored">Beta Phase (https://carpentries.github.io/workbench/beta-phase.html)</span></dt>
+<dt><a href="beta-phase.html" id="beta-phase" class="anchored">Beta Phase</a></dt>
 <dd>
 This is the phase in which lessons are tested with maintainers, instructors, and learners to evaluate any potential snags in the websites that should be fixed before converting all of our lessons. This is divided into three stages for each lesson.
 </dd>
-<dt><span id="pre-beta-stage" class="anchored">Pre-beta stage (8 weeks)</span></dt>
+<dt><a href="beta-phase.html#pre-beta" id="pre-beta-stage" class="anchored">Pre-beta stage (8 weeks)</a></dt>
 <dd>
-(https://carpentries.github.io/workbench/beta-phase.html#pre-beta) a snapshot of a lesson is converted to the workbench in a separate github organisation and hosted on a temporary url (preview.carpentries.org/<lesson>). A banner is hosted on the github URL indicating a beta test with a link to the new url.
+a snapshot of a lesson is converted to the workbench in a separate github organisation and hosted on a temporary url (<code>preview.carpentries.org/&lt;lesson&gt;</code>). A banner is hosted on the github URL indicating a beta test with a link to the new url.
+</dd>
+<dt><a href="beta-phase.html#beta" id="beta-stage" class="anchored">Beta stage (8 weeks)</a></dt>
+<dd>
+a lesson release and archive is created. The lesson is converted to the workbench and hosted on (preview.carpentries.org/<lesson>). The github URL hosts the snapshot of the lesson at the given release and has a link to the new URL, indicating that it is the up-to-date version.
 </lesson></dd>
-<dt><span id="beta-stage" class="anchored">Beta stage (8 weeks)</span></dt>
+<dt><a href="beta-phase.html#pre-release" id="release-candidate" class="anchored">Release Candidate (24 weeks)</a></dt>
 <dd>
-(https://carpentries.github.io/workbench/beta-phase.html#beta) a lesson release and archive is created. The lesson is converted to the workbench and hosted on (preview.carpentries.org/<lesson>). The github URL hosts the snapshot of the lesson at the given release and has a link to the new URL, indicating that it is the up-to-date version.
-</lesson></dd>
-<dt><span id="release-candidate" class="anchored">Release Candidate (24 weeks)</span></dt>
-<dd>
-(https://carpentries.github.io/workbench/beta-phase.html#pre-release) The default URL will now show the Workbench version of the lesson and the styles version of the lesson will be archived. During this time, any imperfections in the transition are to be addressed by the maintainers.
+The default URL will now show the Workbench version of the lesson and the styles version of the lesson will be archived. During this time, any imperfections in the transition are to be addressed by the maintainers.
 </dd>
 </dl>
 
