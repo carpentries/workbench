@@ -11,6 +11,14 @@ Below are terms used in association with The Carpentries Workbench.
 : the collection of three packages used to build Carpentries lessons. NOTE: this
   is no longer called the “template”.
 
+[lesson source]{#lesson-source}
+: a collection of standard files and folders generated from a [lesson
+  template])#template) that [The Workbench](#workbench) uses to build a lesson
+  website
+
+[lesson website]{#lesson-website}
+: An HTML website built by [The Workbench](#workbench).
+
 [{sandpaper}](https://carpentries.github.io/sandpaper){#sandpaper .anchored}
 : the package that lesson contributors interact with. This orchestrates the
   building of lessons from markdown/rmarkdown to html
@@ -23,6 +31,11 @@ Below are terms used in association with The Carpentries Workbench.
 
 [carpentries/actions](https://github.com/carpentries/actions){#actions .anchored}
 : Automation for deploying and updating our lessons on GitHub
+
+[template]{#template}
+: A standard set of files that are used to create a Carpentries lesson. The
+  lesson author is expected to customise and modify these files with their own
+  custom lesson content.
 
 [Markdown Lesson Template]{#markdown-lesson-template .anchored}
 : <https://bit.ly/new-lesson-md> a GitHub repository template to create a new

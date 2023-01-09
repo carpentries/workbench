@@ -1,0 +1,53 @@
+---
+title: "{sandpaper}"
+subtitle: "The User Interface and Engine"
+---
+
+## Introduction
+
+The user interface to [The Workbench](../reference.html#workbench) is an R
+package called [{sandpaper}](../reference.html#sandpaper). This package is
+responsible for the following broad areas.
+
+Static Site Generation
+: Primarily, {sandpaper} is responsible for (rendering and) transforming the
+  files contained within a [lesson source](../reference.html#lesson-source)
+  repository into a [lesson website](../reference.html#lesson-website). The
+  command to generate a website is [`sandpaper::build_lesson()`](https://carpentries.github.io/sandpaper/reference/build_lesson.html).
+
+  This is accomplished in a two-step workflow that first renders any files that
+  have generated content into markdown and then applies the CSS, JS, and HTML
+  styling from [{varnish}](../reference.html#varnish). This two-step process
+  allows us to cleanly separate the tools from the styling components.
+
+  Note that this does not mean that {sandpaper} is suitable for a generic static
+  site. It's primary purpose is to generate a lesson website.
+
+Dependency Management
+: For lessons that use generated content, R packages are needed, and so,
+  {sandpaper} leans heavily on [{renv}](https://rstudio.github.io/renv 
+  "A dependency management toolkit for R") to automatically detect and record
+  dependencies of a lesson to ensure reproducibility. Users give consent (once)
+  with [`sandpaper::use_package_cache()`](https://carpentries.github.io/sandpaper/reference/package_cache.html)
+  and populate their dependencies with [`sandpaper::manage_deps()`](https://carpentries.github.io/sandpaper/reference/dependency_management.html).
+
+  Note: this component may be moved to a different package.
+
+Deployment Pipeline Management
+: Every lesson is deployed using a GitHub Actions workflow that deploys the
+  outputs of the site generation to two branches in a repository. The purpose of
+  the workflow is mainly to provision the environment for {sandpaper} to perform
+  the deployment via the internal function
+  [sandpaper:::ci_deploy()](https://carpentries.github.io/sandpaper/reference/ci_deploy.html),
+  which [sets up git
+  worktrees](https://carpentries.github.io/sandpaper/reference/git_worktree_setup.html)
+  for orphan branches under `site/` and then runs `sandpaper::build_lesson()`
+
+  Note that while the workflows for {sandpaper} only work on GitHub, this does
+  not preclude a Workbench lesson from being deployed by any other method. In
+  fact, it is possible to deploy from your own computer. 
+
+Accessibility Helper
+: The first thing that {sandpaper} does when previewing or deploying a lesson is
+  to validate that links and images are presented in an accessible by calling
+  the [`validate_lesson()`](https://carpentries.github.io/sandpaper/reference/validate_lesson.html).
