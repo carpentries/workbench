@@ -359,7 +359,7 @@ the solution.
 ````markdown
 ::::::::::::::::::::::::::::: challenge
 
-#### Challenge: build
+### Challenge: build
 
 What is the R command to build a Workbench lesson?
 
@@ -451,7 +451,7 @@ exercises: 5
 
 ::::::::::::::::::::::::::::
 
-### Introduction
+## Introduction
 
 ...
 ````
@@ -491,7 +491,7 @@ keypoints:
  - "We will never know who put the bomp in the bomp bah bomp bah bomp." 
 ---
 
-### Introduction
+## Introduction
 
 ...
 ````
@@ -679,7 +679,8 @@ Please note that the table display here is not a good representation of what
 you will see in The Workbench or in Styles. They both have their own 
 idiosyncratic ways of displaying tables. 
 
-I will try to replicate their display here soon.
+A demonstration of Workbench tables can be seen [in the official documentation
+for lesson contributors](https://carpentries.github.io/sandpaper-docs/episodes.html#tables)
 
 :::
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.column-screen-inset}
