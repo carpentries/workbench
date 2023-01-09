@@ -20,6 +20,69 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -132,6 +195,13 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#development" id="toc-development" class="nav-link" data-scroll-target="#development">Development</a>
+  <ul class="collapse">
+  <li><a href="#software-tools" id="toc-software-tools" class="nav-link" data-scroll-target="#software-tools">Software Tools</a></li>
+  <li><a href="#documentation" id="toc-documentation" class="nav-link" data-scroll-target="#documentation">Documentation</a></li>
+  <li><a href="#testing" id="toc-testing" class="nav-link" data-scroll-target="#testing">Testing</a></li>
+  <li><a href="#continous-integration" id="toc-continous-integration" class="nav-link" data-scroll-target="#continous-integration">Continous Integration</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -173,12 +243,45 @@ This section is still under construction!
 </div>
 <p>The core of The Carpentries Workbench consists of three packages:</p>
 <ul>
-<li><a href="https://carpentries.github.io/sandpaper/">{sandpaper}</a>: user interface and workflow engine</li>
+<li><a href="sandpaper.html">{sandpaper}</a>: user interface and workflow engine</li>
 <li><a href="https://carpentries.github.io/pegboard/">{pegboard}</a>: parsing and validation engine</li>
 <li><a href="https://carpentries.github.io/varnish/">{varnish}</a>: HTML templates, CSS, and JS elements</li>
 </ul>
 <p>These packages are all available and released to the <a href="https://carpentries.r-universe.dev/">Carpentries R-Universe</a>, which checks for updates to the source packages hourly.</p>
 <p>If you are interested, we have <a href="releases.html">documentation for the release process</a> available.</p>
+</section>
+<section id="development" class="level2">
+<h2 class="anchored" data-anchor-id="development">Development</h2>
+<p>Development of The Workbench is overseen by Zhian N. Kamvar. New features are added incrementally as pull requests. Pushes to the main branch are <em>rare</em> and discouraged. New features must have tests associated (with the exception of {varnish}).</p>
+<section id="software-tools" class="level3">
+<h3 class="anchored" data-anchor-id="software-tools">Software Tools</h3>
+<p>Development of Workbench components requires the same toolchain for working on lessons:</p>
+<ul>
+<li>R</li>
+<li>pandoc</li>
+<li>Git</li>
+</ul>
+<p>Once you have these installed, make sure to install ALL of the dependencies for the workbench:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"sandpaper"</span>, <span class="st">"pegboard"</span>, <span class="st">"varnish"</span>, <span class="st">"tinkr"</span>),</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">dependencies =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">repos =</span> <span class="fu">c</span>(<span class="fu">getOption</span>(<span class="st">"repos"</span>), <span class="st">"https://carpentries.r-universe.dev"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In addition, you will need the <a href="https://devtools.r-lib.org">{devtools}</a> for development.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"devtools"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="documentation" class="level3">
+<h3 class="anchored" data-anchor-id="documentation">Documentation</h3>
+<p>Reference documentation for individual functions for each package is written alongside the function using <a href="https://roxygen2.r-lib.org/">{roxygen2}</a>.</p>
+<p>This documentation is generated by <code>devtools::document()</code></p>
+</section>
+<section id="testing" class="level3">
+<h3 class="anchored" data-anchor-id="testing">Testing</h3>
+<p>Tests for each package live in <code>tests/testthat/</code> and follow a <code>test-[file-name].R</code> naming convention. These are controlled by the <a href="https://testthat.r-lib.org/">{testthat}</a> package and run by <code>devtools::test()</code>.</p>
+<p>Note that {sandpaper} tests take a long time to run and <em>require</em> internet.</p>
+</section>
+<section id="continous-integration" class="level3">
+<h3 class="anchored" data-anchor-id="continous-integration">Continous Integration</h3>
+<p>The continous integration for each package tests on Ubuntu, MacOS, and Windows systems with the last five versions of R (same as the RStudio convention).</p>
+<hr>
 <p>Coming up:</p>
 <ul>
 <li>Testing Pull Requests (Locally and on your fork)</li>
@@ -190,6 +293,7 @@ This section is still under construction!
 </ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
