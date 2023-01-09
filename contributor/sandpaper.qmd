@@ -51,3 +51,7 @@ Accessibility Helper
 : The first thing that {sandpaper} does when previewing or deploying a lesson is
   to validate that links and images are presented in an accessible by calling
   the [`validate_lesson()`](https://carpentries.github.io/sandpaper/reference/validate_lesson.html).
+
+## Special Technical Requirements
+
+
