@@ -34,7 +34,7 @@ jobs:
       - name: setup dependencies
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          extra-packages: any::rmarkdown
+          packages: any::sandpaper, any::pegboard, any::varnish
 
       - name: Render book to all format
         # Add any command line argument needed
