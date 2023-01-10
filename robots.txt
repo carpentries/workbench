@@ -1,0 +1,1 @@
+Sitemap: https://github.com/carpentries/workbench/sitemap.xml
