@@ -3,6 +3,8 @@ on:
     branches: main
   pull_request:
     branches: main
+  schedule:
+   - cron: '0 0 * * 2'
   # to be able to trigger a manual build
   workflow_dispatch:
 
@@ -17,10 +19,8 @@ jobs:
       - name: Install Quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:
-          # To install LaTeX to build PDF book 
-          tinytex: true 
-          # uncomment below and fill to pin a version
-          # version: 0.9.105
+          # To install LaTeX to build PDF book
+          tinytex: true
 
       # Install any computing dependency you may need, usually either python and Jupyter or R
       # More specific examples will be shared on quarto-dev/quarto-actions project
@@ -39,4 +39,4 @@ jobs:
           branch: gh-pages
           # The folder the action should deploy. Adapt if you changed in Quarto config
           folder: _site
-          
+
