@@ -46,11 +46,17 @@ lessons:
  - pandoc
  - Git
 
+It is recommended to have the latest versions of R and pandoc available. You
+need at least git 2.28 for security purposes.
 
-```{bash}
-R --version
-pandoc --version
-git --version
+```{r}
+#| echo: false
+cat("R version")
+system2("R --version")
+cat("pandoc version")
+system2("pandoc --version")
+cat("git version")
+system2("git --version")
 ```
 
 
