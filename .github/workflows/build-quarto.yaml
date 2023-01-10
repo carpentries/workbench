@@ -30,6 +30,11 @@ jobs:
           use-public-rspm: yes
           install-r: yes
 
+      - name: setup dependencies
+        uses: r-lib/actions/setup-dependencies@v2
+        with:
+          extra-packages: any::rmarkdown
+
       - name: Render book to all format
         # Add any command line argument needed
         run: |
