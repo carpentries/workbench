@@ -51,6 +51,7 @@ need at least git 2.28 for security purposes.
 
 ```{r}
 #| echo: false
+#| message: true
 cat("R version\n---\n")
 system2(c("R", "--version"))
 cat("\npandoc version\n---\n")
