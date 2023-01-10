@@ -51,12 +51,12 @@ need at least git 2.28 for security purposes.
 
 ```{r}
 #| echo: false
-cat("R version")
-system2("R --version")
-cat("pandoc version")
-system2("pandoc --version")
-cat("git version")
-system2("git --version")
+cat("R version\n---\n")
+system2(c("R", "--version"))
+cat("\npandoc version\n---\n")
+system2(c("pandoc", "--version"))
+cat("\ngit version\n---\n")
+system2(c("git", "--version"))
 ```
 
 
