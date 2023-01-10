@@ -53,11 +53,11 @@ need at least git 2.28 for security purposes.
 #| echo: false
 #| message: true
 cat("R version\n---\n")
-system2(c("R", "--version"))
+writeLines(system2(c("R", "--version"), stdout = TRUE))
 cat("\npandoc version\n---\n")
-system2(c("pandoc", "--version"))
+writeLines(system2(c("pandoc", "--version"), stdout = TRUE))
 cat("\ngit version\n---\n")
-system2(c("git", "--version"))
+writeLines(system2(c("git", "--version"), stdout = TRUE))
 ```
 
 
