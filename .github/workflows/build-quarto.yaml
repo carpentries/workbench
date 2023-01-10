@@ -14,7 +14,7 @@ jobs:
   build-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Install Quarto
         uses: quarto-dev/quarto-actions/setup@v2
@@ -44,18 +44,8 @@ jobs:
             any::withr
             any::sessioninfo
 
-      - name: Render book to all format
-        # Add any command line argument needed
-        run: |
-          quarto render
-
       - name: Deploy 🚀
-        # only deploy when push to main
-        if: github.event_name != 'pull_request'
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: quarto-dev/quarto-actions/publish@v2
         with:
-          # The branch the action should deploy to.
-          branch: gh-pages
-          # The folder the action should deploy. Adapt if you changed in Quarto config
-          folder: _site
+          target: gh-pages
 
