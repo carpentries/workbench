@@ -46,6 +46,14 @@ lessons:
  - pandoc
  - Git
 
+
+```{bash}
+R --version
+pandoc --version
+git --version
+```
+
+
 Once you have these installed, make sure to install ALL of the dependencies for
 the workbench:
 
