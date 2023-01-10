@@ -55,7 +55,7 @@ need at least git 2.28 for security purposes.
 cat("R version\n---\n")
 writeLines(system2(c("R", "--version"), stdout = TRUE))
 cat("\npandoc version\n---\n")
-writeLines(system2(c("pandoc", "--version"), stdout = TRUE))
+rmarkdown::pandoc_version()
 cat("\ngit version\n---\n")
 writeLines(system2(c("git", "--version"), stdout = TRUE))
 ```
