@@ -11,12 +11,12 @@ Below are terms used in association with The Carpentries Workbench.
 : the collection of three packages used to build Carpentries lessons. NOTE: this
   is no longer called the “template”.
 
-[lesson source]{#lesson-source}
+[lesson source]{#lesson-source .anchored}
 : a collection of standard files and folders generated from a [lesson
   template])#template) that [The Workbench](#workbench) uses to build a lesson
   website
 
-[lesson website]{#lesson-website}
+[lesson website]{#lesson-website .anchored}
 : An HTML website built by [The Workbench](#workbench).
 
 [{sandpaper}](https://carpentries.github.io/sandpaper){#sandpaper .anchored}

@@ -21,6 +21,8 @@ website:
     left:
       - href: index.qmd
         text: Home
+      - href: faq.qmd
+        text: FAQ
       - href: beta-phase.qmd
         text: "**Beta Phase**"
       - href: workflow-guide.qmd
@@ -28,7 +30,7 @@ website:
       - href: transition-guide.qmd
         text: Transition Guide
       - text: "Contributor Guides"
-        menu: 
+        menu:
          - contributor/index.qmd
          - contributor/releases.qmd
     right:

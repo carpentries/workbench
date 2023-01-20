@@ -1,0 +1,47 @@
+---
+title: 'Frequently Asked Questions'
+date: '2023-01-20'
+---
+
+::: {.callout-caution}
+
+## Work In Progress
+
+As this is a FAQ, it will continue to grow as we update it. If you have any
+questions please submit them to the [Workbench GitHub
+discussion forum](https://github.com/carpentries/workbench/discussions).
+
+I will attempt to divide these questions up by major categories, but these may
+shift around as questions come in.
+
+If you have a question about definitions, consult our [glossary](glossary.html)
+
+:::
+
+## Authoring
+
+These FAQs are intended for those who contribute to, maintain, or create lessons
+using The Workbench. If you only ever visit the website, then head over to 
+the [Teaching](#teaching) or [Learning](#learning) sections.
+
+### Local Clones
+
+
+[How do I update my clone after the transition from styles?]{#update-clone-from-styles .anchored}
+: The easiest way is to rename your local clone to `old-NAME` (where `NAME` is
+  the name of your repository folder) and then re-clone the lesson. You can 
+  find details on [updating your local clone](beta-phase.html#updating-clone) on
+  the beta phase page.
+
+### GitHub Forks
+
+[How do I update my fork after the transition from styles?]{#update-fork-from-styles .anchored}
+: The easiest way to do this is to delete your fork and re-clone. The commit
+  history of the lesson has changed and you will be unable to commit until your
+  fork reflects those changes. Note that if you have a clone, you will need to
+  also [delete and re-clone](#update-clone-from-styles).
+
+## Teaching
+
+
+## Learning
