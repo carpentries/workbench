@@ -35,6 +35,34 @@
     "text": "Resources\n\nInstallation\nTo install the workbench, make sure you have a working version of R and pandoc/RStudio installed (see the workbench setup instructions for details).\nFrom there, you can install the workbench packages and their dependencies from our Carpentries R Universe:\ninstall.packages(c(\"sandpaper\", \"varnish\", \"pegboard\", \"tinkr\"),\n  repos = c(\"https://carpentries.r-universe.dev/\", getOption(\"repos\")))\n\n\nUpdating\nTo update workbench packages, you can use the same command as you did to install your packages:\ninstall.packages(c(\"sandpaper\", \"varnish\", \"pegboard\", \"tinkr\"),\n  repos = c(\"https://carpentries.r-universe.dev/\", getOption(\"repos\")))\n\n\nGuides\n\nGlossary A glossary of terms for The Workbench.\nOfficial Workbench Documentation: written using The Workbench, this guide provides everything you need to get started using The Workbench.\nCollaborative Lesson Development Training: Material for a three day workshop teaching good practices in lesson design and open source collaboration skills\n\n\n\nTools\n\n{sandpaper}: User interface and engine for the workbench\n{pegboard}: Validation and parsing of lesson components\n{varnish}: HTML, CSS, and JavaScript templates\n(carpentries/actions): GitHub Actions for Workbench Workflows\n(carpentries/lesson-transition): Tool for automated transition from styles-based lessons to Workbench.\n\n\n\nTemplates\n\nR Markdown Lesson Template\nMarkdown Lesson Template\n\n\n\nInspired Examples\nThese are examples of lessons developed with The Workbench since the initial announcement:\n\nToby Hodges, Mateusz Kuzak, Aleksandra Nenadic, Sarah Stevens—Collaborative Lesson Development Training\nSaranjeet Kuar, Achintya Rao, Heather Turner, Aman Goel—R’s Bug Tracking\nSaba Ferdous, David Pérez-Suárez—Learn To Discover—Basic Python (note—this uses a custom fork of sandpaper, and varnish to run python)\nPhilipp Matthias Schäfer—GitLab Novice\nMichael Culshaw-Maurer—Rewrite of the R Ecology Lesson"
   },
   {
+    "objectID": "faq.html",
+    "href": "faq.html",
+    "title": "Frequently Asked Questions",
+    "section": "",
+    "text": "Work In Progress\n\n\n\nAs this is a FAQ, it will continue to grow as we update it. If you have any questions please submit them to the Workbench GitHub discussion forum.\nI will attempt to divide these questions up by major categories, but these may shift around as questions come in.\nIf you have a question about definitions, consult our glossary"
+  },
+  {
+    "objectID": "faq.html#authoring",
+    "href": "faq.html#authoring",
+    "title": "Frequently Asked Questions",
+    "section": "Authoring",
+    "text": "Authoring\nThese FAQs are intended for those who contribute to, maintain, or create lessons using The Workbench. If you only ever visit the website, then head over to the Teaching or Learning sections.\n\nLocal Clones\n\nHow do I update my clone after the transition from styles?\n\nThe easiest way is to rename your local clone to old-NAME (where NAME is the name of your repository folder) and then re-clone the lesson. You can find details on updating your local clone on the beta phase page.\n\n\n\n\nGitHub Forks\n\nHow do I update my fork after the transition from styles?\n\nThe easiest way to do this is to delete your fork and re-clone. The commit history of the lesson has changed and you will be unable to commit until your fork reflects those changes. Note that if you have a clone, you will need to also delete and re-clone."
+  },
+  {
+    "objectID": "faq.html#teaching",
+    "href": "faq.html#teaching",
+    "title": "Frequently Asked Questions",
+    "section": "Teaching",
+    "text": "Teaching"
+  },
+  {
+    "objectID": "faq.html#learning",
+    "href": "faq.html#learning",
+    "title": "Frequently Asked Questions",
+    "section": "Learning",
+    "text": "Learning"
+  },
+  {
     "objectID": "transition-guide.html",
     "href": "transition-guide.html",
     "title": "Transition Guide: From Styles to Workbench",

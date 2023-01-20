@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2023-01-20">
 
-<title>The Carpentries Workbench - Reference</title>
+<title>The Carpentries Workbench - Frequently Asked Questions</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -83,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./faq.html">
+    <a class="nav-link active" href="./faq.html" aria-current="page">
  <span class="menu-text">FAQ</span></a>
   </li>  
   <li class="nav-item">
@@ -135,7 +136,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#glossary" id="toc-glossary" class="nav-link active" data-scroll-target="#glossary">Glossary</a></li>
+  <li><a href="#authoring" id="toc-authoring" class="nav-link active" data-scroll-target="#authoring">Authoring</a>
+  <ul class="collapse">
+  <li><a href="#local-clones" id="toc-local-clones" class="nav-link" data-scroll-target="#local-clones">Local Clones</a></li>
+  <li><a href="#github-forks" id="toc-github-forks" class="nav-link" data-scroll-target="#github-forks">GitHub Forks</a></li>
+  </ul></li>
+  <li><a href="#teaching" id="toc-teaching" class="nav-link" data-scroll-target="#teaching">Teaching</a></li>
+  <li><a href="#learning" id="toc-learning" class="nav-link" data-scroll-target="#learning">Learning</a></li>
   </ul>
 </nav>
     </div>
@@ -144,7 +151,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Reference</h1>
+<h1 class="title">Frequently Asked Questions</h1>
 </div>
 
 
@@ -152,6 +159,12 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 20, 2023</p>
+    </div>
+  </div>
   
     
   </div>
@@ -159,103 +172,48 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="glossary" class="level2">
-<h2 class="anchored" data-anchor-id="glossary">Glossary</h2>
-<p>Below are terms used in association with The Carpentries Workbench.</p>
+<div class="callout-caution callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Work In Progress
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>As this is a FAQ, it will continue to grow as we update it. If you have any questions please submit them to the <a href="https://github.com/carpentries/workbench/discussions">Workbench GitHub discussion forum</a>.</p>
+<p>I will attempt to divide these questions up by major categories, but these may shift around as questions come in.</p>
+<p>If you have a question about definitions, consult our <a href="glossary.html">glossary</a></p>
+</div>
+</div>
+<section id="authoring" class="level2">
+<h2 class="anchored" data-anchor-id="authoring">Authoring</h2>
+<p>These FAQs are intended for those who contribute to, maintain, or create lessons using The Workbench. If you only ever visit the website, then head over to the <a href="#teaching">Teaching</a> or <a href="#learning">Learning</a> sections.</p>
+<section id="local-clones" class="level3">
+<h3 class="anchored" data-anchor-id="local-clones">Local Clones</h3>
 <dl>
-<dt><span id="workbench" class="anchored">workbench</span></dt>
+<dt><span id="update-clone-from-styles" class="anchored">How do I update my clone after the transition from styles?</span></dt>
 <dd>
-the collection of three packages used to build Carpentries lessons. NOTE: this is no longer called the “template”.
-</dd>
-<dt><span id="lesson-source" class="anchored">lesson source</span></dt>
-<dd>
-a collection of standard files and folders generated from a [lesson template])#template) that <a href="#workbench">The Workbench</a> uses to build a lesson website
-</dd>
-<dt><span id="lesson-website" class="anchored">lesson website</span></dt>
-<dd>
-An HTML website built by <a href="#workbench">The Workbench</a>.
-</dd>
-<dt><a href="https://carpentries.github.io/sandpaper" id="sandpaper" class="anchored">{sandpaper}</a></dt>
-<dd>
-the package that lesson contributors interact with. This orchestrates the building of lessons from markdown/rmarkdown to html
-</dd>
-<dt><a href="https://carpentries.github.io/pegboard" id="pegboard" class="anchored">{pegboard}</a></dt>
-<dd>
-the validator for our lesson content.
-</dd>
-<dt><a href="https://carpentries.github.io/varnish" id="varnish" class="anchored">{varnish}</a></dt>
-<dd>
-html, css, and javascript styling for our lessons.
-</dd>
-<dt><a href="https://github.com/carpentries/actions" id="actions" class="anchored">carpentries/actions</a></dt>
-<dd>
-Automation for deploying and updating our lessons on GitHub
-</dd>
-<dt><span id="template">template</span></dt>
-<dd>
-A standard set of files that are used to create a Carpentries lesson. The lesson author is expected to customise and modify these files with their own custom lesson content.
-</dd>
-<dt><span id="markdown-lesson-template" class="anchored">Markdown Lesson Template</span></dt>
-<dd>
-<a href="https://bit.ly/new-lesson-md" class="uri">https://bit.ly/new-lesson-md</a> a GitHub repository template to create a new lesson written in markdown using The Workbench
-</dd>
-<dt><span id="r-markdown-lesson-template" class="anchored">R Markdown Lesson Template</span></dt>
-<dd>
-<a href="https://bit.ly/new-lesson-rmd" class="uri">https://bit.ly/new-lesson-rmd</a> a GitHub repository template to create a new lesson written in R Markdown using The Workbench
-</dd>
-<dt><span id="official-lessons" class="anchored">Official Lessons</span></dt>
-<dd>
-Lessons within our Official Curriculum that are offered in Centrally-Organised or Self-Organised workshops. Community Lessons Lessons that are developed by community members, but are not offered in centrally-organised workshops
-</dd>
-<dt><span id="toolchain" class="anchored">Toolchain</span></dt>
-<dd>
-A series of software tools that work together to accomplish a specific task. E.g. The Carpentries Workbench is a toolchain built with R and pandoc to publish accessible lesson websites from markdown or R Markdown content.
-</dd>
-<dt><span id="styles" class="anchored">Styles (aka lesson template)</span></dt>
-<dd>
-This is the lesson infrastructure established in 2016 and can be found at <a href="https://github.com/carpentries/styles" class="uri">https://github.com/carpentries/styles</a>. It uses Jekyll for rendering markdown to HTML with a Make-based workflow. The Carpentries Workbench supersedes this infrastructure. This particular infrastructure required that the tools and templates were embedded within the lesson itself, meaning that updates were often cumbersome.
-</dd>
-<dt><span id="lesson-infrastructure" class="anchored">Lesson infrastructure</span></dt>
-<dd>
-The collection tools and templates required to build Carpentries-style lessons.
-</dd>
-<dt><span id="lesson-transition-tool" class="anchored">Lesson-transition tool</span></dt>
-<dd>
-A custom toolchain that prepared existing lessons to use The Carpentries Workbench: <a href="https://github.com/carpentries/lesson-transition" class="uri">https://github.com/carpentries/lesson-transition</a>. This would transform markdown syntax from <a href="#kramdown">Kramdown</a> to <a href="#pandoc-flavoured-markdown">Pandoc-flavoured markdown</a> and it would remove commits unrelated to the lesson content.
-</dd>
-<dt><a href="https://jekyllrb.com/" id="jekyll" class="anchored">Jekyll</a></dt>
-<dd>
-A static site generator that is used by default to build websites on GitHub from markdown.
-</dd>
-<dt><span id="kramdown" class="anchored">Kramdown</span></dt>
-<dd>
-The default flavour of markdown used by <a href="#jekyll">Jekyll</a>. It is originally based off of a PHP variant of the original markdown syntax that is not widely used.
-</dd>
-<dt><span id="pandoc-flavoured-markdown" class="anchored">Pandoc-flavoured markdown</span></dt>
-<dd>
-A style of markdown that is derived from CommonMark and is the basis for the pandoc document converter <a href="https://pandoc.org/MANUAL.html#pandocs-markdown" class="uri">https://pandoc.org/MANUAL.html#pandocs-markdown</a>.
-</dd>
-<dt><a href="https://github.com/fishtree-attempt" id="fishtree-attempt" class="anchored">Fishtree Attempt</a></dt>
-<dd>
-GitHub organisation to host testing repositories of the transformed lessons.
-</dd>
-<dt><a href="beta-phase.html" id="beta-phase" class="anchored">Beta Phase</a></dt>
-<dd>
-This is the phase in which lessons are tested with maintainers, instructors, and learners to evaluate any potential snags in the websites that should be fixed before converting all of our lessons. This is divided into three stages for each lesson.
-</dd>
-<dt><a href="beta-phase.html#pre-beta" id="pre-beta-stage" class="anchored">Pre-beta stage (8 weeks)</a></dt>
-<dd>
-a snapshot of a lesson is converted to the workbench in a separate github organisation and hosted on a temporary url (<code>preview.carpentries.org/&lt;lesson&gt;</code>). A banner is hosted on the github URL indicating a beta test with a link to the new url.
-</dd>
-<dt><a href="beta-phase.html#beta" id="beta-stage" class="anchored">Beta stage (8 weeks)</a></dt>
-<dd>
-a lesson release and archive is created. The lesson is converted to the workbench and hosted on (preview.carpentries.org/<lesson>). The github URL hosts the snapshot of the lesson at the given release and has a link to the new URL, indicating that it is the up-to-date version.
-</lesson></dd>
-<dt><a href="beta-phase.html#pre-release" id="release-candidate" class="anchored">Release Candidate (24 weeks)</a></dt>
-<dd>
-The default URL will now show the Workbench version of the lesson and the styles version of the lesson will be archived. During this time, any imperfections in the transition are to be addressed by the maintainers.
+The easiest way is to rename your local clone to <code>old-NAME</code> (where <code>NAME</code> is the name of your repository folder) and then re-clone the lesson. You can find details on <a href="beta-phase.html#updating-clone">updating your local clone</a> on the beta phase page.
 </dd>
 </dl>
+</section>
+<section id="github-forks" class="level3">
+<h3 class="anchored" data-anchor-id="github-forks">GitHub Forks</h3>
+<dl>
+<dt><span id="update-fork-from-styles" class="anchored">How do I update my fork after the transition from styles?</span></dt>
+<dd>
+The easiest way to do this is to delete your fork and re-clone. The commit history of the lesson has changed and you will be unable to commit until your fork reflects those changes. Note that if you have a clone, you will need to also <a href="#update-clone-from-styles">delete and re-clone</a>.
+</dd>
+</dl>
+</section>
+</section>
+<section id="teaching" class="level2">
+<h2 class="anchored" data-anchor-id="teaching">Teaching</h2>
+</section>
+<section id="learning" class="level2">
+<h2 class="anchored" data-anchor-id="learning">Learning</h2>
 
 
 </section>

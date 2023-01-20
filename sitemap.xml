@@ -2,42 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://github.com/carpentries/workbench/workflow-guide.html</loc>
-    <lastmod>2023-01-19T19:25:23.843Z</lastmod>
+    <lastmod>2023-01-20T19:13:32.644Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/carpentries/workbench/index.html</loc>
-    <lastmod>2023-01-19T19:25:24.691Z</lastmod>
+    <lastmod>2023-01-20T19:13:33.532Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/carpentries/workbench/faq.html</loc>
+    <lastmod>2023-01-20T19:13:33.860Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/carpentries/workbench/transition-guide.html</loc>
-    <lastmod>2023-01-19T19:25:25.783Z</lastmod>
+    <lastmod>2023-01-20T19:13:35.044Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/carpentries/workbench/beta-phase.html</loc>
-    <lastmod>2023-01-19T19:25:26.323Z</lastmod>
+    <lastmod>2023-01-20T19:13:35.572Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/carpentries/workbench/contributor/index.html</loc>
-    <lastmod>2023-01-19T19:25:27.631Z</lastmod>
+    <lastmod>2023-01-20T19:13:37.056Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/carpentries/workbench/contributor/releases.html</loc>
-    <lastmod>2023-01-19T19:25:27.939Z</lastmod>
+    <lastmod>2023-01-20T19:13:37.388Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/carpentries/workbench/contributor/sandpaper.html</loc>
-    <lastmod>2023-01-19T19:25:28.255Z</lastmod>
+    <lastmod>2023-01-20T19:13:37.736Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/carpentries/workbench/contributor/beta.html</loc>
-    <lastmod>2023-01-19T19:25:28.535Z</lastmod>
+    <lastmod>2023-01-20T19:13:38.036Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/carpentries/workbench/contributor/pre-beta.html</loc>
-    <lastmod>2023-01-19T19:25:28.815Z</lastmod>
+    <lastmod>2023-01-20T19:13:38.332Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/carpentries/workbench/reference.html</loc>
-    <lastmod>2023-01-19T19:25:29.135Z</lastmod>
+    <lastmod>2023-01-20T19:13:38.688Z</lastmod>
   </url>
 </urlset>
