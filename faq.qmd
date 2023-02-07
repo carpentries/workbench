@@ -27,19 +27,33 @@ the [Teaching](#teaching) or [Learning](#learning) sections.
 ### Local Clones
 
 
-[How do I update my clone after the transition from styles?]{#update-clone-from-styles .anchored}
-: The easiest way is to rename your local clone to `old-NAME` (where `NAME` is
-  the name of your repository folder) and then re-clone the lesson. You can 
-  find details on [updating your local clone](beta-phase.html#updating-clone) on
-  the beta phase page.
+#### How do I update my clone after the transition from styles? {#update-clone-from-styles}
+
+The easiest way is to rename your local clone to `old-NAME` (where `NAME` is the
+name of your repository folder) and then re-clone the lesson. You can find
+details on [updating your local clone](beta-phase.html#updating-clone) on the
+beta phase page.
 
 ### GitHub Forks
 
-[How do I update my fork after the transition from styles?]{#update-fork-from-styles .anchored}
-: The easiest way to do this is to delete your fork and re-clone. The commit
-  history of the lesson has changed and you will be unable to commit until your
-  fork reflects those changes. Note that if you have a clone, you will need to
-  also [delete and re-clone](#update-clone-from-styles).
+#### How do I update my fork after the transition from styles? {#update-fork-from-styles}
+
+<iframe width="100%" height="315" src="https://youtube.com/embed/9DVwy818MIE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+The easiest way to do this is to delete your fork and re-clone. The commit
+history of the lesson has changed and you will be unable to commit until your
+fork reflects those changes (this is known as the [burn it all down
+strategy](https://happygitwithr.com/burn.html)): 
+
+1. Save your edits on locally or in a scratch space.
+2. **[Delete your fork](https://docs.github.com/en/repositories/creating-and-managing-repositories/deleting-a-repository)** 
+3. **[Create a new fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo)** or use the "edit" button on the page you wish to edit.
+4. Apply your changes (**NOTE The Workbench uses a different syntax.** Here is
+   a [Transition Guide from Styles to
+   Workbench](https://carpentries.github.io/workbench/transition-guide.html)
+   for your reference). 
+
+Note that if you have a clone, you will need to also [delete and re-clone](#update-clone-from-styles).
 
 ## Teaching
 

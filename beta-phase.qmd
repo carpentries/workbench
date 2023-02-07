@@ -120,7 +120,6 @@ a change.
 
 ### **beta** (one repo using the workbench, two sites) {#beta}
 
-<iframe width="100%" height="315" src="https://youtu.be/161YyNjbYrQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Lessons in this stage will undergo a lesson release of the styles version and a
 snapshot of the repository, including issues and pull requests, will be
@@ -147,6 +146,8 @@ our [< 1 minute survey](https://carpentries.typeform.com/to/KRBl4IZM)**
 ::: {.panel-tabset}
 
 #### Maintainers 
+
+<iframe width="100%" height="315" src="https://youtube.com/embed/161YyNjbYrQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Before this stage can happen, you must **merge or resolve any open PRs in your
 lesson.** *If you feel like you need help with a particular PR, please contact
