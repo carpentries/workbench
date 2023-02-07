@@ -120,6 +120,8 @@ a change.
 
 ### **beta** (one repo using the workbench, two sites) {#beta}
 
+<iframe width="100%" height="315" src="https://youtu.be/161YyNjbYrQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 Lessons in this stage will undergo a lesson release of the styles version and a
 snapshot of the repository, including issues and pull requests, will be
 archived. The default branches (`gh-pages` and `main`) will be renamed and a
