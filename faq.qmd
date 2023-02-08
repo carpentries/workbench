@@ -38,7 +38,15 @@ beta phase page.
 
 #### How do I update my fork after the transition from styles? {#update-fork-from-styles}
 
-<iframe width="100%" height="315" src="https://youtube.com/embed/9DVwy818MIE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+::: {.callout-important}
+
+##### Do not "synchronise" your fork
+
+If you attempt to synchronise your fork from the GitHub interface and create a
+pull request, that pull request will fail. Instead, follow the instructions
+below.
+
+:::
 
 The easiest way to do this is to delete your fork and re-clone. The commit
 history of the lesson has changed and you will be unable to commit until your
@@ -54,6 +62,22 @@ strategy](https://happygitwithr.com/burn.html)):
    for your reference). 
 
 Note that if you have a clone, you will need to also [delete and re-clone](#update-clone-from-styles).
+
+<iframe width="100%" height="315" src="https://youtube.com/embed/9DVwy818MIE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+::: {.callout-warning}
+
+##### contributing without deleting
+
+If you contribute directly on the lesson itself using the "edit" button on
+GitHub, a new branch will be created for you and you can edit on that branch
+without deleting your fork. 
+
+This method is _not recommended_ because it runs the risk that you will
+accidentally merge histories in your fork.
+
+:::
+
 
 ## Teaching
 
