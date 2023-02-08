@@ -65,6 +65,17 @@ Note that if you have a clone, you will need to also [delete and re-clone](#upda
 
 <iframe width="100%" height="315" src="https://youtube.com/embed/9DVwy818MIE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+::: {.callout-note}
+
+##### Production Forks
+
+If you have a fork of a lesson that you have modified significantly and wish to
+continue maintaining under The Workbench, contact Zhian Kamvar and he will help
+you transition your repository. 
+
+:::
+
+
 ::: {.callout-warning}
 
 ##### contributing without deleting
