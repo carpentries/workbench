@@ -6,11 +6,20 @@ format:
       - beta-url.html
 ---
 
-## Beta stage
+:::{style='text-align: center; background: #E6F1FF; padding: 2rem;
+border-radius: 0.25rem'}
 
-You came to this page from a **frozen snapshot** of the lesson. Please be aware
-that **any edits you propose will be made on the live version of the lesson.**
-[Find out more about the **beta stage**](../beta-phase.html#beta).
+You came to this page from a [**frozen snapshot**]{style='font-size: larger;'}
+of a lesson that is being tested in \
+The Workbench Beta Phase 
+
+::: {style='text-align: left;'}
+ - any edits you propose will be made on **The Workbench version of the lesson.**
+ - [Find out more about the **beta stage**](../beta-phase.html#beta).
+
+:::
+:::
+
 
 ::: {.callout-tip appearance="simple"}
 
