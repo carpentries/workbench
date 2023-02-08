@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (new_url.toString().startsWith("https://github.com/")) {
             var href = "<b><a href='" + new_url.toString() + "'>";
             var explainer = "You may continue to " + href + "propose changes to ";
-            edit_url.innerHTML = "<p style='font-size: larger;'>" + explainer + edit + "</p>";
+            edit_url.innerHTML = "<p style='font-size: larger; text-align: center; background: #FFE7A8; padding: 2rem; border-radius: 0.25rem;'>" + explainer + edit + "</p>";
        }
     } else {
         edit_url.innerHTML = "";

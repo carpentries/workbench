@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (new_url.toString().startsWith("https://github.com/")) {
             var href = "<b><a href='" + new_url.toString() + "'>";
             var explainer = "You may continue to " + href + "propose changes to ";
-            edit_url.innerHTML = "<p style='font-size: larger;'>" + explainer + edit + "</p>";
+            edit_url.innerHTML = "<p style='font-size: larger; text-align: center; background: #FFE7A8; padding: 2rem; border-radius: 0.25rem;'>" + explainer + edit + "</p>";
        }
     } else {
         edit_url.innerHTML = "";
@@ -195,13 +195,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#beta-stage" id="toc-beta-stage" class="nav-link active" data-scroll-target="#beta-stage">Beta stage</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -223,9 +217,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
 </header>
 
-<section id="beta-stage" class="level2">
-<h2 class="anchored" data-anchor-id="beta-stage">Beta stage</h2>
-<p>You came to this page from a <strong>frozen snapshot</strong> of the lesson. Please be aware that <strong>any edits you propose will be made on the live version of the lesson.</strong> <a href="../beta-phase.html#beta">Find out more about the <strong>beta stage</strong></a>.</p>
+<div style="text-align: center; background: #E6F1FF; padding: 2rem; border-radius: 0.25rem">
+<p>You came to this page from a <span style="font-size: larger;"><strong>frozen snapshot</strong></span> of a lesson that is being tested in<br>
+The Workbench Beta Phase</p>
+<div style="text-align: left;">
+<ul>
+<li>any edits you propose will be made on <strong>The Workbench version of the lesson.</strong></li>
+<li><a href="../beta-phase.html#beta">Find out more about the <strong>beta stage</strong></a>.</li>
+</ul>
+</div>
+</div>
 <div class="callout-tip callout callout-style-simple">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -241,7 +242,6 @@ document.addEventListener('DOMContentLoaded', function () {
 </div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
