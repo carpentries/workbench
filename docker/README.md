@@ -11,8 +11,10 @@ container periodically.
 At the moment, these are the known issues:
 
  - No port is exposed, so previewing is not yet possible
- - If a lesson uses {renv} and has been rendered locally, then there _will_ be a
-   conflict with the local {renv} installation.
+ - You must run the commands given below. Because {renv} uses symlinks to a
+   global package library, these folders will need to be ignored beforehand.
+ - Output is written as the root user, so you will need to run `chown` on the
+   directories if you want to use them in a meaningful way.
 
 
 ## Building the image
@@ -29,11 +31,26 @@ docker build -t workbench-docker .
 A lesson can be rendered via this command where `$(pwd)` is expected to evaluate
 to the current working directory.
 
+For Markdown-based lessons (no R Markdown files):
+
 ```bash
 cd /path/to/lesson
 docker run --rm -it \
  -v $(pwd):/home \
+ -v /home/site/* \
  -w /home \
  workbench-docker R -e 'sandpaper::build_lesson()'
 ```
 
+For R-markdown-based lessons, a little extra setup is required: 
+
+```bash
+cd /path/to/lesson
+docker run --rm -it \
+ -v $(pwd):/home \
+ -v /home/site/* \
+ -v /home/renv/profiles/lesson-requirements/renv/ \
+ -v /home/renv/sandbox/ \
+ -w /home \
+ workbench-docker R -e 'sandpaper::use_package_cache(); sandpaper::build_lesson()'
+```
