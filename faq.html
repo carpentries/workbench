@@ -141,7 +141,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#local-clones" id="toc-local-clones" class="nav-link" data-scroll-target="#local-clones">Local Clones</a></li>
   <li><a href="#github-forks" id="toc-github-forks" class="nav-link" data-scroll-target="#github-forks">GitHub Forks</a></li>
   </ul></li>
-  <li><a href="#teaching" id="toc-teaching" class="nav-link" data-scroll-target="#teaching">Teaching</a></li>
+  <li><a href="#teaching" id="toc-teaching" class="nav-link" data-scroll-target="#teaching">Teaching</a>
+  <ul class="collapse">
+  <li><a href="#github-forks-1" id="toc-github-forks-1" class="nav-link" data-scroll-target="#github-forks-1">GitHub Forks</a></li>
+  </ul></li>
   <li><a href="#learning" id="toc-learning" class="nav-link" data-scroll-target="#learning">Learning</a></li>
   </ul>
 </nav>
@@ -199,15 +202,21 @@ Work In Progress
 </section>
 <section id="github-forks" class="level3">
 <h3 class="anchored" data-anchor-id="github-forks">GitHub Forks</h3>
-<section id="how-do-i-create-a-fork-for-teaching" class="level4">
-<h4 class="anchored" data-anchor-id="how-do-i-create-a-fork-for-teaching">How do I create a fork for teaching?</h4>
-<p>A common pattern for teaching is to create a fork of a lesson, modify it to add or remove specific section. Because the pages on The Workbench are deployed by GitHub actions, there are a couple of extra steps you need to do to enable the pages to load after the transition.</p>
-<p>In short, when you fork, to make it easier, you should bring in all branches, enable GitHub pages, and enable GitHub Actions. After that, you will have your lesson website and can teach from it.</p>
-<p>You can find the instructions here: https://carpentries.org/blog/2023/01/dovetail-14/#tips-and-tricks-for-using-the-workbench</p>
-</section>
 <section id="update-fork-from-styles" class="level4">
 <h4 class="anchored" data-anchor-id="update-fork-from-styles">How do I update my fork after the transition from styles?</h4>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Before you read further
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p><strong>This is only applicable if you have created a fork of the lesson before 2023-02-06.</strong></p>
+</div>
+</div>
 <div class="callout-important callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -263,6 +272,15 @@ contributing without deleting
 </section>
 <section id="teaching" class="level2">
 <h2 class="anchored" data-anchor-id="teaching">Teaching</h2>
+<section id="github-forks-1" class="level3">
+<h3 class="anchored" data-anchor-id="github-forks-1">GitHub Forks</h3>
+<section id="how-do-i-create-a-fork-for-teaching" class="level4">
+<h4 class="anchored" data-anchor-id="how-do-i-create-a-fork-for-teaching">How do I create a fork for teaching?</h4>
+<p>A common pattern for teaching is to create a fork of a lesson, modify it to add or remove specific section. Because the pages on The Workbench are deployed by GitHub actions, there are a couple of extra steps you need to do to enable the pages to load after the transition.</p>
+<p>In short, when you fork, to make it easier, you should bring in all branches, enable GitHub pages, and enable GitHub Actions. After that, you will have your lesson website and can teach from it.</p>
+<p>You can find the instructions in <a href="https://carpentries.org/blog/2023/01/dovetail-14/#tips-and-tricks-for-using-the-workbench">issue 14 of the Dovetail blog series</a>.</p>
+</section>
+</section>
 </section>
 <section id="learning" class="level2">
 <h2 class="anchored" data-anchor-id="learning">Learning</h2>
