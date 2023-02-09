@@ -38,8 +38,14 @@ beta phase page.
 
 #### How do I update my fork after the transition from styles? {#update-fork-from-styles}
 
+::: {.callout-important}
+
+##### Before you read further
+
 **This is only applicable if you have created a fork of the lesson before
 2023-02-06.**
+
+:::
 
 ::: {.callout-important}
 
