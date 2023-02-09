@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var new_url = new URL(parsedURL.searchParams.get('id'));
     var edit_url = document.getElementById("edit-url");
     var edit = "the live lesson</a></b>.";
+    var explainer = "";
     if (new_url) {
         console.log("new_url:" + new_url.toString());
         console.log(stage);
@@ -17,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // With the beta phase, we want to parse the URL to see if we can
             // get the workbench equivalent.
             // carpentries/instructor-training/edit/gh-pages/_episodes/06-feedback.md
+            edit = "the live Workbench version of the lesson</a></b>."
             var newpath = new_url.pathname.split("/");
             console.log(newpath);
             newpath.splice(4, 1, "main");
@@ -31,6 +33,10 @@ document.addEventListener('DOMContentLoaded', function () {
                     newpath.splice(5, 1, "learners");
                     console.log(newpath);
                     break;
+                case newpath[5].startsWith("index"):
+                    // index page is good to go
+                    console.log(newpath);
+                    break;
                 case newpath[5].startsWith("reference"):
                     newpath.splice(6, 1, newpath[5]);
                     newpath.splice(5, 1, "learners");
@@ -42,7 +48,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     break;
                     console.log(newpath);
                 default:
-                    newpath = newpath.slice(0, 5);
+                    // default to the repository
+                    newpath = newpath.slice(0, 3);
+                    explainer = "<strong>We could not determine the path to this file in The Workbench</strong><br>";
                     console.log(newpath);
                     break;
             }
@@ -51,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         if (new_url.toString().startsWith("https://github.com/")) {
             var href = "<b><a href='" + new_url.toString() + "'>";
-            var explainer = "You may continue to " + href + "propose changes to ";
+            var explainer = explainer + "You may continue to " + href + "propose changes to ";
             edit_url.innerHTML = "<p style='font-size: larger; text-align: center; background: #FFE7A8; padding: 2rem; border-radius: 0.25rem;'>" + explainer + edit + "</p>";
        }
     } else {
