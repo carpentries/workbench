@@ -36,7 +36,23 @@ beta phase page.
 
 ### GitHub Forks
 
+#### How do I create a fork for teaching? 
+
+A common pattern for teaching is to create a fork of a lesson, modify it to add
+or remove specific section. Because the pages on The Workbench are deployed by
+GitHub actions, there are a couple of extra steps you need to do to enable the 
+pages to load after the transition.
+
+In short, when you fork, to make it easier, you should bring in all branches, 
+enable GitHub pages, and enable GitHub Actions. After that, you will have your
+lesson website and can teach from it.
+
+You can find the instructions here: https://carpentries.org/blog/2023/01/dovetail-14/#tips-and-tricks-for-using-the-workbench
+
 #### How do I update my fork after the transition from styles? {#update-fork-from-styles}
+
+**This is only applicable if you have created a fork of the lesson before
+2023-02-06.**
 
 ::: {.callout-important}
 
