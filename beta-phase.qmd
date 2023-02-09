@@ -31,7 +31,7 @@ The three stages are called ["pre-beta"](#pre-beta), ["beta"](#beta)[^beta], and
 
 If you would like to participate in the beta phase, you can
 
- - [find out more about our workbench through our Resource Guide](#resources),
+ - [find out more about our workbench through our Resource Guide](index.html#resources),
  - **[introduce yourself](https://github.com/carpentries/workbench/discussions/1)**, and 
  - [give feedback via GitHub Discussions](https://github.com/carpentries/workbench/discussions/)
 
