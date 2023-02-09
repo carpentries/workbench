@@ -158,7 +158,8 @@ means to address any issues or pull requests that come in and improve the
 lesson. In addition, I would recommend to continue to do the things you were
 doing during the [pre-beta stage](#pre-beta), but first:
 
- - Update your local version of the lesson ([instructions to update](#updating-clone))
+ 1. Update your local version of the lesson ([instructions to update](#updating-clone))
+ 2. Re-fork the lesson if you have a fork (see the [instructions in the FAQ](faq.html#update-fork-from-styles))
 
 #### Instructors {#pre-beta-instructor}
 
