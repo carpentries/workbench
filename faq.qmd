@@ -108,6 +108,6 @@ In short, when you fork, to make it easier, you should bring in all branches,
 enable GitHub pages, and enable GitHub Actions. After that, you will have your
 lesson website and can teach from it.
 
-You can find the instructions here: https://carpentries.org/blog/2023/01/dovetail-14/#tips-and-tricks-for-using-the-workbench
+You can find the instructions in [issue 14 of the Dovetail blog series](https://carpentries.org/blog/2023/01/dovetail-14/#tips-and-tricks-for-using-the-workbench).
 
 ## Learning
