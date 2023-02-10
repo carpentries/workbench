@@ -10,7 +10,7 @@ subtitle: An accessible lesson infrastructure built in R
 We are testing use of The Workbench on a small number of official lessons. \
 **[Learn more about how to participate in the Beta Phase](beta-phase.html)**.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/x7tETGpF3-4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/x7tETGpF3-4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ::::::::::::::::::::
 
