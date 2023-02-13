@@ -5,6 +5,9 @@ project:
 format:
   html:
     toc: true
+    include-in-header: assets/workbench-tools.html
+    filters:
+      - assets/workbench-filters.lua
 
 book:
   title: "Workbench This and That"
