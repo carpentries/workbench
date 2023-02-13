@@ -58,6 +58,16 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script type="text/javascript">
+    function imgError(image) {
+        image.onerror = "";
+        image.src = "https://placekitten.com/200/200";
+        return true;
+    }
+</script>
+
+
+
 
 
 </head>
@@ -209,7 +219,7 @@ ul.task-list li input[type="checkbox"] {
 <p>The local workflow is known as a ‘two-step’ workflow, which renders markdown from the source files (either Markdown or R Markdown) and then applies the styling to HTML rendered from these Markdown sources.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="fig/local-flow.svg" class="img-fluid figure-img" alt="diagram of three folders. The first folder, &quot;episodes/&quot;, labelled as RMarkdown, has an arrow (labelled as hash episodes) pointing to &quot;site/built/&quot;, labelled as Markdown. The Markdown folder has an arrow (labelled as &quot;apply template&quot;) pointing to &quot;site/docs/&quot;, labelled as &quot;HTML&quot;. The first folder is labelled in pale yellow, indicating that it is the only one tracked by git."></p>
+<p><img src="fig/local-flow.svg" class="img-fluid figure-img" alt="diagram of three folders. The first folder, &quot;episodes/&quot;, labelled as RMarkdown, has an arrow (labelled as hash episodes) pointing to &quot;site/built/&quot;, labelled as Markdown. The Markdown folder has an arrow (labelled as &quot;apply template&quot;) pointing to &quot;site/docs/&quot;, labelled as &quot;HTML&quot;. The first folder is labelled in pale yellow, indicating that it is the only one tracked by git." onerror="imgError(this);"></p>
 <p></p><figcaption class="figure-caption">The local two-step model of deployment into local folders</figcaption><p></p>
 </figure>
 </div>
@@ -262,7 +272,7 @@ Note
 <li>{sandpaper} passes the file to PANDOC, which renders the Markdown to HTML (this is temporarily stored as a character vector in R)</li>
 <li>{sandpaper} passes the HTML to {pkgdown}, which applies the templates from {varnish}, creating the lesson website.</li>
 </ol>
-<p><img src="fig/local-workbench-flow.svg" class="img-fluid" alt="Diagram showing the workflow described above."></p>
+<p><img src="fig/local-workbench-flow.svg" class="img-fluid" alt="Diagram showing the workflow described above." onerror="imgError(this);"></p>
 </section>
 </section>
 <section id="remote-workflow" class="level2">
@@ -292,7 +302,7 @@ Note
 </table>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://github.com/carpentries/sandpaper/raw/main/vignettes/articles/img/branch-flow.svg" class="img-fluid figure-img" alt="Diagrammatic representation of the GitHub deployment cycle showing four branches, gh-pages, md-outputs, main, and my-edit. The my-edit branch is a direct descendent of the main branch, while the gh-pages and md-outputs branches are orphans. Each commit of the main branch has a process represented by a dashed arrow that builds a commit of the subsequent orphan branches"></p>
+<p><img src="https://github.com/carpentries/sandpaper/raw/main/vignettes/articles/img/branch-flow.svg" class="img-fluid figure-img" onerror="imgError(this);" alt="Diagrammatic representation of the GitHub deployment cycle showing four branches, gh-pages, md-outputs, main, and my-edit. The my-edit branch is a direct descendent of the main branch, while the gh-pages and md-outputs branches are orphans. Each commit of the main branch has a process represented by a dashed arrow that builds a commit of the subsequent orphan branches"></p>
 <p></p><figcaption class="figure-caption">Diagram of the <code>sandpaper:::ci_deploy()</code> process</figcaption><p></p>
 </figure>
 </div>

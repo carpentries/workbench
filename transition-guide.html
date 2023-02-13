@@ -121,6 +121,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script type="text/javascript">
+    function imgError(image) {
+        image.onerror = "";
+        image.src = "https://placekitten.com/200/200";
+        return true;
+    }
+</script>
+
+
+
 
 
 <link rel="stylesheet" href="transition-guide.css">
@@ -336,7 +346,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>The Contributors reflect those that actually worked on the lesson itself.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="fig/contributors-workbench.png" class="img-fluid figure-img" alt="screenshot of github &quot;contributors&quot; short list showing 4 contributors with GitHub avatars."></p>
+<p><img src="fig/contributors-workbench.png" class="img-fluid figure-img" alt="screenshot of github &quot;contributors&quot; short list showing 4 contributors with GitHub avatars." onerror="imgError(this);"></p>
 <p></p><figcaption class="figure-caption">List of contributors reflects the lesson content contribution (note that Dr.&nbsp;Gibson is listed first)</figcaption><p></p>
 </figure>
 </div>
@@ -348,7 +358,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>The Contributors reflect those that worked on the lesson AND those that worked on the underlying infrastructure, going back to 2013.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="fig/contributors-styles.png" class="img-fluid figure-img" alt="screenshot of github &quot;contributors&quot; short list showing 11 of 48 contributors with GitHub avatars."></p>
+<p><img src="fig/contributors-styles.png" class="img-fluid figure-img" alt="screenshot of github &quot;contributors&quot; short list showing 11 of 48 contributors with GitHub avatars." onerror="imgError(this);"></p>
 <p></p><figcaption class="figure-caption">List of contributors reflects lesson content and styles (note that Dr.&nbsp;Gibson is now fifth!)</figcaption><p></p>
 </figure>
 </div>
@@ -392,7 +402,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>the episodes can be directly lifted from the lesson without needing external context/resources.</li>
 <li>extra content intended for instructors is clearly separated from that intended for learners</li>
 </ol>
-<p>Episodes (aka Chapters) will move from <code>_episodes/</code> and <code>_episodes_rmd</code> to the single folder <code>episodes/</code>. <code>_extras/</code> content will be split into <code>learners/</code> and <code>instructors/</code> depending on the context of the content. Figures, data, and files all become subfolders of <code>episodes/</code>. <img src="fig/folder-flow.svg" class="img-fluid" data-alt="A diagram showing the transition between the former lesson structure (styles) to the new lesson structure (workbench). It shows episodes flowing to episodes, extras flowing to learners and instructors, and figures, data, and files flowing to subfolders under episodes. Other folders are in grey with no arrows indicating that they are discarded."></p>
+<p>Episodes (aka Chapters) will move from <code>_episodes/</code> and <code>_episodes_rmd</code> to the single folder <code>episodes/</code>. <code>_extras/</code> content will be split into <code>learners/</code> and <code>instructors/</code> depending on the context of the content. Figures, data, and files all become subfolders of <code>episodes/</code>. <img src="fig/folder-flow.svg" class="img-fluid" data-alt="A diagram showing the transition between the former lesson structure (styles) to the new lesson structure (workbench). It shows episodes flowing to episodes, extras flowing to learners and instructors, and figures, data, and files flowing to subfolders under episodes. Other folders are in grey with no arrows indicating that they are discarded." onerror="imgError(this);"></p>
 </section>
 <section id="setup-maintainer" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="setup-maintainer">Setup Page</h3>
@@ -1084,13 +1094,13 @@ Note
 <section id="learner-view" class="level5">
 <h5 class="anchored" data-anchor-id="learner-view">Learner View</h5>
 <p>When this is toggled, the main navigation contains the following menu items: Key Points, Glossary, Learner Profiles, and More. The “More” dropdown menu contains information for learners from the <code>learners/</code> folder aside from the setup instructions.</p>
-<p><img src="fig/screenshot-learner-view.png" class="img-fluid" alt="screenshot of the workbench version of &quot;The Unix Shell&quot;. A blue arrow points to the top right corner indicating the lesson is in &quot;Learner View&quot;. The menu bar states the name of the lesson and has the items described in text, with all but the first underlined. There is a grey sidebar that says &quot;Episodes&quot; and a section called &quot;Summary and Setup&quot; is underlined in blue. The main content shows a blue underline under the last updated status."></p>
+<p><img src="fig/screenshot-learner-view.png" class="img-fluid" alt="screenshot of the workbench version of &quot;The Unix Shell&quot;. A blue arrow points to the top right corner indicating the lesson is in &quot;Learner View&quot;. The menu bar states the name of the lesson and has the items described in text, with all but the first underlined. There is a grey sidebar that says &quot;Episodes&quot; and a section called &quot;Summary and Setup&quot; is underlined in blue. The main content shows a blue underline under the last updated status." onerror="imgError(this);"></p>
 </section>
 <section id="instructor-view" class="level5">
 <h5 class="anchored" data-anchor-id="instructor-view">Instructor view</h5>
 <p>When this is toggled, the main navigation contains the following menu items: Key Points, Instructor Notes, Extract All Images, and More. The “More” dropdown menu contains information for learners from the <code>instructors/</code> folder.</p>
 <p>In addition, the schedule now appears on the home page, instructor notes are displayed inline, and the estimated timings for a lesson appear.</p>
-<p><img src="fig/screenshot-instructor-view.png" class="img-fluid" alt="screenshot of the workbench version of &quot;The Unix Shell&quot;. A red arrow points to the top right corner indicating the lesson is in &quot;Learner View&quot;. The menu bar states the name of the lesson and has the items described in text, with all but the first underlined in red. There is a grey sidebar that says &quot;Episodes&quot; and a section called &quot;Summary and Setup&quot; is underlined in red. The main content shows a red underline under the last updated status."></p>
+<p><img src="fig/screenshot-instructor-view.png" class="img-fluid" alt="screenshot of the workbench version of &quot;The Unix Shell&quot;. A red arrow points to the top right corner indicating the lesson is in &quot;Learner View&quot;. The menu bar states the name of the lesson and has the items described in text, with all but the first underlined in red. There is a grey sidebar that says &quot;Episodes&quot; and a section called &quot;Summary and Setup&quot; is underlined in red. The main content shows a red underline under the last updated status." onerror="imgError(this);"></p>
 </section>
 </section>
 </div>
@@ -1098,7 +1108,7 @@ Note
 <section id="styles-14" class="level4">
 <h4 class="anchored" data-anchor-id="styles-14">styles</h4>
 <p>Navigation in the styles repository is relegated to a single menubar at the top of the lesson with seven items: Home, Code of Conduct, Setup, Episodes (dropdown), Extras (dropdown), License, and Improve This Page.</p>
-<p><img src="fig/screenshot-styles.png" class="img-fluid" alt="screenshot of the styles version of &quot;The Unix Shell&quot; lesson highlighting a single navigation bar at the top containing the items described in the text"></p>
+<p><img src="fig/screenshot-styles.png" class="img-fluid" alt="screenshot of the styles version of &quot;The Unix Shell&quot; lesson highlighting a single navigation bar at the top containing the items described in the text" onerror="imgError(this);"></p>
 <div class="callout-warning callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1128,7 +1138,7 @@ Perceived simplicity
 <h4 class="anchored" data-anchor-id="workbench-15">Workbench</h4>
 <p>The setup instructions are located on the home page at the <code>#setup</code> anchor.</p>
 <p>The link to get to the setup is located at the “Summary and Setup” (in Learner View) or the “Summary and Schedule” links (in Instructor View) in the side navigation bar:</p>
-<p><img src="fig/setup-workbench.png" class="img-fluid" alt="zoomed in screenshot of side navigation of a workbench episode showing &quot;Summary and Setup&quot; highlighted"></p>
+<p><img src="fig/setup-workbench.png" class="img-fluid" alt="zoomed in screenshot of side navigation of a workbench episode showing &quot;Summary and Setup&quot; highlighted" onerror="imgError(this);"></p>
 </section>
 </div>
 <div class="column styles quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -1136,7 +1146,7 @@ Perceived simplicity
 <h4 class="anchored" data-anchor-id="styles-15">styles</h4>
 <p>The setup instructions are in a separate page called <code>/setup</code></p>
 <p>The link for the setup instructions are located in the navigation bar.</p>
-<p><img src="fig/setup-styles.png" class="img-fluid" alt="screenshot of top navigation of styles with &quot;setup&quot; highlighted"></p>
+<p><img src="fig/setup-styles.png" class="img-fluid" alt="screenshot of top navigation of styles with &quot;setup&quot; highlighted" onerror="imgError(this);"></p>
 </section>
 </div>
 </div>
@@ -1153,18 +1163,18 @@ Perceived simplicity
 <section id="workbench-16" class="level4">
 <h4 class="anchored" data-anchor-id="workbench-16">Workbench</h4>
 <p>The “Edit This Page” button is located under the heading for each episode:</p>
-<p><img src="fig/edit-page-head-workbench.png" class="img-fluid" alt="screenshot of workbench page header that says &quot;Introduction to R&quot; with a highlighted link that says &quot;Edit this page&quot;"></p>
+<p><img src="fig/edit-page-head-workbench.png" class="img-fluid" alt="screenshot of workbench page header that says &quot;Introduction to R&quot; with a highlighted link that says &quot;Edit this page&quot;" onerror="imgError(this);"></p>
 <p>and on the first column of the footer:</p>
-<p><img src="fig/edit-page-foot-workbench.png" class="img-fluid" alt="screenshot of workbench page footer that shows the &quot;Edit on GitHub&quot; link highlighted"></p>
+<p><img src="fig/edit-page-foot-workbench.png" class="img-fluid" alt="screenshot of workbench page footer that shows the &quot;Edit on GitHub&quot; link highlighted" onerror="imgError(this);"></p>
 </section>
 </div>
 <div class="column styles quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <section id="styles-16" class="level4">
 <h4 class="anchored" data-anchor-id="styles-16">styles</h4>
 <p>The navigation bar in styles contains a link to “Improve this page”:</p>
-<p><img src="fig/edit-page-head-styles.png" class="img-fluid" alt="screenshot of styles navigation bar with &quot;Improve this page&quot; highlighted"></p>
+<p><img src="fig/edit-page-head-styles.png" class="img-fluid" alt="screenshot of styles navigation bar with &quot;Improve this page&quot; highlighted" onerror="imgError(this);"></p>
 <p>The footer contains a link to “Edit on GitHub”</p>
-<p><img src="fig/edit-page-foot-styles.png" class="img-fluid" alt="screenshot of styles footer with &quot;Edit on GitHub&quot; highlighted"></p>
+<p><img src="fig/edit-page-foot-styles.png" class="img-fluid" alt="screenshot of styles footer with &quot;Edit on GitHub&quot; highlighted" onerror="imgError(this);"></p>
 </section>
 </div>
 </div>
@@ -1181,14 +1191,14 @@ Perceived simplicity
 <section id="workbench-17" class="level4">
 <h4 class="anchored" data-anchor-id="workbench-17">Workbench</h4>
 <p>The License information can be found at the <code>LICENSE.html</code> page, whose link is always in the footer:</p>
-<p><img src="fig/license-workbench.png" class="img-fluid" alt="screenshot of workbench footer with &quot;CC-BY 4.0&quot; license highlighted"></p>
+<p><img src="fig/license-workbench.png" class="img-fluid" alt="screenshot of workbench footer with &quot;CC-BY 4.0&quot; license highlighted" onerror="imgError(this);"></p>
 </section>
 </div>
 <div class="column styles quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <section id="styles-17" class="level4">
 <h4 class="anchored" data-anchor-id="styles-17">styles</h4>
 <p>The License information can be found at the <code>LICENSE.html</code> page, whose link is in the header:</p>
-<p><img src="fig/license-styles.png" class="img-fluid" alt="screenshot of header with &quot;License&quot; highlighted"></p>
+<p><img src="fig/license-styles.png" class="img-fluid" alt="screenshot of header with &quot;License&quot; highlighted" onerror="imgError(this);"></p>
 </section>
 </div>
 </div>
@@ -1205,14 +1215,14 @@ Perceived simplicity
 <section id="workbench-18" class="level4">
 <h4 class="anchored" data-anchor-id="workbench-18">Workbench</h4>
 <p>The Code of Conduct information can be found at the <code>CODE_OF_CONDUCT.html</code> page, whose link is always in the footer:</p>
-<p><img src="fig/coc-workbench.png" class="img-fluid" alt="screenshot of workbench footer with &quot;Code of Conduct&quot; highlighted"></p>
+<p><img src="fig/coc-workbench.png" class="img-fluid" alt="screenshot of workbench footer with &quot;Code of Conduct&quot; highlighted" onerror="imgError(this);"></p>
 </section>
 </div>
 <div class="column styles quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <section id="styles-18" class="level4">
 <h4 class="anchored" data-anchor-id="styles-18">styles</h4>
 <p>The Code of Conduct information can be found at the <code>CODE_OF_CONDUCT.html</code> page, whose link is in the header</p>
-<p><img src="fig/coc-styles.png" class="img-fluid" alt="screenshot of styles header with &quot;Code of Conduct&quot; highlighted"></p>
+<p><img src="fig/coc-styles.png" class="img-fluid" alt="screenshot of styles header with &quot;Code of Conduct&quot; highlighted" onerror="imgError(this);"></p>
 </section>
 </div>
 </div>
@@ -1229,7 +1239,7 @@ Perceived simplicity
 <section id="workbench-19" class="level4">
 <h4 class="anchored" data-anchor-id="workbench-19">Workbench</h4>
 <p>The link to this page is at <code>aio.html</code> and can be found at the bottom of the side navigation bar.</p>
-<p><img src="fig/aio-workbench.png" class="img-fluid" alt="screenshot of side navigation bar with episodes collapsed into an ellipsis, highlighting the &quot;See all in one page&quot; link"></p>
+<p><img src="fig/aio-workbench.png" class="img-fluid" alt="screenshot of side navigation bar with episodes collapsed into an ellipsis, highlighting the &quot;See all in one page&quot; link" onerror="imgError(this);"></p>
 <p>You can jump to individual episodes within this page by adding <code>#aio-[page slug]</code> to the end of the URL.</p>
 <p>For example, From the <a href="https://carpentries.github.io/sandpaper-docs/">Workbench Documentation</a>, following <a href="https://carpentries.github.io/sandpaper-docs/aio.html#aio-episodes" class="uri">https://carpentries.github.io/sandpaper-docs/aio.html#aio-episodes</a> will bring you to the “Episode Structure” episode in the all in one page.</p>
 </section>
@@ -1238,7 +1248,7 @@ Perceived simplicity
 <section id="styles-19" class="level4">
 <h4 class="anchored" data-anchor-id="styles-19">styles</h4>
 <p>The link to this page is at <code>aio.html</code> and can be found at the bottom of the episode dropdown in the navigation bar.</p>
-<p><img src="fig/aio-styles.png" class="img-fluid" alt="cropped screenshot of episodes dropdown navigation menu where &quot;All in one page (beta)&quot; has been highlighted"></p>
+<p><img src="fig/aio-styles.png" class="img-fluid" alt="cropped screenshot of episodes dropdown navigation menu where &quot;All in one page (beta)&quot; has been highlighted" onerror="imgError(this);"></p>
 <p>Note that there is no clear division between the episodes in this page.</p>
 </section>
 </div>
