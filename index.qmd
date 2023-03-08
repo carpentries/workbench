@@ -31,6 +31,10 @@ will begin using The Carpentries Workbench in May 2023.**
 </p>
 </figure>
 
+In order to build the website locally, the easiest is to run `sandpaper::serve()`
+in your Rstudio console.
+Refer to the resources section below to guide you through installations of detailed explanations. 
+
 ## Resources
 
 ### Installation
