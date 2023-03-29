@@ -1,6 +1,6 @@
 ---
 title: 'Frequently Asked Questions'
-date: '2023-02-09'
+date: '2023-03-29'
 ---
 
 ::: {.callout-caution}
@@ -23,6 +23,32 @@ If you have a question about definitions, consult our [glossary](glossary.html)
 These FAQs are intended for those who contribute to, maintain, or create lessons
 using The Workbench. If you only ever visit the website, then head over to 
 the [Teaching](#teaching) or [Learning](#learning) sections.
+
+### Do I really need to use RStudio? {#do-i-need-rstudio}
+
+No. We recommend using RStudio for [several reasons that pertain to ease of
+use and standardisation across systems](#recommend), but we do not absolutely
+require it. If you are able to get Git, R, and pandoc installed on your system,
+then you do not need to use RStudio.
+
+### What is an R Library? {#what-is-an-r-library}
+
+An R library is a folder on your computer that stores R packages. When you
+install R packages, the first message you will see will probably be something
+like (on Windows):
+
+```
+Installing packages into ‘c:/Users/USER/Documents/R/win-library/4.0’
+(as ‘lib’ is unspecified)
+```
+
+This folder is where all of the R packages you install via `install.packages()`
+will live. If you ever need to look this up, you can use the `.libPaths()`
+function.
+
+Sometimes, your R session will issue a warning that says a folder is not
+writeable and asks if you would like to use a personal library instead. In this
+case, select "yes".
 
 ### Local Clones
 
