@@ -4,6 +4,8 @@ project:
 
 format:
   html:
+    mermaid:
+      theme: forest
     toc: true
     include-in-header: assets/workbench-tools.html
     filters:
