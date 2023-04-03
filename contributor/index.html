@@ -131,6 +131,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
@@ -262,11 +265,91 @@ This section is still under construction!
 <li><a href="https://carpentries.github.io/varnish/">{varnish}</a>: HTML templates, CSS, and JS elements</li>
 </ul>
 <p>These packages are all available and released to the <a href="https://carpentries.r-universe.dev/">Carpentries R-Universe</a>, which checks for updates to the source packages hourly.</p>
-<p>If you are interested, we have <a href="releases.html">documentation for the release process</a> available.</p>
+<p>The interaction between these packages, the lesson content, and the author can be summarised like this where the author makes an edit:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<p>
+</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-1">sequenceDiagram
+    autonumber
+    actor Author
+    participant Lesson 
+    %% box rgb(255, 214, 216) The Workbench
+    participant {sandpaper}
+    participant {pegboard}
+    participant {varnish}
+    %% end
+    %% box rgb(255, 231, 168) Generated Files
+    %% participant episode.md
+    %% participant episode.html
+    %% end
+
+    Author -&gt;&gt; {sandpaper}: sandpaper::serve()
+    activate Author
+    {sandpaper} --) Author: website preview
+    note left of {sandpaper}: monitor for changes
+    Author -&gt;&gt; Lesson: make an edit
+    deactivate Author
+    Lesson --&gt;&gt; {sandpaper}: READ changed file(s)
+    {sandpaper} --&gt;&gt; {pegboard}: validate Lesson
+    activate {pegboard}
+    {pegboard} --) Author: report accessibility 
+    deactivate {pegboard}
+    activate {sandpaper}
+    note left of {sandpaper}: WRITE markdown
+    %% {sandpaper} -&gt;&gt; episode.md: WRITE to Markdown (via {knitr} and {renv})
+    %% episode.md --&gt;&gt; {sandpaper}: convert to HTML (via pandoc)
+    {varnish} --&gt;&gt; {sandpaper}: load and apply website template
+    note left of {sandpaper}: WRITE website
+    %% {sandpaper} -&gt;&gt; episode.html: WRITE website
+    {sandpaper} --) Author: website preview
+    deactivate {sandpaper}
+</pre>
+<div id="mermaid-tooltip-1" class="mermaidTooltip">
+
+</div>
+<p></p>
+</div>
+</div>
+</div>
+<p>The process to WRITE Markdown and load the processed HTML from that markdown involves {knitr} and pandoc:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<p>
+</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-2">sequenceDiagram
+    autonumber
+    participant episode.Rmd
+    %% box rgb(255, 214, 216) The Workbench
+    participant {sandpaper}
+    %% end
+    participant {knitr}
+    participant episode.md
+    participant pandoc
+    %% box rgb(255, 231, 168) Generated Files
+    %% end
+
+    episode.Rmd --&gt;&gt; {sandpaper}: READ changed file(s)
+    activate {sandpaper}
+    {sandpaper} --&gt;&gt; {knitr}: PROCESS updated Markdown
+    {knitr} --&gt;&gt; episode.md: WRITE Markdown
+    episode.md --&gt;&gt; pandoc: convert to HTML
+    pandoc --&gt;&gt; {sandpaper}: return HTML
+    deactivate {sandpaper}
+</pre>
+<div id="mermaid-tooltip-2" class="mermaidTooltip">
+
+</div>
+<p></p>
+</div>
+</div>
+</div>
+<p>after this, the HTML is post-processed into learner and instructor components, the {varnish} template applied, and written to disk.</p>
 </section>
 <section id="development" class="level2">
 <h2 class="anchored" data-anchor-id="development">Development</h2>
 <p>Development of The Workbench is overseen by Zhian N. Kamvar. New features are added incrementally as pull requests. Pushes to the main branch are <em>rare</em> and discouraged. New features must have tests associated (with the exception of {varnish}).</p>
+<p>If you are interested, we have <a href="releases.html">documentation for the release process</a> available.</p>
 <section id="software-tools" class="level3">
 <h3 class="anchored" data-anchor-id="software-tools">Software Tools</h3>
 <p>Development of Workbench components requires the same toolchain for working on lessons:</p>
@@ -282,8 +365,8 @@ This section is still under construction!
 ---</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
-<pre><code>R version 4.2.2 Patched (2022-11-10 r83330) -- "Innocent and Trusting"
-Copyright (C) 2022 The R Foundation for Statistical Computing
+<pre><code>R version 4.2.3 (2023-03-15) -- "Shortstop Beagle"
+Copyright (C) 2023 The R Foundation for Statistical Computing
 Platform: x86_64-pc-linux-gnu (64-bit)
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
