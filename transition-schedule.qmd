@@ -90,7 +90,7 @@ slist <- split(summary, summary$org)
 
 ## Carpentries
 
-::: {.callout-info}
+::: {.callout-tip}
 
 ### Early transition lessons
 
@@ -114,7 +114,7 @@ makeit(slist$carpentries)
 
 ## Data Carpentry
 
-::: {.callout-info}
+::: {.callout-tip}
 
 ### Early transition lessons
 
@@ -181,7 +181,7 @@ makeit(slist$datacarpentry)
 ## Library Carpentry
 
 
-::: {.callout-info}
+::: {.callout-tip}
 
 ### Early transition lessons
 
@@ -215,7 +215,7 @@ makeit(slist$librarycarpentry)
 
 ## Software Carpentry
 
-::: {.callout-info}
+::: {.callout-tip}
 
 ### Early transition lessons
 
