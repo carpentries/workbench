@@ -5,12 +5,11 @@ subtitle: An accessible lesson infrastructure built in R
 
 ::::::: {.callout-note}
 
-## Workbench Beta Phase
+## Workbench Transition Phase
 
-We are testing use of The Workbench on a small number of official lessons. \
-**[Learn more about how to participate in the Beta Phase](beta-phase.html)**.
-
-<iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/x7tETGpF3-4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+We are in the process of transitioning our official lessons to use The
+Carpentries Workbench. Find out more in our [Transition
+Schedule](transition-schedule.html)
 
 ::::::::::::::::::::
 
@@ -32,6 +31,20 @@ will begin using The Carpentries Workbench in May 2023.**
 </figure>
 
 ## Resources
+
+### Usage
+
+To preview a lesson that uses The Workbench, open R (or RStudio), [install The
+Workbench](#installation), and run the following command to start a live preview
+that will update while you edit:
+
+```r
+sandpaper::serve()
+```
+
+For more guidance on The Workbench, including how create a new lesson, run
+accessibility tests, and more, consult our [Guides](#guides)
+
 
 ### Installation
 
@@ -56,6 +69,8 @@ your packages:
 install.packages(c("sandpaper", "varnish", "pegboard", "tinkr"),
   repos = c("https://carpentries.r-universe.dev/", getOption("repos")))
 ```
+
+
 
 ### Guides
 

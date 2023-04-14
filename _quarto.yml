@@ -29,8 +29,8 @@ website:
         text: Home
       - href: faq.qmd
         text: FAQ
-      - href: beta-phase.qmd
-        text: "**Beta Phase**"
+      - href: transition-schedule.qmd
+        text: "**Transition Schedule**"
       - href: workflow-guide.qmd
         text: How The Workbench Works
       - href: transition-guide.qmd
