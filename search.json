@@ -60,14 +60,14 @@
     "href": "index.html",
     "title": "The Carpentries Workbench",
     "section": "",
-    "text": "Workbench Beta Phase\n\n\n\nWe are testing use of The Workbench on a small number of official lessons.\nLearn more about how to participate in the Beta Phase.\nThe Workbench is a complete redesign of The Carpentries lesson websites, with new features prioritising accessibility and navigation. All Carpentries lessons will begin using The Carpentries Workbench in May 2023."
+    "text": "Workbench Transition Phase\n\n\n\nWe are in the process of transitioning our official lessons to use The Carpentries Workbench. Find out more in our Transition Schedule\nThe Workbench is a complete redesign of The Carpentries lesson websites, with new features prioritising accessibility and navigation. All Carpentries lessons will begin using The Carpentries Workbench in May 2023."
   },
   {
     "objectID": "index.html#resources",
     "href": "index.html#resources",
     "title": "The Carpentries Workbench",
     "section": "Resources",
-    "text": "Resources\n\nInstallation\nTo install the workbench, make sure you have a working version of R and pandoc/RStudio installed (see the workbench setup instructions for details).\nFrom there, you can install the workbench packages and their dependencies from our Carpentries R Universe:\ninstall.packages(c(\"sandpaper\", \"varnish\", \"pegboard\", \"tinkr\"),\n  repos = c(\"https://carpentries.r-universe.dev/\", getOption(\"repos\")))\n\n\nUpdating\nTo update workbench packages, you can use the same command as you did to install your packages:\ninstall.packages(c(\"sandpaper\", \"varnish\", \"pegboard\", \"tinkr\"),\n  repos = c(\"https://carpentries.r-universe.dev/\", getOption(\"repos\")))\n\n\nGuides\n\nGlossary A glossary of terms for The Workbench.\nOfficial Workbench Documentation: written using The Workbench, this guide provides everything you need to get started using The Workbench.\nCollaborative Lesson Development Training: Material for a three day workshop teaching good practices in lesson design and open source collaboration skills\n\n\n\nTools\n\n{sandpaper}: User interface and engine for the workbench\n{pegboard}: Validation and parsing of lesson components\n{varnish}: HTML, CSS, and JavaScript templates\n(carpentries/actions): GitHub Actions for Workbench Workflows\n(carpentries/lesson-transition): Tool for automated transition from styles-based lessons to Workbench.\n\n\n\nTemplates\n\nR Markdown Lesson Template\nMarkdown Lesson Template\n\n\n\nInspired Examples\nThese are examples of lessons developed with The Workbench since the initial announcement:\n\nToby Hodges, Mateusz Kuzak, Aleksandra Nenadic, Sarah Stevens—Collaborative Lesson Development Training\nSaranjeet Kuar, Achintya Rao, Heather Turner, Aman Goel—R’s Bug Tracking\nSaba Ferdous, David Pérez-Suárez—Learn To Discover—Basic Python (note—this uses a custom fork of sandpaper, and varnish to run python)\nPhilipp Matthias Schäfer—GitLab Novice\nMichael Culshaw-Maurer—Rewrite of the R Ecology Lesson"
+    "text": "Resources\n\nUsage\nTo preview a lesson that uses The Workbench, open R (or RStudio), install The Workbench, and run the following command to start a live preview that will update while you edit:\nsandpaper::serve()\nFor more guidance on The Workbench, including how create a new lesson, run accessibility tests, and more, consult our Guides\n\n\nInstallation\nTo install the workbench, make sure you have a working version of R and pandoc/RStudio installed (see the workbench setup instructions for details).\nFrom there, you can install the workbench packages and their dependencies from our Carpentries R Universe:\ninstall.packages(c(\"sandpaper\", \"varnish\", \"pegboard\", \"tinkr\"),\n  repos = c(\"https://carpentries.r-universe.dev/\", getOption(\"repos\")))\n\n\nUpdating\nTo update workbench packages, you can use the same command as you did to install your packages:\ninstall.packages(c(\"sandpaper\", \"varnish\", \"pegboard\", \"tinkr\"),\n  repos = c(\"https://carpentries.r-universe.dev/\", getOption(\"repos\")))\n\n\nGuides\n\nGlossary A glossary of terms for The Workbench.\nOfficial Workbench Documentation: written using The Workbench, this guide provides everything you need to get started using The Workbench.\nCollaborative Lesson Development Training: Material for a three day workshop teaching good practices in lesson design and open source collaboration skills\n\n\n\nTools\n\n{sandpaper}: User interface and engine for the workbench\n{pegboard}: Validation and parsing of lesson components\n{varnish}: HTML, CSS, and JavaScript templates\n(carpentries/actions): GitHub Actions for Workbench Workflows\n(carpentries/lesson-transition): Tool for automated transition from styles-based lessons to Workbench.\n\n\n\nTemplates\n\nR Markdown Lesson Template\nMarkdown Lesson Template\n\n\n\nInspired Examples\nThese are examples of lessons developed with The Workbench since the initial announcement:\n\nToby Hodges, Mateusz Kuzak, Aleksandra Nenadic, Sarah Stevens—Collaborative Lesson Development Training\nSaranjeet Kuar, Achintya Rao, Heather Turner, Aman Goel—R’s Bug Tracking\nSaba Ferdous, David Pérez-Suárez—Learn To Discover—Basic Python (note—this uses a custom fork of sandpaper, and varnish to run python)\nPhilipp Matthias Schäfer—GitLab Novice\nMichael Culshaw-Maurer—Rewrite of the R Ecology Lesson"
   },
   {
     "objectID": "transition-guide.html",
@@ -159,5 +159,40 @@
     "title": "Frequently Asked Questions",
     "section": "Learning",
     "text": "Learning"
+  },
+  {
+    "objectID": "transition-schedule.html",
+    "href": "transition-schedule.html",
+    "title": "Workbench Transition Schedule",
+    "section": "",
+    "text": "Below you will find tables that indicate when a given lesson is expected to transition to The Workbench along with a link to the preview and a GitHub issue tracking progress on the conversion.\nIf you have any questions, please contact the curriculum team at curriculum at carpentries dot org"
+  },
+  {
+    "objectID": "transition-schedule.html#carpentries",
+    "href": "transition-schedule.html#carpentries",
+    "title": "Workbench Transition Schedule",
+    "section": "Carpentries",
+    "text": "Carpentries\n\n\n\n\n\n\nExpected Transition\nLesson\nPreview\nTracking Issue\n\n\n\n\n2023-04-04\ninstructor-training\n(released 🎉)\n\n\n\n2023-05-01\ninstructor-training-bonus-modules\ninstructor-training-bonus-modules (🔍)\n#32"
+  },
+  {
+    "objectID": "transition-schedule.html#data-carpentry",
+    "href": "transition-schedule.html#data-carpentry",
+    "title": "Workbench Transition Schedule",
+    "section": "Data Carpentry",
+    "text": "Data Carpentry\n\n\n\n\nEcology\n\n\n\nExpected Transition\nLesson\nPreview\nTracking Issue\n\n\n\n\n2023-05-01\nopenrefine-ecology-lesson\nopenrefine-ecology-lesson (🔍)\n#53\n\n\n2023-05-01\npython-ecology-lesson\npython-ecology-lesson (🔍)\n#41\n\n\n2023-05-01\npython-ecology-lesson-es\n(released 🎉)\n\n\n\n2023-05-01\nr-ecology-lesson\nr-ecology-lesson (🔍)\n#55\n\n\n2023-05-01\nspreadsheet-ecology-lesson\nspreadsheet-ecology-lesson (🔍)\n#40\n\n\n2023-05-01\nsql-ecology-lesson\nsql-ecology-lesson (🔍)\n#57\n\n\n\n\n\nGenomics\n\n\n\nExpected Transition\nLesson\nPreview\nTracking Issue\n\n\n\n\n2023-05-01\ncloud-genomics\ncloud-genomics (🔍)\n#50\n\n\n2023-05-01\ngenomics-r-intro\ngenomics-r-intro (🔍)\n#51\n\n\n2023-05-01\norganization-genomics\norganization-genomics (🔍)\n#54\n\n\n2023-05-01\nshell-genomics\nshell-genomics (🔍)\n#42\n\n\n2023-05-01\nwrangling-genomics\nwrangling-genomics (🔍)\n#58\n\n\n\n\n\nGeospatial\n\n\n\nExpected Transition\nLesson\nPreview\nTracking Issue\n\n\n\n\n2023-05-01\norganization-geospatial\norganization-geospatial (🔍)\n#26\n\n\n2023-05-01\nr-intro-geospatial\nr-intro-geospatial (🔍)\n#25\n\n\n2023-05-01\nr-raster-vector-geospatial\n(released 🎉)\n\n\n\n\n\n\nImage Processing\n\n\n\nExpected Transition\nLesson\nPreview\nTracking Issue\n\n\n\n\n2023-05-01\nimage-processing\nimage-processing (🔍)\n#46\n\n\n\n\n\nSocialsci\n\n\n\nExpected Transition\nLesson\nPreview\nTracking Issue\n\n\n\n\n2023-05-01\nopenrefine-socialsci\nopenrefine-socialsci (🔍)\n#49\n\n\n2023-05-01\npython-socialsci\npython-socialsci (🔍)\n#47\n\n\n2023-05-01\nr-socialsci\n(released 🎉)\n\n\n\n2023-05-01\nspreadsheets-socialsci\nspreadsheets-socialsci (🔍)\n#48\n\n\n2023-05-01\nsql-socialsci\nsql-socialsci (🔍)\n#28"
+  },
+  {
+    "objectID": "transition-schedule.html#library-carpentry",
+    "href": "transition-schedule.html#library-carpentry",
+    "title": "Workbench Transition Schedule",
+    "section": "Library Carpentry",
+    "text": "Library Carpentry\n\n\n\n\n\n\nExpected Transition\nLesson\nPreview\nTracking Issue\n\n\n\n\n2023-05-01\nlc-data-intro\nlc-data-intro (🔍)\n#60\n\n\n2023-05-01\nlc-data-intro-archives\nlc-data-intro-archives (🔍)\n#61\n\n\n2023-05-01\nlc-git\nlc-git (🔍)\n#63\n\n\n2023-05-01\nlc-marcedit\nlc-marcedit (🔍)\n#64\n\n\n2023-05-01\nlc-open-refine\nlc-open-refine (🔍)\n#65\n\n\n2023-05-01\nlc-overview\nlc-overview (🔍)\n#83\n\n\n2023-05-01\nlc-python-intro\nlc-python-intro (🔍)\n#66\n\n\n2023-05-01\nlc-r\nlc-r (🔍)\n#19\n\n\n2023-05-01\nlc-shell\nlc-shell (🔍)\n#67\n\n\n2023-05-01\nlc-spreadsheets\nlc-spreadsheets (🔍)\n#68\n\n\n2023-05-01\nlc-sql\nlc-sql (🔍)\n#69\n\n\n2023-05-01\nlc-wikidata\nlc-wikidata (🔍)\n#71"
+  },
+  {
+    "objectID": "transition-schedule.html#software-carpentry",
+    "href": "transition-schedule.html#software-carpentry",
+    "title": "Workbench Transition Schedule",
+    "section": "Software Carpentry",
+    "text": "Software Carpentry\n\n\n\n\n\n\nExpected Transition\nLesson\nPreview\nTracking Issue\n\n\n\n\n2023-05-01\ngit-novice\ngit-novice (🔍)\n#72\n\n\n2023-05-01\ngit-novice-es\ngit-novice-es (🔍)\n#73\n\n\n2023-05-01\nmake-novice\nmake-novice (🔍)\n#75\n\n\n2023-05-01\nmatlab-novice-inflammation\nmatlab-novice-inflammation (🔍)\n#76\n\n\n2023-05-01\npython-novice-gapminder\npython-novice-gapminder (🔍)\n#77\n\n\n2023-05-01\npython-novice-inflammation\npython-novice-inflammation (🔍)\n#22\n\n\n2023-05-01\nr-novice-gapminder\nr-novice-gapminder (🔍)\n#78\n\n\n2023-05-01\nr-novice-gapminder-es\nr-novice-gapminder-es (🔍)\n#79\n\n\n2023-05-01\nr-novice-inflammation\nr-novice-inflammation (🔍)\n#24\n\n\n2023-05-01\nshell-novice\nshell-novice (🔍)\n#80\n\n\n2023-05-01\nshell-novice-es\nshell-novice-es (🔍)\n#81\n\n\n2023-05-01\nsql-novice-survey\nsql-novice-survey (🔍)\n#82"
   }
 ]
