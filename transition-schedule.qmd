@@ -223,7 +223,7 @@ Here is a link to tracking issues for lessons whose maintainers have elected to
 transition before May: [early transition SoftwareCarpentry 
 lessons](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%22early+transition%22++swcarpentry)
 
-:
+:::
 
 
 ```{r}
