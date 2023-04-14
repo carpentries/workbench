@@ -90,6 +90,16 @@ slist <- split(summary, summary$org)
 
 ## Carpentries
 
+::: {.callout-info}
+
+### Early transition lessons
+
+Here is a link to tracking issues for lessons whose maintainers have elected to
+transition before May: [early transition carpentries
+lessons](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%22early+transition%22++carpentries)
+
+:::
+
 ```{r}
 #| label: cp-table
 #| eval: false
@@ -103,6 +113,16 @@ makeit(slist$carpentries)
 |2023-05-01|[instructor-training-bonus-modules](https://carpentries.github.io/instructor-training-bonus-modules/)|[instructor-training-bonus-modules (:mag:)](https://fishtree-attempt.github.io/instructor-training-bonus-modules/)|[#32](https://github.com/carpentries/lesson-transition/issues/32)|
 
 ## Data Carpentry
+
+::: {.callout-info}
+
+### Early transition lessons
+
+Here is a link to tracking issues for lessons whose maintainers have elected to
+transition before May: [early transition DataCarpentry
+lessons](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%22early+transition%22++datacarpentry)
+
+:::
 
 ```{r}
 #| label: dc-table
@@ -160,6 +180,17 @@ makeit(slist$datacarpentry)
 
 ## Library Carpentry
 
+
+::: {.callout-info}
+
+### Early transition lessons
+
+Here is a link to tracking issues for lessons whose maintainers have elected to
+transition before May: [early transition LibraryCarpentry 
+lessons](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%22early+transition%22++librarycarpentry)
+
+:::
+
 ```{r}
 #| label: lc-table
 #| eval: false
@@ -183,6 +214,17 @@ makeit(slist$librarycarpentry)
 |2023-05-01|[lc-wikidata](https://librarycarpentry.github.io/lc-wikidata/)|[lc-wikidata (:mag:)](https://fishtree-attempt.github.io/lc-wikidata/)|[#71](https://github.com/carpentries/lesson-transition/issues/71)|
 
 ## Software Carpentry
+
+::: {.callout-info}
+
+### Early transition lessons
+
+Here is a link to tracking issues for lessons whose maintainers have elected to
+transition before May: [early transition SoftwareCarpentry 
+lessons](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%22early+transition%22++swcarpentry)
+
+:
+
 
 ```{r}
 #| label: swc-table
