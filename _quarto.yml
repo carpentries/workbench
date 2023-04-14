@@ -4,6 +4,7 @@ project:
 
 format:
   html:
+    from: markdown+emoji
     mermaid:
       theme: forest
     toc: true
