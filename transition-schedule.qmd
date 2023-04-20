@@ -202,7 +202,7 @@ makeit(slist$librarycarpentry)
 |---------:|:----------------------|:------------------------------|:-------:|
 |2023-05-01|[lc-data-intro](https://librarycarpentry.github.io/lc-data-intro/)|[lc-data-intro (:mag:)](https://fishtree-attempt.github.io/lc-data-intro/)|[#60](https://github.com/carpentries/lesson-transition/issues/60)|
 |2023-04-24|[lc-data-intro-archives](https://librarycarpentry.github.io/lc-data-intro-archives/)|[lc-data-intro-archives (:mag:)](https://fishtree-attempt.github.io/lc-data-intro-archives/)|[#61](https://github.com/carpentries/lesson-transition/issues/61)|
-|2023-05-01|[lc-git](https://librarycarpentry.github.io/lc-git/)|[lc-git (:mag:)](https://fishtree-attempt.github.io/lc-git/)|[#63](https://github.com/carpentries/lesson-transition/issues/63)|
+|2023-04-20|[lc-git](https://librarycarpentry.github.io/lc-git/)|[lc-git (:mag:)](https://fishtree-attempt.github.io/lc-git/)|[#63](https://github.com/carpentries/lesson-transition/issues/63)|
 |2023-04-25|[lc-marcedit](https://librarycarpentry.github.io/lc-marcedit/)|[lc-marcedit (:mag:)](https://fishtree-attempt.github.io/lc-marcedit/)|[#64](https://github.com/carpentries/lesson-transition/issues/64)|
 |2023-05-01|[lc-open-refine](https://librarycarpentry.github.io/lc-open-refine/)|[lc-open-refine (:mag:)](https://fishtree-attempt.github.io/lc-open-refine/)|[#65](https://github.com/carpentries/lesson-transition/issues/65)|
 |2023-05-01|[lc-overview](https://librarycarpentry.github.io/lc-overview/)|[lc-overview (:mag:)](https://fishtree-attempt.github.io/lc-overview/)|[#83](https://github.com/carpentries/lesson-transition/issues/83)|
