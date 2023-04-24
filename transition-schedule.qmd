@@ -234,7 +234,7 @@ makeit(slist$swcarpentry)
 |2023-05-01|[r-novice-gapminder](https://swcarpentry.github.io/r-novice-gapminder/)|[r-novice-gapminder (:mag:)](https://fishtree-attempt.github.io/r-novice-gapminder/)|[#78](https://github.com/carpentries/lesson-transition/issues/78)|
 |2023-04-27|[r-novice-gapminder-es](https://swcarpentry.github.io/r-novice-gapminder-es/)|[r-novice-gapminder-es (:mag:)](https://fishtree-attempt.github.io/r-novice-gapminder-es/)|[#79](https://github.com/carpentries/lesson-transition/issues/79)|
 |2023-05-01|[r-novice-inflammation ](https://swcarpentry.github.io/r-novice-inflammation /)|[r-novice-inflammation  (:mag:)](https://fishtree-attempt.github.io/r-novice-inflammation /)|[#24](https://github.com/carpentries/lesson-transition/issues/24)|
-|2023-05-01|[shell-novice](https://swcarpentry.github.io/shell-novice/)|[shell-novice (:mag:)](https://fishtree-attempt.github.io/shell-novice/)|[#80](https://github.com/carpentries/lesson-transition/issues/80)|
+|2023-04-26 (tentative) |[shell-novice](https://swcarpentry.github.io/shell-novice/)|[shell-novice (:mag:)](https://fishtree-attempt.github.io/shell-novice/)|[#80](https://github.com/carpentries/lesson-transition/issues/80)|
 |2023-04-24|[shell-novice-es](https://swcarpentry.github.io/shell-novice-es/)| (released :tada:) |[#81](https://github.com/carpentries/lesson-transition/issues/81)|
 |2023-05-01|[sql-novice-survey](https://swcarpentry.github.io/sql-novice-survey/)|[sql-novice-survey (:mag:)](https://fishtree-attempt.github.io/sql-novice-survey/)|[#82](https://github.com/carpentries/lesson-transition/issues/82)|
 
