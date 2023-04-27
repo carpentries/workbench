@@ -19,7 +19,7 @@ the number of tasks that need to be completed in the transition workflow.
 
 
 |Lesson                                 | Tasks|  PRs | Percent Tasks Complete |
-|:---------                               |-----:|-----:|--------:|
+|:-------------                           |-----:|-----:|--------:|
 |datacarpentry/openrefine-socialsci       |     5|     0|     100%|
 |swcarpentry/shell-novice                 |     5|     0|      80%|
 |swcarpentry/python-novice-gapminder      |     2|     0|       0%|
