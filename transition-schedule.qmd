@@ -173,7 +173,7 @@ makeit(slist$datacarpentry)
 |2023-05-19|[openrefine-ecology-lesson](https://datacarpentry.github.io/OpenRefine-ecology-lesson/)|[openrefine-ecology-lesson (:mag:)](https://fishtree-attempt.github.io/openrefine-ecology-lesson/)|[#53](https://github.com/carpentries/lesson-transition/issues/53)|
 |2023-05-07|[python-ecology-lesson](https://datacarpentry.github.io/python-ecology-lesson/)|[python-ecology-lesson (:mag:)](https://fishtree-attempt.github.io/python-ecology-lesson/)|[#41](https://github.com/carpentries/lesson-transition/issues/41)|
 |2023-04-04|[python-ecology-lesson-es](https://datacarpentry.github.io/python-ecology-lesson-es/)| (released :tada:) ||
-|2023-05-07|[r-ecology-lesson](https://datacarpentry.github.io/r-ecology-lesson/)|[r-ecology-lesson (:mag:)](https://fishtree-attempt.github.io/r-ecology-lesson/)|[#55](https://github.com/carpentries/lesson-transition/issues/55)|
+|2023-05-01|[r-ecology-lesson](https://datacarpentry.github.io/R-ecology-lesson/)|[R-ecology-lesson (:mag:)](https://fishtree-attempt.github.io/R-ecology-lesson/)|[#55](https://github.com/carpentries/lesson-transition/issues/55)|
 |2023-05-07|[spreadsheet-ecology-lesson](https://datacarpentry.github.io/spreadsheet-ecology-lesson/)|[spreadsheet-ecology-lesson (:mag:)](https://fishtree-attempt.github.io/spreadsheet-ecology-lesson/)|[#40](https://github.com/carpentries/lesson-transition/issues/40)|
 |2023-04-21|[sql-ecology-lesson](https://datacarpentry.github.io/sql-ecology-lesson/)| (released :tada:) |[#57](https://github.com/carpentries/lesson-transition/issues/57)|
 
@@ -182,7 +182,7 @@ makeit(slist$datacarpentry)
 | Expected Transition|Lesson                     |Preview                            | Tracking Issue |
 |---------:|:--------------------------|:----------------------------------|:-------:|
 |2023-04-28|[cloud-genomics](https://datacarpentry.github.io/cloud-genomics/)|[cloud-genomics (:mag:)](https://fishtree-attempt.github.io/cloud-genomics/)|[#50](https://github.com/carpentries/lesson-transition/issues/50)|
-|2023-05-07|[genomics-r-intro](https://datacarpentry.github.io/genomics-r-intro/)|[genomics-r-intro (:mag:)](https://fishtree-attempt.github.io/genomics-r-intro/)|[#51](https://github.com/carpentries/lesson-transition/issues/51)|
+|2023-05-01|[genomics-r-intro](https://datacarpentry.github.io/genomics-r-intro/)|[genomics-r-intro (:mag:)](https://fishtree-attempt.github.io/genomics-r-intro/)|[#51](https://github.com/carpentries/lesson-transition/issues/51)|
 |2023-05-07|[organization-genomics](https://datacarpentry.github.io/organization-genomics/)|[organization-genomics (:mag:)](https://fishtree-attempt.github.io/organization-genomics/)|[#54](https://github.com/carpentries/lesson-transition/issues/54)|
 |2023-05-07|[shell-genomics](https://datacarpentry.github.io/shell-genomics/)|[shell-genomics (:mag:)](https://fishtree-attempt.github.io/shell-genomics/)|[#42](https://github.com/carpentries/lesson-transition/issues/42)|
 |2023-05-07|[wrangling-genomics](https://datacarpentry.github.io/wrangling-genomics/)|[wrangling-genomics (:mag:)](https://fishtree-attempt.github.io/wrangling-genomics/)|[#58](https://github.com/carpentries/lesson-transition/issues/58)|
@@ -239,10 +239,10 @@ makeit(slist$librarycarpentry)
 |2023-04-24|[lc-data-intro-archives](https://librarycarpentry.github.io/lc-data-intro-archives/)| (released :tada:) |[#61](https://github.com/carpentries/lesson-transition/issues/61)|
 |2023-04-20|[lc-git](https://librarycarpentry.github.io/lc-git/)| (released :tada:) |[#63](https://github.com/carpentries/lesson-transition/issues/63)|
 |2023-04-25|[lc-marcedit](https://librarycarpentry.github.io/lc-marcedit/)| (released :tada:) |[#64](https://github.com/carpentries/lesson-transition/issues/64)|
-|2023-05-07|[lc-open-refine](https://librarycarpentry.github.io/lc-open-refine/)|[lc-open-refine (:mag:)](https://fishtree-attempt.github.io/lc-open-refine/)|[#65](https://github.com/carpentries/lesson-transition/issues/65)|
+|2023-05-01|[lc-open-refine](https://librarycarpentry.github.io/lc-open-refine/)|[lc-open-refine (:mag:)](https://fishtree-attempt.github.io/lc-open-refine/)|[#65](https://github.com/carpentries/lesson-transition/issues/65)|
 |2023-05-07|[lc-overview](https://librarycarpentry.github.io/lc-overview/)|[lc-overview (:mag:)](https://fishtree-attempt.github.io/lc-overview/)|[#83](https://github.com/carpentries/lesson-transition/issues/83)|
 |2023-05-07|[lc-python-intro](https://librarycarpentry.github.io/lc-python-intro/)|[lc-python-intro (:mag:)](https://fishtree-attempt.github.io/lc-python-intro/)|[#66](https://github.com/carpentries/lesson-transition/issues/66)|
-|2023-05-07|[lc-r](https://librarycarpentry.github.io/lc-r/)|[lc-r (:mag:)](https://fishtree-attempt.github.io/lc-r/)|[#19](https://github.com/carpentries/lesson-transition/issues/19)|
+|2023-05-01|[lc-r](https://librarycarpentry.github.io/lc-r/)|[lc-r (:mag:)](https://fishtree-attempt.github.io/lc-r/)|[#19](https://github.com/carpentries/lesson-transition/issues/19)|
 |2023-05-07|[lc-shell](https://librarycarpentry.github.io/lc-shell/)|[lc-shell (:mag:)](https://fishtree-attempt.github.io/lc-shell/)|[#67](https://github.com/carpentries/lesson-transition/issues/67)|
 |2023-04-21|[lc-spreadsheets](https://librarycarpentry.github.io/lc-spreadsheets/)| (released :tada:) |[#68](https://github.com/carpentries/lesson-transition/issues/68)|
 |2023-05-07|[lc-sql](https://librarycarpentry.github.io/lc-sql/)|[lc-sql (:mag:)](https://fishtree-attempt.github.io/lc-sql/)|[#69](https://github.com/carpentries/lesson-transition/issues/69)|
@@ -278,7 +278,7 @@ makeit(slist$swcarpentry)
 |2023-04-20|[python-novice-inflammation](https://swcarpentry.github.io/python-novice-inflammation/)| (released :tada:) |[#22](https://github.com/carpentries/lesson-transition/issues/22)|
 |2023-05-07|[r-novice-gapminder](https://swcarpentry.github.io/r-novice-gapminder/)|[r-novice-gapminder (:mag:)](https://fishtree-attempt.github.io/r-novice-gapminder/)|[#78](https://github.com/carpentries/lesson-transition/issues/78)|
 |2023-04-27|[r-novice-gapminder-es](https://swcarpentry.github.io/r-novice-gapminder-es/)| (released :tada:) |[#79](https://github.com/carpentries/lesson-transition/issues/79)|
-|2023-05-07|[r-novice-inflammation ](https://swcarpentry.github.io/r-novice-inflammation /)|[r-novice-inflammation  (:mag:)](https://fishtree-attempt.github.io/r-novice-inflammation /)|[#24](https://github.com/carpentries/lesson-transition/issues/24)|
+|2023-05-01|[r-novice-inflammation ](https://swcarpentry.github.io/r-novice-inflammation /)|[r-novice-inflammation  (:mag:)](https://fishtree-attempt.github.io/r-novice-inflammation /)|[#24](https://github.com/carpentries/lesson-transition/issues/24)|
 |2023-05-07|[shell-novice](https://swcarpentry.github.io/shell-novice/)|[shell-novice (:mag:)](https://fishtree-attempt.github.io/shell-novice/)|[#80](https://github.com/carpentries/lesson-transition/issues/80)|
 |2023-04-24|[shell-novice-es](https://swcarpentry.github.io/shell-novice-es/)| (released :tada:) |[#81](https://github.com/carpentries/lesson-transition/issues/81)|
 |2023-05-07|[sql-novice-survey](https://swcarpentry.github.io/sql-novice-survey/)|[sql-novice-survey (:mag:)](https://fishtree-attempt.github.io/sql-novice-survey/)|[#82](https://github.com/carpentries/lesson-transition/issues/82)|
