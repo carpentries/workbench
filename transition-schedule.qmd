@@ -6,7 +6,7 @@ Below you will find tables that indicate when a given lesson is expected to
 transition to The Workbench along with a link to the preview and a GitHub issue
 tracking progress on the conversion. 
 
-::: {.callout-note}
+::: {.callout-note collapse="true"}
 
 ## Transition Updates
 
