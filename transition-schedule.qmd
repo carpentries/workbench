@@ -170,7 +170,7 @@ makeit(slist$datacarpentry)
 
 | Expected Transition|Lesson                     |Preview                            | Tracking Issue |
 |---------:|:--------------------------|:----------------------------------|:-------:|
-|2023-05-07|[openrefine-ecology-lesson](https://datacarpentry.github.io/openrefine-ecology-lesson/)|[openrefine-ecology-lesson (:mag:)](https://fishtree-attempt.github.io/openrefine-ecology-lesson/)|[#53](https://github.com/carpentries/lesson-transition/issues/53)|
+|2023-05-19|[openrefine-ecology-lesson](https://datacarpentry.github.io/OpenRefine-ecology-lesson/)|[openrefine-ecology-lesson (:mag:)](https://fishtree-attempt.github.io/openrefine-ecology-lesson/)|[#53](https://github.com/carpentries/lesson-transition/issues/53)|
 |2023-05-07|[python-ecology-lesson](https://datacarpentry.github.io/python-ecology-lesson/)|[python-ecology-lesson (:mag:)](https://fishtree-attempt.github.io/python-ecology-lesson/)|[#41](https://github.com/carpentries/lesson-transition/issues/41)|
 |2023-04-04|[python-ecology-lesson-es](https://datacarpentry.github.io/python-ecology-lesson-es/)| (released :tada:) ||
 |2023-05-07|[r-ecology-lesson](https://datacarpentry.github.io/r-ecology-lesson/)|[r-ecology-lesson (:mag:)](https://fishtree-attempt.github.io/r-ecology-lesson/)|[#55](https://github.com/carpentries/lesson-transition/issues/55)|
