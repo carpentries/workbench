@@ -20,7 +20,7 @@ the number of tasks that need to be completed in the transition workflow.
 
 |Lesson                                 | Tasks|  PRs | Percent Tasks Complete |
 |:-------------                           |-----:|-----:|--------:|
-|datacarpentry/openrefine-socialsci       |     5|     0|     100%|
+|~~datacarpentry/openrefine-socialsci~~       |     5|     0|     100%|
 |swcarpentry/shell-novice                 |     5|     0|      80%|
 |swcarpentry/python-novice-gapminder      |     2|     0|       0%|
 |datacarpentry/R-ecology-lesson           |     4|     0|       0%|
@@ -207,7 +207,7 @@ makeit(slist$datacarpentry)
 
 | Expected Transition|Lesson                     |Preview                            | Tracking Issue |
 |---------:|:--------------------------|:----------------------------------|:-------:|
-|2023-04-28|[openrefine-socialsci](https://datacarpentry.github.io/openrefine-socialsci/)|[openrefine-socialsci (:mag:)](https://fishtree-attempt.github.io/openrefine-socialsci/)|[#49](https://github.com/carpentries/lesson-transition/issues/49)|
+|2023-04-28|[openrefine-socialsci](https://datacarpentry.github.io/openrefine-socialsci/)| (released :tada:) |[#49](https://github.com/carpentries/lesson-transition/issues/49)|
 |2023-05-07|[python-socialsci](https://datacarpentry.github.io/python-socialsci/)|[python-socialsci (:mag:)](https://fishtree-attempt.github.io/python-socialsci/)|[#47](https://github.com/carpentries/lesson-transition/issues/47)|
 |2023-04-04|[r-socialsci](https://datacarpentry.github.io/r-socialsci/)| (released :tada:) ||
 |2023-05-07|[spreadsheets-socialsci](https://datacarpentry.github.io/spreadsheets-socialsci/)|[spreadsheets-socialsci (:mag:)](https://fishtree-attempt.github.io/spreadsheets-socialsci/)|[#48](https://github.com/carpentries/lesson-transition/issues/48)|
