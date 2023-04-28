@@ -17,39 +17,6 @@ That being said, **we will be transtioning the lessons between 2023-05-01 and
 2023-05-07** based on a priority of the number of remaining pull requests and
 the number of tasks that need to be completed in the transition workflow.
 
-
-|Lesson                                 | Tasks|  PRs | Percent Tasks Complete |
-|:-------------                           |-----:|-----:|--------:|
-|~~datacarpentry/openrefine-socialsci~~       |     5|     0|     100%|
-|swcarpentry/shell-novice                 |     5|     0|      80%|
-|swcarpentry/python-novice-gapminder      |     2|     0|       0%|
-|datacarpentry/R-ecology-lesson           |     4|     0|       0%|
-|librarycarpentry/lc-r                    |     1|     1|     100%|
-|datacarpentry/spreadsheet-ecology-lesson |     4|     1|      75%|
-|swcarpentry/r-novice-inflammation        |     3|     1|      67%|
-|datacarpentry/genomics-r-intro           |     4|     1|      50%|
-|librarycarpentry/lc-open-refine          |     6|     1|      50%|
-|librarycarpentry/lc-sql                  |     3|     1|      33%|
-|datacarpentry/organization-genomics      |     4|     1|      25%|
-|swcarpentry/r-novice-gapminder           |     2|     1|       0%|
-|datacarpentry/sql-socialsci              |     2|     1|       0%|
-|datacarpentry/organization-geospatial    |     1|     2|     100%|
-|librarycarpentry/lc-data-intro           |     3|     2|     100%|
-|datacarpentry/cloud-genomics             |     3|     2|      67%|
-|datacarpentry/shell-genomics             |     4|     2|      50%|
-|datacarpentry/python-ecology-lesson      |     5|     2|       0%|
-|datacarpentry/spreadsheets-socialsci     |     1|     4|     100%|
-|datacarpentry/OpenRefine-ecology-lesson  |     2|     4|     100%|
-|datacarpentry/python-socialsci           |     3|     5|      33%|
-|librarycarpentry/lc-python-intro         |     1|     6|       0%|
-|datacarpentry/wrangling-genomics         |     2|     6|       0%|
-|datacarpentry/r-intro-geospatial         |     4|     7|      50%|
-|swcarpentry/sql-novice-survey            |     4|     7|      25%|
-|librarycarpentry/lc-shell                |     1|    14|       0%|
-|swcarpentry/git-novice                   |     4|    25|     100%|
-: Lesson transition status as of 2023-04-27 showing priority of lessons arranged
-  by number of pull requests and number of tasks remaining for transition.
-
 Each lesson transition takes ~10-20 minutes to complete from start to finish,
 but combined with the uncertainty of [Github
 incidents](https://www.githubstatus.com/history), network connectivity, among
