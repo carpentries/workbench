@@ -118,13 +118,19 @@ makeit(slist$carpentries)
 
 ::: {.callout-tip}
 
-### Early transition lessons
+### Transition Schedule Issue Tracker
 
-Here is a link to tracking issues for lessons whose maintainers have elected to
-transition before May: [early transition DataCarpentry
-lessons](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%22early+transition%22++datacarpentry)
+Here are links to tracking issues for lessons according to date: 
+
+ - [DataCarpentry 01 May, 2023](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%2201+May%22++datacarpentry)
+ - [DataCarpentry 02 May, 2023](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%2202+May%22++datacarpentry)
+ - [DataCarpentry 03 May, 2023](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%2203+May%22++datacarpentry)
+ - [DataCarpentry 04 May, 2023](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%2204+May%22++datacarpentry)
+ - [DataCarpentry 05 May, 2023](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%2205+May%22++datacarpentry)
+ - [DataCarpentry 08 May, 2023](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%2208+May%22++datacarpentry)
 
 :::
+
 
 ```{r}
 #| label: dc-table
@@ -185,11 +191,16 @@ makeit(slist$datacarpentry)
 
 ::: {.callout-tip}
 
-### Early transition lessons
+### Transition Schedule Issue Tracker
 
-Here is a link to tracking issues for lessons whose maintainers have elected to
-transition before May: [early transition LibraryCarpentry 
-lessons](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%22early+transition%22++librarycarpentry)
+Here are links to tracking issues for lessons according to date: 
+
+ - [LibraryCarpentry 01 May, 2023](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%2201+May%22++librarycarpentry)
+ - [LibraryCarpentry 02 May, 2023](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%2202+May%22++librarycarpentry)
+ - [LibraryCarpentry 03 May, 2023](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%2203+May%22++librarycarpentry)
+ - [LibraryCarpentry 04 May, 2023](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%2204+May%22++librarycarpentry)
+ - [LibraryCarpentry 05 May, 2023](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%2205+May%22++librarycarpentry)
+ - [LibraryCarpentry 08 May, 2023](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%2208+May%22++librarycarpentry)
 
 :::
 
@@ -219,11 +230,16 @@ makeit(slist$librarycarpentry)
 
 ::: {.callout-tip}
 
-### Early transition lessons
+### Transition Schedule Issue Tracker
 
-Here is a link to tracking issues for lessons whose maintainers have elected to
-transition before May: [early transition SoftwareCarpentry 
-lessons](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%22early+transition%22++swcarpentry)
+Here are links to tracking issues for lessons according to date: 
+
+ - [Software Carpentry 01 May, 2023](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%2201+May%22++swcarpentry)
+ - [Software Carpentry 02 May, 2023](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%2202+May%22++swcarpentry)
+ - [Software Carpentry 03 May, 2023](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%2203+May%22++swcarpentry)
+ - [Software Carpentry 04 May, 2023](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%2204+May%22++swcarpentry)
+ - [Software Carpentry 05 May, 2023](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%2205+May%22++swcarpentry)
+ - [Software Carpentry 08 May, 2023](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%2208+May%22++swcarpentry)
 
 :::
 
