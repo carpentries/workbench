@@ -147,7 +147,7 @@ makeit(slist$datacarpentry)
 |2023-05-08|[python-ecology-lesson](https://datacarpentry.github.io/python-ecology-lesson/)|[python-ecology-lesson (:mag:)](https://fishtree-attempt.github.io/python-ecology-lesson/)|[#41](https://github.com/carpentries/lesson-transition/issues/41)|
 |2023-04-04|[python-ecology-lesson-es](https://datacarpentry.github.io/python-ecology-lesson-es/)| (released :tada:) ||
 |2023-05-03|[r-ecology-lesson](https://datacarpentry.github.io/R-ecology-lesson/)| (released :tada:) |[#55](https://github.com/carpentries/lesson-transition/issues/55)|
-|2023-05-08|[spreadsheet-ecology-lesson](https://datacarpentry.github.io/spreadsheet-ecology-lesson/)|[spreadsheet-ecology-lesson (:mag:)](https://fishtree-attempt.github.io/spreadsheet-ecology-lesson/)|[#40](https://github.com/carpentries/lesson-transition/issues/40)|
+|2023-05-03|[spreadsheet-ecology-lesson](https://datacarpentry.github.io/spreadsheet-ecology-lesson/)| (released :tada:) |[#40](https://github.com/carpentries/lesson-transition/issues/40)|
 |2023-04-21|[sql-ecology-lesson](https://datacarpentry.github.io/sql-ecology-lesson/)| (released :tada:) |[#57](https://github.com/carpentries/lesson-transition/issues/57)|
 
 ### Genomics
