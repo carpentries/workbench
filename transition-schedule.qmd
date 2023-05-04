@@ -154,18 +154,18 @@ makeit(slist$datacarpentry)
 
 | Expected Transition|Lesson                     |Preview                            | Tracking Issue |
 |---------:|:--------------------------|:----------------------------------|:-------:|
-|2023-04-28|[cloud-genomics](https://datacarpentry.github.io/cloud-genomics/)|[cloud-genomics (:mag:)](https://fishtree-attempt.github.io/cloud-genomics/)|[#50](https://github.com/carpentries/lesson-transition/issues/50)|
+|2023-05-04|[cloud-genomics](https://datacarpentry.github.io/cloud-genomics/)| (released :tada:) |[#50](https://github.com/carpentries/lesson-transition/issues/50)|
 |2023-05-01|[genomics-r-intro](https://datacarpentry.github.io/genomics-r-intro/)| (released :tada:) |[#51](https://github.com/carpentries/lesson-transition/issues/51)|
 |2023-05-02|[organization-genomics](https://datacarpentry.github.io/organization-genomics/)| (released :tada:) |[#54](https://github.com/carpentries/lesson-transition/issues/54)|
 |2023-05-08|[shell-genomics](https://datacarpentry.github.io/shell-genomics/)|[shell-genomics (:mag:)](https://fishtree-attempt.github.io/shell-genomics/)|[#42](https://github.com/carpentries/lesson-transition/issues/42)|
-|2023-05-08|[wrangling-genomics](https://datacarpentry.github.io/wrangling-genomics/)|[wrangling-genomics (:mag:)](https://fishtree-attempt.github.io/wrangling-genomics/)|[#58](https://github.com/carpentries/lesson-transition/issues/58)|
+|2023-05-04|[wrangling-genomics](https://datacarpentry.github.io/wrangling-genomics/)| (released :tada:) |[#58](https://github.com/carpentries/lesson-transition/issues/58)|
 
 ### Geospatial
 
 | Expected Transition|Lesson                     |Preview                            | Tracking Issue |
 |---------:|:--------------------------|:----------------------------------|:-------:|
-|2023-05-04|[organization-geospatial](https://datacarpentry.github.io/organization-geospatial/)|[organization-geospatial (:mag:)](https://fishtree-attempt.github.io/organization-geospatial/)|[#26](https://github.com/carpentries/lesson-transition/issues/26)|
-|2023-05-04|[r-intro-geospatial](https://datacarpentry.github.io/r-intro-geospatial/)|[r-intro-geospatial (:mag:)](https://fishtree-attempt.github.io/r-intro-geospatial/)|[#25](https://github.com/carpentries/lesson-transition/issues/25)|
+|2023-05-04|[organization-geospatial](https://datacarpentry.github.io/organization-geospatial/)| (released :tada:) |[#26](https://github.com/carpentries/lesson-transition/issues/26)|
+|2023-05-04|[r-intro-geospatial](https://datacarpentry.github.io/r-intro-geospatial/)| (released :tada:) |[#25](https://github.com/carpentries/lesson-transition/issues/25)|
 |2023-04-04|[r-raster-vector-geospatial](https://datacarpentry.github.io/r-raster-vector-geospatial/)| (released :tada:) ||
 
 ### Image Processing
@@ -181,7 +181,7 @@ makeit(slist$datacarpentry)
 | Expected Transition|Lesson                     |Preview                            | Tracking Issue |
 |---------:|:--------------------------|:----------------------------------|:-------:|
 |2023-04-28|[openrefine-socialsci](https://datacarpentry.github.io/openrefine-socialsci/)| (released :tada:) |[#49](https://github.com/carpentries/lesson-transition/issues/49)|
-|2023-05-04|[python-socialsci](https://datacarpentry.github.io/python-socialsci/)|[python-socialsci (:mag:)](https://fishtree-attempt.github.io/python-socialsci/)|[#47](https://github.com/carpentries/lesson-transition/issues/47)|
+|2023-05-04|[python-socialsci](https://datacarpentry.github.io/python-socialsci/)| (released :tada:) |[#47](https://github.com/carpentries/lesson-transition/issues/47)|
 |2023-04-04|[r-socialsci](https://datacarpentry.github.io/r-socialsci/)| (released :tada:) ||
 |2023-05-03|[spreadsheets-socialsci](https://datacarpentry.github.io/spreadsheets-socialsci/)| (released :tada:) |[#48](https://github.com/carpentries/lesson-transition/issues/48)|
 |2023-05-02|[sql-socialsci](https://datacarpentry.github.io/sql-socialsci/)| (released :tada:) |[#28](https://github.com/carpentries/lesson-transition/issues/28)|
