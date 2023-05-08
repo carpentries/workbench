@@ -218,7 +218,7 @@ makeit(slist$librarycarpentry)
 |2023-04-20|[lc-git](https://librarycarpentry.github.io/lc-git/)| (released :tada:) |[#63](https://github.com/carpentries/lesson-transition/issues/63)|
 |2023-04-25|[lc-marcedit](https://librarycarpentry.github.io/lc-marcedit/)| (released :tada:) |[#64](https://github.com/carpentries/lesson-transition/issues/64)|
 |2023-05-01|[lc-open-refine](https://librarycarpentry.github.io/lc-open-refine/)| (released :tada:) |[#65](https://github.com/carpentries/lesson-transition/issues/65)|
-|2023-05-08|[lc-overview](https://librarycarpentry.github.io/lc-overview/)| (released :tada:) |[#83](https://github.com/carpentries/lesson-transition/issues/83)|
+|2023-09-08|[lc-overview](https://librarycarpentry.github.io/lc-overview/)| [lc-overview (:mag:)](https://fishtree-attempt.github.io/lc-overview) |[#83](https://github.com/carpentries/lesson-transition/issues/83)|
 |2023-05-08|[lc-python-intro](https://librarycarpentry.github.io/lc-python-intro/)| (released :tada:) |[#66](https://github.com/carpentries/lesson-transition/issues/66)|
 |2023-05-01|[lc-r](https://librarycarpentry.github.io/lc-r/)| (released :tada:) |[#19](https://github.com/carpentries/lesson-transition/issues/19)|
 |2023-05-08|[lc-shell](https://librarycarpentry.github.io/lc-shell/)| (released :tada:) |[#67](https://github.com/carpentries/lesson-transition/issues/67)|
