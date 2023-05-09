@@ -24,6 +24,40 @@ These FAQs are intended for those who contribute to, maintain, or create lessons
 using The Workbench. If you only ever visit the website, then head over to 
 the [Teaching](#teaching) or [Learning](#learning) sections.
 
+### Why was R chosen for the infrastructure? {#why-r}
+
+Most tools for webpage authoring outside of Wordpress and the like expect
+authors to have some knowledge or ability to manipulate HTML, CSS, JavaScript
+and one (or two) other languages to wrangle them all together. It's great for
+people who are dabbling in webpage development, but as we've seen for several
+years now, it's not great for people who do not have much experience with these
+technologies (think about the last time you assisted someone to install Jekyll
+correctly).
+
+We chose R for four main reasons:
+
+1. It has a really robust publishing ecosystem
+2. It is available as a binary application on all major platforms with a
+   packaging system that more often than not just works
+3. Most of all: The R community as a whole is vibrant, diverse, welcoming, and
+   is most aligned with The Carpentries core values.
+4. It provides a throughline between the tools we teach and real-world
+   applications. 
+
+We tested the infrastructure in 2021 to make sure that it works for people with
+varying levels of familiarity with R:
+See this [Blog Post from 2021 on the Alpha Test of the infrastructure](https://carpentries.org/blog/2021/07/infrastructure-testing/).
+
+Zhian Kamvar has given two talks about The Workbench that go into a little bit
+more detail about why we chose R (which highlight the points above)
+
+| Talk | Video | Slides (with speaker notes) |
+| ---  | ----  | -----------                 |
+| [Using R as a Community Workbench for The Carpentries Lesson Infrastructure](https://zkamvar.netlify.app/talk/carpentries-user-2021/) | [Use!R 2021 Video](https://youtu.be/vd8XZSuY_Rs?t=1240 "Zhian's talk from Use!R in 2021") | <https://zkamvar.github.io/user2021/#p1> |
+| [Building Accessible Lessons with R and Friends](https://zkamvar.netlify.app/talk/carpentries-rstudio-2022/) | [`rstudio::conf(2022)` Video](https://www.rstudio.com/conference/2022/talks/building-accessible-lessons-r-friends/?wvideo=ssot3tfv28 "Zhian's talk from RStudio in 2021") | <https://zkamvar.github.io/rstudio-conf-2022/#p1> |
+
+
+
 ### Do I really need to use RStudio? {#do-i-need-rstudio}
 
 No. We recommend using RStudio for [several reasons that pertain to ease of
