@@ -150,6 +150,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#authoring" id="toc-authoring" class="nav-link active" data-scroll-target="#authoring">Authoring</a>
   <ul class="collapse">
+  <li><a href="#why-r" id="toc-why-r" class="nav-link" data-scroll-target="#why-r">Why was R chosen for the infrastructure?</a></li>
   <li><a href="#do-i-need-rstudio" id="toc-do-i-need-rstudio" class="nav-link" data-scroll-target="#do-i-need-rstudio">Do I really need to use RStudio?</a></li>
   <li><a href="#what-is-an-r-library" id="toc-what-is-an-r-library" class="nav-link" data-scroll-target="#what-is-an-r-library">What is an R Library?</a></li>
   <li><a href="#local-clones" id="toc-local-clones" class="nav-link" data-scroll-target="#local-clones">Local Clones</a></li>
@@ -208,6 +209,40 @@ Work In Progress
 <section id="authoring" class="level2">
 <h2 class="anchored" data-anchor-id="authoring">Authoring</h2>
 <p>These FAQs are intended for those who contribute to, maintain, or create lessons using The Workbench. If you only ever visit the website, then head over to the <a href="#teaching">Teaching</a> or <a href="#learning">Learning</a> sections.</p>
+<section id="why-r" class="level3">
+<h3 class="anchored" data-anchor-id="why-r">Why was R chosen for the infrastructure?</h3>
+<p>Most tools for webpage authoring outside of Wordpress and the like expect authors to have some knowledge or ability to manipulate HTML, CSS, JavaScript and one (or two) other languages to wrangle them all together. It’s great for people who are dabbling in webpage development, but as we’ve seen for several years now, it’s not great for people who do not have much experience with these technologies (think about the last time you assisted someone to install Jekyll correctly).</p>
+<p>We chose R for four main reasons:</p>
+<ol type="1">
+<li>It has a really robust publishing ecosystem</li>
+<li>It is available as a binary application on all major platforms with a packaging system that more often than not just works</li>
+<li>Most of all: The R community as a whole is vibrant, diverse, welcoming, and is most aligned with The Carpentries core values.</li>
+<li>It provides a throughline between the tools we teach and real-world applications.</li>
+</ol>
+<p>We tested the infrastructure in 2021 to make sure that it works for people with varying levels of familiarity with R: See this <a href="https://carpentries.org/blog/2021/07/infrastructure-testing/">Blog Post from 2021 on the Alpha Test of the infrastructure</a>.</p>
+<p>Zhian Kamvar has given two talks about The Workbench that go into a little bit more detail about why we chose R (which highlight the points above)</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Talk</th>
+<th>Video</th>
+<th>Slides (with speaker notes)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://zkamvar.netlify.app/talk/carpentries-user-2021/">Using R as a Community Workbench for The Carpentries Lesson Infrastructure</a></td>
+<td><a href="https://youtu.be/vd8XZSuY_Rs?t=1240" title="Zhian's talk from Use!R in 2021">Use!R 2021 Video</a></td>
+<td><a href="https://zkamvar.github.io/user2021/#p1" class="uri">https://zkamvar.github.io/user2021/#p1</a></td>
+</tr>
+<tr class="even">
+<td><a href="https://zkamvar.netlify.app/talk/carpentries-rstudio-2022/">Building Accessible Lessons with R and Friends</a></td>
+<td><a href="https://www.rstudio.com/conference/2022/talks/building-accessible-lessons-r-friends/?wvideo=ssot3tfv28" title="Zhian's talk from RStudio in 2021"><code>rstudio::conf(2022)</code> Video</a></td>
+<td><a href="https://zkamvar.github.io/rstudio-conf-2022/#p1" class="uri">https://zkamvar.github.io/rstudio-conf-2022/#p1</a></td>
+</tr>
+</tbody>
+</table>
+</section>
 <section id="do-i-need-rstudio" class="level3">
 <h3 class="anchored" data-anchor-id="do-i-need-rstudio">Do I really need to use RStudio?</h3>
 <p>No.&nbsp;We recommend using RStudio for <a href="#recommend">several reasons that pertain to ease of use and standardisation across systems</a>, but we do not absolutely require it. If you are able to get Git, R, and pandoc installed on your system, then you do not need to use RStudio.</p>
