@@ -116,21 +116,6 @@ makeit(slist$carpentries)
 
 ## Data Carpentry
 
-::: {.callout-tip}
-
-### Transition Schedule Issue Tracker
-
-Here are links to tracking issues for lessons according to date: 
-
- - [DataCarpentry 01 May, 2023](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%2201+May%22++datacarpentry)
- - [DataCarpentry 02 May, 2023](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%2202+May%22++datacarpentry)
- - [DataCarpentry 03 May, 2023](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%2203+May%22++datacarpentry)
- - [DataCarpentry 04 May, 2023](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%2204+May%22++datacarpentry)
- - [DataCarpentry 05 May, 2023](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%2205+May%22++datacarpentry)
- - [DataCarpentry 08 May, 2023](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%2208+May%22++datacarpentry)
-
-:::
-
 
 ```{r}
 #| label: dc-table
@@ -138,6 +123,14 @@ Here are links to tracking issues for lessons according to date:
 #| echo: false
 makeit(slist$datacarpentry)
 ```
+
+### Astronomy
+
+
+| Expected Transition|Lesson                     |Preview                            | Tracking Issue |
+|---------:|:--------------------------|:----------------------------------|:-------:|
+|2023-05-15|[astronomy-python](https://datacarpentry.github.io/astronomy-python/)| [:mag: astronomy-python](https://fishtree-attempt.github.io/astronomy-python) |[#89](https://github.com/carpentries/lesson-transition/issues/89)|
+
 
 ### Ecology
 
@@ -189,21 +182,6 @@ makeit(slist$datacarpentry)
 ## Library Carpentry
 
 
-::: {.callout-tip}
-
-### Transition Schedule Issue Tracker
-
-Here are links to tracking issues for lessons according to date: 
-
- - [LibraryCarpentry 01 May, 2023](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%2201+May%22++librarycarpentry)
- - [LibraryCarpentry 02 May, 2023](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%2202+May%22++librarycarpentry)
- - [LibraryCarpentry 03 May, 2023](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%2203+May%22++librarycarpentry)
- - [LibraryCarpentry 04 May, 2023](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%2204+May%22++librarycarpentry)
- - [LibraryCarpentry 05 May, 2023](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%2205+May%22++librarycarpentry)
- - [LibraryCarpentry 08 May, 2023](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%2208+May%22++librarycarpentry)
-
-:::
-
 ```{r}
 #| label: lc-table
 #| eval: false
@@ -227,22 +205,6 @@ makeit(slist$librarycarpentry)
 |2023-04-24|[lc-wikidata](https://librarycarpentry.github.io/lc-wikidata/)| (released :tada:) |[#71](https://github.com/carpentries/lesson-transition/issues/71)|
 
 ## Software Carpentry
-
-::: {.callout-tip}
-
-### Transition Schedule Issue Tracker
-
-Here are links to tracking issues for lessons according to date: 
-
- - [Software Carpentry 01 May, 2023](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%2201+May%22++swcarpentry)
- - [Software Carpentry 02 May, 2023](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%2202+May%22++swcarpentry)
- - [Software Carpentry 03 May, 2023](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%2203+May%22++swcarpentry)
- - [Software Carpentry 04 May, 2023](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%2204+May%22++swcarpentry)
- - [Software Carpentry 05 May, 2023](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%2205+May%22++swcarpentry)
- - [Software Carpentry 08 May, 2023](https://github.com/carpentries/lesson-transition/issues?q=is%3Aopen+is%3Aissue+label%3A%2208+May%22++swcarpentry)
-
-:::
-
 
 ```{r}
 #| label: swc-table
