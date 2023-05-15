@@ -129,7 +129,7 @@ makeit(slist$datacarpentry)
 
 | Expected Transition|Lesson                     |Preview                            | Tracking Issue |
 |---------:|:--------------------------|:----------------------------------|:-------:|
-|2023-05-15|[astronomy-python](https://datacarpentry.github.io/astronomy-python/)| [:mag: astronomy-python](https://fishtree-attempt.github.io/astronomy-python) |[#89](https://github.com/carpentries/lesson-transition/issues/89)|
+|2023-05-15|[astronomy-python](https://datacarpentry.github.io/astronomy-python/)| (released :tada:) |[#89](https://github.com/carpentries/lesson-transition/issues/89)|
 
 
 ### Ecology
