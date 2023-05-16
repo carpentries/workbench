@@ -34,6 +34,11 @@ will begin using The Carpentries Workbench in May 2023.**
 
 ### Usage
 
+
+::: {.panel-tabset}
+
+#### Within R
+
 To preview a lesson that uses The Workbench, open R (or RStudio), [install The
 Workbench](#installation), and run the following command to start a live preview
 that will update while you edit:
@@ -41,6 +46,18 @@ that will update while you edit:
 ```r
 sandpaper::serve()
 ```
+
+#### From the command line
+
+To preview a lesson that uses The Workbench, make sure you [install The
+Workbench](#installation), and run the following command to start a live preview
+that will update while you edit:
+
+```bash
+R -e 'sandpaper::serve(quiet = FALSE)'
+```
+
+:::
 
 For more guidance on The Workbench, including how create a new lesson, run
 accessibility tests, and more, consult our [Guides](#guides)
