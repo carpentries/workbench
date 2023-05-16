@@ -54,8 +54,11 @@ Workbench](#installation), and run the following command to start a live preview
 that will update while you edit:
 
 ```bash
-R -e 'sandpaper::serve(quiet = FALSE)'
+R -e 'sandpaper::serve(quiet = FALSE, port = "3435")'
 ```
+
+You can then open your browser to <http://localhost:3435> preview your lesson as
+you edit.
 
 :::
 
