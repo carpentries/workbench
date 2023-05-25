@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>The Carpentries Workbench - {sandpaper}</title>
+<title>The Carpentries Workbench - Flow Diagrams</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,6 +69,9 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
@@ -153,7 +156,17 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#special-technical-requirements" id="toc-special-technical-requirements" class="nav-link" data-scroll-target="#special-technical-requirements">Special Technical Requirements</a></li>
+  <li><a href="#validate-lesson" id="toc-validate-lesson" class="nav-link" data-scroll-target="#validate-lesson"><code>validate_lesson()</code></a></li>
+  <li><a href="#build-markdown" id="toc-build-markdown" class="nav-link" data-scroll-target="#build-markdown"><code>build_markdown()</code></a>
+  <ul class="collapse">
+  <li><a href="#flow-markdown" id="toc-flow-markdown" class="nav-link" data-scroll-target="#flow-markdown">Generating Markdown</a></li>
+  </ul></li>
+  <li><a href="#build-site" id="toc-build-site" class="nav-link" data-scroll-target="#build-site"><code>build_site()</code></a>
+  <ul class="collapse">
+  <li><a href="#flow-html" id="toc-flow-html" class="nav-link" data-scroll-target="#flow-html">Generating HTML</a></li>
+  <li><a href="#flow-tweaks" id="toc-flow-tweaks" class="nav-link" data-scroll-target="#flow-tweaks">Processing HTML</a></li>
+  <li><a href="#flow-website" id="toc-flow-website" class="nav-link" data-scroll-target="#flow-website">Applying Website Template</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -162,8 +175,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">{sandpaper}</h1>
-<p class="subtitle lead">The User Interface and Engine</p>
+<h1 class="title">Flow Diagrams</h1>
 </div>
 
 
@@ -180,40 +192,189 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>The user interface to <a href="../reference.html#workbench">The Workbench</a> is an R package called <a href="../reference.html#sandpaper">{sandpaper}</a>. This package is responsible for the following broad areas.</p>
-<dl>
-<dt>Static Site Generation</dt>
-<dd>
-Primarily, {sandpaper} is responsible for (rendering and) transforming the files contained within a <a href="../reference.html#lesson-source">lesson source</a> repository into a <a href="../reference.html#lesson-website">lesson website</a>. The command to generate a website is <a href="https://carpentries.github.io/sandpaper/reference/build_lesson.html"><code>sandpaper::build_lesson()</code></a>.
-</dd>
-</dl>
-<p>This is accomplished in a two-step workflow that first renders any files that have generated content into markdown and then applies the CSS, JS, and HTML styling from <a href="../reference.html#varnish">{varnish}</a>. This two-step process allows us to cleanly separate the tools from the styling components.</p>
-<p>Note that this does not mean that {sandpaper} is suitable for a generic static site. It’s primary purpose is to generate a lesson website.</p>
-<dl>
-<dt>Dependency Management</dt>
-<dd>
-For lessons that use generated content, R packages are needed, and so, {sandpaper} leans heavily on <a href="https://rstudio.github.io/renv" title="A dependency management toolkit for R">{renv}</a> to automatically detect and record dependencies of a lesson to ensure reproducibility. Users give consent (once) with <a href="https://carpentries.github.io/sandpaper/reference/package_cache.html"><code>sandpaper::use_package_cache()</code></a> and populate their dependencies with <a href="https://carpentries.github.io/sandpaper/reference/dependency_management.html"><code>sandpaper::manage_deps()</code></a>.
-</dd>
-</dl>
-<p>Note: this component may be moved to a different package.</p>
-<dl>
-<dt>Deployment Pipeline Management</dt>
-<dd>
-Every lesson is deployed using a GitHub Actions workflow that deploys the outputs of the site generation to two branches in a repository. The purpose of the workflow is mainly to provision the environment for {sandpaper} to perform the deployment via the internal function <a href="https://carpentries.github.io/sandpaper/reference/ci_deploy.html">sandpaper:::ci_deploy()</a>, which <a href="https://carpentries.github.io/sandpaper/reference/git_worktree_setup.html">sets up git worktrees</a> for orphan branches under <code>site/</code> and then runs <code>sandpaper::build_lesson()</code>
-</dd>
-</dl>
-<p>Note that while the workflows for {sandpaper} only work on GitHub, this does not preclude a Workbench lesson from being deployed by any other method. In fact, it is possible to deploy from your own computer.</p>
-<dl>
-<dt>Accessibility Helper</dt>
-<dd>
-The first thing that {sandpaper} does when previewing or deploying a lesson is to validate that links and images are presented in an accessible by calling the <a href="https://carpentries.github.io/sandpaper/reference/validate_lesson.html"><code>validate_lesson()</code></a>.
-</dd>
-</dl>
+<p>This section builds on <a href="index.html#workflows">The broad workflow</a> and details the internal process that are invoked with the <code>sandpaper::build_lesson()</code> function. This function has the effect of modifying the files inside of the <code>site/</code> folder, which is the untracked folder that holds both the built markdown cache and the rendered HTML site.</p>
+<p>Users will invoke this function in the following ways:</p>
+<table class="table">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 38%">
+<col style="width: 54%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>venue</th>
+<th>function</th>
+<th>purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>local</td>
+<td><code>sandpaper::build_lesson()</code></td>
+<td>render content for offline use</td>
+</tr>
+<tr class="even">
+<td>local</td>
+<td><code>sandpaper::serve()</code></td>
+<td>dynamically render and preview content</td>
+</tr>
+<tr class="odd">
+<td>remote</td>
+<td><code>sandpaper:::ci_deploy()</code></td>
+<td>render content and deploy to branches</td>
+</tr>
+</tbody>
+</table>
+<p>All of these methods will call <code>sandpaper::validate_lesson()</code> and the two-step internal functions <code>sandpaper:::build_markdown()</code> and <code>sandpaper:::build_site()</code>. Below, I break down and detail the process for each.</p>
 </section>
-<section id="special-technical-requirements" class="level2">
-<h2 class="anchored" data-anchor-id="special-technical-requirements">Special Technical Requirements</h2>
+<section id="validate-lesson" class="level2">
+<h2 class="anchored" data-anchor-id="validate-lesson"><code>validate_lesson()</code></h2>
+<p>TBD</p>
+</section>
+<section id="build-markdown" class="level2">
+<h2 class="anchored" data-anchor-id="build-markdown"><code>build_markdown()</code></h2>
+<section id="flow-markdown" class="level3">
+<h3 class="anchored" data-anchor-id="flow-markdown">Generating Markdown</h3>
+<p>Markdown generation for the lesson is controlled by the internal function <code>sandpaper:::build_markdown()</code>.</p>
+<p>When a lesson contains R Markdown files, these need to have content rendered to markdownsot hat we can further process them. This content is processed with the <a href="https://yihui.org/knitr/">{knitr}</a> R package. Markdown content is simply copied to the <code>site/built</code> folder.</p>
+<p>Because R Markdown files can take some time to render, we use MD5 sums of the episode contents (stored in the <code>site/built/md5sum.txt</code> file) to skip any files that have not changed.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">sequenceDiagram
+    autonumber
+    participant episodes/episode.Rmd
+    box rgb(255, 214, 216) The Workbench
+    participant {sandpaper}
+    end
+    box rgb(230, 234, 240) Document Engine
+    participant {knitr}
+    end
+    box rgb(255, 231, 168) Generated Files
+    participant site/built/md5sum.txt
+    participant site/built/episode.md
+    end
+
+    site/built/md5sum.txt --&gt;&gt; {sandpaper}: READ file cache
+    {sandpaper} --&gt;&gt; {knitr}: RUN conversion
+    episodes/episode.Rmd --&gt;&gt; {knitr}: PROCESS changed file(s)
+    {knitr} --&gt;&gt; site/built/episode.md: WRITE Markdown
+    {sandpaper} --&gt;&gt; site/built/md5sum.txt: WRITE file cache
+</pre>
+</div>
+</div>
+</div>
+</div>
+<p>At this step, the markdown has been written and the state of the cache is updated so if we re-run this function, then it will show that no changes have occured. After this step, the internal function <code>sandpaper:::build_site()</code> is run where the markdown file that we just created is converted to HTML with pandoc and stored in an R object. This R object is then manipulated and then written to an HTML file with the {varnish} website templates applied.</p>
+<p>We use this function in the pull request workflows to demonstrate the changes in markdown source files, which is useful when package versions change, causing the output to potentially change.</p>
+</section>
+</section>
+<section id="build-site" class="level2">
+<h2 class="anchored" data-anchor-id="build-site"><code>build_site()</code></h2>
+<p>The following sections will discuss the HTML generation (<a href="#flow-html">the following section</a>), manipulation (<a href="#flow-tweaks">the section after that</a>), and applying the template (<a href="#flow-website">the final section</a>) separately because, while these processes are each run via the internal <code>sandpaper:::build_site()</code> function, they are functionally separate.</p>
+<section id="flow-html" class="level3">
+<h3 class="anchored" data-anchor-id="flow-html">Generating HTML</h3>
+<p>Each markdown file is processed into HTML via <a href="https://pandoc.org">pandoc</a> and returned to R as text. This is done via the internal function <code>sandpaper:::render_html()</code>.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">sequenceDiagram
+    autonumber
+    box rgb(255, 214, 216) The Workbench
+    participant {sandpaper}
+    end
+    box rgb(230, 234, 240) Document Engine
+    participant pandoc
+    end
+    box rgb(255, 231, 168) Generated Files
+    participant site/built/episode.md
+    end
+
+    {sandpaper} --&gt;&gt; pandoc: LOAD pandoc with lua filters
+    site/built/episode.md --&gt;&gt; pandoc: READ markdown
+    pandoc --&gt;&gt; {sandpaper}: RENDER HTML as text
+</pre>
+</div>
+</div>
+</div>
+</div>
+<p>From here, the HTML exists as the internal body content of a website without a header, footer, or any styling. It is nearly ready for insertion into a website template. The next section details the flow we use to tweak the HTML content.</p>
+</section>
+<section id="flow-tweaks" class="level3">
+<h3 class="anchored" data-anchor-id="flow-tweaks">Processing HTML</h3>
+<p>The HTML needs to be tweaked because the output from pandoc, even with our lua filters, still needs some modification. We tweak the content by first converting the HTML into an Abstract Syntax Tree (AST). This allows us to programmatically manipulate tags in the HTML without resorting to using regular expressions.</p>
+<p>In this part, we update links, images, headings, structure that we could not fix using lua filters. We then use the information from the episode to complete the global menu variable with links to the second level headings in the episode.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">sequenceDiagram
+    autonumber
+    box rgb(255, 214, 216) The Workbench
+    participant {sandpaper}
+    end
+    box rgb(230, 241, 255) R Object
+    participant HTML(AST)
+    end
+    box rgb(230, 234, 240) Helper Package
+    participant {xml2}
+    end
+
+    {sandpaper} --&gt;&gt; {xml2}: READ HTML
+    {xml2} --&gt;&gt; HTML(AST): PARSE HTML
+    activate {sandpaper}
+    note right of HTML(AST): sandpaper:::fix_nodes()
+    {xml2} --&gt;&gt; HTML(AST): update structure
+    HTML(AST) --&gt;&gt; {sandpaper}: extract menu items
+    note right of {sandpaper}: generate learner and instructor versions
+    deactivate {sandpaper}
+</pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="flow-website" class="level3">
+<h3 class="anchored" data-anchor-id="flow-website">Applying Website Template</h3>
+<p>Now that we have an HTML AST that has been corrected and associated metadata, we are ready to write this to HTML. This process is achieved by passing the AST and metadata to {pkgdown} where it performs a little more manipulation, applies the {varnish} template, and writes it to disk.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">sequenceDiagram
+    autonumber
+    box rgb(255, 214, 216) The Workbench
+    participant {sandpaper}
+    participant {varnish}
+    end
+    box rgb(230, 241, 255) R Object
+    participant HTML(AST)
+    end
+    box rgb(230, 234, 240) Helper Package
+    participant {pkgdown}
+    end
+    box rgb(255, 231, 168) Generated Files
+    participant site/docs/episode.html
+    end
+
+    activate {sandpaper}
+    {sandpaper} --&gt;&gt; {pkgdown}: Set global menu variables
+    HTML(AST) --&gt;&gt; {pkgdown}: Hand off HTML to pkgdown
+    deactivate {sandpaper}
+    activate {pkgdown}
+    {varnish} --&gt;&gt; {pkgdown}: Load template
+    {pkgdown} --&gt;&gt; site/docs/episode.html: WRITE website
+    deactivate {pkgdown}
+</pre>
+</div>
+</div>
+</div>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
