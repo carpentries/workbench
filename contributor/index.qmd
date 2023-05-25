@@ -25,25 +25,35 @@ The core of The Carpentries Workbench consists of three packages:
  - [{varnish}]\: HTML templates, CSS, and JS elements
 
 These packages are all available and released to the [Carpentries 
-R-Universe][r-universe], which checks for updates to the source packages hourly. 
+R-Universe][r-universe], which checks for updates to the source packages hourly.
 
-The interaction between these packages, the lesson content, and the author can
-be summarised like this where the author makes an edit:
+### Workflows
+
+In a broad sense, this is what happens when you run `sandpaper::serve()` or
+`sandpaper::build_lesson()`. The interaction between the three Workbench
+packages, the lesson content, and the author can be summarised like this where
+the author makes an edit:
+
+::: {.callout-note}
+
+#### Summary Content
+
+This content is a general picture of what happens between the packages. For a
+more in-depth discussion and more detailed diagrams, please visit the [Flow 
+Diagrams page](flow.html).
+
+:::
 
 ```{mermaid}
 sequenceDiagram
     autonumber
     actor Author
     participant Lesson 
-    %% box rgb(255, 214, 216) The Workbench
+    box rgb(255, 214, 216) The Workbench
     participant {sandpaper}
     participant {pegboard}
     participant {varnish}
-    %% end
-    %% box rgb(255, 231, 168) Generated Files
-    %% participant episode.md
-    %% participant episode.html
-    %% end
+    end
 
     Author ->> {sandpaper}: sandpaper::serve()
     activate Author
@@ -54,48 +64,17 @@ sequenceDiagram
     Lesson -->> {sandpaper}: READ changed file(s)
     {sandpaper} -->> {pegboard}: validate Lesson
     activate {pegboard}
+    note left of {sandpaper}: provision global menu elements
     {pegboard} --) Author: report accessibility 
     deactivate {pegboard}
     activate {sandpaper}
     note left of {sandpaper}: WRITE markdown
-    %% {sandpaper} ->> episode.md: WRITE to Markdown (via {knitr} and {renv})
-    %% episode.md -->> {sandpaper}: convert to HTML (via pandoc)
     {varnish} -->> {sandpaper}: load and apply website template
     note left of {sandpaper}: WRITE website
-    %% {sandpaper} ->> episode.html: WRITE website
     {sandpaper} --) Author: website preview
     deactivate {sandpaper}
 ```
 
-
-The process to WRITE Markdown and load the processed HTML from that markdown
-involves {knitr} and pandoc:
-
-```{mermaid}
-sequenceDiagram
-    autonumber
-    participant episode.Rmd
-    %% box rgb(255, 214, 216) The Workbench
-    participant {sandpaper}
-    %% end
-    participant {knitr}
-    participant episode.md
-    participant pandoc
-    %% box rgb(255, 231, 168) Generated Files
-    %% end
-
-    episode.Rmd -->> {sandpaper}: READ changed file(s)
-    activate {sandpaper}
-    {sandpaper} -->> {knitr}: PROCESS updated Markdown
-    {knitr} -->> episode.md: WRITE Markdown
-    episode.md -->> pandoc: convert to HTML
-    pandoc -->> {sandpaper}: return HTML
-    deactivate {sandpaper}
-```
-
-
-after this, the HTML is post-processed into learner and instructor components,
-the {varnish} template applied, and written to disk. 
 
 ## Development
 

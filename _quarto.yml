@@ -5,15 +5,13 @@ project:
 format:
   html:
     from: markdown+emoji
-    mermaid:
-      theme: forest
     toc: true
     include-in-header: assets/workbench-tools.html
     filters:
       - assets/workbench-filters.lua
 
 book:
-  title: "Workbench This and That"
+  title: "The Carpentries Workbench"
   author: "Zhian N. Kamvar"
   date: "2022-04-29"
   chapters:
@@ -39,6 +37,7 @@ website:
         menu:
          - contributor/index.qmd
          - contributor/releases.qmd
+         - contributor/flow.qmd
     right:
       - icon: github
         href: 'https://github.com/carpentries/workbench'
