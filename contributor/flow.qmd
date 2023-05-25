@@ -5,11 +5,17 @@ title: "Flow Diagrams"
 ## Introduction
 
 This section builds on [The broad workflow](index.html#workflows) and details
-the internal process that are invoked with the `sandpaper::build_lesson()`
-function. This function has the effect of modifying the files inside of the
-`site/` folder, which is the untracked folder that holds both the built markdown
-cache and the rendered HTML site.
+the internal process that are invoked with the
+[`sandpaper::build_lesson()`](https://carpentries.github.io/sandpaper/reference/build_lesson.html)
+function. If you look at [the source for this
+function](https://github.com/carpentries/sandpaper/blob/HEAD/R/build_lesson.R),
+it contains a total of sevens significant lines of code (many more due to
+documentation and comments).
 
+The pre-flight steps all happen before a single source file is built. These
+check for pandoc, validate the lesson, and configure global elements. The last
+two lines are responsible for building the site and combining them with the
+global variables and templates. 
 
 Users will invoke this function in the following ways:
 
@@ -19,9 +25,10 @@ Users will invoke this function in the following ways:
 | local | `sandpaper::serve()`        | dynamically render and preview content |
 | remote| `sandpaper:::ci_deploy()`   | render content and deploy to branches  |
 
-All of these methods will call `sandpaper::validate_lesson()` and the two-step
-internal functions `sandpaper:::build_markdown()` and
-`sandpaper:::build_site()`. Below, I break down and detail the process for each.
+All of these methods will call `sandpaper::validate_lesson()` (which also sets
+up global metadata and menu variables) and the two-step internal functions
+`sandpaper:::build_markdown()` and `sandpaper:::build_site()`. Below, I break
+down and detail the process for each.
 
 ## `validate_lesson()` {#validate-lesson}
 
