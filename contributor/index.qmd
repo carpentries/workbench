@@ -27,7 +27,7 @@ The core of The Carpentries Workbench consists of three packages:
 These packages are all available and released to the [Carpentries 
 R-Universe][r-universe], which checks for updates to the source packages hourly.
 
-### Workflows
+### Local Workflow
 
 In a broad sense, this is what happens when you run `sandpaper::serve()` or
 `sandpaper::build_lesson()`. The interaction between the three Workbench
@@ -43,6 +43,7 @@ more in-depth discussion and more detailed diagrams, please visit the [Flow
 Diagrams page](flow.html).
 
 :::
+
 
 ```{mermaid}
 sequenceDiagram
@@ -74,6 +75,86 @@ sequenceDiagram
     {sandpaper} --) Author: website preview
     deactivate {sandpaper}
 ```
+
+In terms of folder structure, the workflow looks like this: 
+
+
+```{mermaid}
+flowchart TB
+    classDef default color:#383838,fill:#FFF7F1,stroke-width:1px
+    classDef external color:#383838,fill:#E6EEF8,stroke-width:1px
+    classDef normal color:#081457,fill:#E3E6FC,stroke-width:1px
+    classDef local fill:#FFC700,stroke:#333,stroke-width:1px
+    classDef remote fill:#D2BDF2, color:#201434,stroke-width:1px
+
+    subgraph "local repository"
+    BUILT["site/built"]:::local
+    SITE["site/docs"]:::local
+    SERVE("serve()"):::normal
+    BLESS("build_lesson()"):::normal
+    BUILDMD(["build_markdown()"]):::normal
+    BUILDSITE(["build_site()"]):::normal
+    end
+
+    BUILT ~~~ SITE
+
+    SERVE --> BLESS
+    BLESS --> BUILDMD
+    BLESS --> BUILDSITE
+    BUILDMD --> BUILT
+    BUILDSITE --> SITE
+```
+
+The `site/docs` folder contains the full website that can be safely used
+offline.
+
+### Remote Workflow
+
+In the remote workflow, we still use the same workflow as above, except now we
+use `ci_deploy()` to link the branches and folders using worktrees.
+
+
+```{mermaid}
+flowchart TB
+    classDef default color:#383838,fill:#FFF7F1,stroke-width:1px
+    classDef external color:#383838,fill:#E6EEF8,stroke-width:1px
+    classDef normal color:#081457,fill:#E3E6FC,stroke-width:1px
+    classDef local fill:#FFC700,stroke:#333,stroke-width:1px
+    classDef remote fill:#D2BDF2, color:#201434,stroke-width:1px
+
+    subgraph GitHub Actions Runner
+    REPO["[repo]"]:::local
+    BUILT["[repo]/site/built"]:::local
+    SITE["[repo]/site/docs"]:::local
+    BUILDMD(["build_markdown()"]):::normal
+    BUILDSITE(["build_site()"]):::normal
+    end
+
+    subgraph GitHub
+    GH[("@main")]:::remote
+    MDOUT[("@md-outputs")]:::remote
+    PAGES[("@gh-pages")]:::remote
+    DEPLOY(["ci_deploy()"]):::external
+    CIBUILDMD(["ci_build_markdown()"]):::external
+    CIBUILDSITE(["ci_build_site()"]):::external
+    end
+
+    GH ---> REPO
+    GH ~~~ DEPLOY
+    REPO ~~~ BUILDMD
+    BUILT ~~~ BUILDSITE
+
+    BUILDMD --> BUILT
+    BUILDSITE --> SITE
+
+    DEPLOY -.-> CIBUILDMD
+    DEPLOY -.-> CIBUILDSITE
+    BUILT -.->  MDOUT
+    SITE -.->  PAGES
+    CIBUILDMD -.-> BUILDMD
+    CIBUILDSITE -.-> BUILDSITE
+```
+
 
 
 ## Development
@@ -141,12 +222,16 @@ Tests for each package live in `tests/testthat/` and follow a
 `test-[file-name].R` naming convention. These are controlled by the
 [{testthat}](https://testthat.r-lib.org/) package and run by `devtools::test()`.
 
-Note that {sandpaper} tests take a long time to run and _require_ internet. 
+You can find more information about testing the core packages in [Testing The
+Workbench](testing.html)
 
 ### Continous Integration
 
 The continous integration for each package tests on Ubuntu, MacOS, and Windows
 systems with the last five versions of R (same as the RStudio convention). 
+
+More information about the Continous Integration can be found in the [Continuous
+Integration section](testing.html#ci) of the testing section.
 
 --------
 
