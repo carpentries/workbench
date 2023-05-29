@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>The Carpentries Workbench</title>
+<title>The Carpentries Workbench - Testing The Workbench</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,59 +20,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -114,7 +80,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">The Carpentries Workbench</span>
     </a>
   </div>
@@ -125,23 +91,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="../index.html" rel="" target="">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./faq.html" rel="" target="">
+    <a class="nav-link" href="../faq.html" rel="" target="">
  <span class="menu-text">FAQ</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./transition-schedule.html" rel="" target="">
+    <a class="nav-link" href="../transition-schedule.html" rel="" target="">
  <span class="menu-text"><strong>Transition Schedule</strong></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./workflow-guide.html" rel="" target="">
+    <a class="nav-link" href="../workflow-guide.html" rel="" target="">
  <span class="menu-text">How The Workbench Works</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./transition-guide.html" rel="" target="">
+    <a class="nav-link" href="../transition-guide.html" rel="" target="">
  <span class="menu-text">Transition Guide</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -150,19 +116,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-contributor-guides">    
         <li>
-    <a class="dropdown-item" href="./contributor/index.html" rel="" target="">
+    <a class="dropdown-item" href="../contributor/index.html" rel="" target="">
  <span class="dropdown-text">Overview</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./contributor/releases.html" rel="" target="">
+    <a class="dropdown-item" href="../contributor/releases.html" rel="" target="">
  <span class="dropdown-text">Release Process for Workbench Packages</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./contributor/flow.html" rel="" target="">
+    <a class="dropdown-item" href="../contributor/flow.html" rel="" target="">
  <span class="dropdown-text">Flow Diagrams</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./contributor/testing.html" rel="" target="">
+    <a class="dropdown-item" href="../contributor/testing.html" rel="" target="">
  <span class="dropdown-text">Testing The Workbench</span></a>
   </li>  
     </ul>
@@ -190,26 +156,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#resources" id="toc-resources" class="nav-link active" data-scroll-target="#resources">Resources</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#unit-testing" id="toc-unit-testing" class="nav-link" data-scroll-target="#unit-testing">Unit Testing</a>
   <ul class="collapse">
-  <li><a href="#usage" id="toc-usage" class="nav-link" data-scroll-target="#usage">Usage</a></li>
-  <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation">Installation</a></li>
-  <li><a href="#updating" id="toc-updating" class="nav-link" data-scroll-target="#updating">Updating</a></li>
-  <li><a href="#guides" id="toc-guides" class="nav-link" data-scroll-target="#guides">Guides</a></li>
-  <li><a href="#tools" id="toc-tools" class="nav-link" data-scroll-target="#tools">Tools</a></li>
-  <li><a href="#templates" id="toc-templates" class="nav-link" data-scroll-target="#templates">Templates</a></li>
-  <li><a href="#inspired-examples" id="toc-inspired-examples" class="nav-link" data-scroll-target="#inspired-examples">Inspired Examples</a></li>
+  <li><a href="#sandpaper" id="toc-sandpaper" class="nav-link" data-scroll-target="#sandpaper">sandpaper</a></li>
+  <li><a href="#pegboard" id="toc-pegboard" class="nav-link" data-scroll-target="#pegboard">pegboard</a></li>
+  <li><a href="#varnish" id="toc-varnish" class="nav-link" data-scroll-target="#varnish">varnish</a></li>
+  <li><a href="#vise" id="toc-vise" class="nav-link" data-scroll-target="#vise">vise</a></li>
   </ul></li>
+  <li><a href="#continous-integration" id="toc-continous-integration" class="nav-link" data-scroll-target="#continous-integration">Continous Integration</a></li>
+  <li><a href="#lesson-integration-testing" id="toc-lesson-integration-testing" class="nav-link" data-scroll-target="#lesson-integration-testing">Lesson Integration Testing</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">The Carpentries Workbench</h1>
-<p class="subtitle lead">An accessible lesson infrastructure built in R</p>
+<h1 class="title">Testing The Workbench</h1>
 </div>
 
 
@@ -224,99 +189,69 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Workbench Transition Phase
+This section is still under construction!
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>We are in the process of transitioning our official lessons to use The Carpentries Workbench. Find out more in our <a href="transition-schedule.html">Transition Schedule</a></p>
+<p>We are still assembling the documentation for this part of the site. If you would like to contribute, please feel free to open an issue.</p>
 </div>
 </div>
-<p>The Workbench is a complete redesign of The Carpentries lesson websites, with new features prioritising accessibility and navigation. <strong>All Carpentries lessons will begin using The Carpentries Workbench in May 2023.</strong></p>
-<figure style="text-align: center" class="figure page-columns page-full">
-<p>
-<img src="fig/hex-collection.jpeg" width="50%" alt="three isometric hex badges for The Carpentries Workbench representing the packages sandpaper, pegboard, and varnish. Each badge is styled to look like a tiny workshop working on a wooden carpentries logo with the package namesake highlighted." class="figure-img">
-</p><div class="column-screen-inset" style="text-align: left">
-<p><img src="fig/lc-workbench.png" width="23%" alt="screenshot of the 'Navigating the Filesystem' episode of the Library Carpentry Shell lesson" class="figure-img"> <img src="fig/dc-workbench.png" width="23%" alt="screenshot of the 'Introduction to R' episode of the Library Carpentry R for Social Scientists lesson" class="figure-img"> <img src="fig/swc-workbench.png" width="23%" alt="screenshot of the 'Navigating Files and Directories' episode of the Software Carpentry Shell lesson" class="figure-img"> <img src="fig/cp-workbench.png" width="23%" alt="screenshot of the 'Building Skill with Practice' episode of the Instructor Training lesson" class="figure-img"></p>
-</div>
-<p></p>
-</figure>
-<section id="resources" class="level2">
-<h2 class="anchored" data-anchor-id="resources">Resources</h2>
-<section id="usage" class="level3">
-<h3 class="anchored" data-anchor-id="usage">Usage</h3>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Within R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">From the command line</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>To preview a lesson that uses The Workbench, open R (or RStudio), <a href="#installation">install The Workbench</a>, and run the following command to start a live preview that will update while you edit:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>sandpaper<span class="sc">::</span><span class="fu">serve</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p>To preview a lesson that uses The Workbench, make sure you <a href="#installation">install The Workbench</a>, and run the following command to start a live preview that will update while you edit:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">R</span> <span class="at">-e</span> <span class="st">'sandpaper::serve(quiet = FALSE, port = "3435")'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>You can then open your browser to <a href="http://localhost:3435" class="uri">http://localhost:3435</a> preview your lesson as you edit.</p>
-</div>
-</div>
-</div>
-<p>For more guidance on The Workbench, including how create a new lesson, run accessibility tests, and more, consult our <a href="#guides">Guides</a></p>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<blockquote class="blockquote">
+<p>The first stage of your testing journey is to become convinced that testing has enough benefits to justify the work. For some of us, this is easy to accept. Others must learn the hard way.</p>
+<p>— Wickham and Bryan, <a href="https://r-pkgs.org/testing-basics.html">Testing Basics</a>, <strong>R Packages</strong> second edition</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>If you use software that lacks automated tests, you are the tests.</p>
+<p>— Jenny Bryan <a href="https://twitter.com/jennybryan/status/1043307291909316609">source tweet (2018-09-22 01:13 UTC)</a></p>
+</blockquote>
+<p>Every single package that runs code in the lesson infrastructure is tested before it ever reaches any lesson. This is important because we want to give the lesson authors and maintainers as much freedom as they need to write a lesson while maintaining predictability and integrity. We also want to give our community confidence that this system works.</p>
+<p>Whenever a new feature or bug fix is added to The Workbench, it is imperative that a test is associated and verified before it gets sent into production.</p>
+<p>Tests can be run locally and via continuous integration. This page introduces some of the testing strategies used in The Workbench and the caveats that come with these strategies.</p>
 </section>
-<section id="installation" class="level3">
-<h3 class="anchored" data-anchor-id="installation">Installation</h3>
-<p>To install the workbench, make sure you have a working version of R and pandoc/RStudio installed (see <a href="https://carpentries.github.io/sandpaper-docs/">the workbench setup instructions for details</a>).</p>
-<p>From there, you can install the workbench packages and their dependencies from our <a href="https://carpentries.r-universe.dev">Carpentries R Universe</a>:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"sandpaper"</span>, <span class="st">"varnish"</span>, <span class="st">"pegboard"</span>, <span class="st">"tinkr"</span>),</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">repos =</span> <span class="fu">c</span>(<span class="st">"https://carpentries.r-universe.dev/"</span>, <span class="fu">getOption</span>(<span class="st">"repos"</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="unit-testing" class="level2">
+<h2 class="anchored" data-anchor-id="unit-testing">Unit Testing</h2>
+<p>The tests under <code>test/testthat/</code> are run in alphabetical order using the {testthat} package (see https://r-pkgs.org/testing-basics.html) via <code>devtools::test()</code> or <code>devtools::check()</code>.</p>
+<section id="sandpaper" class="level3">
+<h3 class="anchored" data-anchor-id="sandpaper">sandpaper</h3>
+<p>Because all of the tests need to work with a lesson, the first script to run is <a href="https://github.com/carpentries/sandpaper/blob/6989c39f4482b51c22c8ceb38146d08ed8ca4069/tests/testthat/setup.R"><code>tests/testthat/setup.R</code></a>, where <a href="https://carpentries.github.io/sandpaper/reference/fixtures.html">a test lesson</a> is created and stored in a temporary location for the duration of the test suite and a reset function is exposed for the tests.</p>
+<p>Each test file will reset the lesson and run the tests from top to bottom. In this way, the tests within a file are somewhat dependent on one another because they explicitly work on the lesson files. I have attempted to minimize this, but there are some times when the side-effects were necessary.</p>
 </section>
-<section id="updating" class="level3">
-<h3 class="anchored" data-anchor-id="updating">Updating</h3>
-<p>To update workbench packages, you can use the same command as you did to install your packages:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"sandpaper"</span>, <span class="st">"varnish"</span>, <span class="st">"pegboard"</span>, <span class="st">"tinkr"</span>),</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">repos =</span> <span class="fu">c</span>(<span class="st">"https://carpentries.r-universe.dev/"</span>, <span class="fu">getOption</span>(<span class="st">"repos"</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="pegboard" class="level3">
+<h3 class="anchored" data-anchor-id="pegboard">pegboard</h3>
 </section>
-<section id="guides" class="level3">
-<h3 class="anchored" data-anchor-id="guides">Guides</h3>
+<section id="varnish" class="level3">
+<h3 class="anchored" data-anchor-id="varnish">varnish</h3>
+</section>
+<section id="vise" class="level3">
+<h3 class="anchored" data-anchor-id="vise">vise</h3>
+</section>
+</section>
+<section id="continous-integration" class="level2">
+<h2 class="anchored" data-anchor-id="continous-integration">Continous Integration</h2>
+<p>All the unit tests are run in continuous integration for every push and pull request that occurs. They also run every week. This provisions the current releases of the R package dependencies along with development versions of critical dependencies such as {renv}.</p>
+<p>In continous integration, we run on with the following conditions to make sure it works not only on GitHub, but also on local user machines:</p>
 <ul>
-<li><a href="reference.html#glossary">Glossary</a> A glossary of terms for The Workbench.</li>
-<li><a href="https://carpentries.github.io/sandpaper-docs">Official Workbench Documentation</a>: written using The Workbench, this guide provides everything you need to get started using The Workbench.</li>
-<li><a href="https://carpentries.github.io/lesson-development-training/">Collaborative Lesson Development Training</a>: Material for a three day workshop teaching good practices in lesson design and open source collaboration skills</li>
-</ul>
-</section>
-<section id="tools" class="level3">
-<h3 class="anchored" data-anchor-id="tools">Tools</h3>
+<li>test coverage (no package structure) with released versions on Ubuntu Linux (though reporting is stalled)</li>
+<li>For each platform (Ubuntu Linux, macOS, and Windows)
 <ul>
-<li><a href="https://carpentries.github.io/sandpaper/">{sandpaper}</a>: User interface and engine for the workbench</li>
-<li><a href="https://carpentries.github.io/pegboard/">{pegboard}</a>: Validation and parsing of lesson components</li>
-<li><a href="https://carpentries.github.io/varnish/">{varnish}</a>: HTML, CSS, and JavaScript templates</li>
-<li><a href="https://github.com/carpentries/actions#readme">(carpentries/actions)</a>: GitHub Actions for Workbench Workflows</li>
-<li><a href="https://github.com/carpentries/lesson-transition">(carpentries/lesson-transition)</a>: Tool for automated transition from styles-based lessons to Workbench.</li>
+<li><code>R CMD check</code>, which checks the structure of the package and documentation</li>
+<li>all run on these versions of R: current, devel, and two previous R versions</li>
+</ul></li>
 </ul>
+<p>Because of occasional provisioning failures on macOS and Windows, we require only that Ubuntu Linux latest version passes check for merging pull requests.</p>
 </section>
-<section id="templates" class="level3">
-<h3 class="anchored" data-anchor-id="templates">Templates</h3>
-<ul>
-<li><a href="https://github.com/carpentries/workbench-template-rmd">R Markdown Lesson Template</a></li>
-<li><a href="https://github.com/carpentries/workbench-template-md">Markdown Lesson Template</a></li>
-</ul>
-</section>
-<section id="inspired-examples" class="level3">
-<h3 class="anchored" data-anchor-id="inspired-examples">Inspired Examples</h3>
-<p>These are examples of lessons developed with The Workbench since the initial announcement:</p>
-<ul>
-<li>Toby Hodges, Mateusz Kuzak, Aleksandra Nenadic, Sarah Stevens—<a href="https://carpentries.github.io/lesson-development-training/">Collaborative Lesson Development Training</a></li>
-<li>Saranjeet Kuar, Achintya Rao, Heather Turner, Aman Goel—<a href="https://contributor.r-project.org/r-bug-tracking-lesson/">R’s Bug Tracking</a></li>
-<li>Saba Ferdous, David Pérez-Suárez—<a href="https://learntodiscover.github.io/Basic_Python/">Learn To Discover—Basic Python</a> (note—this uses a custom fork of sandpaper, and varnish to run python)</li>
-<li>Philipp Matthias Schäfer—<a href="https://zedif.github.io/gitlab-novice/">GitLab Novice</a></li>
-<li>Michael Culshaw-Maurer—<a href="https://www.michaelc-m.com/Rewrite-R-ecology-lesson/">Rewrite of the R Ecology Lesson</a></li>
-</ul>
+<section id="lesson-integration-testing" class="level2">
+<h2 class="anchored" data-anchor-id="lesson-integration-testing">Lesson Integration Testing</h2>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
