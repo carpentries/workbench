@@ -195,7 +195,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
   <ul class="collapse">
-  <li><a href="#workflows" id="toc-workflows" class="nav-link" data-scroll-target="#workflows">Workflows</a></li>
+  <li><a href="#local-workflow" id="toc-local-workflow" class="nav-link" data-scroll-target="#local-workflow">Local Workflow</a></li>
+  <li><a href="#remote-workflow" id="toc-remote-workflow" class="nav-link" data-scroll-target="#remote-workflow">Remote Workflow</a></li>
   </ul></li>
   <li><a href="#development" id="toc-development" class="nav-link" data-scroll-target="#development">Development</a>
   <ul class="collapse">
@@ -250,8 +251,8 @@ This section is still under construction!
 <li><a href="https://carpentries.github.io/varnish/">{varnish}</a>: HTML templates, CSS, and JS elements</li>
 </ul>
 <p>These packages are all available and released to the <a href="https://carpentries.r-universe.dev/">Carpentries R-Universe</a>, which checks for updates to the source packages hourly.</p>
-<section id="workflows" class="level3">
-<h3 class="anchored" data-anchor-id="workflows">Workflows</h3>
+<section id="local-workflow" class="level3">
+<h3 class="anchored" data-anchor-id="local-workflow">Local Workflow</h3>
 <p>In a broad sense, this is what happens when you run <code>sandpaper::serve()</code> or <code>sandpaper::build_lesson()</code>. The interaction between the three Workbench packages, the lesson content, and the author can be summarised like this where the author makes an edit:</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -298,6 +299,91 @@ Summary Content
     note left of {sandpaper}: WRITE website
     {sandpaper} --) Author: website preview
     deactivate {sandpaper}
+</pre>
+</div>
+</div>
+</div>
+</div>
+<p>In terms of folder structure, the workflow looks like this:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+    classDef default color:#383838,fill:#FFF7F1,stroke-width:1px
+    classDef external color:#383838,fill:#E6EEF8,stroke-width:1px
+    classDef normal color:#081457,fill:#E3E6FC,stroke-width:1px
+    classDef local fill:#FFC700,stroke:#333,stroke-width:1px
+    classDef remote fill:#D2BDF2, color:#201434,stroke-width:1px
+
+    subgraph "local repository"
+    BUILT["site/built"]:::local
+    SITE["site/docs"]:::local
+    SERVE("serve()"):::normal
+    BLESS("build_lesson()"):::normal
+    BUILDMD(["build_markdown()"]):::normal
+    BUILDSITE(["build_site()"]):::normal
+    end
+
+    BUILT ~~~ SITE
+
+    SERVE --&gt; BLESS
+    BLESS --&gt; BUILDMD
+    BLESS --&gt; BUILDSITE
+    BUILDMD --&gt; BUILT
+    BUILDSITE --&gt; SITE
+</pre>
+</div>
+</div>
+</div>
+</div>
+<p>The <code>site/docs</code> folder contains the full website that can be safely used offline. This is the core of the workflow and is used both locally and in a remote setting. The only difference with the remote setting is that we use a few Git tricks to provision the markdown cache without needing to store it in the default branch.</p>
+</section>
+<section id="remote-workflow" class="level3">
+<h3 class="anchored" data-anchor-id="remote-workflow">Remote Workflow</h3>
+<p>In the remote workflow, we still use the same workflow as above, except now we use <code>ci_deploy()</code> to link the branches and folders using worktrees, which you can think of as Git branches assigned to separate folders.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+    classDef default color:#383838,fill:#FFF7F1,stroke-width:1px
+    classDef external color:#383838,fill:#E6EEF8,stroke-width:1px
+    classDef normal color:#081457,fill:#E3E6FC,stroke-width:1px
+    classDef local fill:#FFC700,stroke:#333,stroke-width:1px
+    classDef remote fill:#D2BDF2, color:#201434,stroke-width:1px
+
+    subgraph GitHub Actions Runner
+    REPO["[repo]"]:::local
+    BUILT["[repo]/site/built"]:::local
+    SITE["[repo]/site/docs"]:::local
+    BUILDMD(["build_markdown()"]):::normal
+    BUILDSITE(["build_site()"]):::normal
+    end
+
+    subgraph GitHub
+    GH[("@main")]:::remote
+    MDOUT[("@md-outputs")]:::remote
+    PAGES[("@gh-pages")]:::remote
+    DEPLOY(["ci_deploy()"]):::external
+    CIBUILDMD(["ci_build_markdown()"]):::external
+    CIBUILDSITE(["ci_build_site()"]):::external
+    end
+
+    GH ---&gt; REPO
+    GH ~~~ DEPLOY
+    REPO ~~~ BUILDMD
+    BUILT ~~~ BUILDSITE
+
+    BUILDMD --&gt; BUILT
+    BUILDSITE --&gt; SITE
+
+    DEPLOY -.-&gt; CIBUILDMD
+    DEPLOY -.-&gt; CIBUILDSITE
+    BUILT -.-&gt;  MDOUT
+    SITE -.-&gt;  PAGES
+    CIBUILDMD -.-&gt; BUILDMD
+    CIBUILDSITE -.-&gt; BUILDSITE
 </pre>
 </div>
 </div>
@@ -373,11 +459,12 @@ git version
 <section id="testing" class="level3">
 <h3 class="anchored" data-anchor-id="testing">Testing</h3>
 <p>Tests for each package live in <code>tests/testthat/</code> and follow a <code>test-[file-name].R</code> naming convention. These are controlled by the <a href="https://testthat.r-lib.org/">{testthat}</a> package and run by <code>devtools::test()</code>.</p>
-<p>Note that {sandpaper} tests take a long time to run and <em>require</em> internet.</p>
+<p>You can find more information about testing the core packages in <a href="testing.html">Testing The Workbench</a></p>
 </section>
 <section id="continous-integration" class="level3">
 <h3 class="anchored" data-anchor-id="continous-integration">Continous Integration</h3>
 <p>The continous integration for each package tests on Ubuntu, MacOS, and Windows systems with the last five versions of R (same as the RStudio convention).</p>
+<p>More information about the Continous Integration can be found in the <a href="testing.html#ci">Continuous Integration section</a> of the testing section.</p>
 <hr>
 <p>Coming up:</p>
 <ul>
