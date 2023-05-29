@@ -106,12 +106,16 @@ flowchart TB
 ```
 
 The `site/docs` folder contains the full website that can be safely used
-offline.
+offline. This is the core of the workflow and is used both locally and in a
+remote setting. The only difference with the remote setting is that we use a few
+Git tricks to provision the markdown cache without needing to store it in the
+default branch.
 
 ### Remote Workflow
 
 In the remote workflow, we still use the same workflow as above, except now we
-use `ci_deploy()` to link the branches and folders using worktrees.
+use `ci_deploy()` to link the branches and folders using worktrees, which you
+can think of as Git branches assigned to separate folders. 
 
 
 ```{mermaid}
