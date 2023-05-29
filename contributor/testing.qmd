@@ -1,0 +1,78 @@
+---
+title: "Testing The Workbench"
+---
+
+## Introduction
+
+> The first stage of your testing journey is to become convinced that testing
+> has enough benefits to justify the work. For some of us, this is easy to
+> accept. Others must learn the hard way.
+>
+> --- Wickham and Bryan, [Testing
+> Basics](https://r-pkgs.org/testing-basics.html), **R Packages** second edition
+
+> If you use software that lacks automated tests, you are the tests.
+>
+> --- Jenny Bryan [source tweet (2018-09-22 01:13 UTC)](https://twitter.com/jennybryan/status/1043307291909316609)
+
+Every single package that runs code in the lesson infrastructure is tested
+before it ever reaches any lesson. This is important because we want to give the
+lesson authors and maintainers as much freedom as they need to write a lesson
+while maintaining predictability and integrity. We also want to give our
+community confidence that this system works. 
+
+Whenever a new feature or bug fix is added to The Workbench, it is imperative
+that a test is associated and verified before it gets sent into production.
+
+Tests can be run locally and via continuous integration. This page introduces
+some of the testing strategies used in The Workbench and the caveats that come
+with these strategies.
+
+## Unit Testing
+
+The tests under `test/testthat/` are run in alphabetical order using the
+{testthat} package (see https://r-pkgs.org/testing-basics.html) via
+`devtools::test()` or `devtools::check()`.
+
+### sandpaper
+
+Because all of the tests need to work with a lesson, the first script to run is
+[`tests/testthat/setup.R`](https://github.com/carpentries/sandpaper/blob/6989c39f4482b51c22c8ceb38146d08ed8ca4069/tests/testthat/setup.R),
+where [a test
+lesson](https://carpentries.github.io/sandpaper/reference/fixtures.html) is
+created and stored in a temporary location for the duration of the test suite
+and a reset function is exposed for the tests. 
+
+Each test file will reset the lesson and run the tests from top to bottom. In
+this way, the tests within a file are somewhat dependent on one another because
+they explicitly work on the lesson files. I have attempted to minimize this, but
+there are some times when the side-effects were necessary.
+
+### pegboard
+
+### varnish
+
+### vise
+
+## Continous Integration
+
+All the unit tests are run in continuous integration for every push and pull
+request that occurs. They also run every week. This provisions the current
+releases of the R package dependencies along with development versions of
+critical dependencies such as {renv}.
+
+In continous integration, we run on with the following conditions to make sure
+it works not only on GitHub, but also on local user machines:
+
+ - test coverage (no package structure) with released versions on Ubuntu Linux
+   (though reporting is stalled)
+ - For each platform (Ubuntu Linux, macOS, and Windows)
+   - `R CMD check`, which checks the structure of the package and documentation
+   - all run on these versions of R: current, devel, and two previous R versions
+
+Because of occasional provisioning failures on macOS and Windows, we require
+only that Ubuntu Linux latest version passes check for merging pull requests.
+
+## Lesson Integration Testing
+
+

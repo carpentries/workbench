@@ -38,6 +38,7 @@ website:
          - contributor/index.qmd
          - contributor/releases.qmd
          - contributor/flow.qmd
+         - contributor/testing.qmd
     right:
       - icon: github
         href: 'https://github.com/carpentries/workbench'
