@@ -105,6 +105,15 @@ flowchart TB
     BUILDSITE --> SITE
 ```
 
+::: {.callout-note}
+
+#### Resource folder names
+
+Please note, the names of these internal folders may change, so please do not
+rely on these values being static.
+
+:::
+
 The `site/docs` folder contains the full website that can be safely used
 offline. This is the core of the workflow and is used both locally and in a
 remote setting. The only difference with the remote setting is that we use a few
