@@ -14,7 +14,7 @@ discussion forum](https://github.com/carpentries/workbench/discussions).
 I will attempt to divide these questions up by major categories, but these may
 shift around as questions come in.
 
-If you have a question about definitions, consult our [glossary](glossary.html)
+If you have a question about definitions, consult our [glossary](reference.html#glossary)
 
 :::
 
