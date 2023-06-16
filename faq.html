@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.146">
+<meta name="generator" content="quarto-1.4.151">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -217,7 +217,7 @@ Work In Progress
 <div class="callout-body-container callout-body">
 <p>As this is a FAQ, it will continue to grow as we update it. If you have any questions please submit them to the <a href="https://github.com/carpentries/workbench/discussions">Workbench GitHub discussion forum</a>.</p>
 <p>I will attempt to divide these questions up by major categories, but these may shift around as questions come in.</p>
-<p>If you have a question about definitions, consult our <a href="glossary.html">glossary</a></p>
+<p>If you have a question about definitions, consult our <a href="reference.html#glossary">glossary</a></p>
 </div>
 </div>
 <section id="authoring" class="level2">
@@ -560,7 +560,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
           const parser = new DOMParser();
           const htmlDoc = parser.parseFromString(html, "text/html");
           const note = htmlDoc.getElementById(id);
-          console.log(htmlDoc.body.innerHTML);
           if (note !== null) {
             const html = processXRef(id, note);
             instance.setContent(html);
