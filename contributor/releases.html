@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.176">
+<meta name="generator" content="quarto-1.4.205">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -235,13 +235,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="release-process">Release Process</h2>
 <p>When a package is ready for release we use the following checklist:</p>
 <ul class="task-list">
-<li><p><input type="checkbox">Update version number in DESCRIPTION</p></li>
-<li><p><input type="checkbox">Add NEWS for the changes in this version</p></li>
-<li><p><input type="checkbox">Ensure all changes are committed and pushed</p></li>
-<li><p><input type="checkbox">add new signed tag with the name “<package> X.Y.Z”</package></p>
+<li><p><label><input type="checkbox">Update version number in DESCRIPTION</label></p></li>
+<li><p><label><input type="checkbox">Add NEWS for the changes in this version</label></p></li>
+<li><p><label><input type="checkbox">Ensure all changes are committed and pushed</label></p></li>
+<li><p><label><input type="checkbox">add new signed tag with the name “<package> X.Y.Z”</package></label></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># example: create a signed (-s) tag for sandpaper 3.3.3</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> tag <span class="at">-s</span> 3.3.3 <span class="at">-m</span> <span class="st">'sandpaper 3.3.3'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p><input type="checkbox">create a release on github from the new tag</p></li>
+<li><p><label><input type="checkbox">create a release on github from the new tag</label></p></li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
