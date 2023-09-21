@@ -186,7 +186,7 @@
     "href": "index.html",
     "title": "The Carpentries Workbench",
     "section": "",
-    "text": "The Workbench is a complete redesign of The Carpentries lesson websites, with new features prioritising accessibility and navigation. All Carpentries lessons will begin using The Carpentries Workbench in May 2023."
+    "text": "The Workbench is a complete redesign of The Carpentries lesson websites, with new features prioritising accessibility and navigation for Learners and Instructors. By separating the tools from the content of the lesson, The Workbench makes it easier for Maintainers and Authors to focus on the content of the lesson and not the tooling. To try it out, head over to the Resources section."
   },
   {
     "objectID": "index.html#resources",

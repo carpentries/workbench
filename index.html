@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.373">
+<meta name="generator" content="quarto-1.4.376">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -231,7 +231,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<p>The Workbench is a complete redesign of The Carpentries lesson websites, with new features prioritising accessibility and navigation. <strong>All Carpentries lessons will begin using The Carpentries Workbench in May 2023.</strong></p>
+<p>The Workbench is a <a href="https://carpentries.org/blog/2020/08/lesson-template-design/">complete redesign of The Carpentries lesson websites</a>, with new features prioritising accessibility and navigation for Learners and Instructors. By separating the tools from the content of the lesson, The Workbench makes it easier for Maintainers and Authors to focus on the content of the lesson and not the tooling. To try it out, head over to <a href="#resources">the Resources section</a>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Testimonials
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<blockquote class="blockquote">
+<p>[The Workbench] has provided an easy way to navigate the various parts of the lesson and switch between or share the training content including instructor notes seamlessly.</p>
+<p>— Malvika Sharan (from <a href="https://carpentries.org/blog/2023/08/celebrating-carpentries-workbench/">Celebrating The Carpentries Workbench (2023-08-21)</a>)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>[editing a lesson] was pretty easy. I was doing this at the end of a long day and my brain was only half on. It seemed to just work.</p>
+<p>— Anonymous Maintainer (from <a href="https://carpentries.org/blog/2021/07/infrastructure-testing/">Reflecting on our first Alpha Test of the Lesson Infrastructure Redesign (2021-07-06)</a>)</p>
+</blockquote>
+</div>
+</div>
 <figure style="text-align: center" class="figure page-columns page-full">
 <p>
 <img src="fig/hex-collection.jpeg" width="50%" alt="three isometric hex badges for The Carpentries Workbench representing the packages sandpaper, pegboard, and varnish. Each badge is styled to look like a tiny workshop working on a wooden carpentries logo with the package namesake highlighted." class="figure-img">
@@ -264,7 +284,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="installation">Installation</h3>
 <p>To install the workbench, make sure you have a working version of R and pandoc/RStudio installed (see <a href="https://carpentries.github.io/sandpaper-docs/">the workbench setup instructions for details</a>).</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -273,7 +293,7 @@ Setup with Anaconda
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Thanks to Travis Wrightsman for <a href="https://github.com/carpentries/workbench/issues/50">providing the instructions to setup for anaconda</a>. These lines will set up an anaconda environment that includes all the dependencies you need to use The Workbench.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">-n</span> workbench <span class="st">'git&gt;=2.28'</span> <span class="st">'r-base&gt;=3.6'</span> <span class="st">'pandoc&gt;=2.11'</span> pkg-config libxslt</span>
