@@ -43,6 +43,12 @@ section](#resources).
 
 ## Resources
 
+The Workbench is built using the [R language](https://r-project.org) as a suite
+of three R packages: [{sandpaper}], [{pegboard}], and [{varnish}] that work
+together with R's robust publishing ecosystem and [pandoc](https://pandoc.org)
+manage and deploy Carpentries Lesson websites written in Markdown or R Markdown.
+
+
 ### Usage
 
 ::: {.panel-tabset}
@@ -130,9 +136,9 @@ install.packages(c("sandpaper", "varnish", "pegboard", "tinkr"),
 
 ### Tools
 
- - [{sandpaper}](https://carpentries.github.io/sandpaper/): User interface and engine for the workbench
- - [{pegboard}](https://carpentries.github.io/pegboard/): Validation and parsing of lesson components
- - [{varnish}](https://carpentries.github.io/varnish/): HTML, CSS, and JavaScript templates
+ - [{sandpaper}]\: User interface and engine for the workbench
+ - [{pegboard}]\: Validation and parsing of lesson components
+ - [{varnish}]\: HTML, CSS, and JavaScript templates
  - [(carpentries/actions)](https://github.com/carpentries/actions#readme): GitHub Actions for Workbench Workflows
  - [(carpentries/lesson-transition)](https://github.com/carpentries/lesson-transition): Tool for automated transition from styles-based lessons to Workbench.
 
@@ -151,3 +157,9 @@ These are examples of lessons developed with The Workbench since the initial ann
 - Saba Ferdous, David Pérez-Suárez---[Learn To Discover---Basic Python](https://learntodiscover.github.io/Basic_Python/) (note---this uses a custom fork of sandpaper, and varnish to run python)
 - Philipp Matthias Schäfer---[GitLab Novice](https://zedif.github.io/gitlab-novice/)
 - Michael Culshaw-Maurer---[Rewrite of the R Ecology Lesson](https://www.michaelc-m.com/Rewrite-R-ecology-lesson/)
+
+
+
+[{sandpaper}]: https://carpentries.github.io/sandpaper/ "User interface and engine for the workbench"
+[{pegboard}]: https://carpentries.github.io/pegboard/ "Validation and parsing of lesson components"
+[{varnish}]: https://carpentries.github.io/varnish/ "HTML, CSS, and JavaScript templates"
