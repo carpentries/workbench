@@ -3,9 +3,31 @@ title: The Carpentries Workbench
 subtitle: An accessible lesson infrastructure
 ---
 
-The Workbench is a complete redesign of The Carpentries lesson websites, with
-new features prioritising accessibility and navigation. **All Carpentries lessons
-will begin using The Carpentries Workbench in May 2023.**
+The Workbench is a [complete redesign of The Carpentries lesson
+websites](https://carpentries.org/blog/2020/08/lesson-template-design/), with
+new features prioritising accessibility and navigation for Learners and
+Instructors. By separating the tools from the content of the lesson, The
+Workbench makes it easier for Maintainers and Authors to focus on the content of
+the lesson and not the tooling. To try it out, head over to [the Resources
+section](#resources).
+
+::: {.callout-tip}
+
+## Testimonials
+
+
+ > [The Workbench] has provided an easy way to navigate the various parts of the lesson and
+ > switch between or share the training content including instructor notes
+ > seamlessly.
+ >
+ > --- Malvika Sharan (from [Celebrating The Carpentries Workbench (2023-08-21)](https://carpentries.org/blog/2023/08/celebrating-carpentries-workbench/))
+
+ > [editing a lesson] was pretty easy. I was doing this at the end of a long day and my brain
+ > was only half on. It seemed to just work.
+ >
+ > --- Anonymous Maintainer (from [Reflecting on our first Alpha Test of the Lesson Infrastructure Redesign (2021-07-06)](https://carpentries.org/blog/2021/07/infrastructure-testing/))
+
+:::
 
 <figure style='text-align: center'>
 <p>
