@@ -27,18 +27,14 @@ website:
         text: Home
       - href: faq.qmd
         text: FAQ
-      - href: transition-schedule.qmd
-        text: "**Transition Schedule**"
-      - href: workflow-guide.qmd
-        text: How The Workbench Works
-      - href: transition-guide.qmd
-        text: Transition Guide
-      - text: "Contributor Guides"
+      - text: Guides
         menu:
-         - contributor/index.qmd
-         - contributor/releases.qmd
-         - contributor/flow.qmd
-         - contributor/testing.qmd
+          - text: How The Workbench Works
+            href: workflow-guide.qmd
+          - text: Transition Guide
+            href: transition-guide.qmd
+          - text: "Developer's Guide (external)"
+            href: https://carpentries.github.io/workbench-dev
     right:
       - icon: github
         href: 'https://github.com/carpentries/workbench'
