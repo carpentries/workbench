@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.526">
+<meta name="generator" content="quarto-1.4.529">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -432,9 +432,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>These lessons are all in the <a href="#pre-beta"><strong>first (pre-beta) stage</strong></a> and will transition to the <a href="#beta">second (beta) stage</a> on <strong>2023-02-03</strong>.</p>
 <section id="timeline" class="level3">
 <h3 class="anchored" data-anchor-id="timeline">Timeline</h3>
-<div class="cell">
+<div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
+<p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">gantt
     dateFormat  YYYY-MM-DD
@@ -448,6 +449,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </pre>
 </div>
+<p></p></figure><p></p>
 </div>
 </div>
 </div>
@@ -481,7 +483,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </section>
 </section>
-<aside id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
 <ol>
 <li id="fn1"><p>It will be mostly the same content, save for small changes as described in the different stages.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
@@ -489,7 +491,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li id="fn3"><p>The sandbox organisation is called “Fish Tree Attempt”, which is a pun on Carpentry: <em>carp</em>—fish, tree—<em>ent</em> (after Tolkien), attempt—<em>try</em><a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn4"><p>For details of what will happen to the files and syntax during the transition, see <a href="transition-guide.html">The Transition Guide</a>. During the transformation, we will also excise the commits from styles, which necessarily rerwite the history of the lesson, while <strong>preserving the commits from lesson content</strong>. This move has two benefits: 1. The list of committers on the lesson will better reflect the actual lesson contributors rather than the contributors to the template. 2. Lessons will be reduced in size so that downloading them and contributing to them will be easier. There <em>is</em> precedence for this: When Software Carpentry moved its lessons from the original <a href="https://github.com/swcarpentry/bc">swcarpentr/bc</a> monorepo, they excised the commits related to each lesson from the repository, but preserved the history.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
-</aside>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -620,27 +622,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    const typesetMath = (el) => {
-      if (window.MathJax) {
-        // MathJax Typeset
-        window.MathJax.typeset([el]);
-      } else if (window.katex) {
-        // KaTeX Render
-        var mathElements = el.getElementsByClassName("math");
-        var macros = [];
-        for (var i = 0; i < mathElements.length; i++) {
-          var texText = mathElements[i].firstChild;
-          if (mathElements[i].tagName == "SPAN") {
-            window.katex.render(texText.data, mathElements[i], {
-              displayMode: mathElements[i].classList.contains('display'),
-              throwOnError: false,
-              macros: macros,
-              fleqn: false
-            });
-          }
-        }
-      }
-    }
     if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
@@ -655,10 +636,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             break;
           }
         }
-        typesetMath(container);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
         return container.innerHTML
       } else {
-        typesetMath(note);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
@@ -667,7 +652,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
-      typesetMath(note);
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
       return note.innerHTML;
     }
   }

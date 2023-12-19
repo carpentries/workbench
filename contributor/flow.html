@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.526">
+<meta name="generator" content="quarto-1.4.529">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -251,9 +251,10 @@ ul.task-list li input[type="checkbox"] {
 <p>Markdown generation for the lesson is controlled by the internal function <code>sandpaper:::build_markdown()</code>.</p>
 <p>When a lesson contains R Markdown files, these need to have content rendered to markdownsot hat we can further process them. This content is processed with the <a href="https://yihui.org/knitr/">{knitr}</a> R package <em>in a separate R process</em>. Markdown source content on the other hand is copied to the <code>site/built</code> folder.</p>
 <p>Because R Markdown files can take some time to render, we use MD5 sums of the episode contents (stored in the <code>site/built/md5sum.txt</code> file) to skip any files that have not changed.</p>
-<div class="cell">
+<div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
+<p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">sequenceDiagram
     autonumber
@@ -277,6 +278,7 @@ ul.task-list li input[type="checkbox"] {
     {sandpaper} --&gt;&gt; site/built/md5sum.txt: WRITE file cache
 </pre>
 </div>
+<p></p></figure><p></p>
 </div>
 </div>
 </div>
@@ -309,9 +311,10 @@ Package Cache and Reproducibility
 <section id="flow-html" class="level3">
 <h3 class="anchored" data-anchor-id="flow-html">Generating HTML</h3>
 <p>Each markdown file is processed into HTML via <a href="https://pandoc.org">pandoc</a> and returned to R as text. This is done via the internal function <code>sandpaper:::render_html()</code>.</p>
-<div class="cell">
+<div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
+<p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">sequenceDiagram
     autonumber
@@ -330,6 +333,7 @@ Package Cache and Reproducibility
     pandoc --&gt;&gt; {sandpaper}: RENDER HTML as text
 </pre>
 </div>
+<p></p></figure><p></p>
 </div>
 </div>
 </div>
@@ -339,9 +343,10 @@ Package Cache and Reproducibility
 <h3 class="anchored" data-anchor-id="flow-tweaks">Processing HTML</h3>
 <p>The HTML needs to be tweaked because the output from pandoc, even with our lua filters, still needs some modification. We tweak the content by first converting the HTML into an Abstract Syntax Tree (AST). This allows us to programmatically manipulate tags in the HTML without resorting to using regular expressions.</p>
 <p>In this part, we update links, images, headings, structure that we could not fix using lua filters. We then use the information from the episode to complete the global menu variable with links to the second level headings in the episode.</p>
-<div class="cell">
+<div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
+<p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">sequenceDiagram
     autonumber
@@ -365,6 +370,7 @@ Package Cache and Reproducibility
     deactivate {sandpaper}
 </pre>
 </div>
+<p></p></figure><p></p>
 </div>
 </div>
 </div>
@@ -386,9 +392,10 @@ Working With XML
 <section id="flow-website" class="level3">
 <h3 class="anchored" data-anchor-id="flow-website">Applying Website Template</h3>
 <p>Now that we have an HTML AST that has been corrected and associated metadata, we are ready to write this to HTML. This process is achieved by passing the AST and metadata to {pkgdown} where it performs a little more manipulation, applies the {varnish} template, and writes it to disk.</p>
-<div class="cell">
+<div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
+<p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">sequenceDiagram
     autonumber
@@ -416,6 +423,7 @@ Working With XML
     deactivate {pkgdown}
 </pre>
 </div>
+<p></p></figure><p></p>
 </div>
 </div>
 </div>
@@ -553,27 +561,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    const typesetMath = (el) => {
-      if (window.MathJax) {
-        // MathJax Typeset
-        window.MathJax.typeset([el]);
-      } else if (window.katex) {
-        // KaTeX Render
-        var mathElements = el.getElementsByClassName("math");
-        var macros = [];
-        for (var i = 0; i < mathElements.length; i++) {
-          var texText = mathElements[i].firstChild;
-          if (mathElements[i].tagName == "SPAN") {
-            window.katex.render(texText.data, mathElements[i], {
-              displayMode: mathElements[i].classList.contains('display'),
-              throwOnError: false,
-              macros: macros,
-              fleqn: false
-            });
-          }
-        }
-      }
-    }
     if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
@@ -588,10 +575,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             break;
           }
         }
-        typesetMath(container);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
         return container.innerHTML
       } else {
-        typesetMath(note);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
@@ -600,7 +591,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
-      typesetMath(note);
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
       return note.innerHTML;
     }
   }
