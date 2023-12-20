@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.529">
+<meta name="generator" content="quarto-1.4.532">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -153,8 +187,19 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#why-r" id="toc-why-r" class="nav-link" data-scroll-target="#why-r">Why was R chosen for the infrastructure?</a></li>
   <li><a href="#do-i-need-rstudio" id="toc-do-i-need-rstudio" class="nav-link" data-scroll-target="#do-i-need-rstudio">Do I really need to use RStudio?</a></li>
   <li><a href="#what-is-an-r-library" id="toc-what-is-an-r-library" class="nav-link" data-scroll-target="#what-is-an-r-library">What is an R Library?</a></li>
+  <li><a href="#workflow-plethora" id="toc-workflow-plethora" class="nav-link" data-scroll-target="#workflow-plethora">Why are there so many GitHub Workflows and what do they do?</a></li>
+  <li><a href="#what-are-the-md-outputs-and-gh-pages-branches" id="toc-what-are-the-md-outputs-and-gh-pages-branches" class="nav-link" data-scroll-target="#what-are-the-md-outputs-and-gh-pages-branches">What are the <code>md-outputs</code> and <code>gh-pages</code> branches?</a></li>
+  <li><a href="#why-is-the-workbench-creating-so-many-md-outputs-pr-branches" id="toc-why-is-the-workbench-creating-so-many-md-outputs-pr-branches" class="nav-link" data-scroll-target="#why-is-the-workbench-creating-so-many-md-outputs-pr-branches">Why is The Workbench creating so many <code>md-outputs-PR</code> branches?</a></li>
+  <li><a href="#how-do-i-add-a-custom-logo" id="toc-how-do-i-add-a-custom-logo" class="nav-link" data-scroll-target="#how-do-i-add-a-custom-logo">How do I add a custom logo?</a></li>
+  <li><a href="#custom-package" id="toc-custom-package" class="nav-link" data-scroll-target="#custom-package">How do I get my lesson to use a custom Workbench package?</a></li>
+  <li><a href="#docker" id="toc-docker" class="nav-link" data-scroll-target="#docker">Is there a Docker Container?</a></li>
+  </ul></li>
+  <li><a href="#lesson-transition" id="toc-lesson-transition" class="nav-link" data-scroll-target="#lesson-transition">Lesson Transition</a>
+  <ul class="collapse">
+  <li><a href="#transition-new" id="toc-transition-new" class="nav-link" data-scroll-target="#transition-new">How do I transition my lesson to using The Workbench?</a></li>
+  <li><a href="#long-fork" id="toc-long-fork" class="nav-link" data-scroll-target="#long-fork">How do I transition a long-running fork to using The Workbench?</a></li>
   <li><a href="#local-clones" id="toc-local-clones" class="nav-link" data-scroll-target="#local-clones">Local Clones</a></li>
-  <li><a href="#github-forks" id="toc-github-forks" class="nav-link" data-scroll-target="#github-forks">GitHub Forks</a></li>
+  <li><a href="#github-forks" id="toc-github-forks" class="nav-link" data-scroll-target="#github-forks">Post-transition GitHub Forks</a></li>
   </ul></li>
   <li><a href="#teaching" id="toc-teaching" class="nav-link" data-scroll-target="#teaching">Teaching</a>
   <ul class="collapse">
@@ -203,7 +248,7 @@ Work In Progress
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>As this is a FAQ, it will continue to grow as we update it. If you have any questions please submit them to the <a href="https://github.com/carpentries/workbench/discussions">Workbench GitHub discussion forum</a>.</p>
+<p>As this is a FAQ, it will continue to grow as we update it. <strong>If you have any questions please submit them to the <a href="https://github.com/carpentries/workbench/discussions">Workbench GitHub discussion forum</a>.</strong></p>
 <p>I will attempt to divide these questions up by major categories, but these may shift around as questions come in.</p>
 <p>If you have a question about definitions, consult our <a href="reference.html#glossary">glossary</a></p>
 </div>
@@ -257,6 +302,128 @@ Work In Progress
 <p>This folder is where all of the R packages you install via <code>install.packages()</code> will live. If you ever need to look this up, you can use the <code>.libPaths()</code> function.</p>
 <p>Sometimes, your R session will issue a warning that says a folder is not writeable and asks if you would like to use a personal library instead. In this case, select “yes”.</p>
 </section>
+<section id="workflow-plethora" class="level3">
+<h3 class="anchored" data-anchor-id="workflow-plethora">Why are there so many GitHub Workflows and what do they do?</h3>
+<p>Each lesson contains a set of GitHub workflows that are important for the following tasks:</p>
+<ul>
+<li>building the lesson and deploying it on GitHub (<code>.github/workflows/sandpaper-main.yaml</code>)</li>
+<li>validating and responding to pull requests</li>
+<li>automated updates of workflows and (for lessons that use R) package cache</li>
+</ul>
+<p>These workflows originate from {sandpaper} and are copied directly into each lesson as described in <a href="https://github.com/carpentries/sandpaper/tree/main/inst/workflows#readme">a README.md inside the {sandpaper} repository</a>.</p>
+<p>You can read technical details of how the workflows work and how they are connected by reading <a href="https://carpentries.github.io/workbench-dev/remote/intro.html#workflows">the Workflows section of the Remote Deployment Chapter</a> in the Workbench Developer’s Guide.</p>
+</section>
+<section id="what-are-the-md-outputs-and-gh-pages-branches" class="level3">
+<h3 class="anchored" data-anchor-id="what-are-the-md-outputs-and-gh-pages-branches">What are the <code>md-outputs</code> and <code>gh-pages</code> branches?</h3>
+<p>These branches are part of <a href="https://carpentries.github.io/workbench/workflow-guide.html#remote-workflow">the remote two-step workflow</a>.</p>
+<ul>
+<li><code>md-outputs</code>: contains rendered markdown files, cached to 1) speed up computations by skipping content that has not changed and 2) allow for comparison of rendered output in Pull Requests</li>
+<li><code>gh-pages</code>: contains the rendered website.</li>
+</ul>
+</section>
+<section id="why-is-the-workbench-creating-so-many-md-outputs-pr-branches" class="level3">
+<h3 class="anchored" data-anchor-id="why-is-the-workbench-creating-so-many-md-outputs-pr-branches">Why is The Workbench creating so many <code>md-outputs-PR</code> branches?</h3>
+<p>You might notice that every time a valid pull request is opened, a new branch is created. Each branch is unique to a pull request and is automatically removed when the pull request is closed.</p>
+<p>These branches are orphan branches that contain two commits: the first commit is the current state of the <code>md-outputs</code> branch containing the rendered markdown of the active lesson. The second commit contains the rendered markdown of the pull request. The diff between these commits can be used to analyse changes in output of R Markdown documents. For more information, please read the <a href="https://carpentries.github.io/sandpaper-docs/pull-request.html">Auditing Pull Requests Chapter</a> in the Introduction to The Workbench.</p>
+</section>
+<section id="how-do-i-add-a-custom-logo" class="level3">
+<h3 class="anchored" data-anchor-id="how-do-i-add-a-custom-logo">How do I add a custom logo?</h3>
+<p>For custom logos, you should do the following:</p>
+<ol type="1">
+<li><a href="https://github.com/carpentries/varnish/fork">fork {varnish}</a></li>
+<li>modify the <code>incubator-logo.svg</code> and <code>incubator-logo-sm.svg</code> logos in the <code>source/images/</code> folder.</li>
+<li>ensure your lessons use the <code>carpentries: 'incubator'</code> and <code>varnish:     'MYACCOUNT/varnish'</code> keys in the <code>config.yaml</code></li>
+</ol>
+</section>
+<section id="custom-package" class="level3">
+<h3 class="anchored" data-anchor-id="custom-package">How do I get my lesson to use a custom Workbench package?</h3>
+<p>If you have a custom version of a Workbench package (e.g.&nbsp;{varnish}, with different colours, logos, or badges), there are two steps to get your lesson to use it:</p>
+<ol type="1">
+<li>ensure your package is publicly available on GitHub</li>
+<li>in your lesson, <a href="https://carpentries.github.io/sandpaper/reference/set_config.html#custom-engines">specify your package using the custom engine declaration in the <code>config.yaml</code></a></li>
+</ol>
+</section>
+<section id="docker" class="level3">
+<h3 class="anchored" data-anchor-id="docker">Is there a Docker Container?</h3>
+<p>As of 2023-12-20, there is no official docker container, but the community has some around and created a few iterations as discussed in <a href="https://github.com/carpentries/workbench/issues/39">carpentries/workbench#39</a>.</p>
+</section>
+</section>
+<section id="lesson-transition" class="level2">
+<h2 class="anchored" data-anchor-id="lesson-transition">Lesson Transition</h2>
+<p>This section is applicable for transitioning between the former <a href="https://github.com/carpentries/styles">carpentries/styles</a> lesson infrastructure and The Workbench.</p>
+<section id="transition-new" class="level3">
+<h3 class="anchored" data-anchor-id="transition-new">How do I transition my lesson to using The Workbench?</h3>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Limited Support
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Due to <a href="https://carpentries.org/blog/2023/12/saying-farewell-to-seven-carpentries-core-team-members/">significant staffing changes in late 2023</a>, The Carpentries is unable to provide support for transitioning unofficial lessons to use The Carpentries Workbench.</p>
+</div>
+</div>
+<p>You can use the <a href="https://github.com/carpentries/lesson-transition/#readme">Lesson Transition Tool</a>, which will:</p>
+<ol type="1">
+<li>create a submodule for your lesson</li>
+<li>filter out the infrastructure-related commits</li>
+<li><a href="https://carpentries.github.io/pegboard/articles/intro-episode.html#jekyll-lesson-markdown-content">transform the markdown syntax using {pegboard}</a></li>
+</ol>
+<p>It requires Python, R, git, Make, and BASH (it is unknown if these routines will work with zsh). I have written out detailed instructions for the transition process, but please note: these assume you have administrative access to your lesson.</p>
+<ul>
+<li><a href="https://github.com/carpentries/lesson-transition/blob/main/transition-workflow.md#register-a-lesson-submodule-to-this-repository">Initiating and testing a lesson transtion</a></li>
+<li><a href="https://github.com/carpentries/lesson-transition/blob/main/release-workflow.md">Transitioning and uploading a lesson</a></li>
+</ul>
+</section>
+<section id="long-fork" class="level3">
+<h3 class="anchored" data-anchor-id="long-fork">How do I transition a long-running fork to using The Workbench?</h3>
+<p>See <a href="#transition-new">the above section</a> for instructions. You can copy the lesson-specific transition script to your fork folder to make things easier (though this depends on when you last updated your fork). If you do not have any intention of recieving or contributing your changes to the source, then the above section should be all that you need.</p>
+<p>If you want to continue updating your fork, it will be a little more complicated because it depends on when you last updated your fork. There is some discussion in <a href="https://github.com/carpentries/workbench/issues/51#issuecomment-1550028442">carpentries/workbench#51</a>.</p>
+<p>In short, the commit histories will be identical up until the point of the fork and then the commit history will diverge (but still be relatively compatible) until the point of transition. You may be able to merge the upstream into your fork, but it will not be easy and it will likely contain several merge conflicts. This is not to say that it cannot be done, but it highly depends on the level of customisation you did in the fork. Take for example a <a href="https://github.com/MonashDataFluency/shell-novice/tree/2f4ee4bd9ed01513b8001192fc651ba3a5cca69e">fork of the shell-novice lesson</a> that had 16 commits <em>ahead</em> of <a href="https://github.com/swcarpentry/shell-novice">swcarpentry/shell-novice</a>. Attempting to update the transitioned fork resulted in 188 conflicts<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>:</p>
+<pre><code>Unmerged paths:
+  (use "git add/rm &lt;file&gt;..." as appropriate to mark resolution)
+    both added:      .github/workflows/sandpaper-version.txt
+    both added:      .gitignore
+    both added:      CONTRIBUTING.md
+    both modified:   README.md
+    both added:      config.yaml
+    both deleted:    data/data-shell.zip
+    both modified:   episodes/01-intro.md
+    both modified:   episodes/02-filedir.md
+    both modified:   episodes/03-create.md
+    both modified:   episodes/04-pipefilter.md
+    deleted by us:   episodes/05-loop.md
+    both modified:   episodes/05-script.md
+    both modified:   episodes/07-find.md
+    added by us:     episodes/data/data-shell.zip
+    added by them:   episodes/data/shell-lesson-data.zip
+    deleted by them: episodes/fig/redirects-and-pipes.png
+    both modified:   index.md
+    both added:      instructors/instructor-notes.md
+    both modified:   learners/discuss.md
+    both added:      learners/reference.md
+    both added:      learners/setup.md</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> rg <span class="at">-c</span> <span class="st">'&lt;&lt;&lt;&lt;'</span> </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">index.md:1</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">config.yaml:5</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ex">README.md:3</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ex">episodes/04-pipefilter.md:25</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="ex">episodes/05-script.md:20</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="ex">episodes/02-filedir.md:40</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="ex">episodes/03-create.md:34</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="ex">episodes/01-intro.md:3</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="ex">episodes/07-find.md:25</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="ex">instructors/instructor-notes.md:14</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="ex">CONTRIBUTING.md:2</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="ex">learners/discuss.md:3</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="ex">learners/reference.md:12</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="ex">learners/setup.md:1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> rg <span class="at">-c</span> <span class="st">'&lt;&lt;&lt;&lt;'</span> <span class="kw">|</span> <span class="fu">awk</span> <span class="at">-F:</span> <span class="st">'{sum+=$2} END{print sum}'</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">188</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
 <section id="local-clones" class="level3">
 <h3 class="anchored" data-anchor-id="local-clones">Local Clones</h3>
 <section id="update-clone-from-styles" class="level4">
@@ -265,7 +432,7 @@ Work In Progress
 </section>
 </section>
 <section id="github-forks" class="level3">
-<h3 class="anchored" data-anchor-id="github-forks">GitHub Forks</h3>
+<h3 class="anchored" data-anchor-id="github-forks">Post-transition GitHub Forks</h3>
 <section id="update-fork-from-styles" class="level4">
 <h4 class="anchored" data-anchor-id="update-fork-from-styles">How do I update my fork after the transition from styles?</h4>
 <div class="callout callout-style-default callout-important callout-titled">
@@ -387,6 +554,12 @@ Low-rent versioning with HTMLpreview
 <h2 class="anchored" data-anchor-id="learning">Learning</h2>
 
 
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>It should be noted that these conflicts are not <em>all</em> created by the transition. Conflicts are an inevitable consequence of long-running forks that are not regularly updated. The transitioned lesson just added to the conflicts.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->
