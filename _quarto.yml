@@ -31,10 +31,22 @@ website:
         menu:
           - text: How The Workbench Works
             href: workflow-guide.qmd
+          - text: "Style Guide (external)"
+            href: https://carpentries.github.io/sandpaper-docs/instructor/style.html
           - text: Transition Guide
             href: transition-guide.qmd
           - text: "Developer's Guide (external)"
             href: https://carpentries.github.io/workbench-dev
+      - text: Technical Docs
+        menu:
+          - text: "{sandpaper} (user interface)"
+            href: https://carpentries.github.io/sandpaper/
+          - text: "{varnish} (HTML, CSS, JS)"
+            href: https://carpentries.github.io/varnish/
+          - text: "{pegboard} (parsing, validation)"
+            href: https://carpentries.github.io/pegboard/
+      - href: https://github.com/carpentries/workbench/discussions
+        text: "Join the Discussion"
     right:
       - icon: github
         href: 'https://github.com/carpentries/workbench'
