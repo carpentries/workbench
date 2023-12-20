@@ -7,9 +7,9 @@ date: '2023-03-29'
 
 ## Work In Progress
 
-As this is a FAQ, it will continue to grow as we update it. If you have any
+As this is a FAQ, it will continue to grow as we update it. **If you have any
 questions please submit them to the [Workbench GitHub
-discussion forum](https://github.com/carpentries/workbench/discussions).
+discussion forum](https://github.com/carpentries/workbench/discussions).**
 
 I will attempt to divide these questions up by major categories, but these may
 shift around as questions come in.
@@ -56,8 +56,6 @@ more detail about why we chose R (which highlight the points above)
 | [Using R as a Community Workbench for The Carpentries Lesson Infrastructure](https://zkamvar.netlify.app/talk/carpentries-user-2021/) | [Use!R 2021 Video](https://youtu.be/vd8XZSuY_Rs?t=1240 "Zhian's talk from Use!R in 2021") | <https://zkamvar.github.io/user2021/#p1> |
 | [Building Accessible Lessons with R and Friends](https://zkamvar.netlify.app/talk/carpentries-rstudio-2022/) | [`rstudio::conf(2022)` Video](https://www.rstudio.com/conference/2022/talks/building-accessible-lessons-r-friends/?wvideo=ssot3tfv28 "Zhian's talk from RStudio in 2021") | <https://zkamvar.github.io/rstudio-conf-2022/#p1> |
 
-
-
 ### Do I really need to use RStudio? {#do-i-need-rstudio}
 
 No. We recommend using RStudio for [several reasons that pertain to ease of
@@ -84,7 +82,188 @@ Sometimes, your R session will issue a warning that says a folder is not
 writeable and asks if you would like to use a personal library instead. In this
 case, select "yes".
 
-### Local Clones
+### Why are there so many GitHub Workflows and what do they do? {#workflow-plethora}
+
+Each lesson contains a set of GitHub workflows that are important for the
+following tasks:
+
+ - building the lesson and deploying it on GitHub (`.github/workflows/sandpaper-main.yaml`)
+ - validating and responding to pull requests
+ - automated updates of workflows and (for lessons that use R) package cache
+
+These workflows originate from {sandpaper} and are copied directly into each
+lesson as described in [a README.md inside the {sandpaper}
+repository](https://github.com/carpentries/sandpaper/tree/main/inst/workflows#readme).
+
+You can read technical details of how the workflows work and how they are
+connected by reading [the Workflows section of the Remote Deployment
+Chapter](https://carpentries.github.io/workbench-dev/remote/intro.html#workflows)
+in the Workbench Developer's Guide.
+
+### What are the `md-outputs` and `gh-pages` branches?
+
+These branches are part of [the remote two-step workflow](https://carpentries.github.io/workbench/workflow-guide.html#remote-workflow). 
+
+ - `md-outputs`: contains rendered markdown files, cached to 1) speed up
+   computations by skipping content that has not changed and 2) allow for
+   comparison of rendered output in Pull Requests
+ - `gh-pages`: contains the rendered website.
+
+### Why is The Workbench creating so many `md-outputs-PR` branches?
+
+You might notice that every time a valid pull request is opened, a new branch
+is created. Each branch is unique to a pull request and is automatically removed
+when the pull request is closed.
+
+These branches are orphan branches that contain two commits: the first commit
+is the current state of the `md-outputs` branch containing the rendered markdown
+of the active lesson. The second commit contains the rendered markdown of the
+pull request. The diff between these commits can be used to analyse changes in
+output of R Markdown documents. For more information, please read the [Auditing
+Pull Requests
+Chapter](https://carpentries.github.io/sandpaper-docs/pull-request.html) in the
+Introduction to The Workbench.
+
+### How do I add a custom logo?
+
+For custom logos, you should do the following:
+
+ 1. [fork {varnish}](https://github.com/carpentries/varnish/fork) 
+ 2. modify the `incubator-logo.svg` and `incubator-logo-sm.svg` logos in the
+    `source/images/` folder.
+ 3. ensure your lessons use the `carpentries: 'incubator'` and `varnish:
+    'MYACCOUNT/varnish'` keys in the `config.yaml`
+
+### How do I get my lesson to use a custom Workbench package? {#custom-package}
+
+If you have a custom version of a Workbench package (e.g. {varnish}, with
+different colours, logos, or badges), there are two steps to get your lesson to
+use it:
+
+ 1. ensure your package is publicly available on GitHub
+ 2. in your lesson, [specify your package using the custom engine declaration in
+    the `config.yaml`](https://carpentries.github.io/sandpaper/reference/set_config.html#custom-engines)
+
+### Is there a Docker Container? {#docker}
+
+As of 2023-12-20, there is no official docker container, but the community has
+some around and created a few iterations as discussed in
+[carpentries/workbench#39](https://github.com/carpentries/workbench/issues/39).
+
+## Lesson Transition
+
+This section is applicable for transitioning between the former
+[carpentries/styles](https://github.com/carpentries/styles) lesson
+infrastructure and The Workbench.
+
+### How do I transition my lesson to using The Workbench? {#transition-new}
+
+::: {.callout-warning}
+
+#### Limited Support
+
+Due to [significant staffing changes in late
+2023](https://carpentries.org/blog/2023/12/saying-farewell-to-seven-carpentries-core-team-members/),
+The Carpentries is unable to provide support for transitioning unofficial
+lessons to use The Carpentries Workbench.
+
+:::
+
+You can use the [Lesson Transition Tool](https://github.com/carpentries/lesson-transition/#readme),
+which will:
+
+ 1. create a submodule for your lesson
+ 2. filter out the infrastructure-related commits
+ 3. [transform the markdown syntax using {pegboard}](https://carpentries.github.io/pegboard/articles/intro-episode.html#jekyll-lesson-markdown-content)
+
+It requires Python, R, git, Make, and BASH (it is unknown if these routines will
+work with zsh). I have written out detailed instructions for the transition
+process, but please note: these assume you have administrative access to your
+lesson.
+
+ - [Initiating and testing a lesson transtion](https://github.com/carpentries/lesson-transition/blob/main/transition-workflow.md#register-a-lesson-submodule-to-this-repository)
+ - [Transitioning and uploading a lesson](https://github.com/carpentries/lesson-transition/blob/main/release-workflow.md)
+
+
+### How do I transition a long-running fork to using The Workbench? {#long-fork}
+
+See [the above section](#transition-new) for instructions. You can copy the
+lesson-specific transition script to your fork folder to make things easier
+(though this depends on when you last updated your fork). If you do not have any
+intention of recieving or contributing your changes to the source, then the
+above section should be all that you need.
+
+If you want to continue updating your fork, it will be a little more
+complicated because it depends on when you last updated your fork. There is some
+discussion in [carpentries/workbench#51](https://github.com/carpentries/workbench/issues/51#issuecomment-1550028442).
+
+In short, the commit histories will be identical up until the point of the fork
+and then the commit history will diverge (but still be relatively compatible)
+until the point of transition. You may be able to merge the upstream into your
+fork, but it will not be easy and it will likely contain several merge
+conflicts. This is not to say that it cannot be done, but it highly depends on
+the level of customisation you did in the fork. Take for example a [fork of the
+shell-novice lesson](https://github.com/MonashDataFluency/shell-novice/tree/2f4ee4bd9ed01513b8001192fc651ba3a5cca69e)
+that had 16 commits _ahead_ of
+[swcarpentry/shell-novice](https://github.com/swcarpentry/shell-novice).
+Attempting to update the transitioned fork resulted in 188 conflicts[^conflict]\:
+
+[^conflict]: It should be noted that these conflicts are not _all_ created by
+  the transition. Conflicts are an inevitable consequence of long-running forks
+  that are not regularly updated. The transitioned lesson just added to the
+  conflicts. 
+
+```
+Unmerged paths:
+  (use "git add/rm <file>..." as appropriate to mark resolution)
+	both added:      .github/workflows/sandpaper-version.txt
+	both added:      .gitignore
+	both added:      CONTRIBUTING.md
+	both modified:   README.md
+	both added:      config.yaml
+	both deleted:    data/data-shell.zip
+	both modified:   episodes/01-intro.md
+	both modified:   episodes/02-filedir.md
+	both modified:   episodes/03-create.md
+	both modified:   episodes/04-pipefilter.md
+	deleted by us:   episodes/05-loop.md
+	both modified:   episodes/05-script.md
+	both modified:   episodes/07-find.md
+	added by us:     episodes/data/data-shell.zip
+	added by them:   episodes/data/shell-lesson-data.zip
+	deleted by them: episodes/fig/redirects-and-pipes.png
+	both modified:   index.md
+	both added:      instructors/instructor-notes.md
+	both modified:   learners/discuss.md
+	both added:      learners/reference.md
+	both added:      learners/setup.md
+```
+
+```sh
+$ rg -c '<<<<' 
+index.md:1
+config.yaml:5
+README.md:3
+episodes/04-pipefilter.md:25
+episodes/05-script.md:20
+episodes/02-filedir.md:40
+episodes/03-create.md:34
+episodes/01-intro.md:3
+episodes/07-find.md:25
+instructors/instructor-notes.md:14
+CONTRIBUTING.md:2
+learners/discuss.md:3
+learners/reference.md:12
+learners/setup.md:1
+```
+
+```sh
+$ rg -c '<<<<' | awk -F: '{sum+=$2} END{print sum}'
+188
+```
+
+
+### Local Clones {#local-clones}
 
 
 #### How do I update my clone after the transition from styles? {#update-clone-from-styles}
@@ -94,7 +273,7 @@ name of your repository folder) and then re-clone the lesson. You can find
 details on [updating your local clone](beta-phase.html#updating-clone) on the
 beta phase page.
 
-### GitHub Forks
+### Post-transition GitHub Forks {#github-forks}
 
 #### How do I update my fork after the transition from styles? {#update-fork-from-styles}
 
@@ -120,7 +299,7 @@ below.
 The easiest way to do this is to delete your fork and re-clone. The commit
 history of the lesson has changed and you will be unable to commit until your
 fork reflects those changes (this is known as the [burn it all down
-strategy](https://happygitwithr.com/burn.html)): 
+strategy](https://happygitwithr.com/burn.html)):
 
 1. Save your edits on locally or in a scratch space.
 2. **[Delete your fork](https://docs.github.com/en/repositories/creating-and-managing-repositories/deleting-a-repository)** 
