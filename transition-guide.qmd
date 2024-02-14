@@ -11,8 +11,10 @@ The Carpentries Workbench is a replacement for the former [carpentries/styles]
 lesson infrastructure. Lessons using The Carpentries Workbench have content
 separated from styling and build tools for a more seamless experience in updates
 to the lesson websites. In 2023, all lessons in official Carpentries lesson
-programs will use The Workbench and will be converted using the
+programs were converted to use The Workbench using the
 [lesson-transition tool](https://github.com/carpentries/lesson-transition#readme).
+We provide [a documented transition workflow](https://carpentries.github.io/sandpaper-docs/migrating-from-styles.html) 
+for lesson developers to follow if they want to convert their own lessons.
 
 [carpentries/styles]: https://github.com/carpentries/styles
 
