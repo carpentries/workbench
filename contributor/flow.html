@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.37">
+<meta name="generator" content="quarto-1.5.39">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -220,7 +220,7 @@ ul.task-list li input[type="checkbox"] {
 <p>This section builds on <a href="index.html#workflows">The broad workflow</a> and details the internal process that are invoked with the <a href="https://carpentries.github.io/sandpaper/reference/build_lesson.html"><code>sandpaper::build_lesson()</code></a> function. If you look at <a href="https://github.com/carpentries/sandpaper/blob/HEAD/R/build_lesson.R">the source for this function</a>, it contains a total of sevens significant lines of code (many more due to documentation and comments).</p>
 <p>The pre-flight steps all happen before a single source file is built. These check for pandoc, validate the lesson, and configure global elements. The last two lines are responsible for building the site and combining them with the global variables and templates.</p>
 <p>Users will invoke this function in the following ways:</p>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 7%">
 <col style="width: 38%">
