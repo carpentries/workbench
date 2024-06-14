@@ -13,6 +13,9 @@ name: Render and deploy Book
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      deployments: write    
     steps:
       - uses: actions/checkout@v3
 
