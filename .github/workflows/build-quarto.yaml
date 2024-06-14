@@ -10,16 +10,18 @@ on:
 
 name: Render and deploy Book
 
+permissions:
+  contents: write
+  deployments: write
+  actions: write
+  
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      deployments: write
-      actions: write
     steps:
       - uses: actions/checkout@v3
-
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Install pandoc
         uses: r-lib/actions/setup-pandoc@v2
 
