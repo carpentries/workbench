@@ -74,14 +74,14 @@
     "href": "transition-guide.html",
     "title": "Transition Guide: From Styles to Workbench",
     "section": "",
-    "text": "The Carpentries Workbench is a replacement for the former carpentries/styles lesson infrastructure. Lessons using The Carpentries Workbench have content separated from styling and build tools for a more seamless experience in updates to the lesson websites. In 2023, all lessons in official Carpentries lesson programs will use The Workbench and will be converted using the lesson-transition tool.\nThis document is intended to provide you with a quick reference about the differences between kramdown (used by styles) and pandoc-flavoured markdown (used by The Workbench):"
+    "text": "The Carpentries Workbench is a replacement for the former carpentries/styles lesson infrastructure. Lessons using The Carpentries Workbench have content separated from styling and build tools for a more seamless experience in updates to the lesson websites. In 2023, all lessons in official Carpentries lesson programs were converted to use The Workbench using the lesson-transition tool. We provide a documented transition workflow for lesson developers to follow if they want to convert their own lessons.\nThis document is intended to provide you with a quick reference about the differences between kramdown (used by styles) and pandoc-flavoured markdown (used by The Workbench):"
   },
   {
     "objectID": "transition-guide.html#background",
     "href": "transition-guide.html#background",
     "title": "Transition Guide: From Styles to Workbench",
     "section": "",
-    "text": "The Carpentries Workbench is a replacement for the former carpentries/styles lesson infrastructure. Lessons using The Carpentries Workbench have content separated from styling and build tools for a more seamless experience in updates to the lesson websites. In 2023, all lessons in official Carpentries lesson programs will use The Workbench and will be converted using the lesson-transition tool.\nThis document is intended to provide you with a quick reference about the differences between kramdown (used by styles) and pandoc-flavoured markdown (used by The Workbench):"
+    "text": "The Carpentries Workbench is a replacement for the former carpentries/styles lesson infrastructure. Lessons using The Carpentries Workbench have content separated from styling and build tools for a more seamless experience in updates to the lesson websites. In 2023, all lessons in official Carpentries lesson programs were converted to use The Workbench using the lesson-transition tool. We provide a documented transition workflow for lesson developers to follow if they want to convert their own lessons.\nThis document is intended to provide you with a quick reference about the differences between kramdown (used by styles) and pandoc-flavoured markdown (used by The Workbench):"
   },
   {
     "objectID": "transition-guide.html#for-maintainers",
