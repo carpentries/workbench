@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://carpentries.github.io/workbench/index.html</loc>
-    <lastmod>2024-09-17T00:01:57.419Z</lastmod>
-  </url>
-  <url>
-    <loc>https://carpentries.github.io/workbench/workflow-guide.html</loc>
-    <lastmod>2024-09-17T00:01:57.419Z</lastmod>
-  </url>
-  <url>
-    <loc>https://carpentries.github.io/workbench/faq.html</loc>
-    <lastmod>2024-09-17T00:01:57.407Z</lastmod>
-  </url>
-  <url>
-    <loc>https://carpentries.github.io/workbench/contributor/index.html</loc>
-    <lastmod>2024-09-17T00:01:57.407Z</lastmod>
-  </url>
-  <url>
-    <loc>https://carpentries.github.io/workbench/contributor/beta.html</loc>
-    <lastmod>2024-09-17T00:01:57.407Z</lastmod>
-  </url>
-  <url>
-    <loc>https://carpentries.github.io/workbench/contributor/releases.html</loc>
-    <lastmod>2024-09-17T00:01:57.407Z</lastmod>
+    <loc>https://carpentries.github.io/workbench/transition-guide.html</loc>
+    <lastmod>2024-09-24T00:02:19.576Z</lastmod>
   </url>
   <url>
     <loc>https://carpentries.github.io/workbench/reference.html</loc>
-    <lastmod>2024-09-17T00:01:57.419Z</lastmod>
+    <lastmod>2024-09-24T00:02:19.576Z</lastmod>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench/beta-phase.html</loc>
-    <lastmod>2024-09-17T00:01:57.407Z</lastmod>
-  </url>
-  <url>
-    <loc>https://carpentries.github.io/workbench/contributor/sandpaper.html</loc>
-    <lastmod>2024-09-17T00:01:57.407Z</lastmod>
+    <loc>https://carpentries.github.io/workbench/contributor/releases.html</loc>
+    <lastmod>2024-09-24T00:02:19.566Z</lastmod>
   </url>
   <url>
     <loc>https://carpentries.github.io/workbench/contributor/flow.html</loc>
-    <lastmod>2024-09-17T00:01:57.407Z</lastmod>
+    <lastmod>2024-09-24T00:02:19.565Z</lastmod>
   </url>
   <url>
     <loc>https://carpentries.github.io/workbench/contributor/testing.html</loc>
-    <lastmod>2024-09-17T00:01:57.407Z</lastmod>
+    <lastmod>2024-09-24T00:02:19.566Z</lastmod>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench/contributor/pre-beta.html</loc>
-    <lastmod>2024-09-17T00:01:57.407Z</lastmod>
+    <loc>https://carpentries.github.io/workbench/contributor/index.html</loc>
+    <lastmod>2024-09-24T00:02:19.565Z</lastmod>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench/transition-guide.html</loc>
-    <lastmod>2024-09-17T00:01:57.419Z</lastmod>
+    <loc>https://carpentries.github.io/workbench/index.html</loc>
+    <lastmod>2024-09-24T00:02:19.575Z</lastmod>
   </url>
   <url>
     <loc>https://carpentries.github.io/workbench/transition-schedule.html</loc>
-    <lastmod>2024-09-17T00:01:57.419Z</lastmod>
+    <lastmod>2024-09-24T00:02:19.576Z</lastmod>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/workbench/workflow-guide.html</loc>
+    <lastmod>2024-09-24T00:02:19.576Z</lastmod>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/workbench/contributor/pre-beta.html</loc>
+    <lastmod>2024-09-24T00:02:19.566Z</lastmod>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/workbench/contributor/sandpaper.html</loc>
+    <lastmod>2024-09-24T00:02:19.566Z</lastmod>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/workbench/contributor/beta.html</loc>
+    <lastmod>2024-09-24T00:02:19.565Z</lastmod>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/workbench/faq.html</loc>
+    <lastmod>2024-09-24T00:02:19.566Z</lastmod>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/workbench/beta-phase.html</loc>
+    <lastmod>2024-09-24T00:02:19.565Z</lastmod>
   </url>
 </urlset>
