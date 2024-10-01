@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.12">
+<meta name="generator" content="quarto-1.6.16">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -38,7 +38,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-018089954d508eae8a473f0b7f0491f0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-533b425ce69ff42d0beff6d483a390c1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-40c82891fb6d88085ed8299c1ad0d27a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -310,21 +310,21 @@ Note
 <h2 class="anchored" data-anchor-id="remote-workflow">Remote Workflow</h2>
 <p>The motivation for the remote workflows is the same as the local workflow: to allow for rendering of an HTML website without having to rebuild files that have previously been built. The only twist is that these files are necessarily ephemeral because we will never be building the site on the same server day to day, so how do we avoid rebuilding markdown intermediates and HTML outputs when we do not track them by git?</p>
 <p>The answer is with orphan branches that map on to the folders in <code>site/</code> using git worktrees, which is achieved via the <a href="https://carpentries.github.io/sandpaper/reference/index.html#-internal-continous-integration-functions">internal function <code>sandpaper:::ci_deploy()</code></a>.</p>
-<table class="caption-top table">
+<table class="caption-top">
 <thead>
-<tr class="header">
+<tr>
 <th style="text-align: left;">Folder</th>
 <th style="text-align: left;">Branch</th>
 <th style="text-align: left;">Contents</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td style="text-align: left;"><code>site/built</code></td>
 <td style="text-align: left;"><code>md-outputs</code></td>
 <td style="text-align: left;">Markdown outputs and rendered files (e.g.&nbsp;images)</td>
 </tr>
-<tr class="even">
+<tr>
 <td style="text-align: left;"><code>site/docs</code></td>
 <td style="text-align: left;"><code>gh-pages</code></td>
 <td style="text-align: left;">HTML outputs for the live website.</td>
