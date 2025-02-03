@@ -98,7 +98,7 @@ will set up an anaconda environment that includes all the dependencies you need
 to use The Workbench. 
 
 ```sh
-conda create -n workbench 'git>=2.28' 'r-base>=3.6' 'pandoc>=2.11' pkg-config libxslt
+conda create -n workbench 'git>=2.28' 'r-base>=3.6' 'pandoc>=2.11' pkg-config libxslt glib
 conda activate workbench
 R -e 'install.packages(c("sandpaper", "varnish", "pegboard", "tinkr"), \
   repos = list(carpentries="https://carpentries.r-universe.dev/", CRAN="https://cloud.r-project.org"))'
