@@ -39,7 +39,7 @@ jobs:
         with:
           use-public-rspm: true
           install-r: false
-          # extra-repositories: 'https://carpentries.r-universe.dev'
+          extra-repositories: 'https://carpentries.r-universe.dev'
 
       - name: fix apt
         run: sudo apt update -y
