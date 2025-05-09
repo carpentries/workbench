@@ -44,6 +44,9 @@ jobs:
       - name: fix apt
         run: sudo apt update -y
 
+      - name: print repos
+        run: Rscript -e 'getOption("repos")'
+
       - name: setup dependencies
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
