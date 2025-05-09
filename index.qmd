@@ -88,8 +88,8 @@ accessibility tests, and more, consult our [Guides](#guides)
 
 #### Within R
 
-To install the workbench, make sure you have a working version of R and
-pandoc/RStudio installed (see [the workbench setup instructions for
+To install the Workbench, make sure you have a working version of R and
+pandoc/RStudio installed (see [the Workbench setup instructions for
 details](https://carpentries.github.io/sandpaper-docs/)).
 
 From there, you can install the Workbench packages and their dependencies from
@@ -156,7 +156,7 @@ conda activate workbench
 
 ### Updating
 
-To update workbench packages, you can use:
+To update Workbench packages, you can use:
 
 ::: {.panel-tabset}
 
@@ -190,7 +190,7 @@ conda update --name workbench r-tinkr r-varnish r-pegboard r-sandpaper
 
 ### Tools
 
- - [{sandpaper}]\: User interface and engine for the workbench
+ - [{sandpaper}]\: User interface and engine for the Workbench
  - [{pegboard}]\: Validation and parsing of lesson components
  - [{varnish}]\: HTML, CSS, and JavaScript templates
  - [(carpentries/actions)](https://github.com/carpentries/actions#readme): GitHub Actions for Workbench Workflows
@@ -214,6 +214,6 @@ These are examples of lessons developed with the Workbench since the initial ann
 
 
 
-[{sandpaper}]: https://carpentries.github.io/sandpaper/ "User interface and engine for the workbench"
+[{sandpaper}]: https://carpentries.github.io/sandpaper/ "User interface and engine for the Workbench"
 [{pegboard}]: https://carpentries.github.io/pegboard/ "Validation and parsing of lesson components"
 [{varnish}]: https://carpentries.github.io/varnish/ "HTML, CSS, and JavaScript templates"

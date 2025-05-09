@@ -5,7 +5,7 @@ subtitle: "The User Interface and Engine"
 
 ## Introduction
 
-The user interface to [The Workbench](../reference.html#workbench) is an R
+The user interface to [the Workbench](../reference.html#workbench) is an R
 package called [{sandpaper}](../reference.html#sandpaper). This package is
 responsible for the following broad areas.
 

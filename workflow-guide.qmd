@@ -15,7 +15,7 @@ designed with the following guiding principles:
 3. The procedures should be **well-documented and generalizable** enough that the
    toolchain is not entirely dependent on R.
 
-This document provides details of how the packages of the workbench work
+This document provides details of how the packages of the Workbench work
 behind the scenes to create a full Carpentries lesson website from markdown
 source file. 
 
@@ -28,16 +28,16 @@ which are available via [RStudio](https://rstudio.com)
  - **R**
  - **[Pandoc](https://pandoc.org)**
 
-The workbench itself consists of three R packages, which can all be updated on
+The Workbench itself consists of three R packages, which can all be updated on
 the fly with no changes to the lesson.
 
-There are three packages that comprise The Workbench:
+There are three packages that comprise the Workbench:
 
-- [{sandpaper}](https://carpentries.github.io/sandpaper/): User interface and engine for the workbench
+- [{sandpaper}](https://carpentries.github.io/sandpaper/): User interface and engine for the Workbench
 - [{pegboard}](https://carpentries.github.io/pegboard/): Validation and parsing of lesson components
 - [{varnish}](https://carpentries.github.io/varnish/): HTML, CSS, and JavaScript templates
 
-In addition, The workbench uses the following packages for support:
+In addition, the Workbench uses the following packages for support:
 
 - [{knitr}](https://yihui.org/knitr/): engine that renders R Markdown documents to Markdown
 - [{tinkr}](https://docs.ropensci.org/tinkr/): converts Markdown to an XML representation for {pegboard} to parse
@@ -99,7 +99,7 @@ explain the error and offer correction.
 Because of the need for bootstrapping, validation, and caching, the number of 
 steps from source files to lesson website is considerably more than two. The
 diagram below describes shows the process by which a lesson is built using the
-workbench.
+Workbench.
 
 1. The lesson contributor has an idea and writes it in Markdown or R Markdown
 2. The lesson contributor runs `sandpaper::serve()` to start the engine.
