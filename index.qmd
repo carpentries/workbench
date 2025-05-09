@@ -55,7 +55,7 @@ manage and deploy Carpentries Lesson websites written in Markdown or R Markdown.
 
 #### Within R
 
-To preview a lesson that uses The Workbench, open R (or RStudio), [install The
+To preview a lesson that uses the Workbench, open R (or RStudio), [install The
 Workbench](#installation), and run the following command to start a live preview
 that will update while you edit:
 
@@ -65,7 +65,7 @@ sandpaper::serve()
 
 #### From the command line
 
-To preview a lesson that uses The Workbench, make sure you [install The
+To preview a lesson that uses the Workbench, make sure you [install The
 Workbench](#installation), and run the following command to start a live preview
 that will update while you edit:
 
@@ -78,35 +78,21 @@ you edit.
 
 :::
 
-For more guidance on The Workbench, including how create a new lesson, run
+For more guidance on the Workbench, including how create a new lesson, run
 accessibility tests, and more, consult our [Guides](#guides)
 
 
 ### Installation
 
-To install the workbench, make sure you have a working version of R and 
-pandoc/RStudio installed (see [the workbench setup instructions for 
+:::: {.panel-tabset}
+
+#### Within R
+
+To install the workbench, make sure you have a working version of R and
+pandoc/RStudio installed (see [the workbench setup instructions for
 details](https://carpentries.github.io/sandpaper-docs/)).
 
-::: {.callout-tip collapse='true'}
-
-#### Setup with Anaconda
-
-Thanks to Travis Wrightsman for [providing the instructions to setup for
-anaconda](https://github.com/carpentries/workbench/issues/50). These lines
-will set up an anaconda environment that includes all the dependencies you need
-to use The Workbench. 
-
-```sh
-conda create -n workbench 'git>=2.28' 'r-base>=3.6' 'pandoc>=2.11' pkg-config libxslt
-conda activate workbench
-R -e 'install.packages(c("sandpaper", "varnish", "pegboard", "tinkr"), \
-  repos = list(carpentries="https://carpentries.r-universe.dev/", CRAN="https://cloud.r-project.org"))'
-```
-
-:::
-
-From there, you can install the workbench packages and their dependencies from
+From there, you can install the Workbench packages and their dependencies from
 our [Carpentries R Universe](https://carpentries.r-universe.dev) inside of R:
 
 ```r
@@ -114,24 +100,92 @@ install.packages(c("sandpaper", "varnish", "pegboard", "tinkr"),
   repos = c("https://carpentries.r-universe.dev/", getOption("repos")))
 ```
 
+#### From conda-forge
 
+All of the Workbench tools, and their dependencies, are packaged and distributed
+as built binaries in the form of conda packages on [conda-forge](https://conda-forge.org/)
+for Linux, macOS, and Windows.
+You can setup an environment for lesson development that includes all dependencies
+(including R) with the following.
+
+::: {.panel-tabset}
+
+##### With Pixi
+
+[Pixi](https://pixi.sh/) environments are fully reproducible by default.
+From the project directory, initialize a Pixi workspace
+
+```sh
+pixi init
+```
+
+and then add Git and the Workbench tool packages (`r-pegboard` is a dependency of `r-sandpaper`)
+
+```sh
+pixi add git r-varnish r-sandpaper
+```
+
+You can optionally activate a shell with the environment loaded with
+
+```sh
+pixi shell
+```
+
+##### With Conda
+
+Create a [conda](https://docs.conda.io/) environment and install Git and The
+Workbench tool packages (`r-pegboard` is a dependency of `r-sandpaper`) from
+only the `conda-forge` channel
+
+```sh
+conda create --name workbench
+conda config --name workbench --add channels conda-forge
+conda config --name workbench --remove channels defaults
+conda install --name workbench git r-varnish r-sandpaper
+```
+
+and then activate the conda environment
+
+```sh
+conda activate workbench
+```
+
+:::
+
+::::
 
 ### Updating
 
-To update workbench packages, you can use the same command as you did to install
-your packages:
+To update workbench packages, you can use:
+
+::: {.panel-tabset}
+
+#### R
 
 ```r
 install.packages(c("sandpaper", "varnish", "pegboard", "tinkr"),
   repos = c("https://carpentries.r-universe.dev/", getOption("repos")))
 ```
 
+#### Pixi
+
+```sh
+pixi update
+```
+
+#### Conda
+
+```sh
+conda update --name workbench r-tinkr r-varnish r-pegboard r-sandpaper
+```
+
+:::
 
 
 ### Guides
 
- - [Glossary](reference.html#glossary) A glossary of terms for The Workbench.
- - [Official Workbench Documentation](https://carpentries.github.io/sandpaper-docs): written using The Workbench, this guide provides everything you need to get started using The Workbench. 
+ - [Glossary](reference.html#glossary) A glossary of terms for the Workbench.
+ - [Official Workbench Documentation](https://carpentries.github.io/sandpaper-docs): written using the Workbench, this guide provides everything you need to get started using the Workbench.
  - [Collaborative Lesson Development Training](https://carpentries.github.io/lesson-development-training/): Material for a three day workshop teaching good practices in lesson design and open source collaboration skills
 
 ### Tools
@@ -150,7 +204,7 @@ install.packages(c("sandpaper", "varnish", "pegboard", "tinkr"),
 
 ### Inspired Examples
 
-These are examples of lessons developed with The Workbench since the initial announcement: 
+These are examples of lessons developed with the Workbench since the initial announcement:
 
 - Toby Hodges, Mateusz Kuzak, Aleksandra Nenadic, Sarah Stevens---[Collaborative Lesson Development Training](https://carpentries.github.io/lesson-development-training/)
 - Saranjeet Kuar, Achintya Rao, Heather Turner, Aman Goel---[R's Bug Tracking](https://contributor.r-project.org/r-bug-tracking-lesson/)
