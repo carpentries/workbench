@@ -51,9 +51,9 @@ jobs:
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
           packages: |
-            any::sandpaper
-            any::pegboard
-            any::varnish
+            github::carpentries/sandpaper@main
+            github::carpentries/varnish@main
+            github::carpentries/pegboard@main
             any::withr
             any::sessioninfo
 
