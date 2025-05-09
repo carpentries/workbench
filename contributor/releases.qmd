@@ -4,7 +4,7 @@ title: "Release Process for Workbench Packages"
 
 ## Background
 
-The workbench contains three main packages:
+The Workbench contains three main packages:
 
  - [{sandpaper}]\: user interface and workflow engine
  - [{pegboard}]\: parsing and validation engine
@@ -12,7 +12,7 @@ The workbench contains three main packages:
 
 Each of these packages are available on the [Carpentries R-Universe][r-universe]
 and new versions are checked for hourly. This allows folks to get up-to-date
-versions of The Workbench packages built for their system without running out
+versions of the Workbench packages built for their system without running out
 of GitHub API query attempts.
 
 In order to maintain quality, packages are only sent to the R-Universe if they

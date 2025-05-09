@@ -172,7 +172,7 @@ flowchart TB
 
 ## Development
 
-Development of The Workbench is overseen by Zhian N. Kamvar. New features are
+Development of the Workbench is overseen by Zhian N. Kamvar. New features are
 added incrementally as pull requests. Pushes to the main branch are _rare_ and
 discouraged. New features must have tests associated (with the exception of
 {varnish}).
@@ -206,7 +206,7 @@ writeLines(system2(c("git", "--version"), stdout = TRUE))
 
 
 Once you have these installed, make sure to install ALL of the dependencies for
-the workbench:
+the Workbench:
 
 ```{.r}
 install.packages(c("sandpaper", "pegboard", "varnish", "tinkr"),

@@ -11,7 +11,7 @@ The Carpentries Workbench is a replacement for the former [carpentries/styles]
 lesson infrastructure. Lessons using The Carpentries Workbench have content
 separated from styling and build tools for a more seamless experience in updates
 to the lesson websites. In 2023, all lessons in official Carpentries lesson
-programs were converted to use The Workbench using the
+programs were converted to use the Workbench using the
 [lesson-transition tool](https://github.com/carpentries/lesson-transition#readme).
 We provide [a documented transition workflow](https://carpentries.github.io/sandpaper-docs/migrating-from-styles.html) 
 for lesson developers to follow if they want to convert their own lessons.
@@ -20,7 +20,7 @@ for lesson developers to follow if they want to convert their own lessons.
 
 This document is intended to provide you with a quick reference about the
 differences between [kramdown] (used by styles) and [pandoc-flavoured
-markdown][pandoc] (used by The Workbench):
+markdown][pandoc] (used by the Workbench):
 
 
 ## For Maintainers
@@ -53,7 +53,7 @@ then the default branch is `main`
 
 #### Workbench
 
-The workbench infrastructure is **independent**^[one exception: github
+The Workbench infrastructure is **independent**^[one exception: github
 workflows are contained inside the `.github/workflows` folder] from individual
 lessons. It consists of three major pieces of software.
 
@@ -61,7 +61,7 @@ lessons. It consists of three major pieces of software.
  - **R**
  - **[Pandoc][pandoc]**
 
-The workbench itself consists of three R packages, which can all be updated on
+The Workbench itself consists of three R packages, which can all be updated on
 the fly with no changes to the lesson.
 
  - [{sandpaper}]\: user interface and workflow engine
@@ -142,7 +142,7 @@ on the underlying infrastructure, going back to 2013.
 
 #### Workbench
 
-1. If you haven't already, Follow the [setup instructions for the workbench][workbench-setup] to install R, pandoc, and the workbench packages
+1. If you haven't already, Follow the [setup instructions for the Workbench][workbench-setup] to install R, pandoc, and the Workbench packages
 2. In your lesson directory, open either [R](https://cloud.r-project.org/), [RStudio](https://www.rstudio.com/products/rstudio/download/#download), or [VS Code](https://code.visualstudio.com/docs/languages/r) and run:
 
 ```r
@@ -182,7 +182,7 @@ single folder `episodes/`. `_extras/` content will be split into `learners/`
 and `instructors/` depending on the context of the content. Figures, data, and
 files all become subfolders of `episodes/`.
 ![](fig/folder-flow.svg){data-alt='A diagram showing the transition between the
-former lesson structure (styles) to the new lesson structure (workbench). It
+former lesson structure (styles) to the new lesson structure (Workbench). It
 shows episodes flowing to episodes, extras flowing to learners and instructors,
 and figures, data, and files flowing to subfolders under episodes. Other
 folders are in grey with no arrows indicating that they are discarded.'}
@@ -236,12 +236,12 @@ On the rendred site, the setup instructions are in a separate page called `/setu
 
 #### Workbench
 
-A callout block with The Workbench uses _at least_ three colons followed by a
+A callout block with the Workbench uses _at least_ three colons followed by a
 keyword to start a block. The block is closed with _at least_ three colons.
 
 ::::: {.callout-note}
 
-You can find a demonstration of all the possible callout blocks in [the workbench component guide](https://carpentries.github.io/sandpaper-docs/component-guide.html)
+You can find a demonstration of all the possible callout blocks in [the Workbench component guide](https://carpentries.github.io/sandpaper-docs/component-guide.html)
 
 :::::
 
@@ -310,7 +310,7 @@ document.
 
 #### Workbench
 
-Code fences in the workbench are indicated by fences that consist of three
+Code fences in the Workbench are indicated by fences that consist of three
 backticks (```` ``` ````) with the name of the language appended on the opening 
 fence:
 <br>
@@ -354,7 +354,7 @@ git branch --merged | grep -v '^\*' | xargs git branch -d
 
 #### Workbench
 
-The challenge and solution blocks in the workbench are nested pairs of blocks
+The challenge and solution blocks in the Workbench are nested pairs of blocks
 with an optional Level 3 header. You can additonally add a "hint" block before
 the solution.
 
@@ -395,7 +395,7 @@ compared to the inner section.
 
 #### styles
 
-The challenge and solution blocks in the workbench are nested block quotes
+The challenge and solution blocks in the Workbench are nested block quotes
 with Level 2 headers. Additional blocks are still of the class "solution" 
 
 ````markdown
@@ -523,7 +523,7 @@ use Jekyll's metadata parsing to create a custom introductory block.
 
 #### Workbench
 
-An **inline instructor note** in the workbench is formed inside an episode by
+An **inline instructor note** in the Workbench is formed inside an episode by
 making a [_fenced div_][fenced-divs] with the class "instructor"
 
 ```markdown
@@ -678,7 +678,7 @@ text after the list
 #### About Table Styling
 
 Please note that the table display here is not a good representation of what
-you will see in The Workbench or in Styles. They both have their own 
+you will see in the Workbench or in Styles. They both have their own 
 idiosyncratic ways of displaying tables. 
 
 A demonstration of Workbench tables can be seen [in the official documentation
@@ -692,7 +692,7 @@ for lesson contributors](https://carpentries.github.io/sandpaper-docs/episodes.h
 
 #### Workbench
 
-Tables in the workbench follow the rules for [pandoc pipe table syntax](https://pandoc.org/MANUAL.html#extension-pipe_tables).
+Tables in the Workbench follow the rules for [pandoc pipe table syntax](https://pandoc.org/MANUAL.html#extension-pipe_tables).
 
 There are two extra features for this syntax in pandoc:
 
@@ -911,7 +911,7 @@ The dragon emerges!
 #### Workbench
 
 Episode and setup information is located on the left hand side of the page.
-Navigation in the workbench is split between information for learners and
+Navigation in the Workbench is split between information for learners and
 information for instructors. The top right of the page has a toggle button
 between Learner and Instructor views, which change the four main navigation
 items in the top navigation bar. 
@@ -924,7 +924,7 @@ Key Points, Glossary, Learner Profiles, and More. The "More" dropdown menu
 contains information for learners from the `learners/` folder aside from the
 setup instructions.
 
-![](fig/screenshot-learner-view.png){alt='screenshot of the workbench version
+![](fig/screenshot-learner-view.png){alt='screenshot of the Workbench version
 of "The Unix Shell". A blue arrow points to the top right corner indicating the
 lesson is in "Learner View". The menu bar states the name of the lesson and has
 the items described in text, with all but the first underlined. There is a grey
@@ -942,7 +942,7 @@ In addition, the schedule now appears on the home page, instructor notes are
 displayed inline, and the estimated timings for a lesson appear.
 
 
-![](fig/screenshot-instructor-view.png){alt='screenshot of the workbench
+![](fig/screenshot-instructor-view.png){alt='screenshot of the Workbench
 version of "The Unix Shell". A red arrow points to the top right corner
 indicating the lesson is in "Learner View". The menu bar states the name of the
 lesson and has the items described in text, with all but the first underlined
@@ -999,7 +999,7 @@ Learner View) or the "Summary and Schedule" links (in Instructor View) in the
 side navigation bar:
 
 ![](fig/setup-workbench.png){alt='zoomed in screenshot of side navigation of
-a workbench episode showing "Summary and Setup" highlighted'}
+a Workbench episode showing "Summary and Setup" highlighted'}
 
 :::
 
@@ -1033,11 +1033,11 @@ of episodes.
 
 The "Edit This Page" button is located under the heading for each episode:
 
-![](fig/edit-page-head-workbench.png){alt='screenshot of workbench page header that says "Introduction to R" with a highlighted link that says "Edit this page"'}
+![](fig/edit-page-head-workbench.png){alt='screenshot of Workbench page header that says "Introduction to R" with a highlighted link that says "Edit this page"'}
 
 and on the first column of the footer:
 
-![](fig/edit-page-foot-workbench.png){alt='screenshot of workbench page footer that shows the "Edit on GitHub" link highlighted'}
+![](fig/edit-page-foot-workbench.png){alt='screenshot of Workbench page footer that shows the "Edit on GitHub" link highlighted'}
 
 
 
@@ -1075,7 +1075,7 @@ and reuse.
 The License information can be found at the `LICENSE.html` page, whose link is
 always in the footer:
 
-![](fig/license-workbench.png){alt='screenshot of workbench footer with "CC-BY 4.0" license highlighted'}
+![](fig/license-workbench.png){alt='screenshot of Workbench footer with "CC-BY 4.0" license highlighted'}
 
 :::
 
@@ -1110,7 +1110,7 @@ reporting guidelines.
 The Code of Conduct information can be found at the `CODE_OF_CONDUCT.html` page, whose link is
 always in the footer:
 
-![](fig/coc-workbench.png){alt='screenshot of workbench footer with "Code of Conduct" highlighted'}
+![](fig/coc-workbench.png){alt='screenshot of Workbench footer with "Code of Conduct" highlighted'}
 
 :::
 

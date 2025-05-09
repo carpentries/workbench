@@ -14,7 +14,7 @@ of a lesson that is being tested in \
 The Workbench Beta Phase 
 
 ::: {style='text-align: left;'}
- - any edits you propose will be made on **The Workbench version of the lesson.**
+ - any edits you propose will be made on **the Workbench version of the lesson.**
  - [Find out more about the **beta stage**](../beta-phase.html#beta).
 
 :::

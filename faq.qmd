@@ -21,7 +21,7 @@ If you have a question about definitions, consult our [glossary](reference.html#
 ## Authoring
 
 These FAQs are intended for those who contribute to, maintain, or create lessons
-using The Workbench. If you only ever visit the website, then head over to 
+using the Workbench. If you only ever visit the website, then head over to 
 the [Teaching](#teaching) or [Learning](#learning) sections.
 
 ### Why was R chosen for the infrastructure? {#why-r}
@@ -48,7 +48,7 @@ We tested the infrastructure in 2021 to make sure that it works for people with
 varying levels of familiarity with R:
 See this [Blog Post from 2021 on the Alpha Test of the infrastructure](https://carpentries.org/blog/2021/07/infrastructure-testing/).
 
-Zhian Kamvar has given two talks about The Workbench that go into a little bit
+Zhian Kamvar has given two talks about the Workbench that go into a little bit
 more detail about why we chose R (which highlight the points above)
 
 | Talk | Video | Slides (with speaker notes) |
@@ -109,7 +109,7 @@ These branches are part of [the remote two-step workflow](https://carpentries.gi
    comparison of rendered output in Pull Requests
  - `gh-pages`: contains the rendered website.
 
-### Why is The Workbench creating so many `md-outputs-PR` branches?
+### Why is the Workbench creating so many `md-outputs-PR` branches?
 
 You might notice that every time a valid pull request is opened, a new branch
 is created. Each branch is unique to a pull request and is automatically removed
@@ -122,7 +122,7 @@ pull request. The diff between these commits can be used to analyse changes in
 output of R Markdown documents. For more information, please read the [Auditing
 Pull Requests
 Chapter](https://carpentries.github.io/sandpaper-docs/pull-request.html) in the
-Introduction to The Workbench.
+Introduction to the Workbench.
 
 ### How do I add a custom logo?
 
@@ -154,9 +154,9 @@ some around and created a few iterations as discussed in
 
 This section is applicable for transitioning between the former
 [carpentries/styles](https://github.com/carpentries/styles) lesson
-infrastructure and The Workbench.
+infrastructure and the Workbench.
 
-### How do I transition my lesson to using The Workbench? {#transition-new}
+### How do I transition my lesson to using the Workbench? {#transition-new}
 
 ::: {.callout-warning}
 
@@ -185,7 +185,7 @@ lesson.
  - [Transitioning and uploading a lesson](https://github.com/carpentries/lesson-transition/blob/main/release-workflow.md)
 
 
-### How do I transition a long-running fork to using The Workbench? {#long-fork}
+### How do I transition a long-running fork to using the Workbench? {#long-fork}
 
 See [the above section](#transition-new) for instructions. You can copy the
 lesson-specific transition script to your fork folder to make things easier
@@ -318,7 +318,7 @@ Note that if you have a clone, you will need to also [delete and re-clone](#upda
 ##### Production Forks
 
 If you have a fork of a lesson that you have modified significantly and wish to
-continue maintaining under The Workbench, contact Zhian Kamvar and he will help
+continue maintaining under the Workbench, contact Zhian Kamvar and he will help
 you transition your repository. 
 
 :::
@@ -345,7 +345,7 @@ accidentally merge histories in your fork.
 #### How do I create a fork for teaching? {#teaching-fork}
 
 A common pattern for teaching is to create a fork of a lesson, modify it to add
-or remove specific section. Because the pages on The Workbench are deployed by
+or remove specific section. Because the pages on the Workbench are deployed by
 GitHub actions, there are a couple of extra steps you need to do to enable the 
 pages to load after the transition.
 
@@ -382,10 +382,10 @@ sure that the content is stable.
 The website <https://htmlpreview.github.io> allows you to display HTML pages
 hosted on GitHub without needing to set up GitHub pages. If you do not want to
 fork, but still want a working version you can teach from, you can head to a 
-workbench repository, select the `gh-pages` branch, select the `index.html` file
+Workbench repository, select the `gh-pages` branch, select the `index.html` file
 and click on `copy permalink` and paste that into html preview:
 
-For example: this is the workbench documentation as of 2023-02-07: 
+For example: this is the Workbench documentation as of 2023-02-07:
 <https://htmlpreview.github.io/?https://github.com/carpentries/sandpaper-docs/blob/59651a69e7716c04edaf8f9c1c79abc18ce3e476/index.html>
 
 This is a very workable version of the lesson (with some styling differences as
