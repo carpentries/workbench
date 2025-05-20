@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.9">
+<meta name="generator" content="quarto-1.8.10">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -72,7 +72,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-b7b7c51884a1ad4150cbdc0ccb967560.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-d3ce08b5eb6bbeb75b009e3aca0d8ee7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-31867ad706623b8d4df314de2fc5bb83.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -267,8 +267,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="background" class="level2">
 <h2 class="anchored" data-anchor-id="background">Background</h2>
-<p>The Carpentries Workbench is a replacement for the former <a href="https://github.com/carpentries/styles">carpentries/styles</a> lesson infrastructure. Lessons using The Carpentries Workbench have content separated from styling and build tools for a more seamless experience in updates to the lesson websites. In 2023, all lessons in official Carpentries lesson programs were converted to use The Workbench using the <a href="https://github.com/carpentries/lesson-transition#readme">lesson-transition tool</a>. We provide <a href="https://carpentries.github.io/sandpaper-docs/migrating-from-styles.html">a documented transition workflow</a> for lesson developers to follow if they want to convert their own lessons.</p>
-<p>This document is intended to provide you with a quick reference about the differences between <a href="https://kramdown.gettalong.org/syntax.html">kramdown</a> (used by styles) and <a href="https://pandoc.org/MANUAL.html#pandocs-markdown">pandoc-flavoured markdown</a> (used by The Workbench):</p>
+<p>The Carpentries Workbench is a replacement for the former <a href="https://github.com/carpentries/styles">carpentries/styles</a> lesson infrastructure. Lessons using The Carpentries Workbench have content separated from styling and build tools for a more seamless experience in updates to the lesson websites. In 2023, all lessons in official Carpentries lesson programs were converted to use the Workbench using the <a href="https://github.com/carpentries/lesson-transition#readme">lesson-transition tool</a>. We provide <a href="https://carpentries.github.io/sandpaper-docs/migrating-from-styles.html">a documented transition workflow</a> for lesson developers to follow if they want to convert their own lessons.</p>
+<p>This document is intended to provide you with a quick reference about the differences between <a href="https://kramdown.gettalong.org/syntax.html">kramdown</a> (used by styles) and <a href="https://pandoc.org/MANUAL.html#pandocs-markdown">pandoc-flavoured markdown</a> (used by the Workbench):</p>
 </section>
 <section id="for-maintainers" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="for-maintainers">For Maintainers</h2>
@@ -298,13 +298,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="column workbench quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <section id="workbench-1" class="level4">
 <h4 class="anchored" data-anchor-id="workbench-1">Workbench</h4>
-<p>The workbench infrastructure is <strong>independent</strong><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> from individual lessons. It consists of three major pieces of software.</p>
+<p>The Workbench infrastructure is <strong>independent</strong><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> from individual lessons. It consists of three major pieces of software.</p>
 <ul>
 <li><strong>Git </strong></li>
 <li><strong>R</strong></li>
 <li><strong><a href="https://pandoc.org/MANUAL.html#pandocs-markdown">Pandoc</a></strong></li>
 </ul>
-<p>The workbench itself consists of three R packages, which can all be updated on the fly with no changes to the lesson.</p>
+<p>The Workbench itself consists of three R packages, which can all be updated on the fly with no changes to the lesson.</p>
 <ul>
 <li><a href="https://carpentries.github.io/sandpaper/">{sandpaper}</a>: user interface and workflow engine</li>
 <li><a href="https://carpentries.github.io/pegboard/">{pegboard}</a>: parsing and validation engine</li>
@@ -380,7 +380,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="workbench-3" class="level4">
 <h4 class="anchored" data-anchor-id="workbench-3">Workbench</h4>
 <ol type="1">
-<li>If you haven’t already, Follow the <a href="https://carpentries.github.io/sandpaper-docs/#setup">setup instructions for the workbench</a> to install R, pandoc, and the workbench packages</li>
+<li>If you haven’t already, Follow the <a href="https://carpentries.github.io/sandpaper-docs/#setup">setup instructions for the Workbench</a> to install R, pandoc, and the Workbench packages</li>
 <li>In your lesson directory, open either <a href="https://cloud.r-project.org/">R</a>, <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio</a>, or <a href="https://code.visualstudio.com/docs/languages/r">VS Code</a> and run:</li>
 </ol>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>sandpaper<span class="sc">::</span><span class="fu">serve</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -407,7 +407,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>the episodes can be directly lifted from the lesson without needing external context/resources.</li>
 <li>extra content intended for instructors is clearly separated from that intended for learners</li>
 </ol>
-<p>Episodes (aka Chapters) will move from <code>_episodes/</code> and <code>_episodes_rmd</code> to the single folder <code>episodes/</code>. <code>_extras/</code> content will be split into <code>learners/</code> and <code>instructors/</code> depending on the context of the content. Figures, data, and files all become subfolders of <code>episodes/</code>. <img src="fig/folder-flow.svg" class="img-fluid" data-alt="A diagram showing the transition between the former lesson structure (styles) to the new lesson structure (workbench). It shows episodes flowing to episodes, extras flowing to learners and instructors, and figures, data, and files flowing to subfolders under episodes. Other folders are in grey with no arrows indicating that they are discarded." onerror="imgError(this);"></p>
+<p>Episodes (aka Chapters) will move from <code>_episodes/</code> and <code>_episodes_rmd</code> to the single folder <code>episodes/</code>. <code>_extras/</code> content will be split into <code>learners/</code> and <code>instructors/</code> depending on the context of the content. Figures, data, and files all become subfolders of <code>episodes/</code>. <img src="fig/folder-flow.svg" class="img-fluid" data-alt="A diagram showing the transition between the former lesson structure (styles) to the new lesson structure (Workbench). It shows episodes flowing to episodes, extras flowing to learners and instructors, and figures, data, and files flowing to subfolders under episodes. Other folders are in grey with no arrows indicating that they are discarded." onerror="imgError(this);"></p>
 </section>
 <section id="setup-maintainer" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="setup-maintainer">Setup Page</h3>
@@ -442,7 +442,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="column workbench quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <section id="workbench-5" class="level4">
 <h4 class="anchored" data-anchor-id="workbench-5">Workbench</h4>
-<p>A callout block with The Workbench uses <em>at least</em> three colons followed by a keyword to start a block. The block is closed with <em>at least</em> three colons.</p>
+<p>A callout block with the Workbench uses <em>at least</em> three colons followed by a keyword to start a block. The block is closed with <em>at least</em> three colons.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -453,7 +453,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>You can find a demonstration of all the possible callout blocks in <a href="https://carpentries.github.io/sandpaper-docs/component-guide.html">the workbench component guide</a></p>
+<p>You can find a demonstration of all the possible callout blocks in <a href="https://carpentries.github.io/sandpaper-docs/component-guide.html">the Workbench component guide</a></p>
 </div>
 </div>
 <div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>:::: callout</span>
@@ -529,7 +529,7 @@ Note
 <div class="column workbench quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <section id="workbench-6" class="level4">
 <h4 class="anchored" data-anchor-id="workbench-6">Workbench</h4>
-<p>Code fences in the workbench are indicated by fences that consist of three backticks (<code>```</code>) with the name of the language appended on the opening fence: <br> <br></p>
+<p>Code fences in the Workbench are indicated by fences that consist of three backticks (<code>```</code>) with the name of the language appended on the opening fence: <br> <br></p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>clean all merged branches from git</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
@@ -561,7 +561,7 @@ Note
 <div class="column workbench quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <section id="workbench-7" class="level4">
 <h4 class="anchored" data-anchor-id="workbench-7">Workbench</h4>
-<p>The challenge and solution blocks in the workbench are nested pairs of blocks with an optional Level 3 header. You can additonally add a “hint” block before the solution.</p>
+<p>The challenge and solution blocks in the Workbench are nested pairs of blocks with an optional Level 3 header. You can additonally add a “hint” block before the solution.</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>::::::::::::::::::::::::::::: challenge</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">### Challenge: build</span></span>
@@ -600,7 +600,7 @@ Tip
 <div class="column styles quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <section id="styles-7" class="level4">
 <h4 class="anchored" data-anchor-id="styles-7">styles</h4>
-<p>The challenge and solution blocks in the workbench are nested block quotes with Level 2 headers. Additional blocks are still of the class “solution”</p>
+<p>The challenge and solution blocks in the Workbench are nested block quotes with Level 2 headers. Additional blocks are still of the class “solution”</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; ## Challenge: build</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; </span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; What is the R command to build a Workbench lesson?</span></span>
@@ -712,7 +712,7 @@ Tip
 <div class="column workbench quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <section id="workbench-9" class="level4">
 <h4 class="anchored" data-anchor-id="workbench-9">Workbench</h4>
-<p>An <strong>inline instructor note</strong> in the workbench is formed inside an episode by making a <a href="https://pandoc.org/MANUAL.html#divs-and-spans"><em>fenced div</em></a> with the class “instructor”</p>
+<p>An <strong>inline instructor note</strong> in the Workbench is formed inside an episode by making a <a href="https://pandoc.org/MANUAL.html#divs-and-spans"><em>fenced div</em></a> with the class “instructor”</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>:::: instructor</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>Here be dragons</span>
@@ -831,7 +831,7 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Please note that the table display here is not a good representation of what you will see in The Workbench or in Styles. They both have their own idiosyncratic ways of displaying tables.</p>
+<p>Please note that the table display here is not a good representation of what you will see in the Workbench or in Styles. They both have their own idiosyncratic ways of displaying tables.</p>
 <p>A demonstration of Workbench tables can be seen <a href="https://carpentries.github.io/sandpaper-docs/episodes.html#tables">in the official documentation for lesson contributors</a></p>
 </div>
 </div>
@@ -842,7 +842,7 @@ Tip
 <p>.workbench</p>
 <section id="workbench-11" class="level4">
 <h4 class="anchored" data-anchor-id="workbench-11">Workbench</h4>
-<p>Tables in the workbench follow the rules for <a href="https://pandoc.org/MANUAL.html#extension-pipe_tables">pandoc pipe table syntax</a>.</p>
+<p>Tables in the Workbench follow the rules for <a href="https://pandoc.org/MANUAL.html#extension-pipe_tables">pandoc pipe table syntax</a>.</p>
 <p>There are two extra features for this syntax in pandoc:</p>
 <ol type="1">
 <li>You can add a table caption, which is great for accessibility<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></li>
@@ -1095,17 +1095,17 @@ Note
 <div class="column workbench quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <section id="workbench-14" class="level4">
 <h4 class="anchored" data-anchor-id="workbench-14">Workbench</h4>
-<p>Episode and setup information is located on the left hand side of the page. Navigation in the workbench is split between information for learners and information for instructors. The top right of the page has a toggle button between Learner and Instructor views, which change the four main navigation items in the top navigation bar.</p>
+<p>Episode and setup information is located on the left hand side of the page. Navigation in the Workbench is split between information for learners and information for instructors. The top right of the page has a toggle button between Learner and Instructor views, which change the four main navigation items in the top navigation bar.</p>
 <section id="learner-view" class="level5">
 <h5 class="anchored" data-anchor-id="learner-view">Learner View</h5>
 <p>When this is toggled, the main navigation contains the following menu items: Key Points, Glossary, Learner Profiles, and More. The “More” dropdown menu contains information for learners from the <code>learners/</code> folder aside from the setup instructions.</p>
-<p><img src="fig/screenshot-learner-view.png" class="img-fluid" alt="screenshot of the workbench version of &quot;The Unix Shell&quot;. A blue arrow points to the top right corner indicating the lesson is in &quot;Learner View&quot;. The menu bar states the name of the lesson and has the items described in text, with all but the first underlined. There is a grey sidebar that says &quot;Episodes&quot; and a section called &quot;Summary and Setup&quot; is underlined in blue. The main content shows a blue underline under the last updated status." onerror="imgError(this);"></p>
+<p><img src="fig/screenshot-learner-view.png" class="img-fluid" alt="screenshot of the Workbench version of &quot;The Unix Shell&quot;. A blue arrow points to the top right corner indicating the lesson is in &quot;Learner View&quot;. The menu bar states the name of the lesson and has the items described in text, with all but the first underlined. There is a grey sidebar that says &quot;Episodes&quot; and a section called &quot;Summary and Setup&quot; is underlined in blue. The main content shows a blue underline under the last updated status." onerror="imgError(this);"></p>
 </section>
 <section id="instructor-view" class="level5">
 <h5 class="anchored" data-anchor-id="instructor-view">Instructor view</h5>
 <p>When this is toggled, the main navigation contains the following menu items: Key Points, Instructor Notes, Extract All Images, and More. The “More” dropdown menu contains information for learners from the <code>instructors/</code> folder.</p>
 <p>In addition, the schedule now appears on the home page, instructor notes are displayed inline, and the estimated timings for a lesson appear.</p>
-<p><img src="fig/screenshot-instructor-view.png" class="img-fluid" alt="screenshot of the workbench version of &quot;The Unix Shell&quot;. A red arrow points to the top right corner indicating the lesson is in &quot;Learner View&quot;. The menu bar states the name of the lesson and has the items described in text, with all but the first underlined in red. There is a grey sidebar that says &quot;Episodes&quot; and a section called &quot;Summary and Setup&quot; is underlined in red. The main content shows a red underline under the last updated status." onerror="imgError(this);"></p>
+<p><img src="fig/screenshot-instructor-view.png" class="img-fluid" alt="screenshot of the Workbench version of &quot;The Unix Shell&quot;. A red arrow points to the top right corner indicating the lesson is in &quot;Learner View&quot;. The menu bar states the name of the lesson and has the items described in text, with all but the first underlined in red. There is a grey sidebar that says &quot;Episodes&quot; and a section called &quot;Summary and Setup&quot; is underlined in red. The main content shows a red underline under the last updated status." onerror="imgError(this);"></p>
 </section>
 </section>
 </div>
@@ -1143,7 +1143,7 @@ Note
 <h4 class="anchored" data-anchor-id="workbench-15">Workbench</h4>
 <p>The setup instructions are located on the home page at the <code>#setup</code> anchor.</p>
 <p>The link to get to the setup is located at the “Summary and Setup” (in Learner View) or the “Summary and Schedule” links (in Instructor View) in the side navigation bar:</p>
-<p><img src="fig/setup-workbench.png" class="img-fluid" alt="zoomed in screenshot of side navigation of a workbench episode showing &quot;Summary and Setup&quot; highlighted" onerror="imgError(this);"></p>
+<p><img src="fig/setup-workbench.png" class="img-fluid" alt="zoomed in screenshot of side navigation of a Workbench episode showing &quot;Summary and Setup&quot; highlighted" onerror="imgError(this);"></p>
 </section>
 </div>
 <div class="column styles quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -1168,9 +1168,9 @@ Note
 <section id="workbench-16" class="level4">
 <h4 class="anchored" data-anchor-id="workbench-16">Workbench</h4>
 <p>The “Edit This Page” button is located under the heading for each episode:</p>
-<p><img src="fig/edit-page-head-workbench.png" class="img-fluid" alt="screenshot of workbench page header that says &quot;Introduction to R&quot; with a highlighted link that says &quot;Edit this page&quot;" onerror="imgError(this);"></p>
+<p><img src="fig/edit-page-head-workbench.png" class="img-fluid" alt="screenshot of Workbench page header that says &quot;Introduction to R&quot; with a highlighted link that says &quot;Edit this page&quot;" onerror="imgError(this);"></p>
 <p>and on the first column of the footer:</p>
-<p><img src="fig/edit-page-foot-workbench.png" class="img-fluid" alt="screenshot of workbench page footer that shows the &quot;Edit on GitHub&quot; link highlighted" onerror="imgError(this);"></p>
+<p><img src="fig/edit-page-foot-workbench.png" class="img-fluid" alt="screenshot of Workbench page footer that shows the &quot;Edit on GitHub&quot; link highlighted" onerror="imgError(this);"></p>
 </section>
 </div>
 <div class="column styles quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -1196,7 +1196,7 @@ Note
 <section id="workbench-17" class="level4">
 <h4 class="anchored" data-anchor-id="workbench-17">Workbench</h4>
 <p>The License information can be found at the <code>LICENSE.html</code> page, whose link is always in the footer:</p>
-<p><img src="fig/license-workbench.png" class="img-fluid" alt="screenshot of workbench footer with &quot;CC-BY 4.0&quot; license highlighted" onerror="imgError(this);"></p>
+<p><img src="fig/license-workbench.png" class="img-fluid" alt="screenshot of Workbench footer with &quot;CC-BY 4.0&quot; license highlighted" onerror="imgError(this);"></p>
 </section>
 </div>
 <div class="column styles quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -1220,7 +1220,7 @@ Note
 <section id="workbench-18" class="level4">
 <h4 class="anchored" data-anchor-id="workbench-18">Workbench</h4>
 <p>The Code of Conduct information can be found at the <code>CODE_OF_CONDUCT.html</code> page, whose link is always in the footer:</p>
-<p><img src="fig/coc-workbench.png" class="img-fluid" alt="screenshot of workbench footer with &quot;Code of Conduct&quot; highlighted" onerror="imgError(this);"></p>
+<p><img src="fig/coc-workbench.png" class="img-fluid" alt="screenshot of Workbench footer with &quot;Code of Conduct&quot; highlighted" onerror="imgError(this);"></p>
 </section>
 </div>
 <div class="column styles quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">

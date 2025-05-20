@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.9">
+<meta name="generator" content="quarto-1.8.10">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -73,7 +73,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-b7b7c51884a1ad4150cbdc0ccb967560.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-d3ce08b5eb6bbeb75b009e3aca0d8ee7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-31867ad706623b8d4df314de2fc5bb83.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -219,15 +219,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#what-is-an-r-library" id="toc-what-is-an-r-library" class="nav-link" data-scroll-target="#what-is-an-r-library">What is an R Library?</a></li>
   <li><a href="#workflow-plethora" id="toc-workflow-plethora" class="nav-link" data-scroll-target="#workflow-plethora">Why are there so many GitHub Workflows and what do they do?</a></li>
   <li><a href="#what-are-the-md-outputs-and-gh-pages-branches" id="toc-what-are-the-md-outputs-and-gh-pages-branches" class="nav-link" data-scroll-target="#what-are-the-md-outputs-and-gh-pages-branches">What are the <code>md-outputs</code> and <code>gh-pages</code> branches?</a></li>
-  <li><a href="#why-is-the-workbench-creating-so-many-md-outputs-pr-branches" id="toc-why-is-the-workbench-creating-so-many-md-outputs-pr-branches" class="nav-link" data-scroll-target="#why-is-the-workbench-creating-so-many-md-outputs-pr-branches">Why is The Workbench creating so many <code>md-outputs-PR</code> branches?</a></li>
+  <li><a href="#why-is-the-workbench-creating-so-many-md-outputs-pr-branches" id="toc-why-is-the-workbench-creating-so-many-md-outputs-pr-branches" class="nav-link" data-scroll-target="#why-is-the-workbench-creating-so-many-md-outputs-pr-branches">Why is the Workbench creating so many <code>md-outputs-PR</code> branches?</a></li>
   <li><a href="#how-do-i-add-a-custom-logo" id="toc-how-do-i-add-a-custom-logo" class="nav-link" data-scroll-target="#how-do-i-add-a-custom-logo">How do I add a custom logo?</a></li>
   <li><a href="#custom-package" id="toc-custom-package" class="nav-link" data-scroll-target="#custom-package">How do I get my lesson to use a custom Workbench package?</a></li>
   <li><a href="#docker" id="toc-docker" class="nav-link" data-scroll-target="#docker">Is there a Docker Container?</a></li>
   </ul></li>
   <li><a href="#lesson-transition" id="toc-lesson-transition" class="nav-link" data-scroll-target="#lesson-transition">Lesson Transition</a>
   <ul class="collapse">
-  <li><a href="#transition-new" id="toc-transition-new" class="nav-link" data-scroll-target="#transition-new">How do I transition my lesson to using The Workbench?</a></li>
-  <li><a href="#long-fork" id="toc-long-fork" class="nav-link" data-scroll-target="#long-fork">How do I transition a long-running fork to using The Workbench?</a></li>
+  <li><a href="#transition-new" id="toc-transition-new" class="nav-link" data-scroll-target="#transition-new">How do I transition my lesson to using the Workbench?</a></li>
+  <li><a href="#long-fork" id="toc-long-fork" class="nav-link" data-scroll-target="#long-fork">How do I transition a long-running fork to using the Workbench?</a></li>
   <li><a href="#local-clones" id="toc-local-clones" class="nav-link" data-scroll-target="#local-clones">Local Clones</a></li>
   <li><a href="#github-forks" id="toc-github-forks" class="nav-link" data-scroll-target="#github-forks">Post-transition GitHub Forks</a></li>
   </ul></li>
@@ -285,7 +285,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <section id="authoring" class="level2">
 <h2 class="anchored" data-anchor-id="authoring">Authoring</h2>
-<p>These FAQs are intended for those who contribute to, maintain, or create lessons using The Workbench. If you only ever visit the website, then head over to the <a href="#teaching">Teaching</a> or <a href="#learning">Learning</a> sections.</p>
+<p>These FAQs are intended for those who contribute to, maintain, or create lessons using the Workbench. If you only ever visit the website, then head over to the <a href="#teaching">Teaching</a> or <a href="#learning">Learning</a> sections.</p>
 <section id="why-r" class="level3">
 <h3 class="anchored" data-anchor-id="why-r">Why was R chosen for the infrastructure?</h3>
 <p>Most tools for webpage authoring outside of Wordpress and the like expect authors to have some knowledge or ability to manipulate HTML, CSS, JavaScript and one (or two) other languages to wrangle them all together. It’s great for people who are dabbling in webpage development, but as we’ve seen for several years now, it’s not great for people who do not have much experience with these technologies (think about the last time you assisted someone to install Jekyll correctly).</p>
@@ -297,7 +297,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>It provides a throughline between the tools we teach and real-world applications.</li>
 </ol>
 <p>We tested the infrastructure in 2021 to make sure that it works for people with varying levels of familiarity with R: See this <a href="https://carpentries.org/blog/2021/07/infrastructure-testing/">Blog Post from 2021 on the Alpha Test of the infrastructure</a>.</p>
-<p>Zhian Kamvar has given two talks about The Workbench that go into a little bit more detail about why we chose R (which highlight the points above)</p>
+<p>Zhian Kamvar has given two talks about the Workbench that go into a little bit more detail about why we chose R (which highlight the points above)</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -352,9 +352,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </section>
 <section id="why-is-the-workbench-creating-so-many-md-outputs-pr-branches" class="level3">
-<h3 class="anchored" data-anchor-id="why-is-the-workbench-creating-so-many-md-outputs-pr-branches">Why is The Workbench creating so many <code>md-outputs-PR</code> branches?</h3>
+<h3 class="anchored" data-anchor-id="why-is-the-workbench-creating-so-many-md-outputs-pr-branches">Why is the Workbench creating so many <code>md-outputs-PR</code> branches?</h3>
 <p>You might notice that every time a valid pull request is opened, a new branch is created. Each branch is unique to a pull request and is automatically removed when the pull request is closed.</p>
-<p>These branches are orphan branches that contain two commits: the first commit is the current state of the <code>md-outputs</code> branch containing the rendered markdown of the active lesson. The second commit contains the rendered markdown of the pull request. The diff between these commits can be used to analyse changes in output of R Markdown documents. For more information, please read the <a href="https://carpentries.github.io/sandpaper-docs/pull-request.html">Auditing Pull Requests Chapter</a> in the Introduction to The Workbench.</p>
+<p>These branches are orphan branches that contain two commits: the first commit is the current state of the <code>md-outputs</code> branch containing the rendered markdown of the active lesson. The second commit contains the rendered markdown of the pull request. The diff between these commits can be used to analyse changes in output of R Markdown documents. For more information, please read the <a href="https://carpentries.github.io/sandpaper-docs/pull-request.html">Auditing Pull Requests Chapter</a> in the Introduction to the Workbench.</p>
 </section>
 <section id="how-do-i-add-a-custom-logo" class="level3">
 <h3 class="anchored" data-anchor-id="how-do-i-add-a-custom-logo">How do I add a custom logo?</h3>
@@ -380,9 +380,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="lesson-transition" class="level2">
 <h2 class="anchored" data-anchor-id="lesson-transition">Lesson Transition</h2>
-<p>This section is applicable for transitioning between the former <a href="https://github.com/carpentries/styles">carpentries/styles</a> lesson infrastructure and The Workbench.</p>
+<p>This section is applicable for transitioning between the former <a href="https://github.com/carpentries/styles">carpentries/styles</a> lesson infrastructure and the Workbench.</p>
 <section id="transition-new" class="level3">
-<h3 class="anchored" data-anchor-id="transition-new">How do I transition my lesson to using The Workbench?</h3>
+<h3 class="anchored" data-anchor-id="transition-new">How do I transition my lesson to using the Workbench?</h3>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -409,7 +409,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </section>
 <section id="long-fork" class="level3">
-<h3 class="anchored" data-anchor-id="long-fork">How do I transition a long-running fork to using The Workbench?</h3>
+<h3 class="anchored" data-anchor-id="long-fork">How do I transition a long-running fork to using the Workbench?</h3>
 <p>See <a href="#transition-new">the above section</a> for instructions. You can copy the lesson-specific transition script to your fork folder to make things easier (though this depends on when you last updated your fork). If you do not have any intention of recieving or contributing your changes to the source, then the above section should be all that you need.</p>
 <p>If you want to continue updating your fork, it will be a little more complicated because it depends on when you last updated your fork. There is some discussion in <a href="https://github.com/carpentries/workbench/issues/51#issuecomment-1550028442">carpentries/workbench#51</a>.</p>
 <p>In short, the commit histories will be identical up until the point of the fork and then the commit history will diverge (but still be relatively compatible) until the point of transition. You may be able to merge the upstream into your fork, but it will not be easy and it will likely contain several merge conflicts. This is not to say that it cannot be done, but it highly depends on the level of customisation you did in the fork. Take for example a <a href="https://github.com/MonashDataFluency/shell-novice/tree/2f4ee4bd9ed01513b8001192fc651ba3a5cca69e">fork of the shell-novice lesson</a> that had 16 commits <em>ahead</em> of <a href="https://github.com/swcarpentry/shell-novice">swcarpentry/shell-novice</a>. Attempting to update the transitioned fork resulted in 188 conflicts<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>:</p>
@@ -511,7 +511,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If you have a fork of a lesson that you have modified significantly and wish to continue maintaining under The Workbench, contact Zhian Kamvar and he will help you transition your repository.</p>
+<p>If you have a fork of a lesson that you have modified significantly and wish to continue maintaining under the Workbench, contact Zhian Kamvar and he will help you transition your repository.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-warning callout-titled">
@@ -537,7 +537,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="github-forks-1">GitHub Forks</h3>
 <section id="teaching-fork" class="level4">
 <h4 class="anchored" data-anchor-id="teaching-fork">How do I create a fork for teaching?</h4>
-<p>A common pattern for teaching is to create a fork of a lesson, modify it to add or remove specific section. Because the pages on The Workbench are deployed by GitHub actions, there are a couple of extra steps you need to do to enable the pages to load after the transition.</p>
+<p>A common pattern for teaching is to create a fork of a lesson, modify it to add or remove specific section. Because the pages on the Workbench are deployed by GitHub actions, there are a couple of extra steps you need to do to enable the pages to load after the transition.</p>
 <p>In short, when you fork, to make it easier, you should bring in all branches, enable GitHub pages, and enable GitHub Actions. After that, you will have your lesson website and can teach from it.</p>
 <p>You can find the instructions in <a href="https://carpentries.org/blog/2023/01/dovetail-14/#tips-and-tricks-for-using-the-workbench">issue 14 of the Dovetail blog series</a>.</p>
 </section>
@@ -570,8 +570,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The website <a href="https://htmlpreview.github.io" class="uri">https://htmlpreview.github.io</a> allows you to display HTML pages hosted on GitHub without needing to set up GitHub pages. If you do not want to fork, but still want a working version you can teach from, you can head to a workbench repository, select the <code>gh-pages</code> branch, select the <code>index.html</code> file and click on <code>copy permalink</code> and paste that into html preview:</p>
-<p>For example: this is the workbench documentation as of 2023-02-07: <a href="https://htmlpreview.github.io/?https://github.com/carpentries/sandpaper-docs/blob/59651a69e7716c04edaf8f9c1c79abc18ce3e476/index.html" class="uri">https://htmlpreview.github.io/?https://github.com/carpentries/sandpaper-docs/blob/59651a69e7716c04edaf8f9c1c79abc18ce3e476/index.html</a></p>
+<p>The website <a href="https://htmlpreview.github.io" class="uri">https://htmlpreview.github.io</a> allows you to display HTML pages hosted on GitHub without needing to set up GitHub pages. If you do not want to fork, but still want a working version you can teach from, you can head to a Workbench repository, select the <code>gh-pages</code> branch, select the <code>index.html</code> file and click on <code>copy permalink</code> and paste that into html preview:</p>
+<p>For example: this is the Workbench documentation as of 2023-02-07: <a href="https://htmlpreview.github.io/?https://github.com/carpentries/sandpaper-docs/blob/59651a69e7716c04edaf8f9c1c79abc18ce3e476/index.html" class="uri">https://htmlpreview.github.io/?https://github.com/carpentries/sandpaper-docs/blob/59651a69e7716c04edaf8f9c1c79abc18ce3e476/index.html</a></p>
 <p>This is a very workable version of the lesson (with some styling differences as the default font could not be loaded).</p>
 <p>The only catch is that you have to manually switch to instructor view by the URL: <a href="https://htmlpreview.github.io/?https://github.com/carpentries/sandpaper-docs/blob/59651a69e7716c04edaf8f9c1c79abc18ce3e476/instructor/index.html" class="uri">https://htmlpreview.github.io/?https://github.com/carpentries/sandpaper-docs/blob/59651a69e7716c04edaf8f9c1c79abc18ce3e476/instructor/index.html</a></p>
 <p>And there you have a quick version of the lesson.</p>

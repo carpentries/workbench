@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.9">
+<meta name="generator" content="quarto-1.8.10">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -72,7 +72,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-b7b7c51884a1ad4150cbdc0ccb967560.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-d3ce08b5eb6bbeb75b009e3aca0d8ee7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-31867ad706623b8d4df314de2fc5bb83.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -278,7 +278,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 <section id="resources" class="level2">
 <h2 class="anchored" data-anchor-id="resources">Resources</h2>
-<p>The Workbench is built using the <a href="https://r-project.org">R language</a> as a suite of three R packages: <a href="https://carpentries.github.io/sandpaper/" title="User interface and engine for the workbench">{sandpaper}</a>, <a href="https://carpentries.github.io/pegboard/" title="Validation and parsing of lesson components">{pegboard}</a>, and <a href="https://carpentries.github.io/varnish/" title="HTML, CSS, and JavaScript templates">{varnish}</a> that work together with R’s robust publishing ecosystem and <a href="https://pandoc.org">pandoc</a> manage and deploy Carpentries Lesson websites written in Markdown or R Markdown.</p>
+<p>The Workbench is built using the <a href="https://r-project.org">R language</a> as a suite of three R packages: <a href="https://carpentries.github.io/sandpaper/" title="User interface and engine for the Workbench">{sandpaper}</a>, <a href="https://carpentries.github.io/pegboard/" title="Validation and parsing of lesson components">{pegboard}</a>, and <a href="https://carpentries.github.io/varnish/" title="HTML, CSS, and JavaScript templates">{varnish}</a> that work together with R’s robust publishing ecosystem and <a href="https://pandoc.org">pandoc</a> manage and deploy Carpentries Lesson websites written in Markdown or R Markdown.</p>
 <section id="usage" class="level3">
 <h3 class="anchored" data-anchor-id="usage">Usage</h3>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
@@ -303,7 +303,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">Within R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">From conda-forge</a></li></ul>
 <div class="tab-content">
 <div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
-<p>To install the workbench, make sure you have a working version of R and pandoc/RStudio installed (see <a href="https://carpentries.github.io/sandpaper-docs/">the workbench setup instructions for details</a>).</p>
+<p>To install the Workbench, make sure you have a working version of R and pandoc/RStudio installed (see <a href="https://carpentries.github.io/sandpaper-docs/">the Workbench setup instructions for details</a>).</p>
 <p>From there, you can install the Workbench packages and their dependencies from our <a href="https://carpentries.r-universe.dev">Carpentries R Universe</a> inside of R:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"sandpaper"</span>, <span class="st">"varnish"</span>, <span class="st">"pegboard"</span>, <span class="st">"tinkr"</span>),</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">repos =</span> <span class="fu">c</span>(<span class="st">"https://carpentries.r-universe.dev/"</span>, <span class="fu">getOption</span>(<span class="st">"repos"</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -338,7 +338,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="updating" class="level3">
 <h3 class="anchored" data-anchor-id="updating">Updating</h3>
-<p>To update workbench packages, you can use:</p>
+<p>To update Workbench packages, you can use:</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false">Pixi</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-3" role="tab" aria-controls="tabset-4-3" aria-selected="false">Conda</a></li></ul>
 <div class="tab-content">
@@ -366,7 +366,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="tools" class="level3">
 <h3 class="anchored" data-anchor-id="tools">Tools</h3>
 <ul>
-<li><a href="https://carpentries.github.io/sandpaper/" title="User interface and engine for the workbench">{sandpaper}</a>: User interface and engine for the workbench</li>
+<li><a href="https://carpentries.github.io/sandpaper/" title="User interface and engine for the Workbench">{sandpaper}</a>: User interface and engine for the Workbench</li>
 <li><a href="https://carpentries.github.io/pegboard/" title="Validation and parsing of lesson components">{pegboard}</a>: Validation and parsing of lesson components</li>
 <li><a href="https://carpentries.github.io/varnish/" title="HTML, CSS, and JavaScript templates">{varnish}</a>: HTML, CSS, and JavaScript templates</li>
 <li><a href="https://github.com/carpentries/actions#readme">(carpentries/actions)</a>: GitHub Actions for Workbench Workflows</li>

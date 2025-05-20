@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.9">
+<meta name="generator" content="quarto-1.8.10">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -37,7 +37,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-b7b7c51884a1ad4150cbdc0ccb967560.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-d3ce08b5eb6bbeb75b009e3aca0d8ee7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-31867ad706623b8d4df314de2fc5bb83.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -220,7 +220,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Elements of the toolchain that evaluates, validates, and stylizes should live in <strong>separate repositories to allow for seamless updating</strong>, and</li>
 <li>The procedures should be <strong>well-documented and generalizable</strong> enough that the toolchain is not entirely dependent on R.</li>
 </ol>
-<p>This document provides details of how the packages of the workbench work behind the scenes to create a full Carpentries lesson website from markdown source file.</p>
+<p>This document provides details of how the packages of the Workbench work behind the scenes to create a full Carpentries lesson website from markdown source file.</p>
 <section id="tools" class="level3">
 <h3 class="anchored" data-anchor-id="tools">Tools</h3>
 <p>The Workbench is built on top of the following major pieces of software, all of which are available via <a href="https://rstudio.com">RStudio</a></p>
@@ -229,14 +229,14 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>R</strong></li>
 <li><strong><a href="https://pandoc.org">Pandoc</a></strong></li>
 </ul>
-<p>The workbench itself consists of three R packages, which can all be updated on the fly with no changes to the lesson.</p>
-<p>There are three packages that comprise The Workbench:</p>
+<p>The Workbench itself consists of three R packages, which can all be updated on the fly with no changes to the lesson.</p>
+<p>There are three packages that comprise the Workbench:</p>
 <ul>
-<li><a href="https://carpentries.github.io/sandpaper/">{sandpaper}</a>: User interface and engine for the workbench</li>
+<li><a href="https://carpentries.github.io/sandpaper/">{sandpaper}</a>: User interface and engine for the Workbench</li>
 <li><a href="https://carpentries.github.io/pegboard/">{pegboard}</a>: Validation and parsing of lesson components</li>
 <li><a href="https://carpentries.github.io/varnish/">{varnish}</a>: HTML, CSS, and JavaScript templates</li>
 </ul>
-<p>In addition, The workbench uses the following packages for support:</p>
+<p>In addition, the Workbench uses the following packages for support:</p>
 <ul>
 <li><a href="https://yihui.org/knitr/">{knitr}</a>: engine that renders R Markdown documents to Markdown</li>
 <li><a href="https://docs.ropensci.org/tinkr/">{tinkr}</a>: converts Markdown to an XML representation for {pegboard} to parse</li>
@@ -296,7 +296,7 @@ Note
 </section>
 <section id="in-practice" class="level3">
 <h3 class="anchored" data-anchor-id="in-practice">In Practice</h3>
-<p>Because of the need for bootstrapping, validation, and caching, the number of steps from source files to lesson website is considerably more than two. The diagram below describes shows the process by which a lesson is built using the workbench.</p>
+<p>Because of the need for bootstrapping, validation, and caching, the number of steps from source files to lesson website is considerably more than two. The diagram below describes shows the process by which a lesson is built using the Workbench.</p>
 <ol type="1">
 <li>The lesson contributor has an idea and writes it in Markdown or R Markdown</li>
 <li>The lesson contributor runs <code>sandpaper::serve()</code> to start the engine.</li>
