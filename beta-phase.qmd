@@ -13,7 +13,7 @@ Carpentries Lessons as a whole. Of course, with over 100 maintainers and even
 more instructors, making a sudden change has the potential to be massively
 disruptive.
 
-Instead, we are slowly releasing The Workbench in **three stages**
+Instead, we are slowly releasing the Workbench in **three stages**
 over a **16 week period during which there will be _parallel websites_ showing
 two versions of the same lesson[^parallel-nightmares].** For example, when you
 visit `https://datacarpentry.org/R-ecology-lesson`, there will be a banner at
@@ -31,8 +31,8 @@ The three stages are called ["pre-beta"](#pre-beta), ["beta"](#beta)[^beta], and
 
 If you would like to participate in the beta phase, you can
 
- - [find out more about our workbench through our Resource Guide](index.html#resources),
- - **[introduce yourself](https://github.com/carpentries/workbench/discussions/1)**, and 
+ - [find out more about our Workbench through our Resource Guide](index.html#resources),
+ - **[introduce yourself](https://github.com/carpentries/Workbench/discussions/1)**, and
  - [give feedback via GitHub Discussions](https://github.com/carpentries/workbench/discussions/)
 
 
@@ -62,7 +62,7 @@ new lesson page with a timeframe of 6 months"}
 
 ### **pre-beta** (two repos, two sites) {#pre-beta}
 
-Lessons in this stage will have a workbench version of the lesson live in a
+Lessons in this stage will have a Workbench version of the lesson live in a
 separate repository in a [sandbox GitHub
 organisation](https://github.com/fishtree-attempt)[^pun]. This version will be a
 **snapshot from the date of the pre-beta version**. Any changes made to the
@@ -118,7 +118,7 @@ a change.
 :::
 :::::
 
-### **beta** (one repo using the workbench, two sites) {#beta}
+### **beta** (one repo using the Workbench, two sites) {#beta}
 
 
 Lessons in this stage will undergo a lesson release of the styles version and a
@@ -134,7 +134,7 @@ transformation[^modify] of the default branch will be inserted as `main`:
 
 The default lesson URL will still be served from the `legacy/gh-pages` branch
 during this period. **All new changes to the lesson will be made to the
-workbench version.**
+Workbench version.**
 
 ::::: {#beta-tasks .callout-note}
 
@@ -247,13 +247,13 @@ git remote set-head origin -a      # set main branch to be your local default
   [swcarpentr/bc](https://github.com/swcarpentry/bc) monorepo, they excised the
   commits related to each lesson from the repository, but preserved the history.
 
-Maintainers will continue to work on this workbench version of the lesson.
+Maintainers will continue to work on this Workbench version of the lesson.
 
-### **pre-release (release-candidate)** (one repo using workbench, one site) {#pre-release}
+### **pre-release (release-candidate)** (one repo using Workbench, one site) {#pre-release}
 
 The styles version of the lesson (in the `legacy/` branches) will be removed,
-the default version of the lesson will switch to The Workbench, and the 
-workbench-beta website will redirect to the live lesson.
+the default version of the lesson will switch to the Workbench, and the 
+Workbench-beta website will redirect to the live lesson.
 
 ## Lessons currently in the beta phase
 

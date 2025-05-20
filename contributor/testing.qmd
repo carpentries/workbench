@@ -30,11 +30,11 @@ lesson authors and maintainers as much freedom as they need to write a lesson
 while maintaining predictability and integrity. We also want to give our
 community confidence that this system works. 
 
-Whenever a new feature or bug fix is added to The Workbench, it is imperative
+Whenever a new feature or bug fix is added to the Workbench, it is imperative
 that a test is associated and verified before it gets sent into production.
 
 Tests can be run locally and via continuous integration. This page introduces
-some of the testing strategies used in The Workbench and the caveats that come
+some of the testing strategies used in the Workbench and the caveats that come
 with these strategies.
 
 ## Unit Testing

@@ -2,7 +2,7 @@
 
 This is a WIP dockerfile for running The Carpentries Workbench. The installed
 size is just over 4GB. Note, building this container once will give you a
-snapshot of the workbench _at a particular time_. Given the fact that The
+snapshot of the Workbench _at a particular time_. Given the fact that The
 Workbench is continuously improving, you may want to consider rebuilding the
 container periodically.
 

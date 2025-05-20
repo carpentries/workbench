@@ -14,7 +14,7 @@ permissions:
   contents: write
   deployments: write
   actions: write
-  
+
 jobs:
   build-deploy:
     runs-on: ubuntu-22.04
@@ -58,6 +58,7 @@ jobs:
             any::sessioninfo
 
       - name: Deploy 🚀
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: gh-pages
