@@ -212,6 +212,9 @@ These are examples of lessons developed with the Workbench since the initial ann
 - Philipp Matthias Schäfer---[GitLab Novice](https://zedif.github.io/gitlab-novice/)
 - Michael Culshaw-Maurer---[Rewrite of the R Ecology Lesson](https://www.michaelc-m.com/Rewrite-R-ecology-lesson/)
 
+### Stay in Touch
+Join [the Workbench mailing list](https://carpentries.topicbox.com/groups/workbench) and/or the `#workbench` channel on [The Carpentries Slack Workspace](https://slack-invite.carpentries.org/) to receive news about the Workbench, announcements of new version releases, etc.
+
 
 
 [{sandpaper}]: https://carpentries.github.io/sandpaper/ "User interface and engine for the Workbench"
